@@ -1,0 +1,9 @@
+.\objects\mb_communication_protocol.o: communication\mb_communication_protocol.c
+.\objects\mb_communication_protocol.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\mb_communication_protocol.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\mb_communication_protocol.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\mb_communication_protocol.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\mb_communication_protocol.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\mb_communication_protocol.o: communication\mb_communication_protocol.h
+.\objects\mb_communication_protocol.o: communication\mb_communication_package.h
+.\objects\mb_communication_protocol.o: communication\mb_err.h
