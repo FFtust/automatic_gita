@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\auto_gita.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\auto_gita.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Jan 01 22:55:11 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Jan 02 00:16:46 2019
 <BR><P>
 <H3>Maximum Stack Usage =        160 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -678,7 +678,7 @@ Global Symbols
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_DRIVER_Ack
 </UL>
 
-<P><STRONG><a name="[77]"></a>I2C_DRIVER_Init_GPIO</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_Init_GPIO))
+<P><STRONG><a name="[77]"></a>I2C_DRIVER_Init_GPIO</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_Init_GPIO))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = I2C_DRIVER_Init_GPIO &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
@@ -688,7 +688,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pca9685_init
 </UL>
 
-<P><STRONG><a name="[7b]"></a>I2C_DRIVER_Read_Byte</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, i2c_driver.o(i.I2C_DRIVER_Read_Byte))
+<P><STRONG><a name="[7b]"></a>I2C_DRIVER_Read_Byte</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, i2c_driver.o(i.I2C_DRIVER_Read_Byte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = I2C_DRIVER_Read_Byte &rArr; I2C_DRIVER_NAck &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
@@ -714,7 +714,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PCA9685_read
 </UL>
 
-<P><STRONG><a name="[80]"></a>I2C_DRIVER_Send_Byte</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, i2c_driver.o(i.I2C_DRIVER_Send_Byte))
+<P><STRONG><a name="[80]"></a>I2C_DRIVER_Send_Byte</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, i2c_driver.o(i.I2C_DRIVER_Send_Byte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = I2C_DRIVER_Send_Byte &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
@@ -910,7 +910,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[9e]"></a>pca9685_set_freq</STRONG> (Thumb, 184 bytes, Stack size 48 bytes, pca9685_control.o(i.pca9685_set_freq))
+<P><STRONG><a name="[9e]"></a>pca9685_set_freq</STRONG> (Thumb, 196 bytes, Stack size 48 bytes, pca9685_control.o(i.pca9685_set_freq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = pca9685_set_freq &rArr; PCA9685_read &rArr; I2C_DRIVER_Read_Bytes &rArr; I2C_DRIVER_Read_Byte &rArr; I2C_DRIVER_NAck &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PCA9685_write
@@ -1139,7 +1139,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mb_communication_data_push_t
 </UL>
 
-<P><STRONG><a name="[72]"></a>I2C_DRIVER_Ack</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_Ack))
+<P><STRONG><a name="[72]"></a>I2C_DRIVER_Ack</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_Ack))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = I2C_DRIVER_Ack &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
@@ -1150,7 +1150,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_DRIVER_Read_Byte
 </UL>
 
-<P><STRONG><a name="[7a]"></a>I2C_DRIVER_NAck</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_NAck))
+<P><STRONG><a name="[7a]"></a>I2C_DRIVER_NAck</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_NAck))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = I2C_DRIVER_NAck &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
@@ -1161,7 +1161,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_DRIVER_Read_Byte
 </UL>
 
-<P><STRONG><a name="[7c]"></a>I2C_DRIVER_SDA_IN</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_SDA_IN))
+<P><STRONG><a name="[7c]"></a>I2C_DRIVER_SDA_IN</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_SDA_IN))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = I2C_DRIVER_SDA_IN &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
@@ -1170,7 +1170,7 @@ Local Symbols
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_DRIVER_Wait_Ack
 </UL>
 
-<P><STRONG><a name="[74]"></a>I2C_DRIVER_SDA_OUT</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_SDA_OUT))
+<P><STRONG><a name="[74]"></a>I2C_DRIVER_SDA_OUT</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_SDA_OUT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
@@ -1182,7 +1182,7 @@ Local Symbols
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_DRIVER_Ack
 </UL>
 
-<P><STRONG><a name="[7f]"></a>I2C_DRIVER_Start</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_Start))
+<P><STRONG><a name="[7f]"></a>I2C_DRIVER_Start</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_Start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = I2C_DRIVER_Start &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
@@ -1194,7 +1194,7 @@ Local Symbols
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_DRIVER_Read_Bytes
 </UL>
 
-<P><STRONG><a name="[82]"></a>I2C_DRIVER_Stop</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_Stop))
+<P><STRONG><a name="[82]"></a>I2C_DRIVER_Stop</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_Stop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = I2C_DRIVER_Stop &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
@@ -1207,7 +1207,7 @@ Local Symbols
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_DRIVER_Wait_Ack
 </UL>
 
-<P><STRONG><a name="[81]"></a>I2C_DRIVER_Wait_Ack</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_Wait_Ack))
+<P><STRONG><a name="[81]"></a>I2C_DRIVER_Wait_Ack</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, i2c_driver.o(i.I2C_DRIVER_Wait_Ack))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = I2C_DRIVER_Wait_Ack &rArr; I2C_DRIVER_Stop &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits

@@ -33,13 +33,13 @@ int main()
   // mb_communication_register_callback_t(protocol_check);
  while(1)
  {
-   if(is_key_pressed(0))
+   if(is_key_pressed(2))
    {
      pca9685_set_mk(0, 500);
    }
    else if(is_key_pressed(1))
    {
-     pca9685_set_mk(0, 2500);
+     pca9685_set_mk(0, 1500);
    }
  }
   return 0;

@@ -30,6 +30,8 @@ void pca9685_set_freq(float freq)
   newmode = (oldmode & 0x7F) | 0x10; // sleep
   PCA9685_write(PCA9685_MODE1, newmode); // go to sleep
   PCA9685_write(PCA9685_PRESCALE, prescale); // set the prescaler
+  prescale = 0;
+  PCA9685_read(PCA9685_MODE1, &prescale, 1);
   oldmode &= 0xef;  //清除sleep位
   PCA9685_write(PCA9685_MODE1, oldmode);
   delay_ms(5);
