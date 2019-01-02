@@ -33,14 +33,16 @@ int main()
   // mb_communication_register_callback_t(protocol_check);
  while(1)
  {
-   if(is_key_pressed(2))
+//   if(is_key_pressed(2))
    {
      pca9685_set_mk(0, 500);
    }
-   else if(is_key_pressed(1))
+//   else if(is_key_pressed(1))
+	 delay_ms(1000);
    {
      pca9685_set_mk(0, 1500);
    }
+	 delay_ms(1000);
  }
   return 0;
 }

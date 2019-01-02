@@ -28,14 +28,16 @@ void pca9685_set_freq(float freq)
   prescale = floor(prescaleval + 0.5);
   PCA9685_read(PCA9685_MODE1, &oldmode, 1);
   newmode = (oldmode & 0x7F) | 0x10; // sleep
+	delay_ms(5);
   PCA9685_write(PCA9685_MODE1, newmode); // go to sleep
+	delay_ms(5);
   PCA9685_write(PCA9685_PRESCALE, prescale); // set the prescaler
   prescale = 0;
   PCA9685_read(PCA9685_MODE1, &prescale, 1);
-  oldmode &= 0xef;  //清除sleep位
   PCA9685_write(PCA9685_MODE1, oldmode);
   delay_ms(5);
   PCA9685_write(PCA9685_MODE1, oldmode | 0xa1);
+  delay_ms(5);
 }
 
 void pca9685_set_mk(int num, int mk) //设置指定通道的脉宽。fd是在pca9685_init时获得的设备描述符，num是通道号（从0开始），mk是脉宽单位是us。周期已经固定为20ms了

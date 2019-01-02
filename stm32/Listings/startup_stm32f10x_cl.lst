@@ -565,15 +565,16 @@ ARM Macro Assembler    Page 9
               00000400 
               00000200 
               00000000 
-Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
-ork --depend=.\objects\startup_stm32f10x_cl.d -o.\objects\startup_stm32f10x_cl.
-o -I.\RTE\Device\STM32F107VC -I.\RTE\_Target_1 -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\
-5.3.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\Inclu
-de -IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\inc -
-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\RTE_Driver -IC:\Keil_v5\ARM\PACK\
-Keil.STM32F1xx_DFP.2.2.0 --predefine="__UVISION_VERSION SETA 525" --predefine="
-_RTE_ SETA 1" --predefine="STM32F10X_CL SETA 1" --list=.\listings\startup_stm32
-f10x_cl.lst RTE\Device\STM32F107VC\startup_stm32f10x_cl.s
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\object
+s\startup_stm32f10x_cl.d -o.\objects\startup_stm32f10x_cl.o -IC:\Users\mk10434\
+Desktop\automatic_gita\stm32\RTE -IC:\Users\mk10434\Desktop\automatic_gita\stm3
+2\RTE\Device\STM32F107VC -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include -I
+C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0 -IC:\Keil_v5\ARM\PACK\Keil\STM32F1
+xx_DFP\2.2.0\Device\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Devi
+ce\StdPeriph_Driver\inc -IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\RTE_Driv
+er --predefine="__UVISION_VERSION SETA 513" --predefine="_RTE_ SETA 1" --predef
+ine="STM32F10X_CL SETA 1" --list=.\listings\startup_stm32f10x_cl.lst RTE\Device
+\STM32F107VC\startup_stm32f10x_cl.s
 
 
 
