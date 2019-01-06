@@ -21,7 +21,7 @@
 .\objects\main.o: uart.h
 .\objects\main.o: motor.h
 .\objects\main.o: common.h
-.\objects\main.o: .\pca9685\pca9685_control.h
+.\objects\main.o: servo.h
 .\objects\main.o: .\communication\mb_communication_protocol.h
 .\objects\main.o: .\communication\mb_communication_package.h
 .\objects\main.o: .\communication\mb_err.h

@@ -5,6 +5,8 @@ import _thread
 import time
 import json
 
+PORT = "COM6"
+
 class common_link:
     # Frame header & end
     FRAME_HEADER = 0xF3
@@ -111,8 +113,9 @@ class communication_level():
     def __init__(self):
         self.ser = None
         self.common_link = common_link()
+        self.port = PORT
         try:
-            self.ser = serial.Serial("COM5", 115200, timeout = 0.1)
+            self.ser = serial.Serial(self.port, 115200, timeout = 0.1)
         except:
             print('com can not open')
 
@@ -120,7 +123,7 @@ class communication_level():
         self.ser.close()
 
     def open(self):
-        self.ser = serial.Serial("COM5", 115200, timeout = 0.1)
+        self.ser = serial.Serial(self.port, 115200, timeout = 0.1)
 
     def close(self):
         self.ser.close()

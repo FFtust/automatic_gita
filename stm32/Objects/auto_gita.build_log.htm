@@ -27,24 +27,28 @@ Project File Date:  01/06/2019
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Target 1'
-compiling pca9685_control.c...
-..\stm32\common.h(9): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+key.h(20): warning:  #1-D: last line of file ends without a newline
   #endif
-pca9685\pca9685reg.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif /* PCA9685REG_H_ */
-pca9685\pca9685_control.h(8): warning:  #1-D: last line of file ends without a newline
-  #endif /* PCA9685_CONTROL_H_ */
-pca9685\pca9685_control.c(64): warning:  #550-D: variable "temp"  was set but never used
-    u8 temp = 0;
-pca9685\pca9685_control.c(106): warning:  #1-D: last line of file ends without a newline
+motor.h(137): warning:  #1-D: last line of file ends without a newline
+    // }
+common.h(9): warning:  #1-D: last line of file ends without a newline
+  #endif
+servo.h(4): warning:  #1295-D: Deprecated declaration servo_init - give arg types
+  extern void servo_init();
+.\communication\mb_err.h(76): warning:  #1-D: last line of file ends without a newline
+  #endif /* _MB_ERR_H_ */
+main.c(56): warning:  #111-D: statement is unreachable
+    return 0;
+main.c(57): warning:  #1-D: last line of file ends without a newline
   }
-pca9685\pca9685_control.c(98): warning:  #177-D: function "PCA9685_read_reg16"  was declared but never referenced
-  static void PCA9685_read_reg16(u8 address, u16 *data)
-pca9685\pca9685_control.c: 6 warnings, 0 errors
+main.c(31): warning:  #177-D: variable "i"  was declared but never referenced
+    int32_t i = 0;
+main.c: 8 warnings, 0 errors
 linking...
-Program Size: Code=8528 RO-data=368 RW-data=196 ZI-data=1668  
+Program Size: Code=11520 RO-data=368 RW-data=220 ZI-data=1668  
 FromELF: creating hex file...
-".\Objects\auto_gita.axf" - 0 Error(s), 6 Warning(s).
+".\Objects\auto_gita.axf" - 0 Error(s), 8 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -88,14 +92,14 @@ Package Vendor: Keil
       Include file:  RTE_Driver\GPIO_STM32F10x.h
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\startup_stm32f10x_cl.s
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
-      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\startup_stm32f10x_cl.s
       Source file:   Device\Source\system_stm32f10x.c
+      Include file:  RTE_Driver\Config\RTE_Device.h
 
    * Component: Keil::Device:StdPeriph Drivers:Framework:3.5.1
-      Include file:  Device\StdPeriph_Driver\inc\misc.h
       Source file:   Device\StdPeriph_Driver\src\misc.c
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
       Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
@@ -105,8 +109,8 @@ Package Vendor: Keil
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
 
    * Component: Keil::Device:StdPeriph Drivers:RCC:3.5.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
 
    * Component: Keil::Device:StdPeriph Drivers:TIM:3.5.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h

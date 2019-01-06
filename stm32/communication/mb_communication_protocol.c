@@ -41,6 +41,8 @@
 #include "mb_communication_protocol.h"
 
 static int32_t mb_communication_common_protocol_package_push_chars_t(void *protocol_in, uint8_t *data, int32_t size);
+static int32_t mb_communication_ff55_protocol_package_push_chars_t(void *protocol_in, uint8_t *data, int32_t size);
+
 static void mb_communication_protocol_set_default_t(communication_protocol_group_t *protocol);
 void mb_communication_protocol_create_t(int32_t protocol_group_id, communication_protocol_group_t **protocol_out);
 

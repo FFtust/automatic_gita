@@ -1,24 +1,34 @@
 import time
 import common_link
 
-def set_angle_by_port(port, slot, angle):
+def send_servo_cmd(info):
     protocol_frame = bytearray()
     protocol_frame.append(0xff)
     protocol_frame.append(0x55)
-    protocol_frame.append(0x06)
-    protocol_frame.append(0x00)
-    protocol_frame.append(0x02)
-    protocol_frame.append(0x0b)
+    protocol_frame.append(len(info) * 2)
 
-    protocol_frame.append(port)
-    protocol_frame.append(slot)
-    protocol_frame.append(angle)
+    for i in range(len(info)):
+        info[i][0] &= 0xff 
+        if info[i][1] > 180:
+            info[i][1] = 180
+        if info[i][1] < 0:
+            info[i][1] = 0
+
+        protocol_frame.append(info[i][0])
+        protocol_frame.append(info[i][1])
+
     common_link.communication.write(protocol_frame)
 
 
 def set_all_angle(angle):
-	for i in range(6):
-		set_angle_by_port(6 + i // 2, i % 2 + 1, angle)
+    info = []
+    for i in range(16):
+        info.append([i, angle])
+    send_servo_cmd(info)
+
 
 def set_angle(id, angle):
-	set_angle_by_port(6 + id // 2, id % 2 + 1, angle)
+    send_servo_cmd(([id, angle], ))
+
+def set_muti_angles(info):
+    send_servo_cmd(info)

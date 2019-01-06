@@ -120,8 +120,7 @@ void I2C_DRIVER_Write_Bytes(u8 SlaveAddress, u8 REG_Address,u8* REG_data, u8 len
     I2C_DRIVER_Wait_Ack(); 
   }
    
-  I2C_DRIVER_Stop(); 
-  delay_ms(50);     
+  I2C_DRIVER_Stop();    
 }
 
 void I2C_DRIVER_POC(u8 SlaveAddress,u8 REG_Address,u8* REG_data, u8 len)           
@@ -135,8 +134,7 @@ void I2C_DRIVER_POC(u8 SlaveAddress,u8 REG_Address,u8* REG_data, u8 len)
   I2C_DRIVER_Send_Byte(*(REG_data));
   I2C_DRIVER_Wait_Ack(); 
   I2C_DRIVER_Send_Byte(*(REG_data + 1));
-  I2C_DRIVER_Stop(); 
-  delay_ms(50);     
+  I2C_DRIVER_Stop();  
 }
 
 

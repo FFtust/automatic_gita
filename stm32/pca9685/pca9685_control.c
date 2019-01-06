@@ -34,16 +34,6 @@ void pca9685_set_freq(float freq)
   PCA9685_write(PCA9685_MODE1, oldmode | 0x10); // go to sleep
   PCA9685_write(PCA9685_MODE1, ((oldmode & 0xbf) | 0x20)); // set clock; set AI
   new_mode = ((oldmode & 0xbf) | 0x20);
- 
-  PCA9685_write(LED0_ON_L, 0x00);
-  PCA9685_write(LED0_ON_L + 1, 0x00);
-  PCA9685_write(LED0_OFF_L, 0x67);
-  PCA9685_write(LED0_OFF_L + 1, 0x00);
- 
-  PCA9685_read(LED0_ON_L, &temp, 1);
-  PCA9685_read(LED0_OFF_L + 1, &temp, 1);
- 
- 
   PCA9685_write(PCA9685_PRESCALE, prescale); // set the prescaler
   
   prescale = 0;
@@ -61,24 +51,13 @@ void pca9685_set_freq(float freq)
 void pca9685_set_mk(int num, int mk) //设置指定通道的脉宽。fd是在pca9685_init时获得的设备描述符，num是通道号（从0开始），mk是脉宽单位是us。周期已经固定为20ms了
 {
   u16 ON, OFF;
-  u8 temp = 0;
+  
   ON = 0; //每次周期一开始就输出高电平
   OFF = (u16)((((double)mk) / 20000 * 4096) * 1.0067114);  //最后的1.0067114是校准用的
 
   PCA9685_write_reg16(LED0_ON_L + 4 * num, ON);
   PCA9685_write_reg16(LED0_OFF_L + 4 * num, OFF);
-
-//  PCA9685_write(LED0_ON_L + 4 * num, ON & 0xff);
-//  PCA9685_write(LED0_ON_L + 4 * num + 1, (ON >> 8));
-//  PCA9685_write(LED0_OFF_L + 4 * num, OFF & 0xff);
-//  PCA9685_write(LED0_OFF_L + 4 * num + 1, (OFF >> 8));
-//  
-//  PCA9685_read(LED0_ON_L + 4 * num, &temp, 1);
-//  PCA9685_read(LED0_ON_L + 4 * num + 1, &temp, 1);
-//  PCA9685_read(LED0_OFF_L + 4 * num, &temp, 1);
-//  PCA9685_read(LED0_OFF_L + 4 * num + 1, &temp, 1);
  
-  temp = 0;
 }
 
 

@@ -6,6 +6,7 @@
 ".\objects\motor.o"
 ".\objects\uart.o"
 ".\objects\common.o"
+".\objects\servo.o"
 ".\objects\mb_communication_protocol.o"
 ".\objects\mb_communication_package.o"
 ".\objects\i2c_driver.o"
