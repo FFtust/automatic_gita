@@ -4,9 +4,9 @@
 #include "GPIO_STM32F10x.h"
 
 //**********************I2C宏定义*******************************
-#define I2C_DRIVER_SCL   GPIO_Pin_4                // SCL时钟线
-#define I2C_DRIVER_SDA   GPIO_Pin_5                // SDA数据线
-#define GPIO_I2C_DRIVER  GPIOA                     // 使用B端口
+#define I2C_DRIVER_SCL   GPIO_Pin_8                // SCL时钟线
+#define I2C_DRIVER_SDA   GPIO_Pin_9                // SDA数据线
+#define GPIO_I2C_DRIVER  GPIOE                     // 使用B端口
 
 #define I2C_FREQUENCY       (100000)
 #define I2C_CYCLE_DELAY_US  (1000000 / I2C_FREQUENCY)

@@ -20,7 +20,7 @@ static u8   I2C_DRIVER_Wait_Ack(void);
 void I2C_DRIVER_Init_GPIO(void)
 {
   GPIO_InitTypeDef GPIO_InitStructure;                    // 定义结构体变量 
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);   // IIC时钟配置
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE, ENABLE);   // IIC时钟配置
   // RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE); //打开第二功能，用于中断的使用
   /* 配置SCL线为推挽输出 ，配置SDA线为推挽输出 */
   GPIO_InitStructure.GPIO_Pin = I2C_DRIVER_SCL | I2C_DRIVER_SDA;
