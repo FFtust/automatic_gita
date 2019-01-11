@@ -1,19 +1,29 @@
 import motor
 import time
-import servo
+from chord import *
 # import console_panel 
 # from file_manager import *
 
+# while True:
+#     # servo.set_angle(0, 90)
+#     # servo.set_angle(1, 90)
+#     chord1.pizz()
+#     time.sleep(1)
+#     # servo.set_angle(0, 0)
+#     # servo.set_angle(1, 0)
+#     chord1.pizz()
+#     time.sleep(1)
 
-while True:
-    # servo.set_angle(0, 90)
-    # servo.set_angle(1, 90)
-    servo.set_all_angle(90)
-    time.sleep(1)
-    # servo.set_angle(0, 0)
-    # servo.set_angle(1, 0)
-    servo.set_all_angle(0)
-    time.sleep(1)
+
+# while True:
+#     # servo.set_angle(0, 90)
+#     # servo.set_angle(1, 90)
+#     servo.set_all_angle(90)
+#     time.sleep(1)
+#     # servo.set_angle(0, 0)
+#     # servo.set_angle(1, 0)
+#     servo.set_all_angle(0)
+#     time.sleep(1)
 # import sys
 # import PyQt5
 # from PyQt5.QtWidgets import QApplication, QWidget

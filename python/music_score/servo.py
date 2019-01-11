@@ -11,22 +11,23 @@ class servo_control():
             for i in range(len(info)):
                 start_angles[i] = info[i]
 
-        self.all_servo_angles_to = start_angles
+        self.all_servo_angles_to = start_angles.copy()
         self.all_servo_current_angles = [0] * SERVO_NUM
 
         self.sync_lock = threading.Lock()
         self.work_handle = None
 
     def all_servos_update(self):
-        global all_servo_angles_to, all_servo_current_angles
         changed_servo_info = []
         for i in range(SERVO_NUM):
-            if all_servo_angles_to[i] != all_servo_current_angles[i]:
-                changed_servo_info.append([i, all_servo_angles_to[i]])
-        __send_servo_cmd(changed_servo_info)
-        self.all_servo_current_angles = self.all_servo_angles_to
+            if self.all_servo_angles_to[i] != self.all_servo_current_angles[i]:
+                changed_servo_info.append([i, self.all_servo_angles_to[i]])
+        print(changed_servo_info)
+        self.__send_servo_cmd(changed_servo_info)
+        self.all_servo_current_angles = self.all_servo_angles_to.copy()
 
     def set_all_angles(self, angle):
+
         if angle > 180:
             angle = 180
         if angle < 0:
@@ -65,14 +66,14 @@ class servo_control():
         info = []
         for i in range(16):
             info.append([i, angle])
-        __send_servo_cmd(info)
+        self.__send_servo_cmd(info)
 
 
     def run_single_servo(self, id, angle):
-        __send_servo_cmd(([id, angle], ))
+        self.__send_servo_cmd(([id, angle], ))
 
     def run_muti_angles_directly(self, info):
-        __send_servo_cmd(info)
+        self.__send_servo_cmd(info)
 
     def __send_servo_cmd(self, info):
         if info == []:
@@ -91,7 +92,7 @@ class servo_control():
 
             protocol_frame.append(info[i][0])
             protocol_frame.append(info[i][1])
-
+        print("protocol_frame", protocol_frame)
         common_link.communication.write(protocol_frame)
 
 

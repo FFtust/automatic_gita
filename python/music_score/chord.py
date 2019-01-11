@@ -1,3 +1,58 @@
+from servo import servo_control
+
+CHRODS_ANGLES_SATRT  = [45, 35, 50, 50, 50, 50, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45]
+
+CHRODS_ANGLES = \
+{
+    "1": {"default": 45, "angle1": 35, "angle2": 60},
+    "2": {"default": 35, "angle1": 30, "angle2": 50},
+    "3": {"default": 50, "angle1": 40, "angle2": 65},
+    "4": {"default": 50, "angle1": 40, "angle2": 65},
+    "5": {"default": 50, "angle1": 40, "angle2": 65},
+    "6": {"default": 50, "angle1": 40, "angle2": 65},
+} 
+
+servos = servo_control(CHRODS_ANGLES_SATRT)
+servos.start_control()
+
+class single_chrod():
+    def __init__(self, id, info):
+        self.id = id
+        self.ANGLES = info # info is a list of 3 items
+        self.angle_index = 0
+
+    def reset(self):
+        servo.set_angle(self.id, self.ANGLES[0])
+        self.angle_index = 0
+        time.sleep(0.2)
+
+    def pizz(self, run_flag = False):
+        self.angle_index = (self.angle_index + 1) % 2
+        if type(self.ANGLES[self.angle_index]) == int:
+            angle = self.ANGLES[self.angle_index + 1]
+        else:
+            angle = int(self.ANGLES[self.angle_index + 1], 10)
+
+        # if self.angle_index % 2 == 0:
+        #     servo.set_angle(self.id, angle + 50)
+        # else:
+        #     servo.set_angle(self.id, angle - 50)
+
+        # time.sleep(0.05)
+        print("angle is", angle)
+        servos.set_single_angle(self.id, angle)
+        if run_flag:
+            servos.run()
+        
+
+chord1 = single_chrod(0, [CHRODS_ANGLES['1']["default"], CHRODS_ANGLES['1']["angle1"], CHRODS_ANGLES['1']["angle2"]])
+chord2 = single_chrod(1, [CHRODS_ANGLES["2"]["default"], CHRODS_ANGLES["2"]["angle1"], CHRODS_ANGLES["2"]["angle2"]])
+chord3 = single_chrod(2, [CHRODS_ANGLES["3"]["default"], CHRODS_ANGLES["3"]["angle1"], CHRODS_ANGLES["3"]["angle2"]])
+chord4 = single_chrod(3, [CHRODS_ANGLES["4"]["default"], CHRODS_ANGLES["4"]["angle1"], CHRODS_ANGLES["4"]["angle2"]])
+chord5 = single_chrod(4, [CHRODS_ANGLES["5"]["default"], CHRODS_ANGLES["5"]["angle1"], CHRODS_ANGLES["5"]["angle2"]])
+chord6 = single_chrod(5, [CHRODS_ANGLES["6"]["default"], CHRODS_ANGLES["6"]["angle1"], CHRODS_ANGLES["6"]["angle2"]])
+
+# (chrod_num, grade)
 info_chord_C = ((2, 1), (4, 2), (5, 3))
 info_chord_Dm = ((1, 1), (2, 3), (3, 2))
 info_chord_Em = ((4, 2), (5, 2))
@@ -8,18 +63,18 @@ info_chord_G7 = ((1, 1), (5, 2), (6, 2))
 
 
 class chord_def():
-	def __init__(self, name, des, info):
-		self.name = name
-		self.description = des
-		self.info = info
+    def __init__(self, name, des, info):
+        self.name = name
+        self.description = des
+        self.info = info
 
 
-guita_string_1 = 1
-guita_string_2 = 2
-guita_string_3 = 3
-guita_string_4 = 4
-guita_string_5 = 5
-guita_string_6 = 6
+guitar_string_1 = 1
+guitar_string_2 = 2
+guitar_string_3 = 3
+guitar_string_4 = 4
+guitar_string_5 = 5
+guitar_string_6 = 6
 
 
 C  = chord_def("C", "chrod C", info_chord_C)
