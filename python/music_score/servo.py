@@ -22,7 +22,7 @@ class servo_control():
         for i in range(SERVO_NUM):
             if self.all_servo_angles_to[i] != self.all_servo_current_angles[i]:
                 changed_servo_info.append([i, self.all_servo_angles_to[i]])
-        print(changed_servo_info)
+        # print(changed_servo_info)
         self.__send_servo_cmd(changed_servo_info)
         self.all_servo_current_angles = self.all_servo_angles_to.copy()
 
@@ -92,7 +92,7 @@ class servo_control():
 
             protocol_frame.append(info[i][0])
             protocol_frame.append(info[i][1])
-        print("protocol_frame", protocol_frame)
+        # print("protocol_frame", protocol_frame)
         common_link.communication.write(protocol_frame)
 
 
