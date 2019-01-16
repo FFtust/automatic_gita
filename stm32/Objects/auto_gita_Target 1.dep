@@ -1,5 +1,5 @@
 Dependencies for Project 'auto_gita', Target 'Target 1': (DO NOT MODIFY !)
-F (.\main.c)(0x5C38B9C1)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\communication -I .\pca9685 -I ..\stm32-I.\RTE\Device\STM32F107VC-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\inc-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_CL-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x5C3DF2C7)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\communication -I .\pca9685 -I ..\stm32-I.\RTE\Device\STM32F107VC-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\inc-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_CL-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (C:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\RTE_Driver\GPIO_STM32F10x.h)(0x56177D7D)
@@ -183,7 +183,7 @@ I (C:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\inc\stm3
 I (C:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FA4D8F)
 I (C:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FA4D8F)
 I (pca9685\i2c_driver.h)(0x5C31A9FB)
-F (.\pca9685\pca9685_control.c)(0x5C31C461)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\communication -I .\pca9685 -I ..\stm32-I.\RTE\Device\STM32F107VC-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\inc-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_CL-o .\objects\pca9685_control.o --omf_browse .\objects\pca9685_control.crf --depend .\objects\pca9685_control.d)
+F (.\pca9685\pca9685_control.c)(0x5C3DF303)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\communication -I .\pca9685 -I ..\stm32-I.\RTE\Device\STM32F107VC-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\inc-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_CL-o .\objects\pca9685_control.o --omf_browse .\objects\pca9685_control.crf --depend .\objects\pca9685_control.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x599ECD2E)
@@ -204,7 +204,7 @@ I (C:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\inc\stm3
 I (C:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FA4D8F)
 I (C:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FA4D8F)
 I (pca9685\i2c_driver.h)(0x5C31A9FB)
-I (pca9685\pca9685reg.h)(0x5C2B3228)
+I (pca9685\pca9685reg.h)(0x5C3DDF26)
 I (pca9685\pca9685_control.h)(0x5C2B7CB3)
 F (C:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\src\misc.c)(0x52FA4D8F)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\communication -I .\pca9685 -I ..\stm32-I.\RTE\Device\STM32F107VC-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\inc-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_CL-o .\objects\misc.o --omf_browse .\objects\misc.crf --depend .\objects\misc.d)
 I (C:\Keil_v5\ARM\PACK\Keil.STM32F1xx_DFP.2.2.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FA4D8F)

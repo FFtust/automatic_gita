@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\Objects\auto_gita.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\auto_gita.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Jan 11 23:44:04 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Jan 15 22:49:42 2019
 <BR><P>
-<H3>Maximum Stack Usage =        184 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        192 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 protocol_check &rArr; set_servo &rArr; pca9685_set_mk &rArr; PCA9685_write_reg16 &rArr; I2C_DRIVER_Write_Bytes &rArr; I2C_DRIVER_Send_Byte &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 <P>
@@ -1156,7 +1156,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;servo_init
 </UL>
 
-<P><STRONG><a name="[c5]"></a>pca9685_set_freq</STRONG> (Thumb, 222 bytes, Stack size 56 bytes, pca9685_control.o(i.pca9685_set_freq))
+<P><STRONG><a name="[c5]"></a>pca9685_set_freq</STRONG> (Thumb, 300 bytes, Stack size 48 bytes, pca9685_control.o(i.pca9685_set_freq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = pca9685_set_freq &rArr; PCA9685_read &rArr; I2C_DRIVER_Read_Bytes &rArr; I2C_DRIVER_Read_Byte &rArr; I2C_DRIVER_NAck &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PCA9685_write
@@ -1174,8 +1174,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pca9685_init
 </UL>
 
-<P><STRONG><a name="[cb]"></a>pca9685_set_mk</STRONG> (Thumb, 92 bytes, Stack size 56 bytes, pca9685_control.o(i.pca9685_set_mk))
-<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = pca9685_set_mk &rArr; PCA9685_write_reg16 &rArr; I2C_DRIVER_Write_Bytes &rArr; I2C_DRIVER_Send_Byte &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
+<P><STRONG><a name="[cb]"></a>pca9685_set_mk</STRONG> (Thumb, 140 bytes, Stack size 56 bytes, pca9685_control.o(i.pca9685_set_mk))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = pca9685_set_mk &rArr; PCA9685_write_reg16 &rArr; I2C_DRIVER_Write_Bytes &rArr; I2C_DRIVER_Send_Byte &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PCA9685_write_reg16
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
@@ -1187,7 +1187,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[51]"></a>protocol_check</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, main.o(i.protocol_check))
-<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = protocol_check &rArr; set_servo &rArr; pca9685_set_mk &rArr; PCA9685_write_reg16 &rArr; I2C_DRIVER_Write_Bytes &rArr; I2C_DRIVER_Send_Byte &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
+<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = protocol_check &rArr; set_servo &rArr; pca9685_set_mk &rArr; PCA9685_write_reg16 &rArr; I2C_DRIVER_Write_Bytes &rArr; I2C_DRIVER_Send_Byte &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_servo
 </UL>
@@ -1202,7 +1202,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ba]"></a>set_servo</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, servo.o(i.set_servo))
-<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = set_servo &rArr; pca9685_set_mk &rArr; PCA9685_write_reg16 &rArr; I2C_DRIVER_Write_Bytes &rArr; I2C_DRIVER_Send_Byte &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
+<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = set_servo &rArr; pca9685_set_mk &rArr; PCA9685_write_reg16 &rArr; I2C_DRIVER_Write_Bytes &rArr; I2C_DRIVER_Send_Byte &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pca9685_set_mk
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;calculate_t_from_angle
@@ -1530,24 +1530,24 @@ Local Symbols
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_DRIVER_Read_Bytes
 </UL>
 
-<P><STRONG><a name="[9c]"></a>PCA9685_read</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, pca9685_control.o(i.PCA9685_read))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = PCA9685_read &rArr; I2C_DRIVER_Read_Bytes &rArr; I2C_DRIVER_Read_Byte &rArr; I2C_DRIVER_NAck &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
+<P><STRONG><a name="[9c]"></a>PCA9685_read</STRONG> (Thumb, 28 bytes, Stack size 24 bytes, pca9685_control.o(i.PCA9685_read))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = PCA9685_read &rArr; I2C_DRIVER_Read_Bytes &rArr; I2C_DRIVER_Read_Byte &rArr; I2C_DRIVER_NAck &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_DRIVER_Read_Bytes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pca9685_set_freq
 </UL>
 
-<P><STRONG><a name="[9d]"></a>PCA9685_write</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, pca9685_control.o(i.PCA9685_write))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = PCA9685_write &rArr; I2C_DRIVER_Write_Bytes &rArr; I2C_DRIVER_Send_Byte &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
+<P><STRONG><a name="[9d]"></a>PCA9685_write</STRONG> (Thumb, 20 bytes, Stack size 24 bytes, pca9685_control.o(i.PCA9685_write))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = PCA9685_write &rArr; I2C_DRIVER_Write_Bytes &rArr; I2C_DRIVER_Send_Byte &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_DRIVER_Write_Bytes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pca9685_set_freq
 </UL>
 
-<P><STRONG><a name="[9e]"></a>PCA9685_write_reg16</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, pca9685_control.o(i.PCA9685_write_reg16))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = PCA9685_write_reg16 &rArr; I2C_DRIVER_Write_Bytes &rArr; I2C_DRIVER_Send_Byte &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
+<P><STRONG><a name="[9e]"></a>PCA9685_write_reg16</STRONG> (Thumb, 20 bytes, Stack size 24 bytes, pca9685_control.o(i.PCA9685_write_reg16))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = PCA9685_write_reg16 &rArr; I2C_DRIVER_Write_Bytes &rArr; I2C_DRIVER_Send_Byte &rArr; I2C_DRIVER_SDA_OUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_DRIVER_Write_Bytes
 </UL>

@@ -43,14 +43,14 @@ int main()
    if(is_key_pressed(2))
    {
      set_servo(0, 90);
-     set_servo(1, 90);
-     set_servo(2, 90);
+     set_servo(17, 90);
+     set_servo(16, 90);
    }
    else if(is_key_pressed(3))
    {
      set_servo(0, 45);
-     set_servo(1, 45);
-     set_servo(2, 45);
+     set_servo(17, 45);
+     set_servo(16, 45);
    }
  }
   return 0;

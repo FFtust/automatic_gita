@@ -2,7 +2,7 @@ import time
 import common_link
 import threading
 
-SERVO_NUM = 16
+SERVO_NUM = 32
 
 class servo_control():
     def __init__(self, info = None):
@@ -64,7 +64,7 @@ class servo_control():
 
     def run_all_servos(self, angle):
         info = []
-        for i in range(16):
+        for i in range(SERVO_NUM):
             info.append([i, angle])
         self.__send_servo_cmd(info)
 

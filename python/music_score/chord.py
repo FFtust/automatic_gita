@@ -1,7 +1,7 @@
 from servo import servo_control
 # from servo_angles_table import SERVO_ANGLES_TABLE
 
-CHRODS_ANGLES_SATRT  = [45, 35, 50, 50, 50, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45]
+CHRODS_ANGLES_SATRT  = [45, 35, 50, 50, 50, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 35, 50, 50, 50, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45]
 
 CHRODS_ANGLES = \
 {
@@ -13,7 +13,7 @@ CHRODS_ANGLES = \
     "6": {"default": 45, "angle1": 35, "angle2": 55},
 } 
 
-servos = servo_control(CHRODS_ANGLES_SATRT)
+servos = servo_control()
 servos.start_control()
 
 class single_chrod():
@@ -34,13 +34,6 @@ class single_chrod():
         else:
             angle = int(self.ANGLES[self.angle_index + 1], 10)
 
-        # if self.angle_index % 2 == 0:
-        #     servo.set_angle(self.id, angle + 50)
-        # else:
-        #     servo.set_angle(self.id, angle - 50)
-
-        # time.sleep(0.05)
-        print("angle is", angle)
         servos.set_single_angle(self.id - 1, angle)
         if run_flag:
             servos.run()
@@ -50,7 +43,6 @@ class single_chrod():
             if grade_value in chord_grade_table[self.id]:
                 if grade_value == 0:
                     for item in chord_grade_table[self.id][0]:
-                        print("item", item)
                         servos.set_single_angle(item[0], item[1])
                 else:
                     servos.set_single_angle(chord_grade_table[self.id][grade_value][0], chord_grade_table[self.id][grade_value][1])
@@ -73,12 +65,12 @@ chords = [chord1, chord2, chord3, chord4, chord5, chord6]
 chord_grade_table = \
 {
     #chord:[(grade, (servo_id, angle, servo_id, angle, ...), ...]
-    1 :  {0: ((6, 40), (12, 45)), 1: (6, 60), 2: (6, 30), 3: (12, 60), 4: (12, 35)},
-    2 :  {0: ((7, 50), (13, 45)), 1: (7, 65), 2: (7, 35), 3: (13, 60), 4: (13, 35)},
-    3 :  {0: ((8, 55), ), 1: (8, 70), 2: (8, 35), 3: (14, 45), 4: (14, 35)},
-    4 :  {0: ((9, 45), ), 1: (9, 60), 2: (9, 35), 3: (15, 45), 4: (15, 35)},
-    5 :  {0: ((10, 45), ), 1: (10, 60), 2: (10, 35), 3: (16, 45), 4: (16, 35)},
-    6 :  {0: ((11, 45), ), 1: (11, 60), 2: (11, 35), 3: (17, 45), 4: (17, 35)},
+    1 :  {0: ((16, 50), (22, 45)), 1: (16, 65), 2: (16, 35), 3: (22, 60), 4: (22, 35)},
+    2 :  {0: ((17, 50), (23, 45)), 1: (17, 65), 2: (17, 35), 3: (23, 60), 4: (23, 35)},
+    3 :  {0: ((18, 50), (24, 45)), 1: (18, 65), 2: (18, 35), 3: (24, 60), 4: (24, 35)},
+    4 :  {0: ((19, 32), (25, 45)), 1: (19, 52), 2: (19, 12), 3: (25, 60), 4: (25, 35)},
+    5 :  {0: ((20, 38), (26, 45)), 1: (20, 53), 2: (20, 23), 3: (26, 60), 4: (26, 35)},
+    6 :  {0: ((21, 50), (27, 45)), 1: (21, 65), 2: (21, 35), 3: (27, 60), 4: (27, 35)},
 }
 
 # (chrod_num, grade)
