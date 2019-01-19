@@ -15,6 +15,7 @@ class servo_control():
         self.all_servo_current_angles = [0] * SERVO_NUM
 
         self.sync_lock = threading.Lock()
+        # self.sync_lock.acquire(False)
         self.work_handle = None
 
     def all_servos_update(self):
@@ -51,7 +52,10 @@ class servo_control():
                 self.all_servo_angles_to[item[0]] = item[1]
     
     def run(self):
-        self.sync_lock.release()
+        # self.sync_lock.release()
+        self.all_servos_update()
+
+
 
     def start_control(self):
         self.work_handle  = threading.Thread(target = self.work, args=())

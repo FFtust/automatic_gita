@@ -27,6 +27,16 @@ Project File Date:  01/06/2019
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Target 1'
+compiling i2c_driver.c...
+..\stm32\common.h(9): warning:  #1-D: last line of file ends without a newline
+  #endif
+pca9685\i2c_driver.c(91): warning:  #177-D: variable "temp"  was declared but never referenced
+    u8 temp = 0;    
+pca9685\i2c_driver.c: 2 warnings, 0 errors
+compiling uart.c...
+.\communication\mb_err.h(76): warning:  #1-D: last line of file ends without a newline
+  #endif /* _MB_ERR_H_ */
+uart.c: 1 warning, 0 errors
 compiling pca9685_control.c...
 ..\stm32\common.h(9): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -40,9 +50,9 @@ pca9685\pca9685_control.c(92): warning:  #177-D: function "PCA9685_read_reg16"  
   static void PCA9685_read_reg16(u8 address, u8 reg_addr, u16 *data)
 pca9685\pca9685_control.c: 5 warnings, 0 errors
 linking...
-Program Size: Code=11652 RO-data=368 RW-data=220 ZI-data=1668  
+Program Size: Code=11656 RO-data=368 RW-data=220 ZI-data=1668  
 FromELF: creating hex file...
-".\Objects\auto_gita.axf" - 0 Error(s), 5 Warning(s).
+".\Objects\auto_gita.axf" - 0 Error(s), 8 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -78,25 +88,25 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.1.1
 
    * Component: Keil::Device:DMA:1.2
-      Source file:   RTE_Driver\DMA_STM32F10x.c
       Include file:  RTE_Driver\DMA_STM32F10x.h
+      Source file:   RTE_Driver\DMA_STM32F10x.c
 
    * Component: Keil::Device:GPIO:1.3
       Include file:  RTE_Driver\GPIO_STM32F10x.h
       Source file:   RTE_Driver\GPIO_STM32F10x.c
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
       Source file:   Device\Source\system_stm32f10x.c
-      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
       Source file:   Device\Source\ARM\startup_stm32f10x_cl.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
 
    * Component: Keil::Device:StdPeriph Drivers:Framework:3.5.1
-      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
-      Source file:   Device\StdPeriph_Driver\src\misc.c
-      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+      Source file:   Device\StdPeriph_Driver\src\misc.c
       Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
 
    * Component: Keil::Device:StdPeriph Drivers:GPIO:3.5.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
@@ -107,13 +117,13 @@ Package Vendor: Keil
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
 
    * Component: Keil::Device:StdPeriph Drivers:TIM:3.5.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_tim.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
 
    * Component: Keil::Device:StdPeriph Drivers:USART:3.5.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_usart.c
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

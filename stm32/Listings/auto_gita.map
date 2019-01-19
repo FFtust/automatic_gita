@@ -1078,67 +1078,67 @@ Image Symbol Table
     i.USART_ClearITPendingBit                0x08001370   Section        0  stm32f10x_usart.o(i.USART_ClearITPendingBit)
     i.USART_Cmd                              0x0800138e   Section        0  stm32f10x_usart.o(i.USART_Cmd)
     i.USART_Configuration                    0x080013a8   Section        0  uart.o(i.USART_Configuration)
-    i.USART_GetITStatus                      0x08001444   Section        0  stm32f10x_usart.o(i.USART_GetITStatus)
-    i.USART_ITConfig                         0x08001498   Section        0  stm32f10x_usart.o(i.USART_ITConfig)
-    i.USART_Init                             0x080014e4   Section        0  stm32f10x_usart.o(i.USART_Init)
-    i.calculate_t_from_angle                 0x080015bc   Section        0  servo.o(i.calculate_t_from_angle)
-    calculate_t_from_angle                   0x080015bd   Thumb Code    90  servo.o(i.calculate_t_from_angle)
-    i.delay_ms                               0x08001620   Section        0  common.o(i.delay_ms)
-    i.delay_us                               0x08001634   Section        0  common.o(i.delay_us)
-    i.floor                                  0x080016d4   Section        0  floor.o(i.floor)
-    i.is_key_pressed                         0x080017b0   Section        0  key.o(i.is_key_pressed)
-    i.key_init                               0x080017d4   Section        0  key.o(i.key_init)
-    i.main                                   0x08001818   Section        0  main.o(i.main)
-    i.mb_communication_common_protocol_package_push_chars_t 0x08001880   Section        0  mb_communication_protocol.o(i.mb_communication_common_protocol_package_push_chars_t)
-    mb_communication_common_protocol_package_push_chars_t 0x08001881   Thumb Code   338  mb_communication_protocol.o(i.mb_communication_common_protocol_package_push_chars_t)
-    i.mb_communication_data_push_t           0x080019d8   Section        0  mb_communication_protocol.o(i.mb_communication_data_push_t)
-    i.mb_communication_ff55_protocol_package_push_chars_t 0x080019ec   Section        0  mb_communication_protocol.o(i.mb_communication_ff55_protocol_package_push_chars_t)
-    mb_communication_ff55_protocol_package_push_chars_t 0x080019ed   Thumb Code   194  mb_communication_protocol.o(i.mb_communication_ff55_protocol_package_push_chars_t)
-    i.mb_communication_init_t                0x08001ab4   Section        0  mb_communication_protocol.o(i.mb_communication_init_t)
-    i.mb_communication_package_add_bytes_t   0x08001ac4   Section        0  mb_communication_package.o(i.mb_communication_package_add_bytes_t)
-    i.mb_communication_package_calculate_checksum_t 0x08001b00   Section        0  mb_communication_package.o(i.mb_communication_package_calculate_checksum_t)
-    i.mb_communication_package_create_t      0x08001b2c   Section        0  mb_communication_package.o(i.mb_communication_package_create_t)
-    i.mb_communication_protocol_create_t     0x08001b68   Section        0  mb_communication_protocol.o(i.mb_communication_protocol_create_t)
-    i.mb_communication_protocol_set_default_t 0x08001bfc   Section        0  mb_communication_protocol.o(i.mb_communication_protocol_set_default_t)
-    mb_communication_protocol_set_default_t  0x08001bfd   Thumb Code    32  mb_communication_protocol.o(i.mb_communication_protocol_set_default_t)
-    i.mb_communication_register_callback_t   0x08001c1c   Section        0  mb_communication_protocol.o(i.mb_communication_register_callback_t)
-    i.motor_backward                         0x08001c28   Section        0  motor.o(i.motor_backward)
-    i.motor_forward                          0x08001c80   Section        0  motor.o(i.motor_forward)
-    i.motor_stop                             0x08001cd8   Section        0  motor.o(i.motor_stop)
-    i.pca9685_init                           0x08001d30   Section        0  pca9685_control.o(i.pca9685_init)
-    i.pca9685_set_freq                       0x08001d44   Section        0  pca9685_control.o(i.pca9685_set_freq)
-    i.pca9685_set_mk                         0x08001e80   Section        0  pca9685_control.o(i.pca9685_set_mk)
-    i.protocol_check                         0x08001f1c   Section        0  main.o(i.protocol_check)
-    i.servo_init                             0x08001f58   Section        0  servo.o(i.servo_init)
-    i.set_servo                              0x08001f60   Section        0  servo.o(i.set_servo)
-    i.sweep_motor_control                    0x08001f78   Section        0  motor.o(i.sweep_motor_control)
-    x$fpl$d2f                                0x08002080   Section       98  d2f.o(x$fpl$d2f)
-    x$fpl$dadd                               0x080020e4   Section      336  daddsub_clz.o(x$fpl$dadd)
-    _dadd1                                   0x080020f5   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
-    x$fpl$dcmpinf                            0x08002234   Section       24  dcmpi.o(x$fpl$dcmpinf)
-    x$fpl$ddiv                               0x0800224c   Section      688  ddiv.o(x$fpl$ddiv)
-    ddiv_entry                               0x08002253   Thumb Code     0  ddiv.o(x$fpl$ddiv)
-    x$fpl$dfix                               0x080024fc   Section       94  dfix.o(x$fpl$dfix)
-    x$fpl$dfixu                              0x0800255c   Section       90  dfixu.o(x$fpl$dfixu)
-    x$fpl$dflt                               0x080025b6   Section       46  dflt_clz.o(x$fpl$dflt)
-    x$fpl$dleqf                              0x080025e4   Section      120  dleqf.o(x$fpl$dleqf)
-    x$fpl$dmul                               0x0800265c   Section      340  dmul.o(x$fpl$dmul)
-    x$fpl$dnaninf                            0x080027b0   Section      156  dnaninf.o(x$fpl$dnaninf)
-    x$fpl$dretinf                            0x0800284c   Section       12  dretinf.o(x$fpl$dretinf)
-    x$fpl$drleqf                             0x08002858   Section      108  drleqf.o(x$fpl$drleqf)
-    x$fpl$drsb                               0x080028c4   Section       22  daddsub_clz.o(x$fpl$drsb)
-    x$fpl$dsub                               0x080028dc   Section      468  daddsub_clz.o(x$fpl$dsub)
-    _dsub1                                   0x080028ed   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
-    x$fpl$f2d                                0x08002ab0   Section       86  f2d.o(x$fpl$f2d)
-    x$fpl$fadd                               0x08002b08   Section      196  faddsub_clz.o(x$fpl$fadd)
-    _fadd1                                   0x08002b17   Thumb Code     0  faddsub_clz.o(x$fpl$fadd)
-    x$fpl$fdiv                               0x08002bcc   Section      388  fdiv.o(x$fpl$fdiv)
-    _fdiv1                                   0x08002bcd   Thumb Code     0  fdiv.o(x$fpl$fdiv)
-    x$fpl$fnaninf                            0x08002d50   Section      140  fnaninf.o(x$fpl$fnaninf)
-    x$fpl$fretinf                            0x08002ddc   Section       10  fretinf.o(x$fpl$fretinf)
-    x$fpl$fsub                               0x08002de8   Section      234  faddsub_clz.o(x$fpl$fsub)
-    _fsub1                                   0x08002df7   Thumb Code     0  faddsub_clz.o(x$fpl$fsub)
-    x$fpl$usenofp                            0x08002ed2   Section        0  usenofp.o(x$fpl$usenofp)
+    i.USART_GetITStatus                      0x08001448   Section        0  stm32f10x_usart.o(i.USART_GetITStatus)
+    i.USART_ITConfig                         0x0800149c   Section        0  stm32f10x_usart.o(i.USART_ITConfig)
+    i.USART_Init                             0x080014e8   Section        0  stm32f10x_usart.o(i.USART_Init)
+    i.calculate_t_from_angle                 0x080015c0   Section        0  servo.o(i.calculate_t_from_angle)
+    calculate_t_from_angle                   0x080015c1   Thumb Code    90  servo.o(i.calculate_t_from_angle)
+    i.delay_ms                               0x08001624   Section        0  common.o(i.delay_ms)
+    i.delay_us                               0x08001638   Section        0  common.o(i.delay_us)
+    i.floor                                  0x080016d8   Section        0  floor.o(i.floor)
+    i.is_key_pressed                         0x080017b4   Section        0  key.o(i.is_key_pressed)
+    i.key_init                               0x080017d8   Section        0  key.o(i.key_init)
+    i.main                                   0x0800181c   Section        0  main.o(i.main)
+    i.mb_communication_common_protocol_package_push_chars_t 0x08001884   Section        0  mb_communication_protocol.o(i.mb_communication_common_protocol_package_push_chars_t)
+    mb_communication_common_protocol_package_push_chars_t 0x08001885   Thumb Code   338  mb_communication_protocol.o(i.mb_communication_common_protocol_package_push_chars_t)
+    i.mb_communication_data_push_t           0x080019dc   Section        0  mb_communication_protocol.o(i.mb_communication_data_push_t)
+    i.mb_communication_ff55_protocol_package_push_chars_t 0x080019f0   Section        0  mb_communication_protocol.o(i.mb_communication_ff55_protocol_package_push_chars_t)
+    mb_communication_ff55_protocol_package_push_chars_t 0x080019f1   Thumb Code   194  mb_communication_protocol.o(i.mb_communication_ff55_protocol_package_push_chars_t)
+    i.mb_communication_init_t                0x08001ab8   Section        0  mb_communication_protocol.o(i.mb_communication_init_t)
+    i.mb_communication_package_add_bytes_t   0x08001ac8   Section        0  mb_communication_package.o(i.mb_communication_package_add_bytes_t)
+    i.mb_communication_package_calculate_checksum_t 0x08001b04   Section        0  mb_communication_package.o(i.mb_communication_package_calculate_checksum_t)
+    i.mb_communication_package_create_t      0x08001b30   Section        0  mb_communication_package.o(i.mb_communication_package_create_t)
+    i.mb_communication_protocol_create_t     0x08001b6c   Section        0  mb_communication_protocol.o(i.mb_communication_protocol_create_t)
+    i.mb_communication_protocol_set_default_t 0x08001c00   Section        0  mb_communication_protocol.o(i.mb_communication_protocol_set_default_t)
+    mb_communication_protocol_set_default_t  0x08001c01   Thumb Code    32  mb_communication_protocol.o(i.mb_communication_protocol_set_default_t)
+    i.mb_communication_register_callback_t   0x08001c20   Section        0  mb_communication_protocol.o(i.mb_communication_register_callback_t)
+    i.motor_backward                         0x08001c2c   Section        0  motor.o(i.motor_backward)
+    i.motor_forward                          0x08001c84   Section        0  motor.o(i.motor_forward)
+    i.motor_stop                             0x08001cdc   Section        0  motor.o(i.motor_stop)
+    i.pca9685_init                           0x08001d34   Section        0  pca9685_control.o(i.pca9685_init)
+    i.pca9685_set_freq                       0x08001d48   Section        0  pca9685_control.o(i.pca9685_set_freq)
+    i.pca9685_set_mk                         0x08001e84   Section        0  pca9685_control.o(i.pca9685_set_mk)
+    i.protocol_check                         0x08001f20   Section        0  main.o(i.protocol_check)
+    i.servo_init                             0x08001f5c   Section        0  servo.o(i.servo_init)
+    i.set_servo                              0x08001f64   Section        0  servo.o(i.set_servo)
+    i.sweep_motor_control                    0x08001f7c   Section        0  motor.o(i.sweep_motor_control)
+    x$fpl$d2f                                0x08002084   Section       98  d2f.o(x$fpl$d2f)
+    x$fpl$dadd                               0x080020e8   Section      336  daddsub_clz.o(x$fpl$dadd)
+    _dadd1                                   0x080020f9   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
+    x$fpl$dcmpinf                            0x08002238   Section       24  dcmpi.o(x$fpl$dcmpinf)
+    x$fpl$ddiv                               0x08002250   Section      688  ddiv.o(x$fpl$ddiv)
+    ddiv_entry                               0x08002257   Thumb Code     0  ddiv.o(x$fpl$ddiv)
+    x$fpl$dfix                               0x08002500   Section       94  dfix.o(x$fpl$dfix)
+    x$fpl$dfixu                              0x08002560   Section       90  dfixu.o(x$fpl$dfixu)
+    x$fpl$dflt                               0x080025ba   Section       46  dflt_clz.o(x$fpl$dflt)
+    x$fpl$dleqf                              0x080025e8   Section      120  dleqf.o(x$fpl$dleqf)
+    x$fpl$dmul                               0x08002660   Section      340  dmul.o(x$fpl$dmul)
+    x$fpl$dnaninf                            0x080027b4   Section      156  dnaninf.o(x$fpl$dnaninf)
+    x$fpl$dretinf                            0x08002850   Section       12  dretinf.o(x$fpl$dretinf)
+    x$fpl$drleqf                             0x0800285c   Section      108  drleqf.o(x$fpl$drleqf)
+    x$fpl$drsb                               0x080028c8   Section       22  daddsub_clz.o(x$fpl$drsb)
+    x$fpl$dsub                               0x080028e0   Section      468  daddsub_clz.o(x$fpl$dsub)
+    _dsub1                                   0x080028f1   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
+    x$fpl$f2d                                0x08002ab4   Section       86  f2d.o(x$fpl$f2d)
+    x$fpl$fadd                               0x08002b0c   Section      196  faddsub_clz.o(x$fpl$fadd)
+    _fadd1                                   0x08002b1b   Thumb Code     0  faddsub_clz.o(x$fpl$fadd)
+    x$fpl$fdiv                               0x08002bd0   Section      388  fdiv.o(x$fpl$fdiv)
+    _fdiv1                                   0x08002bd1   Thumb Code     0  fdiv.o(x$fpl$fdiv)
+    x$fpl$fnaninf                            0x08002d54   Section      140  fnaninf.o(x$fpl$fnaninf)
+    x$fpl$fretinf                            0x08002de0   Section       10  fretinf.o(x$fpl$fretinf)
+    x$fpl$fsub                               0x08002dec   Section      234  faddsub_clz.o(x$fpl$fsub)
+    _fsub1                                   0x08002dfb   Thumb Code     0  faddsub_clz.o(x$fpl$fsub)
+    x$fpl$usenofp                            0x08002ed6   Section        0  usenofp.o(x$fpl$usenofp)
     .data                                    0x20000000   Section        4  key.o(.data)
     .data                                    0x20000004   Section      192  motor.o(.data)
     .data                                    0x200000c4   Section        4  mb_communication_protocol.o(.data)
@@ -1393,72 +1393,72 @@ Image Symbol Table
     USART1_IRQHandler                        0x0800132d   Thumb Code    62  uart.o(i.USART1_IRQHandler)
     USART_ClearITPendingBit                  0x08001371   Thumb Code    30  stm32f10x_usart.o(i.USART_ClearITPendingBit)
     USART_Cmd                                0x0800138f   Thumb Code    24  stm32f10x_usart.o(i.USART_Cmd)
-    USART_Configuration                      0x080013a9   Thumb Code   148  uart.o(i.USART_Configuration)
-    USART_GetITStatus                        0x08001445   Thumb Code    84  stm32f10x_usart.o(i.USART_GetITStatus)
-    USART_ITConfig                           0x08001499   Thumb Code    74  stm32f10x_usart.o(i.USART_ITConfig)
-    USART_Init                               0x080014e5   Thumb Code   210  stm32f10x_usart.o(i.USART_Init)
-    delay_ms                                 0x08001621   Thumb Code    20  common.o(i.delay_ms)
-    delay_us                                 0x08001635   Thumb Code   158  common.o(i.delay_us)
-    floor                                    0x080016d5   Thumb Code   204  floor.o(i.floor)
-    is_key_pressed                           0x080017b1   Thumb Code    26  key.o(i.is_key_pressed)
-    key_init                                 0x080017d5   Thumb Code    60  key.o(i.key_init)
-    main                                     0x08001819   Thumb Code    98  main.o(i.main)
-    mb_communication_data_push_t             0x080019d9   Thumb Code    16  mb_communication_protocol.o(i.mb_communication_data_push_t)
-    mb_communication_init_t                  0x08001ab5   Thumb Code    12  mb_communication_protocol.o(i.mb_communication_init_t)
-    mb_communication_package_add_bytes_t     0x08001ac5   Thumb Code    60  mb_communication_package.o(i.mb_communication_package_add_bytes_t)
-    mb_communication_package_calculate_checksum_t 0x08001b01   Thumb Code    44  mb_communication_package.o(i.mb_communication_package_calculate_checksum_t)
-    mb_communication_package_create_t        0x08001b2d   Thumb Code    60  mb_communication_package.o(i.mb_communication_package_create_t)
-    mb_communication_protocol_create_t       0x08001b69   Thumb Code   144  mb_communication_protocol.o(i.mb_communication_protocol_create_t)
-    mb_communication_register_callback_t     0x08001c1d   Thumb Code     8  mb_communication_protocol.o(i.mb_communication_register_callback_t)
-    motor_backward                           0x08001c29   Thumb Code    84  motor.o(i.motor_backward)
-    motor_forward                            0x08001c81   Thumb Code    84  motor.o(i.motor_forward)
-    motor_stop                               0x08001cd9   Thumb Code    84  motor.o(i.motor_stop)
-    pca9685_init                             0x08001d31   Thumb Code    14  pca9685_control.o(i.pca9685_init)
-    pca9685_set_freq                         0x08001d45   Thumb Code   300  pca9685_control.o(i.pca9685_set_freq)
-    pca9685_set_mk                           0x08001e81   Thumb Code   140  pca9685_control.o(i.pca9685_set_mk)
-    protocol_check                           0x08001f1d   Thumb Code    60  main.o(i.protocol_check)
-    servo_init                               0x08001f59   Thumb Code     8  servo.o(i.servo_init)
-    set_servo                                0x08001f61   Thumb Code    24  servo.o(i.set_servo)
-    sweep_motor_control                      0x08001f79   Thumb Code   258  motor.o(i.sweep_motor_control)
-    __aeabi_d2f                              0x08002081   Thumb Code     0  d2f.o(x$fpl$d2f)
-    _d2f                                     0x08002081   Thumb Code    98  d2f.o(x$fpl$d2f)
-    __aeabi_dadd                             0x080020e5   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
-    _dadd                                    0x080020e5   Thumb Code   332  daddsub_clz.o(x$fpl$dadd)
-    __fpl_dcmp_Inf                           0x08002235   Thumb Code    24  dcmpi.o(x$fpl$dcmpinf)
-    __aeabi_ddiv                             0x0800224d   Thumb Code     0  ddiv.o(x$fpl$ddiv)
-    _ddiv                                    0x0800224d   Thumb Code   552  ddiv.o(x$fpl$ddiv)
-    __aeabi_d2iz                             0x080024fd   Thumb Code     0  dfix.o(x$fpl$dfix)
-    _dfix                                    0x080024fd   Thumb Code    94  dfix.o(x$fpl$dfix)
-    __aeabi_d2uiz                            0x0800255d   Thumb Code     0  dfixu.o(x$fpl$dfixu)
-    _dfixu                                   0x0800255d   Thumb Code    90  dfixu.o(x$fpl$dfixu)
-    __aeabi_i2d                              0x080025b7   Thumb Code     0  dflt_clz.o(x$fpl$dflt)
-    _dflt                                    0x080025b7   Thumb Code    46  dflt_clz.o(x$fpl$dflt)
-    __aeabi_cdcmple                          0x080025e5   Thumb Code     0  dleqf.o(x$fpl$dleqf)
-    _dcmple                                  0x080025e5   Thumb Code   120  dleqf.o(x$fpl$dleqf)
-    __fpl_dcmple_InfNaN                      0x08002647   Thumb Code     0  dleqf.o(x$fpl$dleqf)
-    __aeabi_dmul                             0x0800265d   Thumb Code     0  dmul.o(x$fpl$dmul)
-    _dmul                                    0x0800265d   Thumb Code   332  dmul.o(x$fpl$dmul)
-    __fpl_dnaninf                            0x080027b1   Thumb Code   156  dnaninf.o(x$fpl$dnaninf)
-    __fpl_dretinf                            0x0800284d   Thumb Code    12  dretinf.o(x$fpl$dretinf)
-    __aeabi_cdrcmple                         0x08002859   Thumb Code     0  drleqf.o(x$fpl$drleqf)
-    _drcmple                                 0x08002859   Thumb Code   108  drleqf.o(x$fpl$drleqf)
-    __aeabi_drsub                            0x080028c5   Thumb Code     0  daddsub_clz.o(x$fpl$drsb)
-    _drsb                                    0x080028c5   Thumb Code    22  daddsub_clz.o(x$fpl$drsb)
-    __aeabi_dsub                             0x080028dd   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
-    _dsub                                    0x080028dd   Thumb Code   464  daddsub_clz.o(x$fpl$dsub)
-    __aeabi_f2d                              0x08002ab1   Thumb Code     0  f2d.o(x$fpl$f2d)
-    _f2d                                     0x08002ab1   Thumb Code    86  f2d.o(x$fpl$f2d)
-    __aeabi_fadd                             0x08002b09   Thumb Code     0  faddsub_clz.o(x$fpl$fadd)
-    _fadd                                    0x08002b09   Thumb Code   196  faddsub_clz.o(x$fpl$fadd)
-    __aeabi_fdiv                             0x08002bcd   Thumb Code     0  fdiv.o(x$fpl$fdiv)
-    _fdiv                                    0x08002bcd   Thumb Code   384  fdiv.o(x$fpl$fdiv)
-    __fpl_fnaninf                            0x08002d51   Thumb Code   140  fnaninf.o(x$fpl$fnaninf)
-    __fpl_fretinf                            0x08002ddd   Thumb Code    10  fretinf.o(x$fpl$fretinf)
-    __aeabi_fsub                             0x08002de9   Thumb Code     0  faddsub_clz.o(x$fpl$fsub)
-    _fsub                                    0x08002de9   Thumb Code   234  faddsub_clz.o(x$fpl$fsub)
-    __I$use$fp                               0x08002ed2   Number         0  usenofp.o(x$fpl$usenofp)
-    Region$$Table$$Base                      0x08002ed4   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08002ef4   Number         0  anon$$obj.o(Region$$Table)
+    USART_Configuration                      0x080013a9   Thumb Code   146  uart.o(i.USART_Configuration)
+    USART_GetITStatus                        0x08001449   Thumb Code    84  stm32f10x_usart.o(i.USART_GetITStatus)
+    USART_ITConfig                           0x0800149d   Thumb Code    74  stm32f10x_usart.o(i.USART_ITConfig)
+    USART_Init                               0x080014e9   Thumb Code   210  stm32f10x_usart.o(i.USART_Init)
+    delay_ms                                 0x08001625   Thumb Code    20  common.o(i.delay_ms)
+    delay_us                                 0x08001639   Thumb Code   158  common.o(i.delay_us)
+    floor                                    0x080016d9   Thumb Code   204  floor.o(i.floor)
+    is_key_pressed                           0x080017b5   Thumb Code    26  key.o(i.is_key_pressed)
+    key_init                                 0x080017d9   Thumb Code    60  key.o(i.key_init)
+    main                                     0x0800181d   Thumb Code    98  main.o(i.main)
+    mb_communication_data_push_t             0x080019dd   Thumb Code    16  mb_communication_protocol.o(i.mb_communication_data_push_t)
+    mb_communication_init_t                  0x08001ab9   Thumb Code    12  mb_communication_protocol.o(i.mb_communication_init_t)
+    mb_communication_package_add_bytes_t     0x08001ac9   Thumb Code    60  mb_communication_package.o(i.mb_communication_package_add_bytes_t)
+    mb_communication_package_calculate_checksum_t 0x08001b05   Thumb Code    44  mb_communication_package.o(i.mb_communication_package_calculate_checksum_t)
+    mb_communication_package_create_t        0x08001b31   Thumb Code    60  mb_communication_package.o(i.mb_communication_package_create_t)
+    mb_communication_protocol_create_t       0x08001b6d   Thumb Code   144  mb_communication_protocol.o(i.mb_communication_protocol_create_t)
+    mb_communication_register_callback_t     0x08001c21   Thumb Code     8  mb_communication_protocol.o(i.mb_communication_register_callback_t)
+    motor_backward                           0x08001c2d   Thumb Code    84  motor.o(i.motor_backward)
+    motor_forward                            0x08001c85   Thumb Code    84  motor.o(i.motor_forward)
+    motor_stop                               0x08001cdd   Thumb Code    84  motor.o(i.motor_stop)
+    pca9685_init                             0x08001d35   Thumb Code    14  pca9685_control.o(i.pca9685_init)
+    pca9685_set_freq                         0x08001d49   Thumb Code   300  pca9685_control.o(i.pca9685_set_freq)
+    pca9685_set_mk                           0x08001e85   Thumb Code   140  pca9685_control.o(i.pca9685_set_mk)
+    protocol_check                           0x08001f21   Thumb Code    60  main.o(i.protocol_check)
+    servo_init                               0x08001f5d   Thumb Code     8  servo.o(i.servo_init)
+    set_servo                                0x08001f65   Thumb Code    24  servo.o(i.set_servo)
+    sweep_motor_control                      0x08001f7d   Thumb Code   258  motor.o(i.sweep_motor_control)
+    __aeabi_d2f                              0x08002085   Thumb Code     0  d2f.o(x$fpl$d2f)
+    _d2f                                     0x08002085   Thumb Code    98  d2f.o(x$fpl$d2f)
+    __aeabi_dadd                             0x080020e9   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
+    _dadd                                    0x080020e9   Thumb Code   332  daddsub_clz.o(x$fpl$dadd)
+    __fpl_dcmp_Inf                           0x08002239   Thumb Code    24  dcmpi.o(x$fpl$dcmpinf)
+    __aeabi_ddiv                             0x08002251   Thumb Code     0  ddiv.o(x$fpl$ddiv)
+    _ddiv                                    0x08002251   Thumb Code   552  ddiv.o(x$fpl$ddiv)
+    __aeabi_d2iz                             0x08002501   Thumb Code     0  dfix.o(x$fpl$dfix)
+    _dfix                                    0x08002501   Thumb Code    94  dfix.o(x$fpl$dfix)
+    __aeabi_d2uiz                            0x08002561   Thumb Code     0  dfixu.o(x$fpl$dfixu)
+    _dfixu                                   0x08002561   Thumb Code    90  dfixu.o(x$fpl$dfixu)
+    __aeabi_i2d                              0x080025bb   Thumb Code     0  dflt_clz.o(x$fpl$dflt)
+    _dflt                                    0x080025bb   Thumb Code    46  dflt_clz.o(x$fpl$dflt)
+    __aeabi_cdcmple                          0x080025e9   Thumb Code     0  dleqf.o(x$fpl$dleqf)
+    _dcmple                                  0x080025e9   Thumb Code   120  dleqf.o(x$fpl$dleqf)
+    __fpl_dcmple_InfNaN                      0x0800264b   Thumb Code     0  dleqf.o(x$fpl$dleqf)
+    __aeabi_dmul                             0x08002661   Thumb Code     0  dmul.o(x$fpl$dmul)
+    _dmul                                    0x08002661   Thumb Code   332  dmul.o(x$fpl$dmul)
+    __fpl_dnaninf                            0x080027b5   Thumb Code   156  dnaninf.o(x$fpl$dnaninf)
+    __fpl_dretinf                            0x08002851   Thumb Code    12  dretinf.o(x$fpl$dretinf)
+    __aeabi_cdrcmple                         0x0800285d   Thumb Code     0  drleqf.o(x$fpl$drleqf)
+    _drcmple                                 0x0800285d   Thumb Code   108  drleqf.o(x$fpl$drleqf)
+    __aeabi_drsub                            0x080028c9   Thumb Code     0  daddsub_clz.o(x$fpl$drsb)
+    _drsb                                    0x080028c9   Thumb Code    22  daddsub_clz.o(x$fpl$drsb)
+    __aeabi_dsub                             0x080028e1   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
+    _dsub                                    0x080028e1   Thumb Code   464  daddsub_clz.o(x$fpl$dsub)
+    __aeabi_f2d                              0x08002ab5   Thumb Code     0  f2d.o(x$fpl$f2d)
+    _f2d                                     0x08002ab5   Thumb Code    86  f2d.o(x$fpl$f2d)
+    __aeabi_fadd                             0x08002b0d   Thumb Code     0  faddsub_clz.o(x$fpl$fadd)
+    _fadd                                    0x08002b0d   Thumb Code   196  faddsub_clz.o(x$fpl$fadd)
+    __aeabi_fdiv                             0x08002bd1   Thumb Code     0  fdiv.o(x$fpl$fdiv)
+    _fdiv                                    0x08002bd1   Thumb Code   384  fdiv.o(x$fpl$fdiv)
+    __fpl_fnaninf                            0x08002d55   Thumb Code   140  fnaninf.o(x$fpl$fnaninf)
+    __fpl_fretinf                            0x08002de1   Thumb Code    10  fretinf.o(x$fpl$fretinf)
+    __aeabi_fsub                             0x08002ded   Thumb Code     0  faddsub_clz.o(x$fpl$fsub)
+    _fsub                                    0x08002ded   Thumb Code   234  faddsub_clz.o(x$fpl$fsub)
+    __I$use$fp                               0x08002ed6   Number         0  usenofp.o(x$fpl$usenofp)
+    Region$$Table$$Base                      0x08002ed8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08002ef8   Number         0  anon$$obj.o(Region$$Table)
     key_io_map                               0x20000000   Data           4  key.o(.data)
     motor                                    0x20000004   Data         192  motor.o(.data)
     __libspace_start                         0x200000fc   Data          96  libspace.o(.bss)
@@ -1472,9 +1472,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000151
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002fd0, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002fd4, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002ef4, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002ef8, Max: 0x00040000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1628,80 +1628,80 @@ Memory Map of the image
     0x08001370   0x08001370   0x0000001e   Code   RO         1724    i.USART_ClearITPendingBit  stm32f10x_usart.o
     0x0800138e   0x0800138e   0x00000018   Code   RO         1727    i.USART_Cmd         stm32f10x_usart.o
     0x080013a6   0x080013a6   0x00000002   PAD
-    0x080013a8   0x080013a8   0x0000009c   Code   RO          323    i.USART_Configuration  uart.o
-    0x08001444   0x08001444   0x00000054   Code   RO         1731    i.USART_GetITStatus  stm32f10x_usart.o
-    0x08001498   0x08001498   0x0000004a   Code   RO         1733    i.USART_ITConfig    stm32f10x_usart.o
-    0x080014e2   0x080014e2   0x00000002   PAD
-    0x080014e4   0x080014e4   0x000000d8   Code   RO         1734    i.USART_Init        stm32f10x_usart.o
-    0x080015bc   0x080015bc   0x00000064   Code   RO          379    i.calculate_t_from_angle  servo.o
-    0x08001620   0x08001620   0x00000014   Code   RO          352    i.delay_ms          common.o
-    0x08001634   0x08001634   0x0000009e   Code   RO          353    i.delay_us          common.o
-    0x080016d2   0x080016d2   0x00000002   PAD
-    0x080016d4   0x080016d4   0x000000dc   Code   RO         2326    i.floor             m_ws.l(floor.o)
-    0x080017b0   0x080017b0   0x00000024   Code   RO          208    i.is_key_pressed    key.o
-    0x080017d4   0x080017d4   0x00000044   Code   RO          209    i.key_init          key.o
-    0x08001818   0x08001818   0x00000068   Code   RO            4    i.main              main.o
-    0x08001880   0x08001880   0x00000158   Code   RO          405    i.mb_communication_common_protocol_package_push_chars_t  mb_communication_protocol.o
-    0x080019d8   0x080019d8   0x00000014   Code   RO          406    i.mb_communication_data_push_t  mb_communication_protocol.o
-    0x080019ec   0x080019ec   0x000000c8   Code   RO          407    i.mb_communication_ff55_protocol_package_push_chars_t  mb_communication_protocol.o
-    0x08001ab4   0x08001ab4   0x00000010   Code   RO          408    i.mb_communication_init_t  mb_communication_protocol.o
-    0x08001ac4   0x08001ac4   0x0000003c   Code   RO          478    i.mb_communication_package_add_bytes_t  mb_communication_package.o
-    0x08001b00   0x08001b00   0x0000002c   Code   RO          480    i.mb_communication_package_calculate_checksum_t  mb_communication_package.o
-    0x08001b2c   0x08001b2c   0x0000003c   Code   RO          481    i.mb_communication_package_create_t  mb_communication_package.o
-    0x08001b68   0x08001b68   0x00000094   Code   RO          410    i.mb_communication_protocol_create_t  mb_communication_protocol.o
-    0x08001bfc   0x08001bfc   0x00000020   Code   RO          411    i.mb_communication_protocol_set_default_t  mb_communication_protocol.o
-    0x08001c1c   0x08001c1c   0x0000000c   Code   RO          412    i.mb_communication_register_callback_t  mb_communication_protocol.o
-    0x08001c28   0x08001c28   0x00000058   Code   RO          251    i.motor_backward    motor.o
-    0x08001c80   0x08001c80   0x00000058   Code   RO          255    i.motor_forward     motor.o
-    0x08001cd8   0x08001cd8   0x00000058   Code   RO          256    i.motor_stop        motor.o
-    0x08001d30   0x08001d30   0x00000014   Code   RO          661    i.pca9685_init      pca9685_control.o
-    0x08001d44   0x08001d44   0x0000013c   Code   RO          662    i.pca9685_set_freq  pca9685_control.o
-    0x08001e80   0x08001e80   0x0000009c   Code   RO          663    i.pca9685_set_mk    pca9685_control.o
-    0x08001f1c   0x08001f1c   0x0000003c   Code   RO            5    i.protocol_check    main.o
-    0x08001f58   0x08001f58   0x00000008   Code   RO          380    i.servo_init        servo.o
-    0x08001f60   0x08001f60   0x00000018   Code   RO          381    i.set_servo         servo.o
-    0x08001f78   0x08001f78   0x00000108   Code   RO          257    i.sweep_motor_control  motor.o
-    0x08002080   0x08002080   0x00000062   Code   RO         2285    x$fpl$d2f           fz_ws.l(d2f.o)
-    0x080020e2   0x080020e2   0x00000002   PAD
-    0x080020e4   0x080020e4   0x00000150   Code   RO         2287    x$fpl$dadd          fz_ws.l(daddsub_clz.o)
-    0x08002234   0x08002234   0x00000018   Code   RO         2483    x$fpl$dcmpinf       fz_ws.l(dcmpi.o)
-    0x0800224c   0x0800224c   0x000002b0   Code   RO         2294    x$fpl$ddiv          fz_ws.l(ddiv.o)
-    0x080024fc   0x080024fc   0x0000005e   Code   RO         2297    x$fpl$dfix          fz_ws.l(dfix.o)
-    0x0800255a   0x0800255a   0x00000002   PAD
-    0x0800255c   0x0800255c   0x0000005a   Code   RO         2301    x$fpl$dfixu         fz_ws.l(dfixu.o)
-    0x080025b6   0x080025b6   0x0000002e   Code   RO         2306    x$fpl$dflt          fz_ws.l(dflt_clz.o)
-    0x080025e4   0x080025e4   0x00000078   Code   RO         2454    x$fpl$dleqf         fz_ws.l(dleqf.o)
-    0x0800265c   0x0800265c   0x00000154   Code   RO         2311    x$fpl$dmul          fz_ws.l(dmul.o)
-    0x080027b0   0x080027b0   0x0000009c   Code   RO         2406    x$fpl$dnaninf       fz_ws.l(dnaninf.o)
-    0x0800284c   0x0800284c   0x0000000c   Code   RO         2408    x$fpl$dretinf       fz_ws.l(dretinf.o)
-    0x08002858   0x08002858   0x0000006c   Code   RO         2410    x$fpl$drleqf        fz_ws.l(drleqf.o)
-    0x080028c4   0x080028c4   0x00000016   Code   RO         2288    x$fpl$drsb          fz_ws.l(daddsub_clz.o)
-    0x080028da   0x080028da   0x00000002   PAD
-    0x080028dc   0x080028dc   0x000001d4   Code   RO         2289    x$fpl$dsub          fz_ws.l(daddsub_clz.o)
-    0x08002ab0   0x08002ab0   0x00000056   Code   RO         2313    x$fpl$f2d           fz_ws.l(f2d.o)
-    0x08002b06   0x08002b06   0x00000002   PAD
-    0x08002b08   0x08002b08   0x000000c4   Code   RO         2315    x$fpl$fadd          fz_ws.l(faddsub_clz.o)
-    0x08002bcc   0x08002bcc   0x00000184   Code   RO         2322    x$fpl$fdiv          fz_ws.l(fdiv.o)
-    0x08002d50   0x08002d50   0x0000008c   Code   RO         2412    x$fpl$fnaninf       fz_ws.l(fnaninf.o)
-    0x08002ddc   0x08002ddc   0x0000000a   Code   RO         2414    x$fpl$fretinf       fz_ws.l(fretinf.o)
-    0x08002de6   0x08002de6   0x00000002   PAD
-    0x08002de8   0x08002de8   0x000000ea   Code   RO         2317    x$fpl$fsub          fz_ws.l(faddsub_clz.o)
-    0x08002ed2   0x08002ed2   0x00000000   Code   RO         2416    x$fpl$usenofp       fz_ws.l(usenofp.o)
-    0x08002ed2   0x08002ed2   0x00000002   PAD
-    0x08002ed4   0x08002ed4   0x00000020   Data   RO         2543    Region$$Table       anon$$obj.o
+    0x080013a8   0x080013a8   0x000000a0   Code   RO          323    i.USART_Configuration  uart.o
+    0x08001448   0x08001448   0x00000054   Code   RO         1731    i.USART_GetITStatus  stm32f10x_usart.o
+    0x0800149c   0x0800149c   0x0000004a   Code   RO         1733    i.USART_ITConfig    stm32f10x_usart.o
+    0x080014e6   0x080014e6   0x00000002   PAD
+    0x080014e8   0x080014e8   0x000000d8   Code   RO         1734    i.USART_Init        stm32f10x_usart.o
+    0x080015c0   0x080015c0   0x00000064   Code   RO          379    i.calculate_t_from_angle  servo.o
+    0x08001624   0x08001624   0x00000014   Code   RO          352    i.delay_ms          common.o
+    0x08001638   0x08001638   0x0000009e   Code   RO          353    i.delay_us          common.o
+    0x080016d6   0x080016d6   0x00000002   PAD
+    0x080016d8   0x080016d8   0x000000dc   Code   RO         2326    i.floor             m_ws.l(floor.o)
+    0x080017b4   0x080017b4   0x00000024   Code   RO          208    i.is_key_pressed    key.o
+    0x080017d8   0x080017d8   0x00000044   Code   RO          209    i.key_init          key.o
+    0x0800181c   0x0800181c   0x00000068   Code   RO            4    i.main              main.o
+    0x08001884   0x08001884   0x00000158   Code   RO          405    i.mb_communication_common_protocol_package_push_chars_t  mb_communication_protocol.o
+    0x080019dc   0x080019dc   0x00000014   Code   RO          406    i.mb_communication_data_push_t  mb_communication_protocol.o
+    0x080019f0   0x080019f0   0x000000c8   Code   RO          407    i.mb_communication_ff55_protocol_package_push_chars_t  mb_communication_protocol.o
+    0x08001ab8   0x08001ab8   0x00000010   Code   RO          408    i.mb_communication_init_t  mb_communication_protocol.o
+    0x08001ac8   0x08001ac8   0x0000003c   Code   RO          478    i.mb_communication_package_add_bytes_t  mb_communication_package.o
+    0x08001b04   0x08001b04   0x0000002c   Code   RO          480    i.mb_communication_package_calculate_checksum_t  mb_communication_package.o
+    0x08001b30   0x08001b30   0x0000003c   Code   RO          481    i.mb_communication_package_create_t  mb_communication_package.o
+    0x08001b6c   0x08001b6c   0x00000094   Code   RO          410    i.mb_communication_protocol_create_t  mb_communication_protocol.o
+    0x08001c00   0x08001c00   0x00000020   Code   RO          411    i.mb_communication_protocol_set_default_t  mb_communication_protocol.o
+    0x08001c20   0x08001c20   0x0000000c   Code   RO          412    i.mb_communication_register_callback_t  mb_communication_protocol.o
+    0x08001c2c   0x08001c2c   0x00000058   Code   RO          251    i.motor_backward    motor.o
+    0x08001c84   0x08001c84   0x00000058   Code   RO          255    i.motor_forward     motor.o
+    0x08001cdc   0x08001cdc   0x00000058   Code   RO          256    i.motor_stop        motor.o
+    0x08001d34   0x08001d34   0x00000014   Code   RO          661    i.pca9685_init      pca9685_control.o
+    0x08001d48   0x08001d48   0x0000013c   Code   RO          662    i.pca9685_set_freq  pca9685_control.o
+    0x08001e84   0x08001e84   0x0000009c   Code   RO          663    i.pca9685_set_mk    pca9685_control.o
+    0x08001f20   0x08001f20   0x0000003c   Code   RO            5    i.protocol_check    main.o
+    0x08001f5c   0x08001f5c   0x00000008   Code   RO          380    i.servo_init        servo.o
+    0x08001f64   0x08001f64   0x00000018   Code   RO          381    i.set_servo         servo.o
+    0x08001f7c   0x08001f7c   0x00000108   Code   RO          257    i.sweep_motor_control  motor.o
+    0x08002084   0x08002084   0x00000062   Code   RO         2285    x$fpl$d2f           fz_ws.l(d2f.o)
+    0x080020e6   0x080020e6   0x00000002   PAD
+    0x080020e8   0x080020e8   0x00000150   Code   RO         2287    x$fpl$dadd          fz_ws.l(daddsub_clz.o)
+    0x08002238   0x08002238   0x00000018   Code   RO         2483    x$fpl$dcmpinf       fz_ws.l(dcmpi.o)
+    0x08002250   0x08002250   0x000002b0   Code   RO         2294    x$fpl$ddiv          fz_ws.l(ddiv.o)
+    0x08002500   0x08002500   0x0000005e   Code   RO         2297    x$fpl$dfix          fz_ws.l(dfix.o)
+    0x0800255e   0x0800255e   0x00000002   PAD
+    0x08002560   0x08002560   0x0000005a   Code   RO         2301    x$fpl$dfixu         fz_ws.l(dfixu.o)
+    0x080025ba   0x080025ba   0x0000002e   Code   RO         2306    x$fpl$dflt          fz_ws.l(dflt_clz.o)
+    0x080025e8   0x080025e8   0x00000078   Code   RO         2454    x$fpl$dleqf         fz_ws.l(dleqf.o)
+    0x08002660   0x08002660   0x00000154   Code   RO         2311    x$fpl$dmul          fz_ws.l(dmul.o)
+    0x080027b4   0x080027b4   0x0000009c   Code   RO         2406    x$fpl$dnaninf       fz_ws.l(dnaninf.o)
+    0x08002850   0x08002850   0x0000000c   Code   RO         2408    x$fpl$dretinf       fz_ws.l(dretinf.o)
+    0x0800285c   0x0800285c   0x0000006c   Code   RO         2410    x$fpl$drleqf        fz_ws.l(drleqf.o)
+    0x080028c8   0x080028c8   0x00000016   Code   RO         2288    x$fpl$drsb          fz_ws.l(daddsub_clz.o)
+    0x080028de   0x080028de   0x00000002   PAD
+    0x080028e0   0x080028e0   0x000001d4   Code   RO         2289    x$fpl$dsub          fz_ws.l(daddsub_clz.o)
+    0x08002ab4   0x08002ab4   0x00000056   Code   RO         2313    x$fpl$f2d           fz_ws.l(f2d.o)
+    0x08002b0a   0x08002b0a   0x00000002   PAD
+    0x08002b0c   0x08002b0c   0x000000c4   Code   RO         2315    x$fpl$fadd          fz_ws.l(faddsub_clz.o)
+    0x08002bd0   0x08002bd0   0x00000184   Code   RO         2322    x$fpl$fdiv          fz_ws.l(fdiv.o)
+    0x08002d54   0x08002d54   0x0000008c   Code   RO         2412    x$fpl$fnaninf       fz_ws.l(fnaninf.o)
+    0x08002de0   0x08002de0   0x0000000a   Code   RO         2414    x$fpl$fretinf       fz_ws.l(fretinf.o)
+    0x08002dea   0x08002dea   0x00000002   PAD
+    0x08002dec   0x08002dec   0x000000ea   Code   RO         2317    x$fpl$fsub          fz_ws.l(faddsub_clz.o)
+    0x08002ed6   0x08002ed6   0x00000000   Code   RO         2416    x$fpl$usenofp       fz_ws.l(usenofp.o)
+    0x08002ed6   0x08002ed6   0x00000002   PAD
+    0x08002ed8   0x08002ed8   0x00000020   Data   RO         2543    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002ef4, Size: 0x00000760, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002ef8, Size: 0x00000760, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08002ef4   0x00000004   Data   RW          211    .data               key.o
-    0x20000004   0x08002ef8   0x000000c0   Data   RW          258    .data               motor.o
-    0x200000c4   0x08002fb8   0x00000004   Data   RW          414    .data               mb_communication_protocol.o
-    0x200000c8   0x08002fbc   0x00000014   Data   RW          938    .data               stm32f10x_rcc.o
+    0x20000000   0x08002ef8   0x00000004   Data   RW          211    .data               key.o
+    0x20000004   0x08002efc   0x000000c0   Data   RW          258    .data               motor.o
+    0x200000c4   0x08002fbc   0x00000004   Data   RW          414    .data               mb_communication_protocol.o
+    0x200000c8   0x08002fc0   0x00000014   Data   RW          938    .data               stm32f10x_rcc.o
     0x200000dc        -       0x00000020   Zero   RW          413    .bss                mb_communication_protocol.o
     0x200000fc        -       0x00000060   Zero   RW         2420    .bss                c_w.l(libspace.o)
-    0x2000015c   0x08002fd0   0x00000004   PAD
+    0x2000015c   0x08002fd4   0x00000004   PAD
     0x20000160        -       0x00000200   Zero   RW         2159    HEAP                startup_stm32f10x_cl.o
     0x20000360        -       0x00000400   Zero   RW         2158    STACK               startup_stm32f10x_cl.o
 
@@ -1733,10 +1733,10 @@ Image component sizes
        428          6          0          0          0       5336   stm32f10x_usart.o
        396         32          0          0          0       1933   system_stm32f10x.o
         44          4          0          0          0        462   timer.o
-       224         14          0          0          0       1014   uart.o
+       228         20          0          0          0       1014   uart.o
 
     ----------------------------------------------------------------------
-      6536        432        368        220       1568     352068   Object Totals
+      6540        438        368        220       1568     352068   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         34          0          0          0          0          0   (incl. Padding)
 
@@ -1823,15 +1823,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     11652        806        368        220       1668     349400   Grand Totals
-     11652        806        368        220       1668     349400   ELF Image Totals
-     11652        806        368        220          0          0   ROM Totals
+     11656        812        368        220       1668     349400   Grand Totals
+     11656        812        368        220       1668     349400   ELF Image Totals
+     11656        812        368        220          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                12020 (  11.74kB)
+    Total RO  Size (Code + RO Data)                12024 (  11.74kB)
     Total RW  Size (RW Data + ZI Data)              1888 (   1.84kB)
-    Total ROM Size (Code + RO Data + RW Data)      12240 (  11.95kB)
+    Total ROM Size (Code + RO Data + RW Data)      12244 (  11.96kB)
 
 ==============================================================================
 

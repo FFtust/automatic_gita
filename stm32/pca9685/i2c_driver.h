@@ -8,7 +8,7 @@
 #define I2C_DRIVER_SDA   GPIO_Pin_9                // SDA数据线
 #define GPIO_I2C_DRIVER  GPIOE                     // 使用B端口
 
-#define I2C_FREQUENCY       (100000)
+#define I2C_FREQUENCY       (400000)
 #define I2C_CYCLE_DELAY_US  (1000000 / I2C_FREQUENCY)
 
 //**********************I2C函数申明******************************
