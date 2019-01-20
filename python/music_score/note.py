@@ -10,21 +10,25 @@ note_table = \
     "1_u": (2, 1), 
     "7":   (2, 0),
     "6":   (3, 2),
+    "#5":  (3, 1),
     "5":   (3, 0),
+    "#4":  (4, 4),
     "4":   (4, 3),
     "3":   (4, 2),
     "2":   (4, 0),
     "1":   (5, 3),
     "7_d": (5, 2),
     "6_d": (5, 0),
+    "#5_d": (6, 4),
     "5_d": (6, 3),
+    "#4_d" : (6, 2),
     "4_d": (6, 1),
     "3_d": (6, 0),
 }
 
 class note_control():
     def __init__(self):
-        self.grade_pizz_interval = 0.15
+        self.grade_pizz_interval = 0.12
         self.tempo = 60
         self.second_per_beat = 2.5
 
