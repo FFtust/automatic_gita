@@ -43,77 +43,160 @@ tick = 1
 
 while True:
     note.play_note("5", 1 / 8)
+    note.play_note("5", 1 / 8)
+    note.play_note("5", 1 / 8)
+    note.play_note("5", 1 / 8)
+    note.play_note("3", 1 / 8)
+    note.play_note("4", 1 / 8)
 
-    note.play_note("1_u", 1 / 2)
-    note.play_note("2_u", 1 / 3)    
-    note.play_note("3_u", 1 / 6)
-
-    note.play_note("5_u", 1 / 6)
-    note.play_note("3_u", 1 / 6)    
-    note.play_note("3_u", 1 / 2)   
-    note.play_note("5", 1 / 6)   
-
-    note.play_note("1_u", 1 / 2)
-    note.play_note("2_u", 1 / 6)
-    note.play_note("1_u", 1 / 6)    
-    note.play_note("6", 1 / 6)  
-
-    note.play_note("5", 5 / 6)
-    note.play_note("5", 1 / 6)    
-   
-    note.play_note("1_u", 1 / 2)
-    note.play_note("2_u", 1 / 3)    
-    note.play_note("3_u", 1 / 6)
-
-    note.play_note("6_u", 1 / 6)  
-    note.play_note("3_u", 1 / 6)
-    note.play_note("5_u", 1 / 3)  
-    note.play_note("3_u", 1 / 6)
-    note.play_note("2_u", 1 / 6)  
-
-    note.play_note("1_u", 1 / 3)  
-    note.play_note("1_u", 1 / 6)
-    note.play_note("2_u", 1 / 3)  
-    note.play_note("5_u", 1 / 6)
-    
-    note.play_note("2_u", 5 / 6)  
-    note.play_note("3_u", 1 / 6)  
-
-    note.play_note("5_u", 1 / 2)
-    note.play_note("5_u", 1 / 6)  
-    note.play_note("3_u", 5 / 6)
-    note.play_note("5_u", 1 / 6)  
-
-    note.play_note("6_u", 1 / 6)
-    note.play_note("1_u", 1 / 6)  
-    note.play_note("6_u", 1 / 6)
-    note.play_note("6_u", 1 / 3)  
-    note.play_note("3_u", 1 / 6)  
-
-    note.play_note("2_u", 1 / 3)
-    note.play_note("1_u", 1 / 6)  
-    note.play_note("2_u", 1 / 3)
-    note.play_note("3_u", 1 / 6)  
-
-    note.play_note("3_u", 5 / 6)
-    note.play_note("3_u", 1 / 6)
-
-    note.play_note("5_u", 2 / 3)  
-    note.play_note("3_u", 1 / 6)
-    note.play_note("3_u", 1 / 6)  
-
-    note.play_note("2_u", 1 / 6)
-    note.play_note("1_u", 1 / 6)  
-    note.play_note("6", 1 / 2)
-    note.play_note("1_u", 1 / 6)
-
-    note.play_note("2_u", 1 / 3)  
-    note.play_note("1_u", 1 / 6)
-    note.play_note("3_u", 1 / 3)  
-    note.play_note("2_u", 1 / 6)
-
-    note.play_note("1_u", 1)  
-    time.sleep(5)
+    note.play_note("5", 3 / 8)
+    note.play_note("7", 3 / 8)
 
 
+    note.play_note("6", 1 / 8)
+    note.play_note("6", 1 / 8)
+    note.play_note("6", 1 / 8)
+    note.play_note("6", 1 / 8)
+    note.play_note("4", 1 / 8)
+    note.play_note("6", 1 / 8)
+
+    note.play_note("5", 3 / 8)
+    note.play_note("5", 3 / 8)
+
+    note.play_note("5", 1 / 8)
+    note.play_note("5", 1 / 8)
+    note.play_note("5", 1 / 8)
+    note.play_note("5", 1 / 8)
+    note.play_note("7", 1 / 8)
+    note.play_note("6", 1 / 8)
+
+    note.play_note("5", 3 / 8)
+    note.play_note("4", 3 / 16)
+    note.play_note("4", 3 / 8)
+
+    # note.play_note("6", 3 / 8)
+    # note.play_note("5", 1 / 8)
+    # note.play_note("6", 1 / 4)
+    # note.play_note("1_u", 1 / 4)
+
+    # note.play_note("5", 3 / 4)
+    # note.play_note("2", 1 / 8)
+    # note.play_note("3", 1 / 8)
+
+    # note.play_note("4", 3 / 8)
+    # note.play_note("3", 1 / 8)
+    # note.play_note("4", 1 / 8)
+    # note.play_note("1_u", 3 / 8)
+
+    # note.play_note("3", 3 / 8)
+    # note.play_note("2", 1 / 8)
+    # note.play_note("3", 1 / 8)
+    # note.play_note("1_u", 3 / 8)
+
+    # note.play_note("7", 3 / 8)
+    # note.play_note("4", 1 / 8)
+    # note.play_note("4", 1 / 4)
+    # note.play_note("7", 1 / 4)
+
+    # note.play_note("7", 3 / 4)
+    # note.play_note("6", 1 / 8)
+    # note.play_note("7", 1 / 8)
+
+    # note.play_note("1_u", 3 / 8)
+    # note.play_note("7", 1 / 8)
+    # note.play_note("1_u", 1 / 4)
+    # note.play_note("3_u", 1 / 4)
+
+    # note.play_note("7", 3 / 4)
+    # note.play_note("3", 1 / 4)
+
+    # note.play_note("6", 3 / 8)
+    # note.play_note("5", 1 / 8)
+    # note.play_note("6", 1 / 4)
+    # note.play_note("1_u", 1 / 4)
+
+    # note.play_note("5", 3 / 4)
+    # note.play_note("3", 1 / 4)
+
+    # note.play_note("4", 1 / 4)
+    # note.play_note("1_u", 1 / 8)
+    # note.play_note("7", 3 / 8)
+    # note.play_note("1_u", 1 / 4)
+
+    # note.play_note("2_u", 1 / 4)
+    # note.play_note("3_u", 1 / 8)
+    # note.play_note("1_u", 5 / 8)
+
+    # note.play_note("1_u", 1 / 8)
+    # note.play_note("7", 1 / 8)
+    # note.play_note("6", 1 / 4)
+    # note.play_note("7", 1 / 4)
+    # note.play_note("5", 1 / 4)
+
+    # note.play_note("6", 3 / 4)
+    # note.play_note("1_u", 1 / 8)
+    # note.play_note("2_u", 1 / 8)
+
+    # note.play_note("3_u", 3 / 8)
+    # note.play_note("2_u", 1 / 8)
+    # note.play_note("3_u", 1 / 4)
+    # note.play_note("5_u", 1 / 4)
+
+    # note.play_note("2_u", 3 / 4)
+    # note.play_note("5", 1 / 8)
+
+    # note.play_note("1_u", 3 / 8)
+    # note.play_note("7", 1 / 8)
+    # note.play_note("1_u", 1 / 4)
+    # note.play_note("3_u", 1 / 4)
+
+    # note.play_note("3_u", 1)
+
+    # note.play_note("6", 1 / 8)
+    # note.play_note("7", 1 / 8)
+    # note.play_note("1_u", 1 / 4)
+    # note.play_note("7", 1 / 8)
+    # note.play_note("1_u", 1 / 8)
+    # note.play_note("2_u", 1 / 4)
+
+    # note.play_note("1_u", 3 / 8)
+    # note.play_note("5", 1 / 8)
+    # note.play_note("5", 1 / 2)
+
+    # note.play_note("4_u", 1 / 4)
+    # note.play_note("3_u", 1 / 4)
+    # note.play_note("2_u", 1 / 4)
+    # note.play_note("1_u", 1 / 4)
+
+    # note.play_note("3_u", 3 / 4)
+    # note.play_note("3_u", 1 / 4)
+
+    # note.play_note("6_u", 1 / 2)
+    # note.play_note("5_u", 1 / 2)
+
+    # note.play_note("3_u", 1 / 8)
+    # note.play_note("2_u", 1 / 8)
+    # note.play_note("1_u", 3 / 4)
+
+    # note.play_note("2_u", 1 / 4)
+    # note.play_note("1_u", 1 / 8)
+    # note.play_note("2_u", 3 / 8)
+    # note.play_note("5_u", 1 / 4)
+
+    # note.play_note("3_u", 3 / 4)
+    # note.play_note("3_u", 1 / 4)
+
+    # note.play_note("6_u", 1 / 2)
+    # note.play_note("5_u", 1 / 2)
+
+    # note.play_note("3_u", 1 / 8)
+    # note.play_note("2_u", 1 / 8)
+    # note.play_note("1_u", 3 / 4)
+
+    # note.play_note("2_u", 1 / 4)
+    # note.play_note("1_u", 1 / 8)
+    # note.play_note("2_u", 3 / 8)
+    # note.play_note("7", 1 / 4)
+
+    # note.play_note("6", 2)
 

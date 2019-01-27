@@ -12,7 +12,9 @@ class servo_control():
                 start_angles[i] = info[i]
 
         self.all_servo_angles_to = start_angles.copy()
+        # print("***", self.angles)
         self.all_servo_current_angles = [0] * SERVO_NUM
+        self.run()
 
         self.sync_lock = threading.Lock()
         # self.sync_lock.acquire(False)
@@ -58,8 +60,9 @@ class servo_control():
 
 
     def start_control(self):
-        self.work_handle  = threading.Thread(target = self.work, args=())
-        self.work_handle.start()
+        pass
+        # self.work_handle  = threading.Thread(target = self.work, args=())
+        # self.work_handle.start()
 
     def work(self):
         while True:

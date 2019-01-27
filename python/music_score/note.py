@@ -28,7 +28,7 @@ note_table = \
 
 class note_control():
     def __init__(self):
-        self.grade_pizz_interval = 0.12
+        self.grade_pizz_interval = 0.1
         self.tempo = 60
         self.second_per_beat = 2.5
 

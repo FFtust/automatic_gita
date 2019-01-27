@@ -154,7 +154,7 @@ while True:
     note.play_note("5_u", 1 / 2)
 
     note.play_note("3_u", 1 / 8)
-    note.play_note("2_", 1 / 8)
+    note.play_note("2_u", 1 / 8)
     note.play_note("1_u", 3 / 4)
 
     note.play_note("2_u", 1 / 4)
