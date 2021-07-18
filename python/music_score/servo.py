@@ -1,12 +1,14 @@
 import time
 import common_link
 import threading
+import _thread
+lock = _thread.allocate_lock()
 
 SERVO_NUM = 32
 
 class servo_control():
     def __init__(self, info = None):
-        start_angles = [45] * SERVO_NUM
+        start_angles = [90] * SERVO_NUM
         if info != None:
             for i in range(len(info)):
                 start_angles[i] = info[i]
@@ -55,7 +57,10 @@ class servo_control():
     
     def run(self):
         # self.sync_lock.release()
+        lock.acquire()
         self.all_servos_update()
+        # time.sleep(0.05)
+        lock.release()
 
 
 
@@ -102,4 +107,45 @@ class servo_control():
         # print("protocol_frame", protocol_frame)
         common_link.communication.write(protocol_frame)
 
+# import time
+# servos = servo_control()
+# def play(tone):
+#     servos.run_single_servo(tone - 1, 2)
+#     time.sleep(0.25)
+#     servos.run_single_servo(tone - 1, 40)
+#     time.sleep(0.1)
+# table = [1,1,5,5,6,6,5,  4,4,3,3,2,2,1, ]
 
+# while True:
+#     for i in range(32):
+#         servos.run_single_servo(i, 60)
+#         time.sleep(0.1)
+#     for i in range(32):
+#         servos.run_single_servo(i, 90)
+#         time.sleep(0.1)
+#     time.sleep(5)
+
+#     # servos.run_single_servo(16, 0)
+#     # time.sleep(1)
+#     # servos.run_single_servo(16, 90)
+#     # time.sleep(1)
+
+# while True:
+#     for i in range(len(table)):
+#         if i % 7 == 6:
+#             servos.run_single_servo(table[i] - 1, 2)
+#             time.sleep(0.5)
+#             servos.run_single_servo(table[i] - 1, 40)
+#             time.sleep(0.1)
+#         else:
+#             play(table[i])
+#     time.sleep(2)
+
+
+# def test():
+#     while True:
+#         for i in range(8):
+#             servos.run_single_servo(i, 2)
+#             time.sleep(0.1)
+#             servos.run_single_servo(i, 40)
+#             time.sleep(0.1)
