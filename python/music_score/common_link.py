@@ -92,13 +92,6 @@ class common_link:
 
             if receive_frame:
                 return receive_frame[5:-2]
-                # self.frame_list.append(receive_frame[5:-2])
-
-        # if len(self.frame_list) > self.MAX_FRAME_NUM:
-        #     self.frame_list.clear()
-
-        # if self.recv_bin_sem.locked():
-        #     self.recv_bin_sem.release()
 
     def recv(self):
         self.recv_bin_sem.acquire()

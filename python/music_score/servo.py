@@ -14,12 +14,10 @@ class servo_control():
                 start_angles[i] = info[i]
 
         self.all_servo_angles_to = start_angles.copy()
-        # print("***", self.angles)
         self.all_servo_current_angles = [0] * SERVO_NUM
         self.run()
 
         self.sync_lock = threading.Lock()
-        # self.sync_lock.acquire(False)
         self.work_handle = None
 
     def all_servos_update(self):
@@ -27,7 +25,6 @@ class servo_control():
         for i in range(SERVO_NUM):
             if self.all_servo_angles_to[i] != self.all_servo_current_angles[i]:
                 changed_servo_info.append([i, self.all_servo_angles_to[i]])
-        # print(changed_servo_info)
         self.__send_servo_cmd(changed_servo_info)
         self.all_servo_current_angles = self.all_servo_angles_to.copy()
 
@@ -56,10 +53,8 @@ class servo_control():
                 self.all_servo_angles_to[item[0]] = item[1]
     
     def run(self):
-        # self.sync_lock.release()
         lock.acquire()
         self.all_servos_update()
-        # time.sleep(0.05)
         lock.release()
 
 
