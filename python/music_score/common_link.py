@@ -5,7 +5,7 @@ import _thread
 import time
 import json
 
-PORT = "COM7"
+PORT = "COM3"
 
 class common_link:
     # Frame header & end

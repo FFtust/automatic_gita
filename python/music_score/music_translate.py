@@ -17,7 +17,7 @@ servos_angle = \
 "29": [90, 50], "30": [90, 50],"31": [90, 50],"32": [90, 50],"33": [90, 50],"34": [90, 50],"35": [90, 50],
 }
 class music_trans():
-    def __init__(self, music, beat_time = 3.2):
+    def __init__(self, music, beat_time = 3.8):
         self.servo_idx_base = 3
 
         self.music = music
@@ -35,6 +35,7 @@ class music_trans():
     def play_list_sort(self):
         hh = self.play_list.copy()
         ret_list = []
+        # 按时间排序
         while hh != []:
             current_index = 0
             min_t = 100000
@@ -45,6 +46,7 @@ class music_trans():
             ret_list.append(hh[current_index])
             del hh[current_index]
 
+        # 两个连续的相同音符需要单独处理，否则将不会抬起，只有一个声音
         last_angles = []
         for i in range(len(ret_list)):
             last_angles = [(i, ret_list[i][0])]
@@ -55,8 +57,8 @@ class music_trans():
 
                     for jjj in last_angles: 
                         if ret_list[j][0] == jjj[1]:
-                            ret_list[j][2] += 0.025
-                            ret_list[jjj[0]][2] -= 0.04
+                            ret_list[j][2] += self.beat_time * (1/150)#0.04
+                            ret_list[jjj[0]][2] -= self.beat_time * (1/150)#0.04
                             break
 
                     last_angles.append((j, ret_list[j][0]))
@@ -96,7 +98,7 @@ class music_trans():
             self.play_list.append([servo_table[tone] - self.servo_idx_base, angle, self.current_t])
 
 ######################################################################
-    def music_to_play_table(self, ope = "right"):
+    def music_to_play_table(self):
         last_tone = []
         for i in range(len(self.music)):
             check_idx = i
@@ -108,7 +110,6 @@ class music_trans():
 
                     if chor != '-':
                         chors = chor.split(",")
-
                         for item in last_tone:
                             self._stop(item)
 
@@ -128,41 +129,11 @@ class music_trans():
                     self._rest(1 / 16)
         self.play_list_sort()
 
-    def music_to_play_table_tkzc(self):
-        last_tone = []
-        for i in range(len(self.music)):
-            check_idx = i
-            if isinstance(self.music[check_idx], tuple):
-                for j in range(len(self.music[check_idx])):
-                    offset_t = 0
-
-                    chor = self.music[check_idx][j]
-
-                    if chor != '-':
-                        chors = chor.split(",")
-
-                        for item in last_tone:
-                            self._stop(item)
-
-                        last_tone = []
-                        ##########################
-                        for item in chors:
-                            if '{' in item:
-                                temp = eval(item)
-                                for key in temp:
-                                    self._play(key)
-                                    self._rest(temp[key])
-                                    self._stop(key)
-                                    self._rest(-temp[key])
-                            else:
-                                self._play(item)
-                                last_tone.append(item)
-                    self._rest(1 / (self.music[check_idx]))
-        self.play_list_sort()
 import time
 import servo
 
-from scores.���`���� import music_table
+# from scores.亡靈序曲 import music_table
+from scores.梦中的婚礼 import music_table
 music_parse = music_trans(music_table)
 music_parse.music_to_play_table()
 
