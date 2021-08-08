@@ -29,3 +29,14 @@ music_table = \
     ("{'1++':1/8},{'3-':1/8}", "-", "1++,{'6-':1/8}", "1++", "1++,{'1':1/8}", "2++", "{'2++':3/16},{'2-':1/8}", "-", "{'6-':1/8}", "1++", "7+,{'1':1/8}", "6+", "{'5+':3/8},{'2-':1/8}", "-", "{'5-':1/8}", "5+", "6+,{'7-':1/8}", "5+", "{'6+':3/16},{'3-':1/8}", "-", "{'6-':1/8}", "-", "{'1':1/8}", "-"),
 
 )
+
+
+import sys
+sys.path.append('C:\\work\\automatic_gita\\python\\music_score')
+
+import music_translate
+music_parse = music_translate.music_trans([music_table])
+music_parse.set_beat(4)
+music_parse.music_to_play_table()
+music_parse.servos_home()
+music_parse.play_music()
