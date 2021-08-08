@@ -1,5 +1,6 @@
 import time
 import servo
+import math
 
 servo_table = \
 {
@@ -13,15 +14,15 @@ servo_table = \
 
 servos_angle = \
 {
-"0": [80, 45], "1": [80, 45], "2": [80, 45],"3": [80, 45],"4": [80, 45],"5": [80, 45],"6": [80, 45],"7": [80, 45],
-"8": [80, 45], "9": [80, 45],"10": [80, 45],"11": [80, 45],"12": [80, 45],"13": [80, 45],"14": [80, 45],
-"15": [80, 45], "16": [80, 45],"17": [80, 45],"18": [80, 45],"19": [80, 45],"20": [80, 45],"21": [80, 45],
-"22": [80, 45], "23": [80, 45],"24": [80, 45],"25": [80, 45],"26": [80, 45],"27": [80, 45],"28": [80, 45],
-"29": [80, 45], "30": [80, 45],"31": [80, 45],"32": [80, 45],"33": [80, 45],"34": [80, 45],"35": [80, 45],
+"0": [90, 60], "1": [90, 60], "2": [90, 50],"3": [90, 50],"4": [90, 50],"5": [90, 50],"6": [90, 50],"7": [90, 50],
+"8": [90, 50], "9": [90, 50],"10": [90, 50],"11": [90, 50],"12": [90, 50],"13": [90, 50],"14": [90, 50],
+"15": [90, 50], "16": [90, 50],"17": [90, 50],"18": [90, 50],"19": [90, 50],"20": [90, 50],"21": [90, 50],
+"22": [90, 50], "23": [90, 50],"24": [90, 50],"25": [90, 50],"26": [90, 50],"27": [90, 50],"28": [90, 50],
+"29": [90, 50], "30": [90, 50],"31": [90, 50],"32": [90, 50],"33": [90, 50],"34": [90, 50],"35": [90, 50],
 }
-servos_angle = {}
-for i in range(0, 36):
-    servos_angle.update({str(i):[90, 50]})
+# servos_angle = {}
+# for i in range(0, 36):
+#     servos_angle.update({str(i):[90, 50]})
 
 class music_trans():
     def __init__(self, music, beat_time = 5):
@@ -33,11 +34,6 @@ class music_trans():
         self.play_list = []
 
         self.current_t = 0
-
-        self.tone_status = {}
-
-        for key in servo_table:
-            self.tone_status.update({key:0})
 
         self.servos = servo.servo_control()
 
@@ -51,32 +47,27 @@ class music_trans():
     def _rest(self, beat):
         self.current_t += self.beat_time * beat
 
-    def _sleep(self, t_s):
-        self.current_t += t_s
-
-    def _play(self, tone, angle = None):
-        self.tone_status[tone] = 1
-
-        if angle == None:
-            if str(servo_table[tone] - self.servo_idx_base) in servos_angle:
-                angle = servos_angle[str(servo_table[tone] - self.servo_idx_base)][1]
-            else:
-                angle = 30
+    def _play(self, tone):
         if tone in servo_table:
-            self.play_list.append([servo_table[tone] - self.servo_idx_base, angle, self.current_t])
+            self.play_list.append([tone, 1, self.current_t])
 
-    def _stop(self, tone, angle = None):
-        self.tone_status[tone] = 0
+    def _stop(self, tone):
+        if tone in servo_table:
+            self.play_list.append([tone, 0, self.current_t])
 
-        if angle == None:
-            if str(servo_table[tone] - self.servo_idx_base) in servos_angle:
-                angle = servos_angle[str(servo_table[tone] - self.servo_idx_base)][0]
+    def get_angle(slef, play_item):
+        if play_item[1] == 0:
+            if str(play_item[0]) in servos_angle:
+                angle = servos_angle[str(play_item[0])][0]
             else:
                 angle = 90
+        else:
+            if str(play_item[0]) in servos_angle:
+                angle = servos_angle[str(play_item[0])][1]
+            else:
+                angle = 45
 
-        if tone in servo_table:
-            self.play_list.append([servo_table[tone] - self.servo_idx_base, angle, self.current_t])
-
+        return angle
 ######################################################################
     def music_to_play_table(self):
         last_tone = []
@@ -133,42 +124,67 @@ class music_trans():
             del _paly_list[current_index]
 
         # 两个连续的相同音符需要单独处理，否则将不会抬起，只有一个声音
-        last_tones = []
-        for i in range(len(ret_list)):
-            last_tones = [(i, ret_list[i][0])]
+        temp_list1 = []
+        temp_list2 = []
+        i = 0
+        while i < len(ret_list) - 1:
+            temp_list2 = [ret_list[i]]
+            k = i
             for j in range(i + 1, len(ret_list)):
-                if ret_list[j][2] - ret_list[i][2] < 0.02:
-                    if ret_list[j][0] == last_tones[0][1]:
-                        ret_list[j][2] += 0.05
-                        ret_list[last_tones[0][0]][2] -= 0.05
+                if math.fabs(ret_list[j][2] - ret_list[k][2]) < 0.02:
+                    temp_list2.append(ret_list[j])
+                    i += 1
                 else:
+                    i += 1
                     break
+            temp_list1.append(temp_list2)
+
+        ret_list = []
+        for i in range(1, len(temp_list1)):
+            if self._check_special(temp_list1[i]):
+                inser_down = []
+                inser_up = []
+                for item2 in temp_list1[i]:
+                    # print("a", item2)
+                    if item2[1]:
+                        item2[2] += 0.05
+                        inser_down.append(item2.copy())
+                    else:
+                        item2[2] -= 0.05
+                        inser_up.append(item2.copy())
+                    # print("b", item2)
+
+                ret_list.append(inser_up)
+                ret_list.append(inser_down)
+            else:
+                ret_list.append(temp_list1[i])
 
         self.play_list = ret_list
 
+    def _check_special(self, item):
+        for i in range(len(item)):
+            for j in range(i + 1, len(item)):
+                if item[i][0] == item[j][0]:
+                    return True
+        return False
 ######################################################################
     def servos_home(self):
         time.sleep(1)
         for i in range(32):
             self.servos.run_single_servo(i, 90)
 
+
     def play_music(self, play_list = None):
         if play_list == None:
             play_list = self.play_list
-
         start_time = time.time()
         for i in range(len(play_list)):
-            while time.time() - start_time < play_list[i][2]:
+            while time.time() - start_time < play_list[i][0][2]:
                 pass
-            self.servos.set_single_angle(play_list[i][0], play_list[i][1])
 
-            k = i
-            for j in range(k + 1, len(play_list)):
-                if play_list[j][2] - play_list[i][2] < 0.02:
-                    self.servos.set_single_angle(play_list[j][0], play_list[j][1])
-                    i += 1
-                else:
-                    break
+            for item in play_list[i]:
+                print(item, servo_table[item[0]] - self.servo_idx_base , self.get_angle(item))
+                self.servos.set_single_angle(servo_table[item[0]] - self.servo_idx_base , self.get_angle(item))
             self.servos.run()
 
 # from scores.亡靈序曲 import music_table
