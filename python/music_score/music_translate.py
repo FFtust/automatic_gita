@@ -25,9 +25,9 @@ servos_angle = \
 #     servos_angle.update({str(i):[90, 50]})
 
 class music_trans():
-    def __init__(self, music, beat_time = 5):
+    def __init__(self, music, beat_time = 5, toneG = "C"):
         self.servo_idx_base = 3
-
+        self.toneG = toneG
         self.music = music
 
         self.beat_time = beat_time
@@ -78,11 +78,10 @@ class music_trans():
         for music_item in self.music:
             self._reset_t()
             for i in range(len(music_item)):
-                check_idx = i
-                if isinstance(music_item[check_idx], tuple):
-                    for j in range(len(music_item[check_idx])):
+                if isinstance(music_item[i], tuple):
+                    for j in range(len(music_item[i])):
                         # 解析1/16节拍
-                        chor = music_item[check_idx][j]
+                        chor = music_item[i][j]
 
                         # - 代表这个节拍无变化
                         if chor != '-':
@@ -145,14 +144,12 @@ class music_trans():
                 inser_down = []
                 inser_up = []
                 for item2 in temp_list1[i]:
-                    # print("a", item2)
                     if item2[1]:
                         item2[2] += 0
                         inser_down.append(item2.copy())
                     else:
-                        item2[2] -= 0.1
+                        item2[2] -= 0.07
                         inser_up.append(item2.copy())
-                    # print("b", item2)
 
                 ret_list.append(inser_up)
                 ret_list.append(inser_down)
@@ -175,16 +172,20 @@ class music_trans():
 
 
     def play_music(self, play_list = None):
+        if self.toneG == "G":
+            offset = 4
+        elif self.toneG == "C":
+            offset = 0
+
         if play_list == None:
             play_list = self.play_list
         start_time = time.time()
         for i in range(len(play_list)):
             while time.time() - start_time < play_list[i][0][2]:
                 pass
-
             for item in play_list[i]:
-                print(item, servo_table[item[0]] - self.servo_idx_base , self.get_angle(item))
-                self.servos.set_single_angle(servo_table[item[0]] - self.servo_idx_base , self.get_angle(item))
+                print(item, servo_table[item[0]] - self.servo_idx_base + offset, self.get_angle(item))
+                self.servos.set_single_angle(servo_table[item[0]] - self.servo_idx_base + offset, self.get_angle(item))
             self.servos.run()
 
 # from scores.亡靈序曲 import music_table
