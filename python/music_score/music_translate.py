@@ -155,7 +155,7 @@ class music_trans():
                         item2[2] += 0
                         inser_down.append(item2.copy())
                     else:
-                        item2[2] -= 0.02
+                        item2[2] -= 0.06
                         inser_up.append(item2.copy())
 
                 ret_list.append(inser_up)
