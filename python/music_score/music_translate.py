@@ -2,31 +2,37 @@ import time
 import servo
 import math
 
+SERVO_ID_BASE = 3
+
 servo_table = \
 {
 "1--": 1, "2--": 2,"3--": 3,"4--": 4,"5--": 5,"6--": 6,"7--": 7,
 "1-": 8, "2-": 9,"3-": 10,"4-": 11,"5-": 12,"6-": 13,"7-": 14,
 "0": 100, "1": 15, "2": 16,"3": 17,"4": 18,"5": 19,"6": 20,"7": 21,
 "1+": 22, "2+": 23,"3+": 24,"4+": 25,"5+": 26,"6+": 27,"7+": 28,
-"1++": 29, "2++": 30,"3++": 31,"4++": 32,"5++": 33,"6++": 34,"7++": 35,
-"1+++": 36, "2+++": 37,"3+++": 38,"4+++": 39,"5+++": 40,"6+++": 41,"7+++": 42,
+"1++": 29, "2++": 30,"3++": 31,"4++": 32,"5++": 33,"6++": 34,#"7++": 35,
+# "1+++": 36, "2+++": 37,"3+++": 38,"4+++": 39,"5+++": 40,"6+++": 41,"7+++": 42,
+
+"1#": 32 + SERVO_ID_BASE, "2#": 33 + SERVO_ID_BASE,"4#": 34 + SERVO_ID_BASE,"5#": 35 + SERVO_ID_BASE,"6#": 36 + SERVO_ID_BASE,
+"1+#": 37 + SERVO_ID_BASE, "2+#": 38 + SERVO_ID_BASE,"4+#": 39 + SERVO_ID_BASE,"5+#": 40 + SERVO_ID_BASE,"6+#": 41 + SERVO_ID_BASE,
 }
 
 servos_angle = \
 {
-"0": [100, 70], "1": [100, 70], "2": [100, 50],"3": [100, 50],"4": [100, 50],"5": [100, 50],"6": [100, 50],"7": [100, 50],
-"8": [100, 50], "9": [100, 50],"10": [100, 50],"11": [100, 50],"12": [100, 50],"13": [100, 50],"14": [100, 50],
-"15": [100, 50], "16": [100, 50],"17": [100, 50],"18": [100, 50],"19": [100, 50],"20": [100, 50],"21": [100, 50],
-"22": [100, 50], "23": [100, 50],"24": [100, 50],"25": [100, 50],"26": [100, 50],"27": [100, 50],"28": [100, 50],
-"29": [100, 50], "30": [100, 50],"31": [100, 50],"32": [100, 50],"33": [100, 50],"34": [100, 50],"35": [100, 50],
-}
-# servos_angle = {}
-# for i in range(0, 36):
-#     servos_angle.update({str(i):[90, 50]})
+"100":[100, 100], 
+"0": [100, 80], "1": [100, 80], "2": [100, 50],"3": [100, 50],"4": [100, 50],"5": [100, 50],"6": [100, 50],"7": [100, 50],
+"8": [100, 50], "9": [100, 50],"10": [100, 50],"11": [100, 50],"12": [100, 50],"13": [100, 50],"14": [100, 50],"15": [100, 50], 
+
+"16": [100, 50],"17": [100, 50],"18": [100, 50],"19": [100, 50],"20": [100, 50],"21": [100, 50],"22": [100, 50], "23": [100, 50],
+"24": [100, 50],"25": [100, 50],"26": [100, 50],"27": [100, 50],"28": [100, 50],"29": [100, 50], "30": [100, 50],"31": [100, 50],
+
+"32": [100, 85],"33": [100, 85],"34": [100, 85],"35": [100, 85],"36": [100, 85],
+"37": [100, 85],"38": [100, 85],"39": [100, 85],"40": [100, 85],"41": [100, 85],
+"42": [100, 85],"43": [100, 85],"44": [100, 85],"45": [100, 85],"46": [100, 85],}
+
 
 class music_trans():
     def __init__(self, music, beat_time = 5, toneG = "C"):
-        self.servo_idx_base = 3
         self.toneG = toneG
         self.music = music
 
@@ -57,15 +63,15 @@ class music_trans():
 
     def get_angle(slef, play_item):
         if play_item[1] == 0:
-            if str(play_item[0]) in servos_angle:
-                angle = servos_angle[str(play_item[0])][0]
+            if str(play_item[0]) in servo_table:
+                angle = servos_angle[str(servo_table[str(play_item[0])])][0]
             else:
-                angle = 90
+                angle = 100
         else:
-            if str(play_item[0]) in servos_angle:
-                angle = servos_angle[str(play_item[0])][1]
+            if str(play_item[0]) in servo_table:
+                angle = servos_angle[str(servo_table[str(play_item[0])])][1]
             else:
-                angle = 50
+                angle = 80
 
         return angle
 ######################################################################
@@ -79,6 +85,7 @@ class music_trans():
             self._reset_t()
             for i in range(len(music_item)):
                 if isinstance(music_item[i], tuple):
+                    print(len(music_item[i],))
                     for j in range(len(music_item[i])):
                         # 解析1/16节拍
                         chor = music_item[i][j]
@@ -148,7 +155,7 @@ class music_trans():
                         item2[2] += 0
                         inser_down.append(item2.copy())
                     else:
-                        item2[2] -= 0.07
+                        item2[2] -= 0.02
                         inser_up.append(item2.copy())
 
                 ret_list.append(inser_up)
@@ -165,10 +172,11 @@ class music_trans():
                     return True
         return False
 ######################################################################
-    def servos_home(self):
+    def servos_home(self, angle = 100):
         time.sleep(1)
-        for i in range(32):
-            self.servos.run_single_servo(i, 100)
+        for i in range(48):
+            time.sleep(0.02)
+            self.servos.run_single_servo(i, angle)
 
 
     def play_music(self, play_list = None):
@@ -184,8 +192,8 @@ class music_trans():
             while time.time() - start_time < play_list[i][0][2]:
                 pass
             for item in play_list[i]:
-                print(item, servo_table[item[0]] - self.servo_idx_base + offset, self.get_angle(item))
-                self.servos.set_single_angle(servo_table[item[0]] - self.servo_idx_base + offset, self.get_angle(item))
+                print(item, servo_table[item[0]] - SERVO_ID_BASE + offset, self.get_angle(item))
+                self.servos.set_single_angle(servo_table[item[0]] - SERVO_ID_BASE + offset, self.get_angle(item))
             self.servos.run()
 
 # from scores.亡靈序曲 import music_table
