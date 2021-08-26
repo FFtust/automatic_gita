@@ -19,16 +19,16 @@ servo_table = \
 
 servos_angle = \
 {
-"100":[100, 100], 
-"0": [100, 80], "1": [100, 80], "2": [100, 50],"3": [100, 50],"4": [100, 50],"5": [100, 50],"6": [100, 50],"7": [100, 50],
-"8": [100, 50], "9": [100, 50],"10": [100, 50],"11": [100, 50],"12": [100, 50],"13": [100, 50],"14": [100, 50],"15": [100, 50], 
+100:[100, 100], 
+0: [90, 50], 1: [100, 50], 2: [95, 50], 3: [95, 50], 4: [95, 50], 5: [90, 50], 6: [92, 50], 7: [90, 50],
+8: [85, 50], 9: [95, 50], 10: [90, 50], 11: [94, 50], 12: [102, 50], 13: [95, 50], 14: [100, 50], 15: [100, 50], 
 
-"16": [100, 50],"17": [100, 50],"18": [100, 50],"19": [100, 50],"20": [100, 50],"21": [100, 50],"22": [100, 50], "23": [100, 50],
-"24": [100, 50],"25": [100, 50],"26": [100, 50],"27": [100, 50],"28": [100, 50],"29": [100, 50], "30": [100, 50],"31": [100, 50],
+16: [103, 50], 17: [100, 50], 18: [86, 50], 19: [97, 50], 20: [88, 50], 21: [85, 50], 22: [100, 50], 23: [92, 50],
+24: [82, 50], 25: [90, 50], 26: [100, 50], 27: [100, 50], 28: [105, 50], 29: [95, 50], 30: [100, 50], 31: [100, 50],
 
-"32": [115, 80],"33": [115, 80],"34": [115, 80],"35": [115, 80],"36": [115, 80],
-"37": [115, 80],"38": [115, 80],"39": [115, 80],"40": [115, 80],"41": [115, 80],
-"42": [115, 80],"43": [115, 80],"44": [115, 80],"45": [115, 80],"46": [115, 80],
+32: [115, 35],33: [115, 35],34: [115, 35],35: [115, 35],36: [115, 35],
+37: [115, 35],38: [115, 35],39: [115, 35],40: [115, 35],41: [115, 35],
+42: [115, 35],43: [115, 35],44: [115, 35],45: [115, 35],46: [115, 35],
 }
 
 
@@ -65,18 +65,19 @@ class music_trans():
         if tone in self.servo_table:
             self.play_list.append([tone, 0, self.current_t])
 
-    def get_angle(self, play_item):
-        if play_item[1] == 0:
-            if str(play_item[0]) in self.servo_table:
-                angle = self.servos_angle[str(self.servo_table[str(play_item[0])])][0]
+    def get_angle(self, servo_id, sta):
+        print(servo_id, sta)
+        if sta == 0:
+            if servo_id in self.servos_angle:
+                angle = self.servos_angle[servo_id][0]
             else:
                 angle = 100
         else:
-            if str(play_item[0]) in self.servo_table:
-                angle = self.servos_angle[str(self.servo_table[str(play_item[0])])][1]
+            if servo_id in self.servos_angle:
+                angle = self.servos_angle[servo_id][0] - self.servos_angle[servo_id][1]
             else:
-                angle = 80
-
+                angle = 100
+        print(angle)
         return angle
 ######################################################################
     def music_to_play_table(self):
@@ -168,7 +169,6 @@ class music_trans():
             else:
                 ret_list.append(temp_list1[i].copy())
 
-        print(self.play_list)
         self.play_list = ret_list
 
     def _check_special(self, item):
@@ -180,21 +180,17 @@ class music_trans():
 ######################################################################
     def servos_home(self, angle = 100):
         time.sleep(1)
-        # for i in range(48):
-        #     time.sleep(0.02)
-        #     self.servos.run_single_servo(i, angle)
-
         for key in self.servos_angle:
             time.sleep(0.02)
             self.servos.run_single_servo(int(key), self.servos_angle[key][0])            
 
+    def servos_play(self, angle = 100):
+        time.sleep(1)
+        for key in self.servos_angle:
+            time.sleep(0.02)
+            self.servos.run_single_servo(int(key), self.servos_angle[key][0] - self.servos_angle[key][1])    
 
     def play_music(self, play_list = None):
-        if self.toneG == "G":
-            offset = 4
-        elif self.toneG == "C":
-            offset = 0
-
         if play_list == None:
             play_list = self.play_list
         start_time = time.time()
@@ -202,6 +198,17 @@ class music_trans():
             while time.time() - start_time < play_list[i][0][2]:
                 pass
             for item in play_list[i]:
-                print(item, self.servo_table[item[0]] - SERVO_ID_BASE + offset, self.get_angle(item))
-                self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE + offset, self.get_angle(item))
+                print(item, self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
+                self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
             self.servos.run()
+
+
+
+# music_parse = music_trans([()])
+# music_parse.music_to_play_table()
+
+# music_parse.servos_home()
+# time.sleep(5)
+# music_parse.servos_play()
+# time.sleep(5)
+# music_parse.servos_home()
