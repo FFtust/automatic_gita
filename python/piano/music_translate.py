@@ -29,8 +29,8 @@ servos_angle = \
 16: [103, D_ANGLE_COMMON], 17: [100, D_ANGLE_COMMON], 18: [86, D_ANGLE_COMMON], 19: [97, D_ANGLE_COMMON], 20: [88, D_ANGLE_COMMON], 21: [85, D_ANGLE_COMMON], 22: [100, D_ANGLE_COMMON], 23: [92, D_ANGLE_COMMON],
 24: [82, D_ANGLE_COMMON], 25: [90, D_ANGLE_COMMON], 26: [100, D_ANGLE_COMMON], 27: [100, D_ANGLE_COMMON], 28: [105, D_ANGLE_COMMON], 29: [95, D_ANGLE_COMMON], 30: [100, D_ANGLE_COMMON], 31: [100, D_ANGLE_COMMON],
 
-32: [110, D_ANGLE_COMMON_BLACK],33: [110, D_ANGLE_COMMON_BLACK],34: [115, D_ANGLE_COMMON_BLACK],D_ANGLE_COMMON_BLACK: [110, D_ANGLE_COMMON_BLACK],36: [110, D_ANGLE_COMMON_BLACK],
-37: [115, D_ANGLE_COMMON_BLACK],38: [115, D_ANGLE_COMMON_BLACK],39: [115, D_ANGLE_COMMON_BLACK],40: [115, D_ANGLE_COMMON_BLACK],41: [110, D_ANGLE_COMMON_BLACK],
+32: [110 - 10, D_ANGLE_COMMON_BLACK],33: [110 - 10, D_ANGLE_COMMON_BLACK],34: [115 - 10, D_ANGLE_COMMON_BLACK],35: [110 - 10, D_ANGLE_COMMON_BLACK],36: [110 - 10, D_ANGLE_COMMON_BLACK],
+37: [115 - 10, D_ANGLE_COMMON_BLACK],38: [115 - 10, D_ANGLE_COMMON_BLACK],39: [115 - 10, D_ANGLE_COMMON_BLACK],40: [115 - 10, D_ANGLE_COMMON_BLACK],41: [110 - 10, D_ANGLE_COMMON_BLACK],
 42: [115, D_ANGLE_COMMON_BLACK],43: [115, D_ANGLE_COMMON_BLACK],44: [115, D_ANGLE_COMMON_BLACK],45: [115, D_ANGLE_COMMON_BLACK],46: [115, D_ANGLE_COMMON_BLACK],
 }
 
@@ -134,7 +134,7 @@ class music_trans():
                 if _paly_list[i][2] < min_t:
                     min_t = _paly_list[i][2]
                     current_index = i
-            ret_list.append(_paly_list[current_index].copy())
+            ret_list.append(_paly_list[current_index])
             del _paly_list[current_index]
 
         # 将同一时间操作的音符放在一个list中
@@ -142,16 +142,16 @@ class music_trans():
         temp_list2 = []
         i = 0
         while i < len(ret_list) - 1:
-            temp_list2 = [ret_list[i].copy()]
+            temp_list2 = [ret_list[i]]
             k = i
             for j in range(i + 1, len(ret_list)):
                 if math.fabs(ret_list[j][2] - ret_list[k][2]) < 0.02:
-                    temp_list2.append(ret_list[j].copy())
+                    temp_list2.append(ret_list[j])
                     i += 1
                 else:
                     i += 1
                     break
-            temp_list1.append(temp_list2.copy())
+            temp_list1.append(temp_list2)
 
         # 两个连续的相同音符需要单独处理，否则将不会抬起，只有一个声音
         ret_list = []
@@ -164,13 +164,13 @@ class music_trans():
                         item2[2] += 0
                         inser_down.append(item2.copy())
                     else:
-                        item2[2] -= 0.05
+                        item2[2] -= 0.04
                         inser_up.append(item2.copy())
 
-                ret_list.append(inser_up.copy())
-                ret_list.append(inser_down.copy())
+                ret_list.append(inser_up)
+                ret_list.append(inser_down)
             else:
-                ret_list.append(temp_list1[i].copy())
+                ret_list.append(temp_list1[i])
 
         self.play_list = ret_list
 
