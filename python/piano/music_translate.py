@@ -17,18 +17,21 @@ servo_table = \
 "1+#": 37 + SERVO_ID_BASE, "2+#": 38 + SERVO_ID_BASE,"4+#": 39 + SERVO_ID_BASE,"5+#": 40 + SERVO_ID_BASE,"6+#": 41 + SERVO_ID_BASE,
 }
 
+D_ANGLE_COMMON = 50
+D_ANGLE_COMMON_BLACK = 40
+
 servos_angle = \
 {
 100:[100, 100], 
-0: [90, 50], 1: [100, 50], 2: [95, 50], 3: [95, 50], 4: [95, 50], 5: [90, 50], 6: [92, 50], 7: [90, 50],
-8: [85, 50], 9: [95, 50], 10: [90, 50], 11: [94, 50], 12: [102, 50], 13: [95, 50], 14: [100, 50], 15: [100, 50], 
+0: [90, D_ANGLE_COMMON - 20], 1: [100, D_ANGLE_COMMON - 20], 2: [95, D_ANGLE_COMMON - 20], 3: [95, D_ANGLE_COMMON - 20], 4: [95, D_ANGLE_COMMON - 20], 5: [90, D_ANGLE_COMMON], 6: [92, D_ANGLE_COMMON], 7: [90, D_ANGLE_COMMON],
+8: [85, D_ANGLE_COMMON], 9: [95, D_ANGLE_COMMON], 10: [90, D_ANGLE_COMMON], 11: [94, D_ANGLE_COMMON], 12: [102, D_ANGLE_COMMON], 13: [95, D_ANGLE_COMMON], 14: [100, D_ANGLE_COMMON], 15: [100, D_ANGLE_COMMON], 
 
-16: [103, 50], 17: [100, 50], 18: [86, 50], 19: [97, 50], 20: [88, 50], 21: [85, 50], 22: [100, 50], 23: [92, 50],
-24: [82, 50], 25: [90, 50], 26: [100, 50], 27: [100, 50], 28: [105, 50], 29: [95, 50], 30: [100, 50], 31: [100, 50],
+16: [103, D_ANGLE_COMMON], 17: [100, D_ANGLE_COMMON], 18: [86, D_ANGLE_COMMON], 19: [97, D_ANGLE_COMMON], 20: [88, D_ANGLE_COMMON], 21: [85, D_ANGLE_COMMON], 22: [100, D_ANGLE_COMMON], 23: [92, D_ANGLE_COMMON],
+24: [82, D_ANGLE_COMMON], 25: [90, D_ANGLE_COMMON], 26: [100, D_ANGLE_COMMON], 27: [100, D_ANGLE_COMMON], 28: [105, D_ANGLE_COMMON], 29: [95, D_ANGLE_COMMON], 30: [100, D_ANGLE_COMMON], 31: [100, D_ANGLE_COMMON],
 
-32: [115, 35],33: [115, 35],34: [115, 35],35: [115, 35],36: [115, 35],
-37: [115, 35],38: [115, 35],39: [115, 35],40: [115, 35],41: [115, 35],
-42: [115, 35],43: [115, 35],44: [115, 35],45: [115, 35],46: [115, 35],
+32: [110, D_ANGLE_COMMON_BLACK],33: [110, D_ANGLE_COMMON_BLACK],34: [115, D_ANGLE_COMMON_BLACK],D_ANGLE_COMMON_BLACK: [110, D_ANGLE_COMMON_BLACK],36: [110, D_ANGLE_COMMON_BLACK],
+37: [115, D_ANGLE_COMMON_BLACK],38: [115, D_ANGLE_COMMON_BLACK],39: [115, D_ANGLE_COMMON_BLACK],40: [115, D_ANGLE_COMMON_BLACK],41: [110, D_ANGLE_COMMON_BLACK],
+42: [115, D_ANGLE_COMMON_BLACK],43: [115, D_ANGLE_COMMON_BLACK],44: [115, D_ANGLE_COMMON_BLACK],45: [115, D_ANGLE_COMMON_BLACK],46: [115, D_ANGLE_COMMON_BLACK],
 }
 
 
@@ -161,7 +164,7 @@ class music_trans():
                         item2[2] += 0
                         inser_down.append(item2.copy())
                     else:
-                        item2[2] -= 0.07
+                        item2[2] -= 0.05
                         inser_up.append(item2.copy())
 
                 ret_list.append(inser_up.copy())

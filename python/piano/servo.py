@@ -8,7 +8,7 @@ SERVO_NUM = 48
 
 class servo_control():
     def __init__(self, info = None):
-        start_angles = [100] * SERVO_NUM
+        start_angles = [120] * SERVO_NUM
         if info != None:
             for i in range(len(info)):
                 start_angles[i] = info[i]
