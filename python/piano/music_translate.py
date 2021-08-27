@@ -18,7 +18,7 @@ servo_table = \
 }
 
 D_ANGLE_COMMON = 50
-D_ANGLE_COMMON_BLACK = 40
+D_ANGLE_COMMON_BLACK = 20
 
 servos_angle = \
 {
@@ -69,7 +69,6 @@ class music_trans():
             self.play_list.append([tone, 0, self.current_t])
 
     def get_angle(self, servo_id, sta):
-        print(servo_id, sta)
         if sta == 0:
             if servo_id in self.servos_angle:
                 angle = self.servos_angle[servo_id][0]
@@ -80,7 +79,6 @@ class music_trans():
                 angle = self.servos_angle[servo_id][0] - self.servos_angle[servo_id][1]
             else:
                 angle = 100
-        print(angle)
         return angle
 ######################################################################
     def music_to_play_table(self):
@@ -93,7 +91,6 @@ class music_trans():
             self._reset_t()
             for i in range(len(music_item)):
                 if isinstance(music_item[i], tuple):
-                    print(len(music_item[i],))
                     for j in range(len(music_item[i])):
                         # 解析1/16节拍
                         chor = music_item[i][j]
@@ -120,7 +117,7 @@ class music_trans():
                                     self._play(item)
                                     last_tone.append(item)
 
-                        self._rest(1 / 16)
+                        self._rest(1 / len(music_item[i]))
         self.play_list_sort()
 
     def play_list_sort(self):
@@ -164,7 +161,7 @@ class music_trans():
                         item2[2] += 0
                         inser_down.append(item2.copy())
                     else:
-                        item2[2] -= 0.04
+                        item2[2] -= 0.07
                         inser_up.append(item2.copy())
 
                 ret_list.append(inser_up)

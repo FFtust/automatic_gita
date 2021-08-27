@@ -14,8 +14,7 @@ class servo_control():
                 start_angles[i] = info[i]
 
         self.all_servo_angles_to = start_angles.copy()
-        self.all_servo_current_angles = [0] * SERVO_NUM
-        self.run()
+        self.all_servo_current_angles = start_angles.copy()
 
         self.sync_lock = threading.Lock()
         self.work_handle = None
