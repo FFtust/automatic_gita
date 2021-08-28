@@ -167,6 +167,9 @@ class music_trans():
                 ret_list.append(inser_up)
                 ret_list.append(inser_down)
             else:
+                for k in range(len(temp_list1[i])):
+                    if temp_list1[i][k][1] == 1:
+                        temp_list1[i][k][2] -= 0.03
                 ret_list.append(temp_list1[i])
 
         self.play_list = ret_list
