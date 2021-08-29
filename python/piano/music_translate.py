@@ -161,7 +161,7 @@ class music_trans():
                         item2[2] += 0
                         inser_down.append(item2.copy())
                     else:
-                        item2[2] -= 0.07
+                        item2[2] -= 0.05
                         inser_up.append(item2.copy())
 
                 ret_list.append(inser_up)
@@ -169,7 +169,7 @@ class music_trans():
             else:
                 for k in range(len(temp_list1[i])):
                     if temp_list1[i][k][1] == 1:
-                        temp_list1[i][k][2] -= 0.03
+                        temp_list1[i][k][2] -= 0.02
                 ret_list.append(temp_list1[i])
 
         self.play_list = ret_list
