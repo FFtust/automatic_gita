@@ -13,13 +13,16 @@ servo_table = \
 "1++": 29, "2++": 30,"3++": 31,"4++": 32,"5++": 33,"6++": 34,"7++": NOT_IMPLEMET, 
 "1+++": NOT_IMPLEMET,
 
+"1-#": 8, "2-#": 9,"4-#": 11,"5-#": 12,"6-#": 13,
 "1#": 32 + SERVO_ID_BASE, "2#": 33 + SERVO_ID_BASE,"4#": 34 + SERVO_ID_BASE,"5#": 35 + SERVO_ID_BASE,"6#": 36 + SERVO_ID_BASE,
 "1+#": 37 + SERVO_ID_BASE, "2+#": 38 + SERVO_ID_BASE,"4+#": 39 + SERVO_ID_BASE,"5+#": 40 + SERVO_ID_BASE,"6+#": 41 + SERVO_ID_BASE,
+"1++#": 29, "2++#": 30,"4++#": 32,"5++#": 33,"6++#": 34,
+
 }
 
 D_ANGLE_COMMON = 50
 D_ANGLE_COMMON_BLACK = 30
-
+D_ANGLE_OFFSET_BLACK = 0
 servos_angle = \
 {
 100:[100, 100], 
@@ -29,8 +32,8 @@ servos_angle = \
 16: [103, D_ANGLE_COMMON], 17: [100, D_ANGLE_COMMON], 18: [86, D_ANGLE_COMMON], 19: [97, D_ANGLE_COMMON], 20: [88, D_ANGLE_COMMON], 21: [85, D_ANGLE_COMMON], 22: [100, D_ANGLE_COMMON], 23: [92, D_ANGLE_COMMON],
 24: [82, D_ANGLE_COMMON], 25: [90, D_ANGLE_COMMON], 26: [100, D_ANGLE_COMMON], 27: [100, D_ANGLE_COMMON], 28: [105, D_ANGLE_COMMON], 29: [95, D_ANGLE_COMMON], 30: [100, D_ANGLE_COMMON], 31: [100, D_ANGLE_COMMON],
 
-32: [110, D_ANGLE_COMMON_BLACK],33: [110, D_ANGLE_COMMON_BLACK],34: [115, D_ANGLE_COMMON_BLACK],35: [110, D_ANGLE_COMMON_BLACK],36: [110, D_ANGLE_COMMON_BLACK],
-37: [115, D_ANGLE_COMMON_BLACK],38: [115, D_ANGLE_COMMON_BLACK],39: [115, D_ANGLE_COMMON_BLACK],40: [115, D_ANGLE_COMMON_BLACK],41: [110, D_ANGLE_COMMON_BLACK],
+32: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],33: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],34: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],35: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],36: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
+37: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],38: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],39: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],40: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],41: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
 42: [115, D_ANGLE_COMMON_BLACK],43: [115, D_ANGLE_COMMON_BLACK],44: [115, D_ANGLE_COMMON_BLACK],45: [115, D_ANGLE_COMMON_BLACK],46: [115, D_ANGLE_COMMON_BLACK],
 }
 
@@ -158,10 +161,10 @@ class music_trans():
                 inser_up = []
                 for item2 in temp_list1[i]:
                     if item2[1]:
-                        item2[2] += 0.02
+                        item2[2] += 0.0
                         inser_down.append(item2.copy())
                     else:
-                        item2[2] -= 0.05
+                        item2[2] -= 0.07
                         inser_up.append(item2.copy())
 
                 ret_list.append(inser_up)
@@ -169,7 +172,7 @@ class music_trans():
             else:
                 for k in range(len(temp_list1[i])):
                     if temp_list1[i][k][1] == 1:
-                        temp_list1[i][k][2] -= 0.02
+                        temp_list1[i][k][2] -= 0.0
                 ret_list.append(temp_list1[i])
 
         self.play_list = ret_list
@@ -185,7 +188,16 @@ class music_trans():
         time.sleep(1)
         for key in self.servos_angle:
             time.sleep(0.02)
-            self.servos.run_single_servo(int(key), self.servos_angle[key][0])            
+            self.servos.run_single_servo(int(key), self.servos_angle[key][0])    
+
+    def home(self):
+        time.sleep(1)
+        for i in range(len(self.play_list)):
+            for item in self.play_list[i]:
+                self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, 0))
+            self.servos.run()
+        time.sleep(1)
+
 
     def servos_play(self, angle = 100):
         time.sleep(1)
@@ -194,6 +206,7 @@ class music_trans():
             self.servos.run_single_servo(int(key), self.servos_angle[key][0] - self.servos_angle[key][1])    
 
     def play_music(self, play_list = None):
+        self.home()
         if play_list == None:
             play_list = self.play_list
         start_time = time.time()
@@ -204,6 +217,7 @@ class music_trans():
                 print(item, self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
                 self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
             self.servos.run()
+        self.home()
 
 
 
