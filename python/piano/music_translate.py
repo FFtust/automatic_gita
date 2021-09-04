@@ -13,6 +13,7 @@ servo_table = \
 "1++": 29, "2++": 30,"3++": 31,"4++": 32,"5++": 33,"6++": 34,"7++": NOT_IMPLEMET, 
 "1+++": NOT_IMPLEMET,
 
+"1--#": 1, "2--#": 2,"4--#": 4,"5--#": 5,"6--#": 6,
 "1-#": 8, "2-#": 9,"4-#": 11,"5-#": 12,"6-#": 13,
 "1#": 32 + SERVO_ID_BASE, "2#": 33 + SERVO_ID_BASE,"4#": 34 + SERVO_ID_BASE,"5#": 35 + SERVO_ID_BASE,"6#": 36 + SERVO_ID_BASE,
 "1+#": 37 + SERVO_ID_BASE, "2+#": 38 + SERVO_ID_BASE,"4+#": 39 + SERVO_ID_BASE,"5+#": 40 + SERVO_ID_BASE,"6+#": 41 + SERVO_ID_BASE,
@@ -164,7 +165,7 @@ class music_trans():
                         item2[2] += 0.0
                         inser_down.append(item2.copy())
                     else:
-                        item2[2] -= 0.07
+                        item2[2] -= 0.05
                         inser_up.append(item2.copy())
 
                 ret_list.append(inser_up)
@@ -172,7 +173,7 @@ class music_trans():
             else:
                 for k in range(len(temp_list1[i])):
                     if temp_list1[i][k][1] == 1:
-                        temp_list1[i][k][2] -= 0.0
+                        temp_list1[i][k][2] -= 0
                 ret_list.append(temp_list1[i])
 
         self.play_list = ret_list

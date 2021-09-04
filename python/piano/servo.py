@@ -98,8 +98,6 @@ class servo_control():
 
             protocol_frame.append(info[i][0])
             protocol_frame.append(info[i][1])
-        protocol_frame.append(0x0D)
-        protocol_frame.append(0x0A)
 
         # print("protocol_frame", protocol_frame)
         common_link.communication.write(protocol_frame)
