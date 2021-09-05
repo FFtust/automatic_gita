@@ -30,7 +30,7 @@ servos_angle = \
 {
 100:[100, 100], 
 0: [90, D_ANGLE_COMMON - 20], 1: [100, D_ANGLE_COMMON - 20], 2: [95, D_ANGLE_COMMON - 20], 3: [95, D_ANGLE_COMMON - 20], 4: [95, D_ANGLE_COMMON - 20], 5: [90, D_ANGLE_COMMON], 6: [92, D_ANGLE_COMMON], 7: [90, D_ANGLE_COMMON],
-8: [85, D_ANGLE_COMMON], 9: [95, D_ANGLE_COMMON], 10: [90, D_ANGLE_COMMON], 11: [100, D_ANGLE_COMMON], 12: [102, D_ANGLE_COMMON], 13: [98, D_ANGLE_COMMON], 14: [100, D_ANGLE_COMMON], 15: [100, D_ANGLE_COMMON + 7], 
+8: [85, D_ANGLE_COMMON], 9: [95, D_ANGLE_COMMON], 10: [90, D_ANGLE_COMMON], 11: [100, D_ANGLE_COMMON], 12: [102, D_ANGLE_COMMON], 13: [98, D_ANGLE_COMMON], 14: [95, D_ANGLE_COMMON], 15: [100, D_ANGLE_COMMON + 7], 
 
 16: [103, D_ANGLE_COMMON], 17: [100, D_ANGLE_COMMON], 18: [86, D_ANGLE_COMMON], 19: [97, D_ANGLE_COMMON], 20: [88, D_ANGLE_COMMON], 21: [85, D_ANGLE_COMMON], 22: [100, D_ANGLE_COMMON], 23: [92, D_ANGLE_COMMON],
 24: [82, D_ANGLE_COMMON], 25: [90, D_ANGLE_COMMON], 26: [100, D_ANGLE_COMMON], 27: [100, D_ANGLE_COMMON], 28: [105, D_ANGLE_COMMON], 29: [95, D_ANGLE_COMMON], 30: [100, D_ANGLE_COMMON], 31: [100, D_ANGLE_COMMON],
@@ -166,7 +166,7 @@ class music_trans():
                     if temp_list1[i][l][1]:
                         temp_list1[i][l][2] += 0
                     else:
-                        temp_list1[i][l][2] -= 0.05
+                        temp_list1[i][l][2] -= 0.07
 
                 # for j in range(i + 1, len(temp_list1)):
                 #     for m in range(len(temp_list1[j])):
@@ -174,7 +174,7 @@ class music_trans():
             else:
                 for k in range(len(temp_list1[i])):
                     if temp_list1[i][k][1] == 1:
-                        temp_list1[i][k][2] -= 0.01
+                        temp_list1[i][k][2] -= 0
                 # for l in range(len(temp_list1[i])):
                 #     if temp_list1[i][l][1]:
                 #         temp_list1[i][l][2] -= 0.015
