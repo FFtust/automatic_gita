@@ -4,6 +4,8 @@ import math
 
 SERVO_ID_BASE = 3
 NOT_IMPLEMET = 100
+FREE_ANGLE = 181
+
 servo_table = \
 {
 "1--": 1, "2--": 2,"3--": 3,"4--": 4,"5--": 5,"6--": 6,"7--": 7,
@@ -14,9 +16,9 @@ servo_table = \
 "1+++": NOT_IMPLEMET,
 
 "1--#": 1, "2--#": 2,"4--#": 4,"5--#": 5,"6--#": 6,
-"1-#": 8, "2-#": 9,"4-#": 11,"5-#": 12,"6-#": 13,
-"1#": 32 + SERVO_ID_BASE, "2#": 33 + SERVO_ID_BASE,"4#": 34 + SERVO_ID_BASE,"5#": 35 + SERVO_ID_BASE,"6#": 36 + SERVO_ID_BASE,
-"1+#": 37 + SERVO_ID_BASE, "2+#": 38 + SERVO_ID_BASE,"4+#": 39 + SERVO_ID_BASE,"5+#": 40 + SERVO_ID_BASE,"6+#": 41 + SERVO_ID_BASE,
+"1-#": 32 + SERVO_ID_BASE, "2-#": 33 + SERVO_ID_BASE,"4-#": 34 + SERVO_ID_BASE,"5-#": 35 + SERVO_ID_BASE,"6-#": 36 + SERVO_ID_BASE,
+"1#": 37 + SERVO_ID_BASE, "2#": 38 + SERVO_ID_BASE,"4#": 39 + SERVO_ID_BASE,"5#": 40 + SERVO_ID_BASE,"6#": 41 + SERVO_ID_BASE,
+"1+#": 42 + SERVO_ID_BASE, "2+#": 43 + SERVO_ID_BASE,"4+#": 44 + SERVO_ID_BASE,"5+#": 45 + SERVO_ID_BASE,"6+#": 46 + SERVO_ID_BASE,
 "1++#": 29, "2++#": 30,"4++#": 32,"5++#": 33,"6++#": 34,
 
 }
@@ -33,15 +35,14 @@ servos_angle = \
 16: [103, D_ANGLE_COMMON], 17: [100, D_ANGLE_COMMON], 18: [86, D_ANGLE_COMMON], 19: [97, D_ANGLE_COMMON], 20: [88, D_ANGLE_COMMON], 21: [85, D_ANGLE_COMMON], 22: [100, D_ANGLE_COMMON], 23: [92, D_ANGLE_COMMON],
 24: [82, D_ANGLE_COMMON], 25: [90, D_ANGLE_COMMON], 26: [100, D_ANGLE_COMMON], 27: [100, D_ANGLE_COMMON], 28: [105, D_ANGLE_COMMON], 29: [95, D_ANGLE_COMMON], 30: [100, D_ANGLE_COMMON], 31: [100, D_ANGLE_COMMON],
 
-32: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],33: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],34: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],35: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],36: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
-37: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],38: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],39: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],40: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],41: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
-42: [115, D_ANGLE_COMMON_BLACK],43: [115, D_ANGLE_COMMON_BLACK],44: [115, D_ANGLE_COMMON_BLACK],45: [115, D_ANGLE_COMMON_BLACK],46: [115, D_ANGLE_COMMON_BLACK],
+32: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],33: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],34: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],35: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],36: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
+37: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],38: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],39: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],40: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],41: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
+42: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],43: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],44: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],45: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],46: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
 }
 
 
 class music_trans():
-    def __init__(self, music, beat = 60, toneG = "C"):
-        self.toneG = toneG
+    def __init__(self, music, beat = 60):
         self.music = music
 
         self.beat_time = 4 * (60 / beat)
@@ -163,17 +164,17 @@ class music_trans():
             if self._check_special(temp_list1[i]):
                 for l in range(len(temp_list1[i])):
                     if temp_list1[i][l][1]:
-                        temp_list1[i][l][2] += 0.0
+                        temp_list1[i][l][2] += 0
                     else:
-                        temp_list1[i][l][2] -= 0.07
+                        temp_list1[i][l][2] -= 0.05
 
                 # for j in range(i + 1, len(temp_list1)):
                 #     for m in range(len(temp_list1[j])):
-                #         temp_list1[j][m][2] += 0.00
+                #         temp_list1[j][m][2] += 0.05
             else:
                 for k in range(len(temp_list1[i])):
                     if temp_list1[i][k][1] == 1:
-                        temp_list1[i][k][2] -= 0.0
+                        temp_list1[i][k][2] -= 0.01
                 # for l in range(len(temp_list1[i])):
                 #     if temp_list1[i][l][1]:
                 #         temp_list1[i][l][2] -= 0.015
@@ -194,11 +195,16 @@ class music_trans():
                     return True
         return False
 ######################################################################
-    def servos_home(self, angle = 100):
+    def servos_home(self):
         time.sleep(1)
         for key in self.servos_angle:
             time.sleep(0.02)
             self.servos.run_single_servo(int(key), self.servos_angle[key][0])    
+
+    def free_all(self):
+        time.sleep(1)
+        for key in self.servos_angle:
+            self.servos.run_single_servo(int(key), FREE_ANGLE)  
 
     def home(self):
         time.sleep(1)
@@ -207,6 +213,7 @@ class music_trans():
                 self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, 0))
             self.servos.run()
         time.sleep(1)
+        self.free_all()
 
 
     def servos_play(self, angle = 100):
@@ -220,9 +227,13 @@ class music_trans():
         if play_list == None:
             play_list = self.play_list
         start_time = time.time()
+        last_item = []
         for i in range(len(play_list)):
             while time.time() - start_time < play_list[i][0][2]:
                 pass
+            for item in last_item:
+                self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, FREE_ANGLE)
+
             for item in play_list[i]:
                 print(item, self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
                 self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))

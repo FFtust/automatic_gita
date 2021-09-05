@@ -91,8 +91,8 @@ class servo_control():
 
         for i in range(len(info)):
             info[i][0] &= 0xff 
-            if info[i][1] > 180:
-                info[i][1] = 180
+            if info[i][1] > 181:
+                info[i][1] = 181
             if info[i][1] < 0:
                 info[i][1] = 0
 
