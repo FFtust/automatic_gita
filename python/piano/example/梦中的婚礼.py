@@ -38,6 +38,4 @@ import music_translate
 music_parse = music_translate.music_trans([music_table])
 music_parse.set_beat(68)
 music_parse.music_to_play_table()
-music_parse.servos_home()
 music_parse.play_music()
-music_parse.servos_home()

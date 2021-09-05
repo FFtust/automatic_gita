@@ -124,19 +124,19 @@ class music_trans():
                         self._rest(1 / len(music_item[i]))
         self.play_list_sort()
 
-    def play_list_sort(self):
-        _paly_list = self.play_list.copy()
+    def _sort_by_time(self, play_list):
+        _play_list = play_list.copy()
         ret_list = []
         # 按时间排序
-        while _paly_list != []:
+        while _play_list != []:
             current_index = 0
             min_t = 100000
-            for i in range(len(_paly_list)):
-                if _paly_list[i][2] < min_t:
-                    min_t = _paly_list[i][2]
+            for i in range(len(_play_list)):
+                if _play_list[i][2] < min_t:
+                    min_t = _play_list[i][2]
                     current_index = i
-            ret_list.append(_paly_list[current_index])
-            del _paly_list[current_index]
+            ret_list.append(_play_list[current_index])
+            del _play_list[current_index]
 
         # 将同一时间操作的音符放在一个list中
         temp_list1 = []
@@ -153,30 +153,39 @@ class music_trans():
                     i += 1
                     break
             temp_list1.append(temp_list2)
+        return temp_list1
+
+    def play_list_sort(self):
+        temp_list1 = self._sort_by_time(self.play_list)
 
         # 两个连续的相同音符需要单独处理，否则将不会抬起，只有一个声音
-        ret_list = []
         for i in range(1, len(temp_list1)):
             if self._check_special(temp_list1[i]):
-                inser_down = []
-                inser_up = []
-                for item2 in temp_list1[i]:
-                    if item2[1]:
-                        item2[2] += 0.0
-                        inser_down.append(item2.copy())
+                for l in range(len(temp_list1[i])):
+                    if temp_list1[i][l][1]:
+                        temp_list1[i][l][2] += 0.0
                     else:
-                        item2[2] -= 0.05
-                        inser_up.append(item2.copy())
+                        temp_list1[i][l][2] -= 0.07
 
-                ret_list.append(inser_up)
-                ret_list.append(inser_down)
+                # for j in range(i + 1, len(temp_list1)):
+                #     for m in range(len(temp_list1[j])):
+                #         temp_list1[j][m][2] += 0.00
             else:
                 for k in range(len(temp_list1[i])):
                     if temp_list1[i][k][1] == 1:
-                        temp_list1[i][k][2] -= 0
-                ret_list.append(temp_list1[i])
+                        temp_list1[i][k][2] -= 0.0
+                # for l in range(len(temp_list1[i])):
+                #     if temp_list1[i][l][1]:
+                #         temp_list1[i][l][2] -= 0.015
+                #     else:
+                #         temp_list1[i][l][2] += 0.015
 
-        self.play_list = ret_list
+        temp = []
+        for item in temp_list1:
+            for item2 in item:
+                temp.append(item2)
+
+        self.play_list = self._sort_by_time(temp)
 
     def _check_special(self, item):
         for i in range(len(item)):
@@ -219,14 +228,3 @@ class music_trans():
                 self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
             self.servos.run()
         self.home()
-
-
-
-# music_parse = music_trans([()])
-# music_parse.music_to_play_table()
-
-# music_parse.servos_home()
-# time.sleep(5)
-# music_parse.servos_play()
-# time.sleep(5)
-# music_parse.servos_home()

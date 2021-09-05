@@ -128,5 +128,3 @@ import music_translate
 music_parse = music_translate.music_trans([music_table, music_table_left])
 music_parse.set_beat(82)
 music_parse.music_to_play_table()
-music_parse.play_music()
-
