@@ -30,14 +30,14 @@ servos_angle = \
 {
 100:[100, 100], 
 0: [90, D_ANGLE_COMMON - 20], 1: [100, D_ANGLE_COMMON - 20], 2: [95, D_ANGLE_COMMON - 20], 3: [95, D_ANGLE_COMMON - 20], 4: [95, D_ANGLE_COMMON - 20], 5: [90, D_ANGLE_COMMON], 6: [92, D_ANGLE_COMMON], 7: [90, D_ANGLE_COMMON],
-8: [85, D_ANGLE_COMMON], 9: [95, D_ANGLE_COMMON], 10: [90, D_ANGLE_COMMON], 11: [94, D_ANGLE_COMMON], 12: [102, D_ANGLE_COMMON], 13: [95, D_ANGLE_COMMON], 14: [100, D_ANGLE_COMMON], 15: [100, D_ANGLE_COMMON], 
+8: [85, D_ANGLE_COMMON], 9: [95, D_ANGLE_COMMON], 10: [90, D_ANGLE_COMMON], 11: [100, D_ANGLE_COMMON], 12: [102, D_ANGLE_COMMON], 13: [98, D_ANGLE_COMMON], 14: [100, D_ANGLE_COMMON], 15: [100, D_ANGLE_COMMON + 7], 
 
 16: [103, D_ANGLE_COMMON], 17: [100, D_ANGLE_COMMON], 18: [86, D_ANGLE_COMMON], 19: [97, D_ANGLE_COMMON], 20: [88, D_ANGLE_COMMON], 21: [85, D_ANGLE_COMMON], 22: [100, D_ANGLE_COMMON], 23: [92, D_ANGLE_COMMON],
 24: [82, D_ANGLE_COMMON], 25: [90, D_ANGLE_COMMON], 26: [100, D_ANGLE_COMMON], 27: [100, D_ANGLE_COMMON], 28: [105, D_ANGLE_COMMON], 29: [95, D_ANGLE_COMMON], 30: [100, D_ANGLE_COMMON], 31: [100, D_ANGLE_COMMON],
 
 32: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],33: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],34: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],35: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],36: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
-37: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],38: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],39: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],40: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],41: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
-42: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],43: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],44: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],45: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],46: [115 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
+37: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],38: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],39: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],40: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],41: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
+42: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],43: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],44: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK - 10],45: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],46: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
 }
 
 
@@ -200,6 +200,7 @@ class music_trans():
         for key in self.servos_angle:
             time.sleep(0.02)
             self.servos.run_single_servo(int(key), self.servos_angle[key][0])    
+        self.free_all()
 
     def free_all(self):
         time.sleep(1)
@@ -213,7 +214,6 @@ class music_trans():
                 self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, 0))
             self.servos.run()
         time.sleep(1)
-        self.free_all()
 
 
     def servos_play(self, angle = 100):
@@ -227,15 +227,14 @@ class music_trans():
         if play_list == None:
             play_list = self.play_list
         start_time = time.time()
-        last_item = []
         for i in range(len(play_list)):
             while time.time() - start_time < play_list[i][0][2]:
                 pass
-            for item in last_item:
-                self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, FREE_ANGLE)
 
             for item in play_list[i]:
                 print(item, self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
                 self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
+
             self.servos.run()
+
         self.home()

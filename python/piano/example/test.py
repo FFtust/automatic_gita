@@ -1,13 +1,17 @@
-music_table = \
+music_table1 = \
 (
-    # ("1-", "2-", "3-", "4-", "5-", "6-", "7-", "1", "2", "3", "4", "5", "6", "7", "1+", "2+"),
-    # ("3+", "4+", "5+", "6+", "7+", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"),
     ("0", "0"),
-    ("1,1#", "1,1#", "2,2#", "4,4#", "5,5#", "6,6#"),
-    ("1+,1+#", "1+,1+#", "2+,2+#", "4+,4+#", "5+,5+#", "6+,6+#"),
-
+	("1---", "2---", "3---", "4---", "5---", "6---", "7---", "1--", "2--", "3--", "4--", "5--", "6--", "7--"),
+    ("1-", "2-", "3-", "4-", "5-", "6-", "7-", "1", "2", "3", "4", "5", "6", "7", "1+", "2+"),
+    ("3+", "4+", "5+", "6+", "7+", "1++", "2++", "3++", "4++", "5++", "6++", "7++", "1+++", "-", "-", "-"),
+    ("1-#", "2-#", "4-#", "5-#", "6-#", "1#", "2#", "4#", "5#", "6#",),
+    ("1+#", "2+#", "4+#", "5+#", "6+#", "1++#", "2++#", "4++#", "5++#", "6++#",),
 )
-
+music_table2 = \
+(
+    ("0", "0"),
+	("6+,6+#", "6+,6+#")
+)
 
 # music_table = \
 # (
@@ -24,12 +28,10 @@ import sys,time
 sys.path.append('C:\\work\\automatic_gita\\python\\piano')
 
 import music_translate
-music_parse = music_translate.music_trans([music_table])
-music_parse.servos_home()
-music_parse.set_beat(60)
+music_parse = music_translate.music_trans([music_table2])
+music_parse.set_beat(80)
 music_parse.music_to_play_table()
 music_parse.play_music()
-music_parse.servos_home()
 
 # music_parse.servos.run_single_servo(32, 70)
 # time.sleep(1)
