@@ -1,6 +1,7 @@
 import time
 import servo
 import math
+import random
 
 SERVO_ID_BASE = 3
 NOT_IMPLEMET = 100
@@ -54,6 +55,8 @@ class music_trans():
         self.servo_table = servo_table
 
         self.servos = servo.servo_control()
+
+        self._count = 0
 
     def set_beat(self, beat):
         self.beat_time = 4 * (60 / beat)
@@ -122,7 +125,8 @@ class music_trans():
                                     self._play(item)
                                     last_tone.append(item)
 
-                        self._rest(1 / len(music_item[i]))
+                        # self._rest(1 / len(music_item[i]))
+                        self._rest(1 / 16)
         self.play_list_sort()
 
     def _sort_by_time(self, play_list):
@@ -224,6 +228,7 @@ class music_trans():
 
     def play_music(self, play_list = None):
         self.home()
+        self.create_noise()
         if play_list == None:
             play_list = self.play_list
         start_time = time.time()
@@ -238,3 +243,8 @@ class music_trans():
             self.servos.run()
 
         self.home()
+
+    def create_noise(self):
+        for i in range(len(self.play_list)):
+            self._count += 0.2
+            self.play_list[i][0][2] += math.sin(self._count) * 0.03
