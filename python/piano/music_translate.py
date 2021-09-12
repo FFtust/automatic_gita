@@ -43,16 +43,13 @@ class music_trans():
             self.play_list.append([tone, 0, self.current_t])
 
     def get_angle(self, servo_id, sta):
+        angle = 100
         if sta == 0:
             if servo_id in self.servos_angle:
                 angle = self.servos_angle[servo_id][0]
-            else:
-                angle = 100
         else:
             if servo_id in self.servos_angle:
                 angle = self.servos_angle[servo_id][0] - self.servos_angle[servo_id][1]
-            else:
-                angle = 100
         return angle
 ######################################################################
     def music_to_play_table(self):
@@ -94,10 +91,10 @@ class music_trans():
                                     for key in temp:
                                         self._rest_with_time(temp[key])
                                         self._play(key)
-                                        self._rest((1 / len(music_item[i])) * 4)
+                                        self._rest(1 / len(music_item[i]))
                                         self._rest_with_time(- temp[key])
                                         self._stop(key)
-                                        self._rest((-1 / len(music_item[i]) * 4))
+                                        self._rest(-1 / len(music_item[i]))
                                 elif '{' in item:
                                     temp = eval(item)
                                     for key in temp:
@@ -112,7 +109,7 @@ class music_trans():
                         self._rest(1 / len(music_item[i]))
                         # self._rest(1 / 16)
 
-                self._rest_with_time(0.05)
+                self._rest_with_time(0.01)
 
         self.play_list_sort()
 
@@ -152,16 +149,17 @@ class music_trans():
 
         # 两个连续的相同音符需要单独处理，否则将不会抬起，只有一个声音
         for i in range(1, len(temp_list1)):
-            if self._check_special(temp_list1[i]):
-                for l in range(len(temp_list1[i])):
+            t_ret = self._check_special(temp_list1[i])
+            if t_ret != []:
+                for l in t_ret:
                     if temp_list1[i][l][1]:
-                        temp_list1[i][l][2] += 0
+                        temp_list1[i][l][2] += 0.0
                     else:
                         temp_list1[i][l][2] -= 0.07
 
                 # for j in range(i + 1, len(temp_list1)):
                 #     for m in range(len(temp_list1[j])):
-                #         temp_list1[j][m][2] += 0.05
+                #         temp_list1[j][m][2] += 0.02
             else:
                 for k in range(len(temp_list1[i])):
                     if temp_list1[i][k][1] == 1:
@@ -180,11 +178,15 @@ class music_trans():
         self.play_list = self._sort_by_time(temp)
 
     def _check_special(self, item):
+        ret = []
         for i in range(len(item)):
             for j in range(i + 1, len(item)):
                 if item[i][0] == item[j][0]:
-                    return True
-        return False
+                    if item[i][1] == 0:
+                        ret.append(i)
+                    else:
+                        ret.append(j)
+        return ret
 ######################################################################
     def servos_home(self):
         time.sleep(1)
@@ -239,5 +241,5 @@ class music_trans():
 
     def create_noise(self):
         for i in range(len(self.play_list)):
-            self._count += 0.2
-            self.play_list[i][0][2] += math.sin(self._count) * 0.015
+            self._count += 0.1
+            self.play_list[i][0][2] += abs(math.sin(self._count)) * 0.01

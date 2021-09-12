@@ -36,6 +36,18 @@ servos_angle = \
 42: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],43: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],44: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK - 10],45: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],46: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
 }
 
+def get_angle(servo_id, sta):
+    if sta == 0:
+        if servo_id in servos_angle:
+            angle = servos_angle[servo_id][0]
+        else:
+            angle = 100
+    else:
+        if servo_id in servos_angle:
+            angle = servos_angle[servo_id][0] - servos_angle[servo_id][1]
+        else:
+            angle = 100
+    return angle
 #####################################################################
 
 servo_table_G = \
