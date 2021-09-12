@@ -2,51 +2,14 @@ import time
 import servo
 import math
 import random
-
-SERVO_ID_BASE = 3
-NOT_IMPLEMET = 100
-FREE_ANGLE = 181
-
-servo_table = \
-{
-"1--": 1, "2--": 2,"3--": 3,"4--": 4,"5--": 5,"6--": 6,"7--": 7,
-"1-": 8, "2-": 9,"3-": 10,"4-": 11,"5-": 12,"6-": 13,"7-": 14,
-"0": 100, "1": 15, "2": 16,"3": 17,"4": 18,"5": 19,"6": 20,"7": 21,
-"1+": 22, "2+": 23,"3+": 24,"4+": 25,"5+": 26,"6+": 27,"7+": 28,
-"1++": 29, "2++": 30,"3++": 31,"4++": 32,"5++": 33,"6++": 34,"7++": NOT_IMPLEMET, 
-"1+++": NOT_IMPLEMET,
-
-"1--#": 1, "2--#": 2,"4--#": 4,"5--#": 5,"6--#": 6,
-"1-#": 32 + SERVO_ID_BASE, "2-#": 33 + SERVO_ID_BASE,"4-#": 34 + SERVO_ID_BASE,"5-#": 35 + SERVO_ID_BASE,"6-#": 36 + SERVO_ID_BASE,
-"1#": 37 + SERVO_ID_BASE, "2#": 38 + SERVO_ID_BASE,"4#": 39 + SERVO_ID_BASE,"5#": 40 + SERVO_ID_BASE,"6#": 41 + SERVO_ID_BASE,
-"1+#": 42 + SERVO_ID_BASE, "2+#": 43 + SERVO_ID_BASE,"4+#": 44 + SERVO_ID_BASE,"5+#": 45 + SERVO_ID_BASE,"6+#": 46 + SERVO_ID_BASE,
-"1++#": 29, "2++#": 30,"4++#": 32,"5++#": 33,"6++#": 34,
-
-}
-
-D_ANGLE_COMMON = 50
-D_ANGLE_COMMON_BLACK = 30
-D_ANGLE_OFFSET_BLACK = 0
-servos_angle = \
-{
-100:[100, 100], 
-0: [90, D_ANGLE_COMMON - 20], 1: [100, D_ANGLE_COMMON - 20], 2: [95, D_ANGLE_COMMON - 20], 3: [95, D_ANGLE_COMMON - 20], 4: [95, D_ANGLE_COMMON - 20], 5: [90, D_ANGLE_COMMON], 6: [92, D_ANGLE_COMMON], 7: [90, D_ANGLE_COMMON],
-8: [85, D_ANGLE_COMMON], 9: [95, D_ANGLE_COMMON], 10: [90, D_ANGLE_COMMON], 11: [100, D_ANGLE_COMMON], 12: [102, D_ANGLE_COMMON], 13: [98, D_ANGLE_COMMON], 14: [95, D_ANGLE_COMMON], 15: [100, D_ANGLE_COMMON + 7], 
-
-16: [103, D_ANGLE_COMMON], 17: [100, D_ANGLE_COMMON], 18: [86, D_ANGLE_COMMON], 19: [97, D_ANGLE_COMMON], 20: [88, D_ANGLE_COMMON], 21: [85, D_ANGLE_COMMON], 22: [100, D_ANGLE_COMMON], 23: [92, D_ANGLE_COMMON],
-24: [82, D_ANGLE_COMMON], 25: [90, D_ANGLE_COMMON], 26: [100, D_ANGLE_COMMON], 27: [100, D_ANGLE_COMMON], 28: [105, D_ANGLE_COMMON], 29: [95, D_ANGLE_COMMON], 30: [100, D_ANGLE_COMMON], 31: [100, D_ANGLE_COMMON],
-
-32: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],33: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],34: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],35: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],36: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
-37: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],38: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],39: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],40: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],41: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
-42: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],43: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],44: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK - 10],45: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],46: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
-}
-
+from note import *
 
 class music_trans():
     def __init__(self, music, beat = 60):
         self.music = music
 
         self.beat_time = 4 * (60 / beat)
+        self.origin_beat = beat
         self.play_list = []
 
         self.current_t = 0
@@ -67,6 +30,9 @@ class music_trans():
 
     def _rest(self, beat):
         self.current_t += self.beat_time * beat
+
+    def _rest_with_time(self, t):
+        self.current_t += t
 
     def _play(self, tone):
         if tone in self.servo_table:
@@ -97,15 +63,24 @@ class music_trans():
 
         for music_item in self.music:
             self._reset_t()
+            self.set_beat(self.origin_beat)
+
             for i in range(len(music_item)):
                 if isinstance(music_item[i], tuple):
                     for j in range(len(music_item[i])):
                         # 解析1/16节拍
                         chor = music_item[i][j]
 
+                        if chor == "NOP":
+                            self._rest(1 / 16)
+                            continue
+                        elif "BEAT" in chor:
+                            tmp = eval(chor)
+                            self.set_beat(tmp["BEAT"])
+                            continue
                         # - 代表这个节拍无变化
                         if chor != '-':
-                            # 多个音调以 逗号间隔
+                            # 多个音符以 逗号间隔
                             chors = chor.split(",")
                             # 抬起需要停止的音符
                             for item in last_tone:
@@ -114,7 +89,16 @@ class music_trans():
                             last_tone = []
                             ##########################
                             for item in chors:
-                                if '{' in item:
+                                if 'Z' in item:
+                                    temp = eval(item[1:])
+                                    for key in temp:
+                                        self._rest_with_time(temp[key])
+                                        self._play(key)
+                                        self._rest((1 / len(music_item[i])) * 4)
+                                        self._rest_with_time(- temp[key])
+                                        self._stop(key)
+                                        self._rest((-1 / len(music_item[i]) * 4))
+                                elif '{' in item:
                                     temp = eval(item)
                                     for key in temp:
                                         self._play(key)
@@ -125,8 +109,11 @@ class music_trans():
                                     self._play(item)
                                     last_tone.append(item)
 
-                        # self._rest(1 / len(music_item[i]))
-                        self._rest(1 / 16)
+                        self._rest(1 / len(music_item[i]))
+                        # self._rest(1 / 16)
+
+                self._rest_with_time(0.05)
+
         self.play_list_sort()
 
     def _sort_by_time(self, play_list):
@@ -229,6 +216,7 @@ class music_trans():
     def play_music(self, play_list = None):
         self.home()
         self.create_noise()
+        self.last_play = []
         if play_list == None:
             play_list = self.play_list
         start_time = time.time()
@@ -236,9 +224,14 @@ class music_trans():
             while time.time() - start_time < play_list[i][0][2]:
                 pass
 
+            # for item in self.last_play:
+            #     self.servos.run_single_servo(self.servo_table[item[0]] - SERVO_ID_BASE, FREE_ANGLE)
+
             for item in play_list[i]:
                 print(item, self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
                 self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
+
+            self.last_play = play_list[i].copy()
 
             self.servos.run()
 
@@ -247,4 +240,4 @@ class music_trans():
     def create_noise(self):
         for i in range(len(self.play_list)):
             self._count += 0.2
-            self.play_list[i][0][2] += math.sin(self._count) * 0.03
+            self.play_list[i][0][2] += math.sin(self._count) * 0.015
