@@ -69,7 +69,7 @@ class music_trans():
                         chor = music_item[i][j]
 
                         if chor == "NOP":
-                            self._rest(1 / 16)
+                            self._rest(1 / 24)
                             continue
                         elif "BEAT" in chor:
                             tmp = eval(chor)
@@ -85,26 +85,27 @@ class music_trans():
 
                             last_tone = []
                             ##########################
-                            for item in chors:
-                                if 'Z' in item:
-                                    temp = eval(item[1:])
+                            for m in range(len(chors)):
+                                chors[m] = chors[m].replace("&", ",")
+
+                                if '{' in chors[m]:
+                                    temp = eval(chors[m])
                                     for key in temp:
-                                        self._rest_with_time(temp[key])
-                                        self._play(key)
-                                        self._rest(1 / len(music_item[i]))
-                                        self._rest_with_time(- temp[key])
-                                        self._stop(key)
-                                        self._rest(-1 / len(music_item[i]))
-                                elif '{' in item:
-                                    temp = eval(item)
-                                    for key in temp:
-                                        self._play(key)
-                                        self._rest(temp[key])
-                                        self._stop(key)
-                                        self._rest(-temp[key])
+                                        if isinstance(temp[key], list):
+                                            self._rest_with_time(temp[key][0])
+                                            self._play(key)
+                                            self._rest(temp[key][1])
+                                            self._rest_with_time(-temp[key][0])
+                                            self._stop(key)
+                                            self._rest(-temp[key][1])
+                                        else: 
+                                            self._play(key)
+                                            self._rest(temp[key])
+                                            self._stop(key)
+                                            self._rest(-temp[key])
                                 else:
-                                    self._play(item)
-                                    last_tone.append(item)
+                                    self._play(chors[m])
+                                    last_tone.append(chors[m])
 
                         self._rest(1 / len(music_item[i]))
                         # self._rest(1 / 16)
@@ -135,7 +136,7 @@ class music_trans():
             temp_list2 = [ret_list[i]]
             k = i
             for j in range(i + 1, len(ret_list)):
-                if math.fabs(ret_list[j][2] - ret_list[k][2]) < 0.02:
+                if math.fabs(ret_list[j][2] - ret_list[k][2]) < 0.001:
                     temp_list2.append(ret_list[j])
                     i += 1
                 else:
@@ -151,24 +152,19 @@ class music_trans():
         for i in range(1, len(temp_list1)):
             t_ret = self._check_special(temp_list1[i])
             if t_ret != []:
-                for l in t_ret:
-                    if temp_list1[i][l][1]:
-                        temp_list1[i][l][2] += 0.0
+                for l in range(len(temp_list1[i])):
+                    if not (l in t_ret):
+                        temp_list1[i][l][2] += 0.02
                     else:
-                        temp_list1[i][l][2] -= 0.07
+                        temp_list1[i][l][2] -= 0.05
 
-                # for j in range(i + 1, len(temp_list1)):
-                #     for m in range(len(temp_list1[j])):
-                #         temp_list1[j][m][2] += 0.02
+                for j in range(i + 1, len(temp_list1)):
+                    for m in range(len(temp_list1[j])):
+                        temp_list1[j][m][2] += 0.02
             else:
                 for k in range(len(temp_list1[i])):
                     if temp_list1[i][k][1] == 1:
                         temp_list1[i][k][2] -= 0
-                # for l in range(len(temp_list1[i])):
-                #     if temp_list1[i][l][1]:
-                #         temp_list1[i][l][2] -= 0.015
-                #     else:
-                #         temp_list1[i][l][2] += 0.015
 
         temp = []
         for item in temp_list1:
@@ -241,5 +237,6 @@ class music_trans():
 
     def create_noise(self):
         for i in range(len(self.play_list)):
-            self._count += 0.1
-            self.play_list[i][0][2] += abs(math.sin(self._count)) * 0.01
+            self._count += 0.2
+            for j in range(len(self.play_list[i])):
+                self.play_list[i][j][2] += math.sin(self._count) * 0.008
