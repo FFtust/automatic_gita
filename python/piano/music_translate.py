@@ -110,7 +110,7 @@ class music_trans():
                         self._rest(1 / len(music_item[i]))
                         # self._rest(1 / 16)
 
-                self._rest_with_time(0.01)
+                    self._rest_with_time(0.02)
 
         self.play_list_sort()
 
@@ -239,4 +239,4 @@ class music_trans():
         for i in range(len(self.play_list)):
             self._count += 0.2
             for j in range(len(self.play_list[i])):
-                self.play_list[i][j][2] += math.sin(self._count) * 0.008
+                self.play_list[i][j][2] += math.sin(self._count) * 0.01

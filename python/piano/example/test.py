@@ -27,11 +27,19 @@ music_table2 = \
 import sys,time
 sys.path.append('C:\\work\\automatic_gita\\python\\piano')
 
-import music_translate
-music_parse = music_translate.music_trans([music_table1])
-music_parse.set_beat(80)
-music_parse.music_to_play_table()
-music_parse.play_music()
+# import 一千个伤心的理由
+import 亡靈序曲
+import 克罗地亚狂想曲
+import 卡农
+import 晴天
+import 梦中的婚礼
+import 野蜂飞舞.py
+
+# import music_translate
+# music_parse = music_translate.music_trans([music_table1])
+# music_parse.set_beat(80)
+# music_parse.music_to_play_table()
+# music_parse.play_music()
 
 # music_parse.servos.run_single_servo(32, 70)
 # time.sleep(1)
