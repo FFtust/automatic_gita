@@ -82,7 +82,7 @@ class music_trans():
                             # 抬起需要停止的音符
                             for item in last_tone:
                                 self._stop(item)
-
+                            last_tone_tmp = last_tone.copy()
                             last_tone = []
                             ##########################
                             for m in range(len(chors)):
@@ -91,6 +91,9 @@ class music_trans():
                                 if '{' in chors[m]:
                                     temp = eval(chors[m])
                                     for key in temp:
+                                        if key in last_tone_tmp:
+                                            self._rest_with_time(0.0)
+                                            last_tone_tmp = []
                                         if isinstance(temp[key], list):
                                             self._rest_with_time(temp[key][0])
                                             self._play(key)
@@ -104,13 +107,16 @@ class music_trans():
                                             self._stop(key)
                                             self._rest(-temp[key])
                                 else:
+                                    if chors[m] in last_tone_tmp:
+                                        self._rest_with_time(0.0)
+                                        last_tone_tmp = []
                                     self._play(chors[m])
                                     last_tone.append(chors[m])
 
                         self._rest(1 / len(music_item[i]))
                         # self._rest(1 / 16)
 
-                    self._rest_with_time(0.02)
+                    # self._rest_with_time(0.02)
 
         self.play_list_sort()
 
@@ -154,13 +160,13 @@ class music_trans():
             if t_ret != []:
                 for l in range(len(temp_list1[i])):
                     if not (l in t_ret):
-                        temp_list1[i][l][2] += 0.02
+                        temp_list1[i][l][2] += 0.00
                     else:
-                        temp_list1[i][l][2] -= 0.05
+                        temp_list1[i][l][2] -= 0.06
 
                 for j in range(i + 1, len(temp_list1)):
                     for m in range(len(temp_list1[j])):
-                        temp_list1[j][m][2] += 0.02
+                        temp_list1[j][m][2] += 0.0
             else:
                 for k in range(len(temp_list1[i])):
                     if temp_list1[i][k][1] == 1:
@@ -239,4 +245,4 @@ class music_trans():
         for i in range(len(self.play_list)):
             self._count += 0.2
             for j in range(len(self.play_list[i])):
-                self.play_list[i][j][2] += math.sin(self._count) * 0.01
+                self.play_list[i][j][2] += abs(math.sin(self._count)) * 0.01
