@@ -162,7 +162,7 @@ class music_trans():
                     if not (l in t_ret):
                         temp_list1[i][l][2] += 0.00
                     else:
-                        temp_list1[i][l][2] -= 0.06
+                        temp_list1[i][l][2] -= 0.07
 
                 for j in range(i + 1, len(temp_list1)):
                     for m in range(len(temp_list1[j])):
