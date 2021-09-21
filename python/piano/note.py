@@ -18,7 +18,7 @@ servo_table = \
 
 servos_angle = \
 {
-0: [90, ANG_BLACK], 1: [90, ANG_BLACK], 2: [90, 35], 3: [90, 35], 4: [90, 35], 5: [90, 35], 6: [90, ANG_BLACK], 7: [90, 35], 8: [90, ANG_BLACK], 9: [90, ANG_COM], 10: [90, ANG_BLACK], 11: [90, 35], 
+0: [90, ANG_BLACK], 1: [90, ANG_BLACK], 2: [90, 35], 3: [90, 35], 4: [90, 35], 5: [90, 35], 6: [90, ANG_BLACK], 7: [90, 35], 8: [90, ANG_BLACK], 9: [90, 35], 10: [90, ANG_BLACK], 11: [90, 35], 
 12: [90, ANG_COM], 13: [90, ANG_BLACK], 14: [90, ANG_COM], 15: [90, ANG_BLACK], 16: [90, ANG_COM], 17: [90, ANG_COM], 18: [90, ANG_BLACK], 19: [90, ANG_COM], 20: [90, ANG_BLACK], 21: [90, ANG_COM], 22: [90, ANG_BLACK], 23: [90, ANG_COM],
 24: [90, ANG_COM], 25: [90, ANG_BLACK], 26: [90, ANG_COM], 27: [90, ANG_BLACK], 28: [90, ANG_COM], 29: [90, ANG_COM], 30: [90, ANG_BLACK], 31: [90, ANG_COM], 32: [90, ANG_BLACK], 33: [90, ANG_COM], 34: [90, ANG_BLACK], 35: [90, ANG_COM], 
 36: [90, ANG_COM], 37: [90, ANG_BLACK], 38: [90, ANG_COM], 39: [90, ANG_BLACK], 40: [90, ANG_COM], 41: [90, ANG_COM], 42: [90, ANG_BLACK], 43: [90, ANG_COM], 44: [90, 40], 45: [90, ANG_COM], 46: [90, ANG_BLACK -15], 47: [90, ANG_COM], 

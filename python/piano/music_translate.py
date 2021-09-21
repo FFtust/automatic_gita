@@ -110,6 +110,7 @@ class music_trans():
                     # self._rest_with_time(0.02)
 
         self.play_list_sort()
+        print(self.play_list)
 
     def _sort_by_time(self, play_list):
         _play_list = play_list.copy()
@@ -151,13 +152,13 @@ class music_trans():
             if t_ret != []:
                 for l in range(len(temp_list1[i])):
                     if not (l in t_ret):
-                        temp_list1[i][l][2] += 0.00
+                        temp_list1[i][l][2] += 0.07
                     else:
-                        temp_list1[i][l][2] -= 0.07
+                        temp_list1[i][l][2] -= 0.0
 
                 for j in range(i + 1, len(temp_list1)):
                     for m in range(len(temp_list1[j])):
-                        temp_list1[j][m][2] += 0.0
+                        temp_list1[j][m][2] += 0.07
             else:
                 for k in range(len(temp_list1[i])):
                     if temp_list1[i][k][1] == 1:
@@ -220,7 +221,7 @@ class music_trans():
                 pass
 
             # for item in self.last_play:
-            #     if not item in play_list[i]:
+            #     if (not (item in play_list[i])) and (not (item in play_list[i + 1])) and (not (item in play_list[i + 2])):
             #         self.servos.run_single_servo(self.servo_table[item[0]] - SERVO_ID_BASE, FREE_ANGLE)
 
             for item in play_list[i]:
@@ -237,4 +238,4 @@ class music_trans():
         for i in range(len(self.play_list)):
             self._count += 0.2
             for j in range(len(self.play_list[i])):
-                self.play_list[i][j][2] += abs(math.sin(self._count)) * 0.01
+                self.play_list[i][j][2] += abs(math.sin(self._count)) * 0.05
