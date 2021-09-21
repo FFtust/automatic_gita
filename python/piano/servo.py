@@ -2,22 +2,18 @@ import time
 import common_link
 import threading
 import _thread
-lock = _thread.allocate_lock()
 
 SERVO_NUM = 64
 
 class servo_control():
     def __init__(self, info = None):
-        start_angles = [90] * SERVO_NUM
+        start_angles = [181] * SERVO_NUM
         if info != None:
             for i in range(len(info)):
                 start_angles[i] = info[i]
 
         self.all_servo_angles_to = start_angles.copy()
         self.all_servo_current_angles = start_angles.copy()
-
-        self.sync_lock = threading.Lock()
-        self.work_handle = None
 
     def all_servos_update(self):
         changed_servo_info = []
@@ -45,23 +41,8 @@ class servo_control():
 
         self.all_servo_angles_to[index] = angle
 
-    def set_mutiple_angles(self, info):
-        for item in info:
-            if item[0] < SERVO_NUM or item[0] >= 0:
-                self.all_servo_angles_to[item[0]] = item[1]
-    
     def run(self):
-        lock.acquire()
         self.all_servos_update()
-        lock.release()
-
-    def start_control(self):
-        pass
-
-    def work(self):
-        while True:
-            self.sync_lock.acquire()
-            self.all_servos_update()
 
     def run_all_servos(self, angle):
         info = []
