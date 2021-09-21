@@ -4,11 +4,11 @@ import threading
 import _thread
 lock = _thread.allocate_lock()
 
-SERVO_NUM = 48
+SERVO_NUM = 64
 
 class servo_control():
     def __init__(self, info = None):
-        start_angles = [120] * SERVO_NUM
+        start_angles = [90] * SERVO_NUM
         if info != None:
             for i in range(len(info)):
                 start_angles[i] = info[i]
@@ -28,9 +28,8 @@ class servo_control():
         self.all_servo_current_angles = self.all_servo_angles_to.copy()
 
     def set_all_angles(self, angle):
-
-        if angle > 180:
-            angle = 180
+        if angle > 181:
+            angle = 181
         if angle < 0:
             angle = 0
         self.all_servo_angles_to = [angle] * SERVO_NUM
@@ -39,8 +38,8 @@ class servo_control():
         if index < 0 or index >= SERVO_NUM:
             return
 
-        if angle > 180:
-            angle = 180
+        if angle > 181:
+            angle = 181
         if angle < 0:
             angle = 0
 
@@ -56,12 +55,8 @@ class servo_control():
         self.all_servos_update()
         lock.release()
 
-
-
     def start_control(self):
         pass
-        # self.work_handle  = threading.Thread(target = self.work, args=())
-        # self.work_handle.start()
 
     def work(self):
         while True:

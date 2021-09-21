@@ -98,7 +98,7 @@ void pca9685_set_mk(int num, int mk) //设置指定通道的脉宽。fd是在pca
   }
   elseif (num >=48 && num < 64)
   {
-    PCA9685_write_reg16(PCA9685_adrr4, LED0_ON_L + 4 * (num - 16), ON);
+    PCA9685_write_reg16(PCA9685_adrr4, LED0_ON_L + 4 * (num - 48), ON);
     PCA9685_write_reg16(PCA9685_adrr4, LED0_OFF_L + 4 * (num - 48), OFF);
   }
 }

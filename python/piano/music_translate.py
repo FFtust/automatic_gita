@@ -42,15 +42,6 @@ class music_trans():
         if tone in self.servo_table:
             self.play_list.append([tone, 0, self.current_t])
 
-    def get_angle(self, servo_id, sta):
-        angle = 100
-        if sta == 0:
-            if servo_id in self.servos_angle:
-                angle = self.servos_angle[servo_id][0]
-        else:
-            if servo_id in self.servos_angle:
-                angle = self.servos_angle[servo_id][0] - self.servos_angle[servo_id][1]
-        return angle
 ######################################################################
     def music_to_play_table(self):
         last_tone = []
@@ -206,7 +197,7 @@ class music_trans():
         time.sleep(1)
         for i in range(len(self.play_list)):
             for item in self.play_list[i]:
-                self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, 0))
+                self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, 0))
             self.servos.run()
         time.sleep(1)
 
@@ -229,11 +220,12 @@ class music_trans():
                 pass
 
             # for item in self.last_play:
-            #     self.servos.run_single_servo(self.servo_table[item[0]] - SERVO_ID_BASE, FREE_ANGLE)
+            #     if not item in play_list[i]:
+            #         self.servos.run_single_servo(self.servo_table[item[0]] - SERVO_ID_BASE, FREE_ANGLE)
 
             for item in play_list[i]:
-                print(item, self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
-                self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, self.get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
+                print(item, self.servo_table[item[0]] - SERVO_ID_BASE, get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
+                self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
 
             self.last_play = play_list[i].copy()
 

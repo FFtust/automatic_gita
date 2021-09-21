@@ -1,40 +1,30 @@
-SERVO_ID_BASE = 3
+SERVO_ID_BASE = 0
 NOT_IMPLEMET = 100
 FREE_ANGLE = 181
 
+ANG_COM = 50
+ANG_BLACK = 40
+ANG_OFF_BLACK = 0
+
 servo_table = \
 {
-"1--": 1, "2--": 2,"3--": 3,"4--": 4,"5--": 5,"6--": 6,"7--": 7,
-"1-": 8, "2-": 9,"3-": 10,"4-": 11,"5-": 12,"6-": 13,"7-": 14,
-"0": 100, "1": 15, "2": 16,"3": 17,"4": 18,"5": 19,"6": 20,"7": 21,
-"1+": 22, "2+": 23,"3+": 24,"4+": 25,"5+": 26,"6+": 27,"7+": 28,
-"1++": 29, "2++": 30,"3++": 31,"4++": 32,"5++": 33,"6++": 34,"7++": NOT_IMPLEMET, 
-"1+++": NOT_IMPLEMET,
-
-"1--#": 1, "2--#": 2,"4--#": 4,"5--#": 5,"6--#": 6,
-"1-#": 32 + SERVO_ID_BASE, "2-#": 33 + SERVO_ID_BASE,"4-#": 34 + SERVO_ID_BASE,"5-#": 35 + SERVO_ID_BASE,"6-#": 36 + SERVO_ID_BASE,
-"1#": 37 + SERVO_ID_BASE, "2#": 38 + SERVO_ID_BASE,"4#": 39 + SERVO_ID_BASE,"5#": 40 + SERVO_ID_BASE,"6#": 41 + SERVO_ID_BASE,
-"1+#": 42 + SERVO_ID_BASE, "2+#": 43 + SERVO_ID_BASE,"4+#": 44 + SERVO_ID_BASE,"5+#": 45 + SERVO_ID_BASE,"6+#": 46 + SERVO_ID_BASE,
-"1++#": 47 + SERVO_ID_BASE, "2++#": 30,"4++#": 32,"5++#": 33,"6++#": 34,
-
+"1--": 0, "1--#": 1, "2--": 2,"2--#": 3,"3--": 4,"4--": 5, "4--#": 6,"5--": 7,"5--#": 8,"6--": 9,"6--#": 10, "7--": 11,
+"1-": 12, "1-#": 13, "2-": 14, "2-#": 15,"3-": 16,"4-": 17, "4-#": 18,"5-": 19,"5-#": 20,"6-": 21,"6-#": 22, "7-": 23,
+"1": 24, "1#": 25, "2": 26,"2#": 27,"3": 28,"4": 29, "4#": 30,"5": 31,"5#": 32,"6": 33,"6#": 34, "7": 35,
+"1+": 36, "1+#": 37, "2+": 38,"2+#": 39,"3+": 40,"4+": 41, "4+#": 42,"5+": 43,"5+#": 44,"6+": 45,"6+#": 46, "7+": 47,
+"1++": 48, "1++#": 49, "2++": 50,"2++#": 51,"3++": 52,"4++": 53, "4++#": 54,"5++": 55,"5++#": 56,"6++": 57,"6++#": 58, "7++": 59,
+"1+++":61,
 }
 
-D_ANGLE_COMMON = 50
-D_ANGLE_COMMON_BLACK = 30
-D_ANGLE_OFFSET_BLACK = 0
 servos_angle = \
 {
-100:[100, 100], 
-0: [90, D_ANGLE_COMMON - 20], 1: [100, D_ANGLE_COMMON - 20], 2: [95, D_ANGLE_COMMON - 20], 3: [95, D_ANGLE_COMMON - 20], 4: [95, D_ANGLE_COMMON - 20], 5: [90, D_ANGLE_COMMON], 6: [92, D_ANGLE_COMMON], 7: [90, D_ANGLE_COMMON],
-8: [85, D_ANGLE_COMMON], 9: [95, D_ANGLE_COMMON], 10: [90, D_ANGLE_COMMON], 11: [100, D_ANGLE_COMMON], 12: [102, D_ANGLE_COMMON], 13: [98, D_ANGLE_COMMON], 14: [95, D_ANGLE_COMMON], 15: [100, D_ANGLE_COMMON + 7], 
-
-16: [103, D_ANGLE_COMMON], 17: [100, D_ANGLE_COMMON], 18: [86, D_ANGLE_COMMON], 19: [97, D_ANGLE_COMMON], 20: [88, D_ANGLE_COMMON], 21: [85, D_ANGLE_COMMON], 22: [100, D_ANGLE_COMMON], 23: [92, D_ANGLE_COMMON],
-24: [82, D_ANGLE_COMMON], 25: [90, D_ANGLE_COMMON], 26: [100, D_ANGLE_COMMON], 27: [100, D_ANGLE_COMMON], 28: [105, D_ANGLE_COMMON], 29: [95, D_ANGLE_COMMON], 30: [100, D_ANGLE_COMMON], 31: [100, D_ANGLE_COMMON],
-
-32: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],33: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],34: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],35: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],36: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
-37: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],38: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],39: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],40: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],41: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
-42: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK + 10],43: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK + 10],44: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK - 10],45: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],46: [105 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK],
-47: [110 + D_ANGLE_OFFSET_BLACK, D_ANGLE_COMMON_BLACK + 5]
+0: [90, ANG_BLACK], 1: [90, ANG_BLACK], 2: [90, 35], 3: [90, 35], 4: [90, 35], 5: [90, ANG_COM], 6: [90, ANG_BLACK], 7: [90, ANG_COM], 8: [90, ANG_BLACK], 9: [90, ANG_COM], 10: [90, ANG_BLACK], 11: [90, ANG_COM], 
+12: [90, ANG_COM], 13: [90, ANG_BLACK], 14: [90, ANG_COM], 15: [90, ANG_BLACK], 16: [90, ANG_COM], 17: [90, ANG_COM], 18: [90, ANG_BLACK], 19: [90, ANG_COM], 20: [90, ANG_BLACK], 21: [90, ANG_COM], 22: [90, ANG_BLACK], 23: [90, ANG_COM],
+24: [90, ANG_COM], 25: [90, ANG_BLACK], 26: [90, ANG_COM], 27: [90, ANG_BLACK], 28: [90, ANG_COM], 29: [90, ANG_COM], 30: [90, ANG_BLACK], 31: [90, ANG_COM], 32: [90, ANG_BLACK], 33: [90, ANG_COM], 34: [90, ANG_BLACK], 35: [90, ANG_COM], 
+36: [90, ANG_COM], 37: [90, ANG_BLACK], 38: [90, ANG_COM], 39: [90, ANG_BLACK], ANG_BLACK: [90, ANG_COM], 41: [90, ANG_COM], 42: [90, ANG_BLACK], 43: [90, ANG_COM], 44: [90, 20], 45: [90, ANG_COM], 46: [90, ANG_BLACK], 47: [90, ANG_COM], 
+48: [90, ANG_COM], 49: [90, ANG_BLACK], ANG_COM: [90, ANG_COM], 51: [90, ANG_BLACK], 52: [90, ANG_COM], 53: [90, ANG_COM], 54: [90, ANG_BLACK], 55: [90, ANG_COM], 56: [90, ANG_BLACK], 57: [90, ANG_COM], 58: [90, ANG_BLACK], 59: [90, ANG_COM], 
+60: [90, ANG_COM], 61: [90, ANG_BLACK], 62: [90, ANG_COM], 63: [90, ANG_BLACK], 64: [90, ANG_COM], 
+100: [90, 90]
 }
 
 def get_angle(servo_id, sta):
@@ -49,30 +39,3 @@ def get_angle(servo_id, sta):
         else:
             angle = 100
     return angle
-#####################################################################
-
-servo_table_G = \
-{
-"1--": 1, "2--": 2,"3--": 3,"4--": 4,"5--": 5,"6--": 6,"7--": 7,
-"1-": 8, "2-": 9,"3-": 10,"4-": 11,"5-": 12,"6-": 13,"7-": 14,
-"0": 100, "1": 33, "2": 16,"3": 17,"4": 18,"5": 19,"6": 20,"7": 21,
-"1+": 22, "2+": 23,"3+": 24,"4+": 25,"5+": 26,"6+": 27,"7+": 28,
-"1++": 29, "2++": 30,"3++": 31,"4++": 32,"5++": 33,"6++": 34,#"7++": 35,
-# "1+++": 36, "2+++": 37,"3+++": 38,"4+++": 39,"5+++": 40,"6+++": 41,"7+++": 42,
-
-"1#": 32 + SERVO_ID_BASE, "2#": 33 + SERVO_ID_BASE,"4#": 34 + SERVO_ID_BASE,"5#": 35 + SERVO_ID_BASE,"6#": 36 + SERVO_ID_BASE,
-"1+#": 37 + SERVO_ID_BASE, "2+#": 38 + SERVO_ID_BASE,"4+#": 39 + SERVO_ID_BASE,"5+#": 40 + SERVO_ID_BASE,"6+#": 41 + SERVO_ID_BASE,
-}
-
-servo_table_Eb = \
-{
-"1--": NOT_IMPLEMET, "2--": NOT_IMPLEMET,"3--": 3,"4--": 4,"5--": 5,"6--": 6,"7--": 7,
-"1-": 8, "2-": 9,"3-": 10,"4-": 11,"5-": 12,"6-": 13,"7-": 14,
-"0": 100, "1": 15, "2": 16,"3": 17,"4": 18,"5": 19,"6": 20,"7": 21,
-"1+": 22, "2+": 23,"3+": 24,"4+": 25,"5+": 26,"6+": 27,"7+": 28,
-"1++": 29, "2++": 30,"3++": 31,"4++": 32,"5++": 33,"6++": 34,#"7++": 35,
-# "1+++": 36, "2+++": 37,"3+++": 38,"4+++": 39,"5+++": 40,"6+++": 41,"7+++": 42,
-
-"1#": 32 + SERVO_ID_BASE, "2#": 33 + SERVO_ID_BASE,"4#": 34 + SERVO_ID_BASE,"5#": 35 + SERVO_ID_BASE,"6#": 36 + SERVO_ID_BASE,
-"1+#": 37 + SERVO_ID_BASE, "2+#": 38 + SERVO_ID_BASE,"4+#": 39 + SERVO_ID_BASE,"5+#": 40 + SERVO_ID_BASE,"6+#": 41 + SERVO_ID_BASE,
-}
