@@ -146,13 +146,17 @@ class music_trans():
     def play_list_sort(self):
         temp_list1 = self._sort_by_time(self.play_list)
 
+        print("aa",  temp_list1)
         # 两个连续的相同音符需要单独处理，否则将不会抬起，只有一个声音
         for i in range(1, len(temp_list1)):
             t_ret = self._check_special(temp_list1[i])
             if t_ret != []:
                 for l in range(len(temp_list1[i])):
-                    if not (l in t_ret):
-                        temp_list1[i][l][2] += 0.07
+                    if l in t_ret:
+                        if temp_list1[i][l][1] == 1:
+                            temp_list1[i][l][2] += 0.07
+                        else:
+                            temp_list1[i][l][2] -= 0.0
                     else:
                         temp_list1[i][l][2] -= 0.0
 
@@ -170,16 +174,15 @@ class music_trans():
                 temp.append(item2)
 
         self.play_list = self._sort_by_time(temp)
+        print("bb",  self.play_list)
 
     def _check_special(self, item):
         ret = []
         for i in range(len(item)):
             for j in range(i + 1, len(item)):
                 if item[i][0] == item[j][0]:
-                    if item[i][1] == 0:
-                        ret.append(i)
-                    else:
-                        ret.append(j)
+                    ret.append(i)
+                    ret.append(j)
         return ret
 ######################################################################
     def servos_home(self):
