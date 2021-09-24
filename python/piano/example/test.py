@@ -23,7 +23,7 @@
 music_table1 = \
 (
     ("0", "0"),
-	("1,2,3", "1", "1", "1,2,3","1", "1", "1", "1"),
+	("6-", "6-"),
 	# ("2", "1", "2", "1"),
 	# ("1", "1", "1", "1"),
 
@@ -60,8 +60,9 @@ sys.path.append('C:\\work\\automatic_gita\\python\\piano')
 # )
 
 import music_translate
-music_parse = music_translate.music_trans([music_table1], beat=30)
+music_parse = music_translate.music_trans([music_table1], beat=100)
 music_parse.music_to_play_table()
+music_parse.servos_home()
 # music_parse.home()
 music_parse.play_music()
 # while 1:
