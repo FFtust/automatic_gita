@@ -47,8 +47,8 @@
 
 
 ### 乐谱转化规则
-	1. 左右手弹奏的乐谱独立编写；
-	2. 每一个独立的乐谱（如左手乐谱）为一个tuple类型的数据，tuple中包含N个小节的乐谱，也为一个tuple类型，如
+1. 左右手弹奏的乐谱独立编写；
+2. 每一个独立的乐谱（如左手乐谱）为一个tuple类型的数据，tuple中包含N个小节的乐谱，也为一个tuple类型，如
 ``` python
 music_table = \
 (
@@ -77,7 +77,6 @@ music_parse = music_translate.music_trans([music_table, music_table_left], beat 
 music_parse.music_to_play_table()
 music_parse.play_music()
 ```
-
 	3. 描述每一小节的tuple长度可变，根据各小节的最小节拍来定义。如最小节拍为1/4音符，则长度为4，最小节拍为1/16音符，则长度为16.
 	4. 使用音符<-->舵机对应表来转换成舵机控制信号。
 
@@ -92,7 +91,6 @@ servo_table = \
 "1+++":61,
 }
 ```
-
 	5. 存在一个描述每个舵机按下和抬起的角度值，因为舵机安装存在误差，所以角度需要微调。
 ``` python
 SERVO_ID_BASE = 0
