@@ -6,7 +6,7 @@
 	早期视频：https://www.bilibili.com/video/BV1jb411k7um?spm_id_from=333.999.0.0
 ## 硬件组成
 ### 硬件框图
-
+![硬件框图](https://github.com/FFtust/automatic_gita/blob/master/source/piano/hardware.png)
 ### 元器件清单
 | 元件 | 数量 | 参数 |备注|
 | :-----| :---- | :---- | :---- |
@@ -44,8 +44,7 @@
 	
 ## 软件架构
 ### 信息转化流程图
-
-
+![信息转化流程图](https://github.com/FFtust/automatic_gita/blob/master/source/piano/sofeware.png)
 ### 乐谱转化规则
 1. 左右手弹奏的乐谱独立编写；
 2. 每一个独立的乐谱（如左手乐谱）为一个tuple类型的数据，tuple中包含N个小节的乐谱，也为一个tuple类型，如
