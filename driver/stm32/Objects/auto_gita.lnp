@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\nvic.o"
+".\objects\timer.o"
+".\objects\key.o"
+".\objects\motor.o"
+".\objects\uart.o"
+".\objects\common.o"
+".\objects\servo.o"
+".\objects\mb_communication_protocol.o"
+".\objects\mb_communication_package.o"
+".\objects\i2c_driver.o"
+".\objects\pca9685_control.o"
+".\objects\misc.o"
+".\objects\stm32f10x_gpio.o"
+".\objects\stm32f10x_rcc.o"
+".\objects\stm32f10x_tim.o"
+".\objects\stm32f10x_usart.o"
+".\objects\dma_stm32f10x.o"
+".\objects\gpio_stm32f10x.o"
+".\objects\startup_stm32f10x_cl.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\auto_gita.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\auto_gita.map" -o .\Objects\auto_gita.axf
