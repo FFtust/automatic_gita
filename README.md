@@ -17,6 +17,8 @@ https://www.bilibili.com/video/BV1jb411k7um?spm_id_from=333.999.0.0
 ![硬件框图](https://github.com/FFtust/automatic_gita/blob/master/source/piano/hardware.png)
 
 ### 元器件清单
+![硬件框图](https://github.com/FFtust/automatic_gita/blob/master/source/piano/tools_list.jpg)
+
 | 元件 | 数量 | 参数 |备注|
 | :-----| :---- | :---- | :---- |
 | 5V开关电源 | 1 | 30A | 尽量电流大的 |
