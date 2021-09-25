@@ -2,11 +2,20 @@
 ## 写在前面
 　　自动电子琴是一个利用业余时间完成的项目，纯属个人爱好。为什么这个项目的名称是
 automaic_gita？这是因为最早这个项目是在19年用来实现自动吉他的，因为两个项目都是用
-纯舵机控制，因此放在了一起。自动吉他的完成度较低，故不作详细描述，感兴趣的可观看
-早期视频：https://www.bilibili.com/video/BV1jb411k7um?spm_id_from=333.999.0.0
+纯舵机控制，因此放在了一起。
+　　自动吉他的完成度较低，故不作详细描述，感兴趣的可观看早期视频：
+https://www.bilibili.com/video/BV1jb411k7um?spm_id_from=333.999.0.0
+
+## 成品展示
+### 独立演奏设备
+![独立设备](https://github.com/FFtust/automatic_gita/blob/master/source/piano/device_shot.jpg)
+### 完整设备
+![完整设备](https://github.com/FFtust/automatic_gita/blob/master/source/piano/all_shot.jpg)
+
 ## 硬件组成
 ### 硬件框图
 ![硬件框图](https://github.com/FFtust/automatic_gita/blob/master/source/piano/hardware.png)
+
 ### 元器件清单
 | 元件 | 数量 | 参数 |备注|
 | :-----| :---- | :---- | :---- |
