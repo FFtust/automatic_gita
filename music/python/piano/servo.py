@@ -3,7 +3,7 @@ import common_link
 import threading
 import _thread
 
-SERVO_NUM = 64
+SERVO_NUM = 80
 
 class servo_control():
     def __init__(self, info = None):

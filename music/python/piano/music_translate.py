@@ -52,7 +52,6 @@ class music_trans():
         for music_item in self.music:
             self._reset_t()
             self.set_beat(self.origin_beat)
-
             for i in range(len(music_item)):
                 if isinstance(music_item[i], tuple):
                     for j in range(len(music_item[i])):
@@ -106,11 +105,11 @@ class music_trans():
 
                         self._rest(1 / len(music_item[i]))
                         # self._rest(1 / 16)
-
                     # self._rest_with_time(0.02)
+            for nn in last_tone:
+                self._stop(nn)
 
         self.play_list_sort()
-        print(self.play_list)
 
     def _sort_by_time(self, play_list):
         _play_list = play_list.copy()
@@ -130,8 +129,12 @@ class music_trans():
         temp_list1 = []
         temp_list2 = []
         i = 0
-        while i < len(ret_list) - 1:
+        while i < len(ret_list):
             temp_list2 = [ret_list[i]]
+            if i == len(ret_list) - 1:
+                temp_list1.append(temp_list2)
+                break
+
             k = i
             for j in range(i + 1, len(ret_list)):
                 if math.fabs(ret_list[j][2] - ret_list[k][2]) < 0.001:
@@ -146,7 +149,7 @@ class music_trans():
     def play_list_sort(self):
         temp_list1 = self._sort_by_time(self.play_list)
 
-        print("aa",  temp_list1)
+        # print("aa",  temp_list1)
         # 两个连续的相同音符需要单独处理，否则将不会抬起，只有一个声音
         for i in range(1, len(temp_list1)):
             t_ret = self._check_special(temp_list1[i])
@@ -174,7 +177,6 @@ class music_trans():
                 temp.append(item2)
 
         self.play_list = self._sort_by_time(temp)
-        print("bb",  self.play_list)
 
     def _check_special(self, item):
         ret = []
@@ -189,12 +191,13 @@ class music_trans():
         time.sleep(1)
         for key in self.servos_angle:
             time.sleep(0.02)
-            self.servos.run_single_servo(int(key), self.servos_angle[key][0])    
+            self.servos.run_single_servo(int(key), self.servos_angle[key][0])  
         self.free_all()
 
     def free_all(self):
         time.sleep(1)
         for key in self.servos_angle:
+            time.sleep(0.01)
             self.servos.run_single_servo(int(key), FREE_ANGLE)  
 
     def home(self):
@@ -203,8 +206,7 @@ class music_trans():
             for item in self.play_list[i]:
                 self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, 0))
             self.servos.run()
-        time.sleep(1)
-
+        self.free_all()
 
     def servos_play(self, angle = 100):
         time.sleep(1)
@@ -229,7 +231,7 @@ class music_trans():
 
             for item in play_list[i]:
                 print(item, self.servo_table[item[0]] - SERVO_ID_BASE, get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
-                self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
+                self.servos.set_single_angle(get_servo(self.servo_table[item[0]]) - SERVO_ID_BASE, get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
 
             self.last_play = play_list[i].copy()
 
