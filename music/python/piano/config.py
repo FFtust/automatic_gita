@@ -9,19 +9,26 @@ configTable = None
 currentServo = 0
 
 def saveConfig():
-	with open("configContent,py", "w") as f:
-		f.write(str(configTable))
+	with open("configContent.py", "w") as f:
+		f.write("servos_angle = \\\n" + str(configTable))
 
 def readConfig():
 	global configTable
 	with open("configContent.py", "r") as f:
-		configTable = eval(f.read())
+		time.sleep(0.1)
+		configTable = eval(f.read()[16:])
 
 def play():
 	global currentServo
-	print(currentServo, get_note_by_servo(currentServo), configTable[currentServo])
-	servoCtl.run_single_servo(currentServo, configTable[currentServo][0])
+	if currentServo in configTable:
+		print(currentServo, get_note_by_servo(currentServo), configTable[currentServo])
+		servoCtl.run_single_servo(currentServo, configTable[currentServo][0])
+	else:
+		print("not find", currentServo)
 readConfig()
+
+for key in configTable:
+	servoCtl.run_single_servo(key, configTable[key][0])
 
 def keyEventCb(e):
 	global currentServo
@@ -35,6 +42,7 @@ def keyEventCb(e):
 		elif e.name == "d":
 			currentServo += 1
 		play()
+		saveConfig()
 
 keyboard.hook(keyEventCb)
 keyboard.wait('Ctrl')
