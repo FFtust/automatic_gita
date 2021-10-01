@@ -119,9 +119,15 @@ class communication_level():
         self.ser = serial.Serial(self.port, 115200, timeout = 1)
 
     def close(self):
+        if not self.ser:
+            return
+
         self.ser.close()
 
     def write(self, frame):
+        if not self.ser:
+            return
+            
         self.ser.write(frame)
 
     def read(self):

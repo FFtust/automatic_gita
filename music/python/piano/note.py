@@ -2,8 +2,8 @@ SERVO_ID_BASE = 0
 NOT_IMPLEMET = 100
 FREE_ANGLE = 181
 
-ANG_COM = 50
-ANG_BLACK = 40
+ANG_WHITE = 50
+ANG_BLACK = 30
 ANG_OFF_BLACK = 0
 
 servo_table = \
@@ -19,17 +19,33 @@ servo_table = \
 servos_angle = \
 {
 0: [90, ANG_BLACK], 1: [90, ANG_BLACK], 2: [90, 35], 3: [90, 35], 4: [90, 35], 5: [90, 35], 6: [90, ANG_BLACK], 7: [90, 35], 8: [90, ANG_BLACK], 9: [80, 30], 10: [90, ANG_BLACK], 11: [90, 35], 
-12: [90, ANG_COM], 13: [90, ANG_BLACK], 14: [80, ANG_COM], 15: [90, ANG_BLACK], 16: [85, ANG_COM], 17: [90, ANG_COM], 18: [90, ANG_BLACK], 19: [90, ANG_COM], 20: [90, ANG_BLACK], 21: [85, ANG_COM], 22: [90, ANG_BLACK], 23: [90, ANG_COM],
-24: [90,  ANG_COM], 25: [90, ANG_BLACK], 26: [90, ANG_COM], 27: [90, ANG_BLACK], 28: [90, ANG_COM], 29: [90, ANG_COM], 30: [90, ANG_BLACK], 31: [90, ANG_COM], 32: [90, ANG_BLACK], 33: [90, ANG_COM], 34: [90, ANG_BLACK], 35: [90, ANG_COM], 
-36: [90, ANG_COM], 37: [90, ANG_BLACK], 38: [90, ANG_COM], 39: [90, ANG_BLACK], 40: [90, ANG_COM], 41: [90, ANG_COM], 42: [90, ANG_BLACK], 43: [90, ANG_COM], 44: [90, 40], 45: [90, ANG_COM], 46: [90, ANG_BLACK -15], 47: [90, ANG_COM], 
-48: [90, ANG_COM], 49: [90, ANG_BLACK], 50: [90, ANG_COM], 51: [90, ANG_BLACK], 520: [90, ANG_COM], 521: [90, -ANG_COM], 53: [90, ANG_COM], 540: [90, ANG_BLACK], 541: [90, -ANG_BLACK], 55: [90, ANG_COM], 56: [90, ANG_BLACK], 57: [90, ANG_COM], 58: [90, ANG_BLACK], 59: [90, ANG_COM], 
-60: [90, ANG_COM], 630: [90, ANG_BLACK], 631: [90, -ANG_BLACK], 62: [90, ANG_COM], 63: [90, ANG_BLACK], 64: [90, ANG_COM], 
+12: [90, ANG_WHITE], 13: [90, ANG_BLACK], 14: [80, ANG_WHITE], 15: [90, ANG_BLACK], 16: [85, ANG_WHITE], 17: [90, ANG_WHITE], 18: [90, ANG_BLACK], 19: [90, ANG_WHITE], 20: [90, ANG_BLACK], 21: [85, ANG_WHITE], 22: [90, ANG_BLACK], 23: [90, ANG_WHITE],
+24: [90,  ANG_WHITE], 25: [90, ANG_BLACK], 26: [90, ANG_WHITE], 27: [90, ANG_BLACK], 28: [90, ANG_WHITE], 29: [90, ANG_WHITE], 30: [90, ANG_BLACK], 31: [90, ANG_WHITE], 32: [90, ANG_BLACK], 33: [90, ANG_WHITE], 34: [90, ANG_BLACK], 35: [90, ANG_WHITE], 
+36: [90, ANG_WHITE], 37: [90, ANG_BLACK], 38: [90, ANG_WHITE], 39: [90, ANG_BLACK], 40: [90, ANG_WHITE], 41: [90, ANG_WHITE], 42: [90, ANG_BLACK], 43: [90, ANG_WHITE], 44: [90, 40], 45: [90, ANG_WHITE], 46: [90, ANG_BLACK -15], 47: [90, ANG_WHITE], 
+48: [90, ANG_WHITE], 49: [90, ANG_BLACK], 50: [90, ANG_WHITE], 51: [90, ANG_BLACK], 520: [90, ANG_WHITE], 521: [90, -ANG_WHITE], 53: [90, ANG_WHITE], 540: [90, ANG_BLACK], 541: [90, -ANG_BLACK], 55: [90, ANG_WHITE], 56: [90, ANG_BLACK], 57: [90, ANG_WHITE], 58: [90, ANG_BLACK], 59: [90, ANG_WHITE], 
+60: [90, ANG_WHITE], 630: [90, ANG_BLACK], 631: [90, -ANG_BLACK], 62: [90, ANG_WHITE], 63: [90, ANG_BLACK], 64: [90, ANG_WHITE], 
 100: [90, 90]
 }
-# import configContent
-# servos_angle = configContent.servos_angle
+import configContent
+servos_angle = configContent.servos_angle
 
 def get_angle(servo_id, sta):
+    down_ang = 30
+    sign = 1
+
+    if servo_id > 100:
+        if servo_id % 2 == 0:
+            sign = 1
+        else:
+            sign = -1
+
+    for key in servo_table:
+        if servo_id == servo_table[key]:
+            if "#" in key:
+                down_ang = ANG_BLACK * sign
+            else:
+                down_ang = ANG_WHITE * sign
+
     if sta == 0:
         if servo_id in servos_angle:
             angle = servos_angle[servo_id][0]
@@ -37,9 +53,10 @@ def get_angle(servo_id, sta):
             angle = 100
     else:
         if servo_id in servos_angle:
-            angle = servos_angle[servo_id][0] - servos_angle[servo_id][1]
+            angle = servos_angle[servo_id][0] - down_ang
         else:
             angle = 100
+
     return angle
 
 def get_servo(servo_id):

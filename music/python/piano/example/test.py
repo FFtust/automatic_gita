@@ -9,6 +9,16 @@ music_table1 = \
     ("1+++", "1+++"),
 )
 
+music_white = \
+(
+    ("0", "0"),
+	("1--", "2--", "3--", "4--","5--", "6--", "7--"),
+	("1-", "2-", "3-", "4-","5-", "6-", "7-"),
+	("1", "2", "3", "4","5", "6", "7"),
+	("1+", "2+", "3+", "4+","5+", "6+", "7+"),
+	("1++", "2++", "3++", "4++","5++", "6++", "7++"),
+    ("1+++", "1+++"),
+)
 # music_table2 = \
 # (
 #     ("0", "0"),
@@ -58,9 +68,9 @@ sys.path.append('C:\\work\\automatic_gita\\MUSIC\\python\\piano')
 # 	("6#", "6#", "6#", "6#", "6#", "6#", "6#", "6#"),
 # 	("1", "1", "1", "1", "1", "1", "1", "1"),
 # )
-
+music_white = (("2","2"),)
 import music_translate
-music_parse = music_translate.music_trans([music_table1], beat=100)
+music_parse = music_translate.music_trans([music_white], beat=100)
 music_parse.music_to_play_table()
 music_parse.free_all()
 music_parse.play_music()

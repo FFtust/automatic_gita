@@ -267,7 +267,7 @@ music_table_2 = \
 )
 
 import sys
-sys.path.append('C:\\work\\automatic_gita\\python\\piano')
+sys.path.append('C:\\work\\automatic_gita\\music\\python\\piano')
 
 import music_translate
 music_parse = music_translate.music_trans([music_table, music_table_2], beat = 300)
