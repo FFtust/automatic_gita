@@ -2,9 +2,10 @@ SERVO_ID_BASE = 0
 NOT_IMPLEMET = 100
 FREE_ANGLE = 181
 
-ANG_WHITE = 50
+ANG_WHITE = 40
 ANG_BLACK = 30
 ANG_OFF_BLACK = 0
+ANG_OFF_WHITE = 0
 
 servo_table = \
 {
@@ -71,3 +72,4 @@ def get_note_by_servo(idx):
             return key
 
     return None
+
