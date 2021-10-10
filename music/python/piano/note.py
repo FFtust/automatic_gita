@@ -1,3 +1,5 @@
+import time
+
 SERVO_ID_BASE = 0
 NOT_IMPLEMET = 100
 FREE_ANGLE = 181
@@ -15,6 +17,16 @@ servo_table = \
 "1+": 36, "1+#": 37, "2+": 38,"2+#": 39,"3+": 40,"4+": 41, "4+#": 42,"5+": 43,"5+#": 44,"6+": 45,"6+#": 46, "7+": 47,
 "1++": 48, "1++#": 630, "2++": 50,"2++#": 631,"3++": 520,"4++": 521, "4++#": 540,"5++": 55,"5++#": 541,"6++": 57,"6++#": 58, "7++": 59,
 "1+++":60,
+}
+
+midi_table = \
+{
+  36:"1--", 37:"1--#", 38:"2--",39:"2--#",40:"3--",41:"4--",42:"4--#",43:"5--",44:"5--#",45:"6--",46:"6--#",47:"7--",
+  48:"1-", 49:"1-#", 50:"2-",51:"2-#",52:"3-",53:"4-",54:"4-#",55:"5-",56:"5-#",57:"6-",58:"6-#",59:"7-",
+  60:"1", 61:"1#", 62:"2",63:"2#",64:"3",65:"4",66:"4#",67:"5",68:"5#",69:"6",70:"6#",71:"7",
+  72:"1+", 73:"1+#", 74:"2+",75:"2+#",76:"3+",77:"4+",78:"4+#",79:"5+",80:"5+#",81:"6+",82:"6+#",83:"7+",
+  84:"1++", 85:"1++#", 86:"2++",87:"2++#",88:"3++",89:"4++",90:"4++#",91:"5++",92:"5++#",93:"6++",94:"6++#",95:"7++",
+  96:"1+++"
 }
 
 servos_angle = \
@@ -73,3 +85,30 @@ def get_note_by_servo(idx):
 
     return None
 
+#########################################################
+import servo
+servoCtl = servo.servo_control()
+def play_note(note):
+    pass
+
+def stop_note(note):
+    pass
+
+def play_servo(servo_id):
+    servoCtl.run_single_servo(servo_id, get_angle(servo_id, 1))
+
+def stop_servo(servo_id):
+    servoCtl.run_single_servo(servo_id, get_angle(servo_id, 0))
+
+def servos_home():
+    time.sleep(1)
+    for key in servos_angle:
+        servoCtl.run_single_servo(int(key), servos_angle[key][0])
+        time.sleep(0.02)
+    time.sleep(1)
+    free_all()
+
+def free_all():
+    for key in servos_angle:
+        time.sleep(0.01)
+        servoCtl.run_single_servo(int(key), FREE_ANGLE)  

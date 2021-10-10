@@ -1,8 +1,7 @@
 import time
-import servo
 import math
 import random
-from note import *
+import note
 
 class music_trans():
     def __init__(self, music, beat = 60):
@@ -14,10 +13,7 @@ class music_trans():
 
         self.current_t = 0
 
-        self.servos_angle = servos_angle
-        self.servo_table = servo_table
-
-        self.servos = servo.servo_control()
+        self.servo_table = note.servo_table
 
         self._count = 0
 
@@ -187,35 +183,8 @@ class music_trans():
                     ret.append(j)
         return ret
 ######################################################################
-    def servos_home(self):
-        time.sleep(1)
-        for key in self.servos_angle:
-            time.sleep(0.02)
-            self.servos.run_single_servo(int(key), self.servos_angle[key][0])  
-        self.free_all()
-
-    def free_all(self):
-        time.sleep(1)
-        for key in self.servos_angle:
-            time.sleep(0.01)
-            self.servos.run_single_servo(int(key), FREE_ANGLE)  
-
-    def home(self):
-        time.sleep(1)
-        for i in range(len(self.play_list)):
-            for item in self.play_list[i]:
-                self.servos.set_single_angle(self.servo_table[item[0]] - SERVO_ID_BASE, get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, 0))
-            self.servos.run()
-        self.free_all()
-
-    def servos_play(self, angle = 100):
-        time.sleep(1)
-        for key in self.servos_angle:
-            time.sleep(0.02)
-            self.servos.run_single_servo(int(key), self.servos_angle[key][0] - self.servos_angle[key][1])    
-
     def play_music(self, play_list = None):
-        self.home()
+        note.servos_home()
         self.create_noise()
         self.last_play = []
         if play_list == None:
@@ -227,17 +196,17 @@ class music_trans():
 
             # for item in self.last_play:
             #     if (not (item in play_list[i])) and (not (item in play_list[i + 1])) and (not (item in play_list[i + 2])):
-            #         self.servos.run_single_servo(self.servo_table[item[0]] - SERVO_ID_BASE, FREE_ANGLE)
+            #         note.servoCtl.run_single_servo(self.servo_table[item[0]] - note.SERVO_ID_BASE, note.FREE_ANGLE)
 
             for item in play_list[i]:
-                print(item, self.servo_table[item[0]] - SERVO_ID_BASE, get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
-                self.servos.set_single_angle(get_servo(self.servo_table[item[0]]) - SERVO_ID_BASE, get_angle(self.servo_table[item[0]] - SERVO_ID_BASE, item[1]))
+                print(item, self.servo_table[item[0]] - note.SERVO_ID_BASE, note.get_angle(self.servo_table[item[0]] - note.SERVO_ID_BASE, item[1]))
+                note.servoCtl.set_single_angle(note.get_servo(self.servo_table[item[0]]) - note.SERVO_ID_BASE, note.get_angle(self.servo_table[item[0]] - note.SERVO_ID_BASE, item[1]))
 
             self.last_play = play_list[i].copy()
 
-            self.servos.run()
+            note.servoCtl.run()
 
-        self.home()
+        note.servos_home()
 
     def create_noise(self):
         for i in range(len(self.play_list)):
