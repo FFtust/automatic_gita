@@ -89,7 +89,7 @@ def get_note_by_servo(idx):
 import servo
 servoCtl = servo.servo_control()
 def play_note(note):
-    if not istance(note, list, tuple):
+    if not isinstance(note, (list, tuple)):
             note = [note]
 
     for item in note:
@@ -98,7 +98,7 @@ def play_note(note):
 
 
 def stop_note(note):
-    if not istance(note, list, tuple):
+    if not isinstance(note, (list, tuple)):
             note = [note]
 
     for item in note:
@@ -116,7 +116,7 @@ def sto_midi(midi):
 
 
 def play_servo(servo_id):
-    if not istance(servo_id, list, tuple):
+    if not isinstance(servo_id, (list, tuple)):
             servo_id = [servo_id]
 
     for item in servo_id:
@@ -124,7 +124,7 @@ def play_servo(servo_id):
     servo_id.servoCtl.run()
 
 def stop_servo(servo_id):
-    if not istance(servo_id, list, tuple):
+    if not isinstance(servo_id, (list, tuple)):
             servo_id = [servo_id]
 
     for item in servo_id:

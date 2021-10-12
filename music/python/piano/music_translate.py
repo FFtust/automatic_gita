@@ -212,6 +212,8 @@ class music_trans():
                     note_play.append(item[0])
                 else:
                     note_stop.append(item[0])
+            note.play_note(note_stop)
+            note.play_note(note_play)
 
             self.last_play = play_list[i].copy()
 
