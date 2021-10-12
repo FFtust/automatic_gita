@@ -89,26 +89,56 @@ def get_note_by_servo(idx):
 import servo
 servoCtl = servo.servo_control()
 def play_note(note):
-    pass
+    if not istance(note, list, tuple):
+            note = [note]
+
+    for item in note:
+        servoCtl.set_single_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 1))
+    servoCtl.run()
+
 
 def stop_note(note):
-    pass
+    if not istance(note, list, tuple):
+            note = [note]
+
+    for item in note:
+        servoCtl.set_single_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 0))
+    servoCtl.run()
+
+def play_midi(midi):
+    if midi in midi_table:
+        play_note(midi_table[midi])
+
+
+def sto_midi(midi):
+    if midi in midi_table:
+        stop_note(midi_table[midi])
+
 
 def play_servo(servo_id):
-    servoCtl.run_single_servo(servo_id, get_angle(servo_id, 1))
+    if not istance(servo_id, list, tuple):
+            servo_id = [servo_id]
+
+    for item in servo_id:
+        servoCtl.set_single_angle(get_servo(item), get_angle(item, 1))
+    servo_id.servoCtl.run()
 
 def stop_servo(servo_id):
-    servoCtl.run_single_servo(servo_id, get_angle(servo_id, 0))
+    if not istance(servo_id, list, tuple):
+            servo_id = [servo_id]
+
+    for item in servo_id:
+        servoCtl.set_single_angle(get_servo(item), get_angle(item, 0))
+    servo_id.servoCtl.run()
 
 def servos_home():
     time.sleep(1)
     for key in servos_angle:
         servoCtl.run_single_servo(int(key), servos_angle[key][0])
-        time.sleep(0.02)
+        time.sleep(0.01)
     time.sleep(1)
     free_all()
 
 def free_all():
     for key in servos_angle:
-        time.sleep(0.01)
         servoCtl.run_single_servo(int(key), FREE_ANGLE)  

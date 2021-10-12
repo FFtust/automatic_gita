@@ -2,9 +2,6 @@ import keyboard
 import time
 from note import servo_table, get_note_by_servo
 import note
-import servo
-
-servoCtl = servo.servo_control()
 
 configTable = None
 currentServo = 0
@@ -23,21 +20,21 @@ def play():
 	global currentServo
 	if currentServo in configTable:
 		print(currentServo, get_note_by_servo(currentServo), configTable[currentServo])
-		servoCtl.run_single_servo(currentServo, configTable[currentServo][0])
+		note.servoCtl.run_single_servo(currentServo, configTable[currentServo][0])
 	else:
 		print("not find", currentServo)
 
 def servo_play(servo_id):
-    servoCtl.run_single_servo(servo_id, note.get_angle(servo_id, 1))
+    note.servoCtl.run_single_servo(servo_id, note.get_angle(servo_id, 1))
 
 def servo_stop(servo_id):
-    servoCtl.run_single_servo(servo_id, note.get_angle(servo_id, 0))
+    note.servoCtl.run_single_servo(servo_id, note.get_angle(servo_id, 0))
 
 
 readConfig()
 
 for key in configTable:
-	servoCtl.run_single_servo(key, configTable[key][0])
+	note.servoCtl.run_single_servo(key, configTable[key][0])
 
 def keyEventCb(e):
 	global currentServo
@@ -57,7 +54,7 @@ key_level = 0
 key_table = {"q":1, "w":3, "e":5, "r":6, "t":8, "y":10, "u":12, "2":2, "3":4, "5":7, "6":9, "7":11}
 
 def keyEventCb2(e):
-	global key_level,servoCtl
+	global key_level
 	if e.event_type == "up":
 		if e.name == "up":
 			key_level += 1

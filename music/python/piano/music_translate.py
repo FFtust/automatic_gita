@@ -66,8 +66,14 @@ class music_trans():
                             # 多个音符以 逗号间隔
                             chors = chor.split(",")
                             # 抬起需要停止的音符
+                            tmp = (1 / len(music_item[i])) * self.beat_time * (1 / 5)
+                            if tmp < 0.07:
+                                temp = 0.07
+                            self._rest_with_time(-tmp)
                             for item in last_tone:
                                 self._stop(item)
+                            self._rest_with_time(tmp)
+
                             last_tone_tmp = last_tone.copy()
                             last_tone = []
                             ##########################
@@ -153,15 +159,15 @@ class music_trans():
                 for l in range(len(temp_list1[i])):
                     if l in t_ret:
                         if temp_list1[i][l][1] == 1:
-                            temp_list1[i][l][2] += 0.02
+                            temp_list1[i][l][2] += 0.0
                         else:
-                            temp_list1[i][l][2] -= 0.05
+                            temp_list1[i][l][2] -= 0.0
                     else:
                         temp_list1[i][l][2] -= 0.0
 
                 for j in range(i + 1, len(temp_list1)):
                     for m in range(len(temp_list1[j])):
-                        temp_list1[j][m][2] += 0.02
+                        temp_list1[j][m][2] += 0.00
             else:
                 for k in range(len(temp_list1[i])):
                     if temp_list1[i][k][1] == 1:
@@ -198,13 +204,16 @@ class music_trans():
             #     if (not (item in play_list[i])) and (not (item in play_list[i + 1])) and (not (item in play_list[i + 2])):
             #         note.servoCtl.run_single_servo(self.servo_table[item[0]] - note.SERVO_ID_BASE, note.FREE_ANGLE)
 
+            note_play = []
+            note_stop = []
             for item in play_list[i]:
                 print(item, self.servo_table[item[0]] - note.SERVO_ID_BASE, note.get_angle(self.servo_table[item[0]] - note.SERVO_ID_BASE, item[1]))
-                note.servoCtl.set_single_angle(note.get_servo(self.servo_table[item[0]]) - note.SERVO_ID_BASE, note.get_angle(self.servo_table[item[0]] - note.SERVO_ID_BASE, item[1]))
+                if item[1]:
+                    note_play.append(item[0])
+                else:
+                    note_stop.append(item[0])
 
             self.last_play = play_list[i].copy()
-
-            note.servoCtl.run()
 
         note.servos_home()
 
