@@ -68,7 +68,7 @@ class music_trans():
                             # 抬起需要停止的音符
                             tmp = (1 / len(music_item[i])) * self.beat_time * (1 / 4)
                             if tmp < 0.1:
-                                temp = 0.1
+                                tmp = 0.1
                             self._rest_with_time(-tmp)
                             for item in last_tone:
                                 self._stop(item)
