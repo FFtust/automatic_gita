@@ -67,14 +67,13 @@ class music_trans():
                             chors = chor.split(",")
                             # 抬起需要停止的音符
                             tmp = (1 / len(music_item[i])) * self.beat_time * (1 / 4)
-                            if tmp < 0.05:
-                                temp = 0.05
+                            if tmp < 0.1:
+                                temp = 0.1
                             self._rest_with_time(-tmp)
                             for item in last_tone:
                                 self._stop(item)
                             self._rest_with_time(tmp)
 
-                            last_tone_tmp = last_tone.copy()
                             last_tone = []
                             ##########################
                             for m in range(len(chors)):
@@ -83,9 +82,6 @@ class music_trans():
                                 if '{' in chors[m]:
                                     temp = eval(chors[m])
                                     for key in temp:
-                                        if key in last_tone_tmp:
-                                            self._rest_with_time(0.0)
-                                            last_tone_tmp = []
                                         if isinstance(temp[key], list):
                                             self._rest_with_time(temp[key][0])
                                             self._play(key)
@@ -99,15 +95,12 @@ class music_trans():
                                             self._stop(key)
                                             self._rest(-temp[key])
                                 else:
-                                    if chors[m] in last_tone_tmp:
-                                        self._rest_with_time(0.0)
-                                        last_tone_tmp = []
                                     self._play(chors[m])
                                     last_tone.append(chors[m])
 
                         self._rest(1 / len(music_item[i]))
                         # self._rest(1 / 16)
-                    # self._rest_with_time(0.02)
+                    self._rest_with_time(0.03)
             for nn in last_tone:
                 self._stop(nn)
 
@@ -161,7 +154,7 @@ class music_trans():
                         if temp_list1[i][l][1] == 1:
                             temp_list1[i][l][2] += 0.0
                         else:
-                            temp_list1[i][l][2] -= 0.03
+                            temp_list1[i][l][2] -= 0.0
                     else:
                         temp_list1[i][l][2] -= 0.0
 
