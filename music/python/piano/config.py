@@ -4,7 +4,7 @@ from note import servo_table, get_note_by_servo
 import note
 
 configTable = None
-currentServo = 0
+currentMidi = 0
 
 def saveConfig():
 	with open("configContent.py", "w") as f:
@@ -17,12 +17,13 @@ def readConfig():
 		configTable = eval(f.read()[16:])
 
 def play():
-	global currentServo
-	if currentServo in configTable:
-		print(currentServo, get_note_by_servo(currentServo), configTable[currentServo])
-		note.servoCtl.run_single_servo(currentServo, configTable[currentServo][0])
+	global currentMidi
+	servo_idx = note.get_servo(note.servo_table[note.midi_table[currentMidi]])
+	if servo_idx in configTable:
+		print(servo_idx, get_note_by_servo(servo_idx), configTable[servo_idx])
+		note.servoCtl.run_single_servo(servo_idx, configTable[servo_idx][0])
 	else:
-		print("not find", currentServo)
+		print("not find", servo_idx)
 
 def servo_play(servo_id):
     note.servoCtl.run_single_servo(servo_id, note.get_angle(servo_id, 1))
@@ -36,22 +37,30 @@ readConfig()
 for key in configTable:
 	note.servoCtl.run_single_servo(key, configTable[key][0])
 
+key_level = 0
+key_table = {"q":0, "w":2, "e":4, "r":5, "t":7, "y":9, "u":11, "2":1, "3":3, "5":6, "6":8, "7":10}
+
 def keyEventCb(e):
-	global currentServo
+	global currentMidi,key_level,key_table
 	if e.event_type == "up":
 		if e.name == "up":
-			configTable[currentServo][0] += 3 
+			key_level += 1
+			print("level", key_level)
 		elif e.name == "down":
-			configTable[currentServo][0] -= 3 
-		elif e.name == "left":
-			currentServo -= 1
+			key_level -= 1
+			print("level", key_level)
+		if e.name == "left":
+			key_level +=-3
+			print("level", key_level)
 		elif e.name == "right":
-			currentServo += 1
+			key_level += 3
+			print("level", key_level)
+
+		if e.name in key_table:
+			currentMidi = key_table[e.name] + key_level * 12 + 36
+			print(midi_num, "up")
 		play()
 		saveConfig()
-
-key_level = 0
-key_table = {"q":1, "w":3, "e":5, "r":6, "t":8, "y":10, "u":12, "2":2, "3":4, "5":7, "6":9, "7":11}
 
 def keyEventCb2(e):
 	global key_level
@@ -62,15 +71,17 @@ def keyEventCb2(e):
 		elif e.name == "down":
 			key_level -= 1
 			print("level", key_level)
-		elif e.name in key_table:
-			idx = key_table[e.name] + key_level * 12 - 1
-			servo_stop(idx)
+		
+		if e.name in key_table:
+			midi_num = key_table[e.name] + key_level * 12 + 36
+			note.stop_midi(midi_num)
+			print(midi_num, "up")
 
 	if e.event_type == "down":
 		if e.name in key_table:
-			idx = key_table[e.name] + key_level * 12 - 1
-			servo_play(idx)
-
+			midi_num = key_table[e.name] + key_level * 12 + 36
+			note.play_midi(midi_num)
+			print(midi_num, "down")
 
 
 keyboard.hook(keyEventCb2)

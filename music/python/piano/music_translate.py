@@ -66,9 +66,9 @@ class music_trans():
                             # 多个音符以 逗号间隔
                             chors = chor.split(",")
                             # 抬起需要停止的音符
-                            tmp = (1 / len(music_item[i])) * self.beat_time * (1 / 5)
-                            if tmp < 0.07:
-                                temp = 0.07
+                            tmp = (1 / len(music_item[i])) * self.beat_time * (1 / 4)
+                            if tmp < 0.05:
+                                temp = 0.05
                             self._rest_with_time(-tmp)
                             for item in last_tone:
                                 self._stop(item)
@@ -161,7 +161,7 @@ class music_trans():
                         if temp_list1[i][l][1] == 1:
                             temp_list1[i][l][2] += 0.0
                         else:
-                            temp_list1[i][l][2] -= 0.0
+                            temp_list1[i][l][2] -= 0.03
                     else:
                         temp_list1[i][l][2] -= 0.0
 
@@ -212,7 +212,7 @@ class music_trans():
                     note_play.append(item[0])
                 else:
                     note_stop.append(item[0])
-            note.play_note(note_stop)
+            note.stop_note(note_stop)
             note.play_note(note_play)
 
             self.last_play = play_list[i].copy()
