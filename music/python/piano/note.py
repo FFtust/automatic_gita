@@ -5,7 +5,8 @@ NOT_IMPLEMET = 100
 FREE_ANGLE = 181
 
 ANG_WHITE = 40
-ANG_BLACK = 30
+ANG_BLACK = 25
+
 ANG_OFF_BLACK = 0
 ANG_OFF_WHITE = 0
 
@@ -134,13 +135,13 @@ def stop_servo(servo_id):
 def servos_home():
     time.sleep(1)
     for key in servos_angle:
-        servoCtl.run_single_servo(int(key), servos_angle[key][0])
+        servoCtl.run_single_servo(get_servo(key), get_angle(key, 0))
         time.sleep(0.1)
     time.sleep(1)
     free_all()
 
 def free_all():
     for key in servos_angle:
-        servoCtl.run_single_servo(int(key), FREE_ANGLE)  
+        servoCtl.run_single_servo(get_servo(key), FREE_ANGLE)  
         time.sleep(0.03)
 

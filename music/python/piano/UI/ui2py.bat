@@ -1,0 +1,1 @@
+pyuic5 -o autopiano.py autopiano.ui
