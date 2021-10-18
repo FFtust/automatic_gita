@@ -147,15 +147,15 @@ class music_trans():
                 for l in range(len(temp_list1[i])):
                     if l in t_ret:
                         if temp_list1[i][l][1] == 1:
-                            temp_list1[i][l][2] += 0.07
+                            temp_list1[i][l][2] += 0.02
                         else:
-                            temp_list1[i][l][2] -= 0.07
+                            temp_list1[i][l][2] -= 0.06
                     else:
                         temp_list1[i][l][2] -= 0.0
 
                 for j in range(i + 1, len(temp_list1)):
                     for m in range(len(temp_list1[j])):
-                        temp_list1[j][m][2] += 0.0
+                        temp_list1[j][m][2] += 0.02
             else:
                 for k in range(len(temp_list1[i])):
                     if temp_list1[i][k][1] == 1:
