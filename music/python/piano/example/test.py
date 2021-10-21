@@ -80,7 +80,7 @@ sys.path.append('C:\\work\\automatic_gita\\music\\python\\piano')
 # )
 # music_white = (("2++","3++", "4++"),)
 import music_translate
-music_parse = music_translate.music_trans([music_black], beat=60)
+music_parse = music_translate.music_trans([music_black, music_table1], beat=60)
 music_parse.music_to_play_table()
 music_parse.play_music()
 # while 1:
