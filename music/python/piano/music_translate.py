@@ -39,8 +39,14 @@ class music_trans():
             self.play_list.append([tone, 0, self.current_t])
 
 ######################################################################
+    def _cal_rest(self, l):
+        for i in range(10):
+            if math.pow(2, i) <= l and math.pow(2, i + 1) > l:
+                return math.pow(2,i)
+
     def music_to_play_table(self):
         last_tone = []
+        rest_time = 0
 
         if not isinstance(self.music, list):
             self.music = [self.music]
@@ -48,16 +54,21 @@ class music_trans():
         for music_item in self.music:
             self._reset_t()
             self.set_beat(self.origin_beat)
+            rest_time = 0
             for i in range(len(music_item)):
+                # 处理一小节
                 if isinstance(music_item[i], tuple):
                     for j in range(len(music_item[i])):
                         # 解析1/16节拍
                         chor = music_item[i][j]
 
-                        if chor == "NOP":
+                        if "REST" in chor:
+                            tmp = eval(chor)
+                            rest_time = tmp["REST"]
+                            continue
+                        elif chor == "NOP":
                             self._rest(1 / 24)
                             continue
-
                         elif "BEAT" in chor:
                             tmp = eval(chor)
                             self.set_beat(tmp["BEAT"])
@@ -94,9 +105,11 @@ class music_trans():
                                 else:
                                     self._play(chors[m])
                                     last_tone.append(chors[m])
+                        if rest_time == 0:
+                            self._rest(1 / self._cal_rest(len(music_item[i])))
+                        else:
+                            self._rest(rest_time)
 
-                        self._rest(1 / len(music_item[i]))
-                        # self._rest(1 / 16)
                     self._rest_with_time(0.03)
 
         self.play_list_sort()

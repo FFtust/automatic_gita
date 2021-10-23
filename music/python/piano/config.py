@@ -42,7 +42,6 @@ def keyEventCb(e):
 		elif e.name == "right":
 			note.servos_angle[note.servo_table[note.midi_table[currentMidi]]][0] += 3
 			play()
-
 		if e.name in key_table:
 			currentMidi = key_table[e.name] + key_level * 12 + 36
 			print("current midi", currentMidi)
