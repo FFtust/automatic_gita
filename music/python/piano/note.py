@@ -7,23 +7,22 @@ FREE_ANGLE = 181
 ANG_WHITE = 35
 ANG_BLACK = 30
 
-KEY_IDLE_OFFSET = 7
+KEY_IDLE_OFFSET = 10
 
 ANG_OFF_BLACK = 0
 ANG_OFF_WHITE = 0
 
-TOME_MOVING = 10
+TOME_MOVING = 0
 
 servo_table = \
 {
 "1---": -12, "1---#": -11, "2---": -10,"2---#": -9,"3---": -8,"4---": -7, "4---#": -6,"5---": -5,"5---#": -4,"6---": -3,"6---#": -2, "7---": -1,
-"1--": 0, "1--#": 1, "2--": 2,"2--#": 3,"3--": 4,"4--": 5, "4--#": 6,"5--": 7,"5--#": 8,"6--": 9,"6--#": 10, "7--": 11,
+"1--": 0, "1--#": 100, "2--": 2,"2--#": 101,"3--": 4,"4--": 5, "4--#": 6,"5--": 7,"5--#": 8,"6--": 9,"6--#": 10, "7--": 11,
 "1-": 12, "1-#": 13, "2-": 14, "2-#": 15,"3-": 16,"4-": 17, "4-#": 18,"5-": 19,"5-#": 20,"6-": 21,"6-#": 22, "7-": 23,
-"1": 24, "1#": 25, "2": 260,"2#": 27,"3": 261,"4": 29, "4#": 30,"5": 31,"5#": 32,"6": 33,"6#": 34, "7": 35,
+"1": 24, "1#": 25, "2": 2600,"2#": 27,"3": 2601,"4": 29, "4#": 30,"5": 31,"5#": 32,"6": 33,"6#": 34, "7": 35,
 "1+": 36, "1+#": 37, "2+": 38,"2+#": 39,"3+": 40,"4+": 41, "4+#": 42,"5+": 43,"5+#": 440,"6+": 45,"6+#": 441, "7+": 47,
-"1++": 48, "1++#": 630, "2++": 50,"2++#": 631,"3++": 520,"4++": 521, "4++#": 540,"5++": 550,"5++#": 541,"6++": 551,"6++#": 58, "7++": 59,
+"1++": 48, "1++#": 6300, "2++": 50,"2++#": 6301,"3++": 5200,"4++": 5201, "4++#": 5400,"5++": 5500,"5++#": 5401,"6++": 5501,"6++#": 58, "7++": 59,
 "1+++":60
-
 }
 
 midi_table = \
@@ -56,13 +55,13 @@ def get_angle(servo_id, sta):
     is_two_key = False
 
     # 处理一个舵机控制两个琴键的情况
-    if servo_id > 100:
+    if servo_id >= 100:
         is_two_key = True
 
         if servo_id % 2 == 0:
-            sign = 1.5
+            sign = 1.4
         else:
-            sign = -1.5
+            sign = -1.4
 
     # 判断黑白键
     for key in servo_table:
@@ -94,11 +93,11 @@ def get_angle(servo_id, sta):
     return int(angle)    
 
 def get_servo(servo_id):
-    if servo_id > 100:
-        servo_id = servo_id // 10
+    if servo_id >= 100:
+        servo_id = servo_id // 100
     return servo_id
 
-def set_tome_moving(move):
+def set_tone_moving(move):
     global TOME_MOVING
     TOME_MOVING = move
 
@@ -127,6 +126,7 @@ def play_note(note):
     for item in note:
         item = cal_note(item, TOME_MOVING)
         if item in servo_table:
+            print("item", get_servo(servo_table[item]) - SERVO_ID_BASE)
             servoCtl.set_single_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 1))
     servoCtl.run()
 

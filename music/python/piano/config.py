@@ -65,9 +65,9 @@ def keyEventCb2(e):
 	if e.event_type == "down":
 		if e.name in key_table:
 			midi_num = key_table[e.name] + key_level * 12 + 36
-			note.play_midi(midi_num)
 			print(midi_num, "down")
+			note.play_midi(midi_num)
 
 
-keyboard.hook(keyEventCb)
-keyboard.wait('Ctrl')
+keyboard.hook(keyEventCb2)
+keyboard.wait('Esc')
