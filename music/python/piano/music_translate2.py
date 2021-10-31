@@ -50,6 +50,7 @@ class music_trans():
         last_tone = []
         rest_time = 0
         copy_index_start = None
+        check_t = []
 
         if not isinstance(self.music, list):
             self.music = [self.music]
@@ -61,9 +62,9 @@ class music_trans():
             rest_time = 0
             i = 0
             copy_index_start = None
+            check_t = []
 
             while i < len(music_item):
-                print("aa", i)
             # for i in range(len(music_item)):
                 # 处理一小节
                 if isinstance(music_item[i], tuple):
@@ -146,7 +147,12 @@ class music_trans():
                             self._rest(rest_time)
 
                     self._rest_with_time(0.04)
+                    check_t.append([i,round(self.current_t, 1)])
+                else:
+                    print("iiiiii", i, music_item[i])
                 i = i + 1
+            print("aa", len(check_t), check_t)
+
 
         self.play_list_sort()
 
