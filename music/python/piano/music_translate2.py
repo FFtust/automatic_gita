@@ -49,6 +49,7 @@ class music_trans():
     def music_to_play_table(self):
         last_tone = []
         rest_time = 0
+        copy_index_start = None
 
         if not isinstance(self.music, list):
             self.music = [self.music]
@@ -58,7 +59,12 @@ class music_trans():
             self.set_beat(self.origin_beat)
             # self._rest_with_time(0.03)
             rest_time = 0
-            for i in range(len(music_item)):
+            i = 0
+            copy_index_start = None
+
+            while i < len(music_item):
+                print("aa", i)
+            # for i in range(len(music_item)):
                 # 处理一小节
                 if isinstance(music_item[i], tuple):
                     for j in range(len(music_item[i])):
@@ -79,6 +85,14 @@ class music_trans():
                         elif "MOVE" in chor:
                             tmp = eval(chor)
                             note.set_tone_moving(tmp["MOVE"])
+                            continue
+                        elif "COPY_START" in chor:
+                            copy_index_start = i+1
+                            continue
+                        elif "COPY_STOP" in chor:
+                            if copy_index_start != None:                            
+                                i = copy_index_start
+                                copy_index_start = None
                             continue
                         elif "=" in chor:
                             tmp = chor.split("=")
@@ -131,7 +145,8 @@ class music_trans():
                         else:
                             self._rest(rest_time)
 
-                    self._rest_with_time(0.03)
+                    self._rest_with_time(0.04)
+                i = i + 1
 
         self.play_list_sort()
 
