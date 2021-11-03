@@ -3,6 +3,11 @@ import math
 import random
 import note
 
+NOTE_SECTION_INTERVAL = 0.03
+RIGHT_LEFT_INTERVAL = 0.03
+
+SAME_NOTE_INTERVAL = 0.07
+
 class music_trans():
     def __init__(self, music, beat = 60, note_per = 4, move = 0):
         self.music = music
@@ -58,7 +63,7 @@ class music_trans():
         for music_item in self.music:
             self._reset_t()
             self.set_beat(self.origin_beat)
-            # self._rest_with_time(0.03)
+            self._rest_with_time(RIGHT_LEFT_INTERVAL)
             rest_time = 0
             i = 0
             copy_index_start = None
@@ -76,8 +81,9 @@ class music_trans():
                             tmp = eval(chor)
                             rest_time = tmp["REST"]
                             continue
-                        elif chor == "NOP":
-                            self._rest(1 / 24)
+                        elif "NOP" in chor:
+                            tmp = eval(chor)
+                            self._rest(tmp["NOP"])
                             continue
                         elif "BEAT" in chor:
                             tmp = eval(chor)
@@ -93,6 +99,7 @@ class music_trans():
                         elif "COPY_STOP" in chor:
                             if copy_index_start != None:                            
                                 i = copy_index_start
+                                i -= 1
                                 copy_index_start = None
                             continue
                         elif "=" in chor:
@@ -146,13 +153,11 @@ class music_trans():
                         else:
                             self._rest(rest_time)
 
-                    self._rest_with_time(0.04)
+                    self._rest_with_time(NOTE_SECTION_INTERVAL)
                     check_t.append([i,round(self.current_t, 1)])
                 else:
-                    print("iiiiii", i, music_item[i])
+                    print("error", i, music_item[i])
                 i = i + 1
-            print("aa", len(check_t), check_t)
-
 
         self.play_list_sort()
 
@@ -182,7 +187,7 @@ class music_trans():
 
             k = i
             for j in range(i + 1, len(ret_list)):
-                if math.fabs(ret_list[j][2] - ret_list[k][2]) < 0.001:
+                if math.fabs(ret_list[j][2] - ret_list[k][2]) < 0.0001:
                     temp_list2.append(ret_list[j])
                     i += 1
                 else:
@@ -201,9 +206,9 @@ class music_trans():
                 for l in range(len(temp_list1[i])):
                     if l in t_ret:
                         if temp_list1[i][l][1] == 1:
-                            temp_list1[i][l][2] += 0.0
+                            temp_list1[i][l][2] += 0.02
                         else:
-                            temp_list1[i][l][2] -= 0.06
+                            temp_list1[i][l][2] -= SAME_NOTE_INTERVAL
                     else:
                         temp_list1[i][l][2] += 0.0
 
