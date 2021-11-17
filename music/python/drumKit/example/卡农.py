@@ -125,6 +125,6 @@ import sys
 sys.path.append('C:\\work\\automatic_gita\\music\\python\\piano')
 
 import music_translate
-music_parse = music_translate.music_trans([music_table_left, music_table_right], beat = 82)
+music_parse = music_translate.music_trans([music_table_right, music_table_left], beat = 82)
 music_parse.music_to_play_table()
 music_parse.play_music()

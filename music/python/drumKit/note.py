@@ -186,5 +186,5 @@ def servos_home():
 def free_all():
     for key in servos_angle:
         servoCtl.run_single_servo(get_servo(key), FREE_ANGLE)  
-        time.sleep(0.05)
+        time.sleep(0.01)
 

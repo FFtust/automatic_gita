@@ -1,0 +1,8932 @@
+sleep 861.715500
+noteon 1 49 100
+sleep 500.000000
+noteon 0 66 100
+noteon 2 54 60
+noteon 0 61 100
+noteoff 1 49
+noteon 1 42 100
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 0 66
+noteoff 2 73
+noteoff 0 61
+noteon 2 76 60
+noteon 0 68 100
+noteon 0 59 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 2 78
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 2 73
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 1 42
+noteon 3 64 65
+noteoff 2 78
+noteon 3 66 65
+noteon 1 42 100
+noteon 3 61 65
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 50.000000
+noteoff 3 64
+noteoff 3 66
+noteoff 3 61
+sleep 50.000000
+noteoff 2 73
+noteon 3 64 65
+noteon 2 76 60
+noteon 3 61 65
+noteon 3 57 65
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 0 68
+noteoff 2 78
+noteoff 0 59
+noteon 2 54 60
+noteon 0 61 100
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 0 61
+noteoff 2 61
+noteon 0 69 100
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 0 69
+noteoff 2 66
+noteon 0 68 100
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 2 73
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 50.000000
+noteoff 3 64
+noteoff 3 61
+noteoff 3 57
+sleep 50.000000
+noteoff 0 68
+noteoff 1 42
+noteon 0 66 100
+noteoff 2 78
+noteon 0 62 100
+noteon 1 47 100
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 0 66
+noteoff 2 73
+noteoff 0 62
+noteon 2 76 60
+noteon 0 68 100
+noteon 0 59 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 2 78
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 2 73
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteon 1 35 100
+noteon 3 66 65
+noteoff 2 78
+noteon 3 64 65
+noteon 2 54 60
+noteon 3 73 65
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 50.000000
+noteoff 3 66
+noteoff 3 64
+noteoff 3 73
+sleep 50.000000
+noteoff 2 73
+noteon 3 71 65
+noteon 2 76 60
+noteon 3 66 65
+noteon 3 69 65
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 0 68
+noteon 3 66 75
+noteoff 2 78
+noteoff 0 59
+noteon 2 54 60
+noteon 0 69 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 3 66
+noteoff 2 54
+noteon 3 61 75
+noteon 2 61 60
+sleep 100.000000
+noteoff 3 61
+noteoff 2 61
+noteon 3 76 75
+noteon 2 64 60
+sleep 100.000000
+noteoff 3 76
+noteoff 2 64
+noteon 3 74 75
+noteon 2 66 60
+sleep 50.000000
+noteoff 3 71
+noteoff 3 66
+noteoff 3 69
+sleep 50.000000
+noteoff 0 69
+noteoff 3 74
+noteoff 2 66
+noteon 3 69 65
+noteoff 0 61
+noteon 3 66 65
+noteon 2 66 60
+noteon 3 64 65
+noteon 0 68 100
+noteon 0 59 100
+sleep 100.000000
+noteon 3 71 75
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 3 71
+noteoff 2 73
+noteon 3 69 75
+noteon 2 76 60
+sleep 100.000000
+noteoff 3 69
+noteoff 2 76
+noteon 3 68 75
+noteon 2 78 60
+sleep 50.000000
+noteoff 3 69
+noteoff 3 66
+noteoff 3 64
+sleep 50.000000
+noteoff 0 68
+noteon 4 50 80
+noteoff 1 47
+noteoff 3 68
+noteoff 0 59
+noteoff 2 78
+noteon 0 66 100
+noteoff 1 35
+noteon 0 62 100
+noteon 2 62 60
+noteon 1 38 100
+sleep 100.000000
+noteoff 2 62
+noteon 2 66 60
+sleep 100.000000
+noteoff 4 50
+noteoff 2 66
+noteon 2 69 60
+sleep 100.000000
+noteoff 2 69
+noteon 2 74 60
+sleep 100.000000
+noteon 4 50 80
+noteoff 2 74
+noteon 2 74 60
+sleep 100.000000
+noteoff 2 74
+noteon 2 78 60
+sleep 100.000000
+noteoff 4 50
+noteoff 0 62
+noteoff 2 78
+noteon 0 62 100
+noteon 2 81 60
+sleep 100.000000
+noteoff 2 81
+noteon 2 86 60
+sleep 100.000000
+noteon 4 50 80
+noteoff 2 86
+noteon 2 62 60
+sleep 100.000000
+noteoff 2 62
+noteon 2 66 60
+sleep 100.000000
+noteoff 4 50
+noteoff 2 66
+noteon 2 69 60
+sleep 100.000000
+noteoff 2 69
+noteon 2 74 60
+sleep 100.000000
+noteon 3 66 65
+noteoff 0 66
+noteon 4 50 80
+noteoff 2 74
+noteon 3 62 65
+noteoff 0 62
+noteon 3 64 65
+noteon 2 74 60
+noteon 0 71 100
+sleep 100.000000
+noteoff 2 74
+noteon 2 78 60
+sleep 50.000000
+noteoff 3 66
+noteoff 3 62
+noteoff 3 64
+sleep 50.000000
+noteoff 2 78
+noteoff 4 50
+noteon 2 81 60
+noteon 3 68 65
+noteon 3 66 65
+sleep 100.000000
+noteoff 2 81
+noteon 2 86 60
+sleep 50.000000
+noteoff 3 68
+noteoff 3 66
+sleep 50.000000
+noteoff 0 71
+noteon 4 52 80
+noteoff 1 38
+noteon 3 69 65
+noteon 0 68 100
+noteon 3 66 65
+noteoff 2 86
+noteon 3 61 65
+noteon 0 59 100
+noteon 1 40 100
+noteon 2 76 50
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 52
+sleep 50.000000
+noteoff 3 69
+noteoff 3 66
+noteoff 3 61
+sleep 50.000000
+noteoff 2 64
+noteoff 4 52
+noteon 2 76 54
+sleep 100.000000
+noteon 3 68 65
+noteoff 2 76
+noteon 3 64 65
+noteon 2 64 56
+noteon 3 59 65
+sleep 100.000000
+noteoff 2 64
+noteon 4 52 80
+noteon 2 76 58
+sleep 50.000000
+noteoff 3 68
+noteoff 3 64
+noteoff 3 59
+sleep 50.000000
+noteoff 2 76
+noteon 2 64 60
+sleep 100.000000
+noteoff 4 52
+noteoff 0 68
+noteoff 2 64
+noteoff 0 59
+noteon 2 76 62
+noteon 0 61 100
+noteon 0 56 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 64
+sleep 100.000000
+noteon 4 52 80
+noteoff 2 64
+noteon 2 76 66
+sleep 100.000000
+noteon 3 64 65
+noteoff 2 76
+noteon 3 61 65
+noteon 2 64 68
+noteon 3 59 65
+sleep 100.000000
+noteoff 2 64
+noteoff 4 52
+noteon 2 76 70
+sleep 50.000000
+noteoff 3 64
+noteoff 3 61
+noteoff 3 59
+sleep 50.000000
+noteoff 2 76
+noteon 2 64 72
+sleep 100.000000
+noteon 4 52 80
+noteoff 0 61
+noteon 3 57 65
+noteoff 2 64
+noteoff 0 56
+noteon 2 76 74
+noteon 0 64 100
+noteon 0 59 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 76
+sleep 50.000000
+noteoff 3 57
+sleep 50.000000
+noteoff 2 64
+noteoff 4 52
+noteon 2 76 78
+noteon 3 59 65
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 80
+sleep 50.000000
+noteoff 3 59
+sleep 50.000000
+noteoff 0 64
+noteoff 1 40
+noteoff 0 59
+noteoff 2 64
+noteon 0 66 100
+noteon 1 47 100
+noteon 0 59 100
+noteon 2 59 60
+sleep 100.000000
+noteoff 2 59
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 71 60
+sleep 100.000000
+noteoff 2 71
+noteon 2 73 60
+sleep 100.000000
+noteoff 2 73
+noteon 2 71 60
+sleep 100.000000
+noteoff 2 71
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 71 60
+sleep 100.000000
+noteoff 2 71
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 2 78
+noteon 2 83 60
+sleep 100.000000
+noteoff 2 83
+noteon 2 85 60
+sleep 100.000000
+noteoff 2 85
+noteon 2 83 60
+sleep 100.000000
+noteoff 2 83
+noteon 2 78 60
+sleep 100.000000
+noteoff 2 78
+noteon 2 76 60
+sleep 100.000000
+noteon 3 30 27
+noteoff 0 66
+noteoff 1 47
+noteoff 0 59
+noteoff 2 76
+noteon 0 66 100
+noteon 1 46 100
+noteon 0 61 100
+noteon 2 90 60
+sleep 50.000000
+noteon 2 85 60
+sleep 75.000000
+noteon 2 82 60
+sleep 275.000000
+noteoff 3 30
+noteon 3 30 48
+sleep 400.000000
+noteoff 3 30
+noteon 5 78 14
+noteon 4 90 14
+noteon 3 30 70
+sleep 50.000000
+noteoff 5 78
+noteoff 4 90
+sleep 1.666667
+noteon 5 78 19
+noteon 4 90 19
+sleep 48.333333
+noteon 5 78 23
+noteon 4 90 23
+sleep 1.666667
+noteoff 5 78
+noteoff 4 90
+sleep 48.333333
+noteoff 5 78
+noteoff 4 90
+noteon 5 78 28
+noteon 4 90 28
+sleep 50.000000
+noteoff 5 78
+noteoff 4 90
+noteon 5 78 32
+noteon 4 90 32
+sleep 50.000000
+noteoff 5 78
+noteoff 4 90
+sleep 1.666667
+noteon 5 78 37
+noteon 4 90 37
+sleep 48.333333
+noteon 5 78 41
+noteon 4 90 41
+sleep 1.666667
+noteoff 5 78
+noteoff 4 90
+sleep 48.333333
+noteoff 5 78
+noteoff 4 90
+noteon 5 78 45
+noteon 4 90 45
+sleep 50.000000
+noteoff 5 78
+noteoff 3 30
+noteon 5 78 50
+noteoff 4 90
+noteon 3 30 91
+noteon 4 90 50
+sleep 50.000000
+noteoff 5 78
+noteoff 4 90
+sleep 1.666667
+noteon 5 78 54
+noteon 4 90 54
+sleep 48.333333
+noteon 5 78 59
+noteon 4 90 59
+sleep 1.666667
+noteoff 5 78
+noteoff 4 90
+sleep 48.333333
+noteoff 5 78
+noteoff 4 90
+noteon 5 78 63
+noteon 4 90 63
+sleep 50.000000
+noteoff 2 90
+noteoff 5 78
+noteoff 4 90
+noteon 5 78 68
+noteon 4 90 68
+sleep 50.000000
+noteoff 2 85
+noteoff 5 78
+noteoff 4 90
+sleep 1.666667
+noteon 5 78 72
+noteon 4 90 72
+sleep 48.333333
+noteon 5 78 76
+noteon 4 90 76
+sleep 1.666667
+noteoff 5 78
+noteoff 4 90
+sleep 23.333333
+noteoff 2 82
+sleep 25.000000
+noteoff 5 78
+noteoff 4 90
+noteon 5 78 81
+noteon 4 90 81
+sleep 50.000000
+noteoff 0 66
+noteoff 5 78
+noteoff 1 46
+noteoff 3 30
+noteoff 0 61
+noteoff 4 90
+noteon 0 69 100
+noteon 3 78 80
+noteon 1 42 100
+noteon 0 66 100
+noteon 3 73 80
+noteon 2 90 73
+noteon 4 54 80
+noteon 0 61 100
+noteon 3 69 80
+noteon 1 30 100
+noteon 4 49 80
+sleep 100.000000
+noteoff 3 78
+noteoff 0 69
+noteoff 3 73
+noteoff 1 42
+noteoff 3 69
+noteoff 0 66
+noteoff 2 90
+noteoff 0 61
+noteoff 1 30
+noteon 0 69 50
+noteon 2 78 71
+noteon 0 66 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 54
+noteoff 0 69
+noteon 3 78 80
+noteon 1 42 100
+noteoff 4 49
+noteoff 0 66
+noteon 3 73 80
+noteoff 2 78
+noteon 4 42 80
+noteoff 0 61
+noteon 3 69 80
+noteon 1 30 100
+noteon 0 69 100
+noteon 2 78 68
+noteon 0 66 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 3 78
+noteoff 0 69
+noteoff 3 73
+noteoff 1 42
+noteoff 3 69
+noteoff 0 66
+noteoff 2 78
+noteoff 0 61
+noteoff 1 30
+noteon 0 69 50
+noteon 2 90 66
+noteon 0 66 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 42
+noteoff 0 69
+noteon 4 54 80
+noteoff 2 90
+noteon 4 49 80
+noteoff 0 66
+noteon 2 90 64
+noteoff 0 61
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 61
+sleep 100.000000
+noteon 3 76 80
+noteon 0 68 100
+noteoff 4 54
+noteon 1 40 100
+noteon 3 71 80
+noteon 0 64 100
+noteoff 4 49
+noteoff 2 78
+noteon 3 68 80
+noteon 0 61 100
+noteon 4 66 80
+noteon 1 28 100
+noteon 4 61 80
+noteon 2 78 59
+sleep 100.000000
+noteoff 3 76
+noteoff 0 68
+noteoff 3 71
+noteoff 1 40
+noteoff 3 68
+noteoff 0 64
+noteoff 2 78
+noteoff 0 61
+noteoff 1 28
+noteon 0 68 50
+noteon 2 90 57
+noteon 0 64 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 66
+noteoff 0 68
+noteoff 4 61
+noteoff 2 90
+noteon 4 69 80
+noteoff 0 64
+noteon 4 66 80
+noteon 2 90 54
+noteoff 0 61
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 52
+sleep 100.000000
+noteon 3 73 80
+noteon 0 64 100
+noteoff 4 69
+noteon 1 36 100
+noteon 3 69 80
+noteon 0 61 100
+noteoff 4 66
+noteoff 2 78
+noteon 3 66 80
+noteon 0 57 100
+noteon 4 66 80
+noteon 1 24 100
+noteon 4 61 80
+noteon 2 78 49
+sleep 100.000000
+noteoff 3 73
+noteoff 0 64
+noteoff 3 69
+noteoff 1 36
+noteoff 3 66
+noteoff 0 61
+noteoff 2 78
+noteoff 0 57
+noteoff 1 24
+noteon 0 64 50
+noteon 0 61 50
+noteon 2 90 47
+noteon 0 57 50
+sleep 100.000000
+noteoff 4 66
+noteoff 0 64
+noteoff 4 61
+noteon 1 37 100
+noteon 4 56 80
+noteoff 0 61
+noteon 4 52 80
+noteoff 2 90
+noteoff 0 57
+noteon 2 90 45
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 42
+sleep 100.000000
+noteon 3 73 80
+noteon 0 71 100
+noteoff 4 56
+noteoff 2 78
+noteon 3 69 80
+noteon 0 61 100
+noteoff 4 52
+noteon 2 78 40
+noteon 3 66 80
+noteon 0 68 100
+noteon 4 52 80
+noteon 4 49 80
+sleep 100.000000
+noteoff 3 73
+noteoff 2 78
+noteoff 3 69
+noteon 2 90 37
+noteoff 3 66
+sleep 100.000000
+noteoff 4 52
+noteoff 1 37
+noteoff 4 49
+noteoff 2 90
+noteon 4 50 80
+noteon 1 38 100
+noteon 2 90 36
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 36
+sleep 100.000000
+noteon 3 74 80
+noteoff 0 71
+noteoff 4 50
+noteoff 2 78
+noteon 3 69 80
+noteoff 0 61
+noteon 4 52 80
+noteon 2 78 36
+noteoff 0 68
+noteon 0 69 100
+noteon 0 66 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 3 74
+noteoff 0 69
+noteoff 3 69
+noteoff 2 78
+noteoff 0 66
+noteon 2 90 37
+noteoff 0 61
+sleep 100.000000
+noteoff 4 52
+noteon 0 69 100
+noteon 3 74 80
+noteoff 2 90
+noteon 4 54 80
+noteon 0 66 100
+noteon 3 69 80
+noteon 2 90 37
+noteon 0 62 100
+sleep 100.000000
+noteoff 3 74
+noteoff 2 90
+noteoff 3 69
+noteon 2 78 37
+sleep 100.000000
+noteoff 2 78
+noteon 2 78 37
+sleep 100.000000
+noteoff 2 78
+noteon 2 90 38
+sleep 100.000000
+noteon 0 61 100
+noteoff 2 90
+noteon 2 90 38
+sleep 100.000000
+noteoff 0 61
+noteoff 2 90
+noteon 0 62 100
+noteon 2 78 39
+sleep 100.000000
+noteoff 0 62
+noteoff 2 78
+noteon 0 66 100
+noteon 2 78 41
+sleep 100.000000
+noteoff 0 66
+noteoff 2 78
+noteon 0 69 100
+noteon 2 90 44
+sleep 100.000000
+noteoff 0 69
+noteoff 2 90
+noteon 0 73 100
+noteon 2 90 47
+sleep 100.000000
+noteoff 0 73
+noteoff 2 90
+noteon 0 74 100
+noteon 2 78 50
+sleep 100.000000
+noteoff 0 74
+noteoff 2 78
+noteon 0 73 100
+noteon 2 78 53
+sleep 100.000000
+noteoff 0 69
+noteoff 2 78
+noteoff 0 66
+noteon 2 90 56
+noteoff 0 62
+noteoff 0 73
+noteon 0 69 100
+sleep 100.000000
+noteoff 4 54
+noteoff 0 69
+noteon 3 73 80
+noteoff 1 38
+noteon 4 57 80
+noteon 0 69 100
+noteon 3 69 80
+noteoff 2 90
+noteon 4 50 80
+noteon 0 66 100
+noteon 3 85 80
+noteon 1 35 100
+noteon 3 81 80
+noteon 0 62 100
+noteon 0 59 100
+noteon 1 47 100
+noteon 2 90 73
+sleep 100.000000
+noteoff 3 73
+noteoff 0 69
+noteoff 3 69
+noteoff 1 35
+noteoff 3 85
+noteoff 0 66
+noteoff 3 81
+noteoff 2 90
+noteoff 0 62
+noteoff 1 47
+noteoff 0 59
+noteon 2 78 71
+sleep 100.000000
+noteoff 4 57
+noteon 0 69 100
+noteon 3 73 80
+noteon 1 35 100
+noteoff 4 50
+noteon 0 66 100
+noteon 3 69 80
+noteoff 2 78
+noteon 4 47 80
+noteon 0 62 100
+noteon 3 85 80
+noteon 1 47 100
+noteon 3 81 80
+noteon 0 59 100
+noteon 2 78 68
+sleep 100.000000
+noteoff 3 73
+noteoff 0 69
+noteoff 3 69
+noteoff 1 35
+noteoff 3 85
+noteoff 0 66
+noteoff 3 81
+noteoff 2 78
+noteoff 0 62
+noteoff 1 47
+noteoff 0 59
+noteon 2 90 66
+sleep 100.000000
+noteoff 4 47
+noteoff 2 90
+noteon 4 61 80
+noteon 2 90 64
+noteon 4 54 80
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 61
+sleep 100.000000
+noteon 3 71 80
+noteon 0 71 100
+noteoff 4 61
+noteon 1 37 100
+noteon 3 68 80
+noteon 0 68 100
+noteoff 4 54
+noteoff 2 78
+noteon 3 83 80
+noteon 0 64 100
+noteon 4 68 80
+noteon 1 49 100
+noteon 3 80 80
+noteon 0 61 100
+noteon 4 61 80
+noteon 2 78 59
+sleep 100.000000
+noteoff 3 71
+noteoff 0 71
+noteoff 3 68
+noteoff 1 37
+noteoff 3 83
+noteoff 0 68
+noteoff 3 80
+noteoff 2 78
+noteoff 0 64
+noteoff 1 49
+noteoff 0 61
+noteon 2 90 57
+sleep 100.000000
+noteoff 4 68
+noteoff 2 90
+noteoff 4 61
+noteon 2 90 54
+noteon 4 69 80
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 52
+sleep 100.000000
+noteon 3 68 80
+noteon 0 68 100
+noteoff 4 69
+noteon 1 40 100
+noteon 3 64 80
+noteon 0 64 100
+noteon 4 73 80
+noteoff 2 78
+noteon 3 80 80
+noteon 0 61 100
+noteon 3 76 80
+noteon 1 52 100
+noteon 2 78 49
+sleep 100.000000
+noteoff 3 68
+noteoff 0 68
+noteoff 3 64
+noteoff 1 40
+noteoff 3 80
+noteoff 0 64
+noteoff 3 76
+noteoff 2 78
+noteoff 0 61
+noteoff 1 52
+noteon 2 90 47
+sleep 100.000000
+noteoff 4 73
+noteon 1 37 100
+noteon 4 61 80
+noteoff 2 90
+noteon 1 49 100
+noteon 2 90 45
+sleep 100.000000
+noteoff 4 61
+noteoff 2 90
+noteon 4 59 80
+noteon 2 78 42
+sleep 100.000000
+noteon 3 68 80
+noteon 0 59 100
+noteoff 4 59
+noteoff 2 78
+noteon 3 64 80
+noteon 2 78 40
+noteon 4 57 80
+noteon 3 80 80
+noteon 3 76 80
+sleep 100.000000
+noteoff 4 57
+noteoff 0 59
+noteoff 3 68
+noteoff 2 78
+noteon 4 56 80
+noteon 0 61 100
+noteoff 3 64
+noteon 2 90 37
+noteoff 3 80
+noteoff 3 76
+sleep 100.000000
+noteoff 4 56
+noteoff 0 61
+noteon 3 69 80
+noteoff 1 37
+noteon 4 61 80
+noteon 0 66 100
+noteon 3 66 80
+noteoff 2 90
+noteon 0 61 100
+noteoff 1 49
+noteon 2 90 36
+noteon 1 50 100
+noteon 1 38 100
+sleep 100.000000
+noteoff 3 69
+noteoff 2 90
+noteoff 3 66
+noteon 2 78 36
+sleep 100.000000
+noteoff 2 78
+noteon 2 78 36
+sleep 100.000000
+noteoff 2 78
+noteon 2 90 37
+sleep 100.000000
+noteoff 2 90
+noteon 2 90 37
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 37
+sleep 100.000000
+noteoff 2 78
+noteon 2 78 37
+sleep 100.000000
+noteoff 2 78
+noteon 2 90 38
+sleep 100.000000
+noteon 0 81 100
+noteoff 2 90
+noteon 5 90 14
+noteon 2 90 38
+noteon 6 78 14
+sleep 50.000000
+noteoff 5 90
+noteoff 6 78
+sleep 1.666667
+noteon 5 90 19
+noteon 6 78 19
+sleep 48.333333
+noteon 5 90 23
+noteoff 0 81
+noteon 6 78 23
+noteoff 2 90
+noteon 0 78 100
+noteon 2 78 39
+sleep 1.666667
+noteoff 5 90
+noteoff 6 78
+sleep 48.333333
+noteoff 5 90
+noteoff 6 78
+noteon 5 90 28
+noteon 6 78 28
+sleep 50.000000
+noteoff 5 90
+noteoff 0 78
+noteoff 6 78
+noteoff 2 78
+noteon 5 90 32
+noteon 0 76 100
+noteon 6 78 32
+noteon 2 78 41
+sleep 50.000000
+noteoff 5 90
+noteoff 6 78
+sleep 1.666667
+noteon 5 90 37
+noteon 6 78 37
+sleep 48.333333
+noteon 5 90 41
+noteoff 0 76
+noteon 6 78 41
+noteoff 2 78
+noteon 0 73 100
+noteon 2 90 44
+sleep 1.666667
+noteoff 5 90
+noteoff 6 78
+sleep 48.333333
+noteoff 5 90
+noteoff 6 78
+noteon 5 90 45
+noteon 6 78 45
+sleep 50.000000
+noteoff 5 90
+noteoff 0 73
+noteoff 6 78
+noteoff 2 90
+noteon 5 90 50
+noteon 0 69 100
+noteon 6 78 50
+noteon 2 90 47
+sleep 50.000000
+noteoff 5 90
+noteoff 6 78
+sleep 1.666667
+noteon 5 90 54
+noteon 6 78 54
+sleep 48.333333
+noteon 5 90 59
+noteoff 0 69
+noteon 6 78 59
+noteoff 2 90
+noteon 0 66 100
+noteon 2 78 50
+sleep 1.666667
+noteoff 5 90
+noteoff 6 78
+sleep 48.333333
+noteoff 5 90
+noteoff 6 78
+noteon 5 90 63
+noteon 6 78 63
+sleep 50.000000
+noteoff 5 90
+noteoff 0 66
+noteoff 6 78
+noteoff 2 78
+noteon 5 90 68
+noteon 0 61 100
+noteon 6 78 68
+noteon 2 78 53
+sleep 50.000000
+noteoff 5 90
+noteoff 6 78
+sleep 1.666667
+noteon 5 90 72
+noteon 6 78 72
+sleep 48.333333
+noteon 5 90 76
+noteoff 0 61
+noteon 6 78 76
+noteoff 2 78
+noteon 0 57 100
+noteon 2 90 56
+sleep 1.666667
+noteoff 5 90
+noteoff 6 78
+sleep 48.333333
+noteoff 5 90
+noteoff 6 78
+noteon 5 90 81
+noteon 6 78 81
+sleep 50.000000
+noteoff 4 61
+noteoff 0 66
+noteoff 5 90
+noteoff 1 50
+noteon 3 78 80
+noteoff 0 61
+noteoff 6 78
+noteoff 2 90
+noteoff 0 57
+noteon 5 90 90
+noteoff 1 38
+noteon 3 73 80
+noteon 0 69 100
+noteon 5 78 90
+noteon 4 54 80
+noteon 0 66 100
+noteon 5 85 90
+noteon 1 42 100
+noteon 3 69 80
+noteon 0 61 100
+noteon 4 49 80
+noteon 2 90 73
+noteon 1 30 100
+sleep 100.000000
+noteoff 5 90
+noteoff 0 69
+noteoff 3 78
+noteoff 1 42
+noteoff 5 78
+noteoff 0 66
+noteoff 3 73
+noteoff 2 90
+noteoff 5 85
+noteoff 0 61
+noteoff 3 69
+noteoff 1 30
+noteon 5 78 90
+noteon 0 69 50
+noteon 2 78 71
+noteon 0 66 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 54
+noteoff 0 69
+noteoff 5 78
+noteon 1 42 100
+noteon 3 78 80
+noteoff 0 66
+noteon 5 78 90
+noteoff 2 78
+noteoff 4 49
+noteoff 0 61
+noteon 5 73 90
+noteon 1 30 100
+noteon 3 73 80
+noteon 0 69 100
+noteon 5 81 90
+noteon 2 78 68
+noteon 4 42 80
+noteon 0 66 100
+noteon 3 69 80
+noteon 0 61 100
+sleep 100.000000
+noteoff 5 78
+noteoff 0 69
+noteoff 3 78
+noteoff 1 42
+noteoff 5 73
+noteoff 0 66
+noteoff 3 73
+noteoff 2 78
+noteoff 5 81
+noteoff 0 61
+noteoff 3 69
+noteoff 1 30
+noteon 0 69 50
+noteon 2 90 66
+noteon 0 66 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 42
+noteoff 0 69
+noteon 4 54 80
+noteoff 2 90
+noteon 4 49 80
+noteoff 0 66
+noteon 2 90 64
+noteoff 0 61
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 61
+sleep 100.000000
+noteon 5 88 90
+noteon 0 68 100
+noteon 3 76 80
+noteon 1 40 100
+noteon 5 76 90
+noteon 0 64 100
+noteoff 4 54
+noteoff 2 78
+noteon 5 83 90
+noteon 0 61 100
+noteon 3 71 80
+noteon 1 28 100
+noteoff 4 49
+noteon 3 68 80
+noteon 2 78 59
+noteon 4 66 80
+noteon 4 61 80
+sleep 100.000000
+noteoff 5 88
+noteoff 0 68
+noteoff 3 76
+noteoff 1 40
+noteoff 5 76
+noteoff 0 64
+noteoff 3 71
+noteoff 2 78
+noteoff 5 83
+noteoff 0 61
+noteoff 3 68
+noteoff 1 28
+noteon 5 76 90
+noteon 0 68 50
+noteon 2 90 57
+noteon 0 64 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 66
+noteoff 0 68
+noteoff 5 76
+noteoff 2 90
+noteoff 4 61
+noteoff 0 64
+noteon 5 71 90
+noteon 2 90 54
+noteon 4 69 80
+noteoff 0 61
+noteon 5 76 90
+noteon 4 66 80
+sleep 100.000000
+noteoff 5 71
+noteoff 2 90
+noteoff 5 76
+noteon 2 78 52
+sleep 100.000000
+noteon 3 73 80
+noteon 0 64 100
+noteon 5 85 90
+noteon 1 36 100
+noteoff 4 69
+noteon 0 61 100
+noteon 5 78 90
+noteoff 2 78
+noteon 3 69 80
+noteon 0 57 100
+noteon 5 73 90
+noteon 1 24 100
+noteoff 4 66
+noteon 2 78 49
+noteon 3 66 80
+noteon 4 66 80
+noteon 4 61 80
+sleep 100.000000
+noteoff 5 85
+noteoff 0 64
+noteoff 3 73
+noteoff 1 36
+noteoff 5 78
+noteoff 0 61
+noteoff 3 69
+noteoff 2 78
+noteoff 5 73
+noteoff 0 57
+noteoff 3 66
+noteoff 1 24
+noteon 5 78 90
+noteon 0 64 50
+noteon 5 73 90
+noteon 0 61 50
+noteon 2 90 47
+noteon 0 57 50
+sleep 100.000000
+noteoff 4 66
+noteoff 0 64
+noteoff 5 78
+noteon 1 37 100
+noteoff 4 61
+noteoff 0 61
+noteoff 5 73
+noteoff 2 90
+noteon 4 56 80
+noteoff 0 57
+noteon 4 52 80
+noteon 2 90 45
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 42
+sleep 100.000000
+noteon 5 73 90
+noteon 0 71 100
+noteon 3 73 80
+noteoff 2 78
+noteon 5 69 90
+noteon 0 61 100
+noteoff 4 56
+noteon 2 78 40
+noteon 3 69 80
+noteon 0 68 100
+noteoff 4 52
+noteon 3 66 80
+noteon 4 52 80
+noteon 4 49 80
+sleep 100.000000
+noteoff 5 73
+noteoff 2 78
+noteoff 3 73
+noteon 2 90 37
+noteoff 5 69
+noteoff 3 69
+noteon 5 69 90
+noteoff 3 66
+sleep 100.000000
+noteoff 5 69
+noteoff 1 37
+noteoff 4 52
+noteoff 2 90
+noteoff 4 49
+noteon 1 38 100
+noteon 4 50 80
+noteon 2 90 36
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 36
+sleep 100.000000
+noteon 5 74 90
+noteoff 0 71
+noteon 3 74 80
+noteoff 2 78
+noteon 5 69 90
+noteoff 0 61
+noteoff 4 50
+noteon 2 78 36
+noteon 5 78 90
+noteoff 0 68
+noteon 3 69 80
+noteon 0 69 100
+noteon 4 52 80
+noteon 0 66 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 5 74
+noteoff 0 69
+noteoff 3 74
+noteoff 2 78
+noteoff 5 69
+noteoff 0 66
+noteoff 3 69
+noteon 2 90 37
+noteoff 5 78
+noteoff 0 61
+sleep 100.000000
+noteoff 4 52
+noteon 0 69 100
+noteon 5 74 90
+noteoff 2 90
+noteon 3 74 80
+noteon 0 66 100
+noteon 5 69 90
+noteon 2 90 37
+noteon 4 54 80
+noteon 0 62 100
+noteon 5 78 90
+noteon 3 69 80
+sleep 100.000000
+noteoff 5 74
+noteoff 2 90
+noteoff 3 74
+noteon 2 78 37
+noteoff 5 69
+noteoff 3 69
+noteoff 5 78
+sleep 100.000000
+noteoff 2 78
+noteon 2 78 37
+sleep 100.000000
+noteoff 2 78
+noteon 2 90 38
+sleep 100.000000
+noteon 0 61 100
+noteoff 2 90
+noteon 2 90 38
+sleep 100.000000
+noteoff 0 61
+noteoff 2 90
+noteon 0 62 100
+noteon 2 78 39
+sleep 100.000000
+noteoff 0 62
+noteoff 2 78
+noteon 0 66 100
+noteon 2 78 41
+sleep 100.000000
+noteoff 0 66
+noteoff 2 78
+noteon 0 69 100
+noteon 2 90 44
+sleep 100.000000
+noteoff 0 69
+noteoff 2 90
+noteon 0 73 100
+noteon 2 90 47
+sleep 100.000000
+noteoff 0 73
+noteoff 2 90
+noteon 0 74 100
+noteon 2 78 50
+sleep 100.000000
+noteoff 0 74
+noteoff 2 78
+noteon 0 78 100
+noteon 2 78 53
+sleep 100.000000
+noteoff 0 69
+noteoff 2 78
+noteoff 0 66
+noteon 2 90 56
+noteoff 0 62
+noteoff 0 78
+noteon 0 81 100
+sleep 100.000000
+noteoff 4 54
+noteoff 0 81
+noteon 3 73 80
+noteoff 1 38
+noteon 4 57 80
+noteon 0 69 100
+noteon 3 69 80
+noteoff 2 90
+noteon 4 50 80
+noteon 0 66 100
+noteon 3 85 80
+noteon 1 35 100
+noteon 3 81 80
+noteon 0 62 100
+noteon 0 59 100
+noteon 1 47 100
+noteon 2 90 73
+sleep 100.000000
+noteoff 3 73
+noteoff 0 69
+noteoff 3 69
+noteoff 1 35
+noteoff 3 85
+noteoff 0 66
+noteoff 3 81
+noteoff 2 90
+noteoff 0 62
+noteoff 1 47
+noteoff 0 59
+noteon 2 78 71
+sleep 100.000000
+noteoff 4 57
+noteon 0 69 100
+noteon 3 73 80
+noteon 1 35 100
+noteoff 4 50
+noteon 0 66 100
+noteon 3 69 80
+noteoff 2 78
+noteon 4 47 80
+noteon 0 62 100
+noteon 3 85 80
+noteon 1 47 100
+noteon 3 81 80
+noteon 0 59 100
+noteon 2 78 68
+sleep 100.000000
+noteoff 3 73
+noteoff 0 69
+noteoff 3 69
+noteoff 1 35
+noteoff 3 85
+noteoff 0 66
+noteoff 3 81
+noteoff 2 78
+noteoff 0 62
+noteoff 1 47
+noteoff 0 59
+noteon 2 90 66
+sleep 100.000000
+noteoff 4 47
+noteoff 2 90
+noteon 4 61 80
+noteon 2 90 64
+noteon 4 54 80
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 61
+sleep 100.000000
+noteon 3 71 80
+noteon 0 71 100
+noteoff 4 61
+noteon 1 37 100
+noteon 3 68 80
+noteon 0 68 100
+noteoff 4 54
+noteoff 2 78
+noteon 3 83 80
+noteon 0 64 100
+noteon 4 68 80
+noteon 1 49 100
+noteon 3 80 80
+noteon 0 61 100
+noteon 4 61 80
+noteon 2 78 59
+sleep 100.000000
+noteoff 3 71
+noteoff 0 71
+noteoff 3 68
+noteoff 1 37
+noteoff 3 83
+noteoff 0 68
+noteoff 3 80
+noteoff 2 78
+noteoff 0 64
+noteoff 1 49
+noteoff 0 61
+noteon 2 90 57
+sleep 100.000000
+noteoff 4 68
+noteoff 2 90
+noteoff 4 61
+noteon 2 90 54
+noteon 4 69 80
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 52
+sleep 100.000000
+noteon 3 68 80
+noteon 0 68 100
+noteoff 4 69
+noteon 1 40 100
+noteon 3 64 80
+noteon 0 64 100
+noteon 4 73 80
+noteoff 2 78
+noteon 3 80 80
+noteon 0 61 100
+noteon 3 76 80
+noteon 1 52 100
+noteon 3 88 80
+noteon 2 78 49
+sleep 100.000000
+noteoff 3 68
+noteoff 0 68
+noteoff 3 64
+noteoff 1 40
+noteoff 3 80
+noteoff 0 64
+noteoff 3 76
+noteoff 2 78
+noteoff 0 61
+noteoff 1 52
+noteon 2 90 47
+sleep 100.000000
+noteoff 4 73
+noteon 1 37 100
+noteoff 3 88
+noteoff 2 90
+noteon 4 61 80
+noteon 1 49 100
+noteon 3 83 80
+noteon 2 90 45
+sleep 100.000000
+noteoff 4 61
+noteoff 2 90
+noteon 4 59 80
+noteon 2 78 42
+sleep 100.000000
+noteoff 3 83
+noteon 0 59 100
+noteoff 4 59
+noteoff 2 78
+noteon 3 68 80
+noteon 2 78 40
+noteon 4 57 80
+noteon 3 64 80
+noteon 3 80 80
+noteon 3 76 80
+noteon 3 83 80
+sleep 100.000000
+noteoff 4 57
+noteoff 0 59
+noteoff 3 68
+noteoff 2 78
+noteon 4 56 80
+noteon 0 61 100
+noteoff 3 64
+noteon 2 90 37
+noteoff 3 80
+noteoff 3 76
+sleep 100.000000
+noteoff 0 61
+noteoff 4 56
+noteoff 1 37
+noteoff 3 83
+noteon 0 71 100
+noteon 4 61 80
+noteoff 2 90
+noteon 3 83 80
+noteon 0 78 100
+noteoff 1 49
+noteon 0 66 100
+noteon 2 90 36
+noteon 1 54 100
+noteon 1 42 100
+noteon 1 30 100
+sleep 50.000000
+noteon 5 83 23
+noteon 5 78 23
+noteon 5 71 23
+sleep 50.000000
+noteoff 5 83
+noteoff 2 90
+noteoff 5 78
+noteon 2 78 36
+noteoff 5 71
+noteon 5 83 28
+noteon 5 78 28
+noteon 5 71 28
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 32
+noteon 5 78 32
+noteon 5 71 32
+sleep 50.000000
+noteoff 4 61
+noteoff 2 78
+noteoff 5 83
+noteon 2 78 36
+noteon 4 54 80
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 37
+noteon 5 78 37
+noteon 5 71 37
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 42
+noteon 5 78 42
+noteon 5 71 42
+sleep 50.000000
+noteoff 5 83
+noteoff 2 78
+noteoff 5 78
+noteon 2 90 37
+noteoff 5 71
+noteon 5 83 46
+noteon 5 78 46
+noteon 5 71 46
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 45
+noteon 5 78 45
+noteon 5 71 45
+sleep 50.000000
+noteoff 4 54
+noteoff 2 90
+noteoff 5 83
+noteon 2 90 37
+noteon 4 66 80
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 46
+noteon 5 78 46
+noteon 5 71 46
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 47
+noteon 5 78 47
+noteon 5 71 47
+sleep 50.000000
+noteoff 5 83
+noteoff 2 90
+noteoff 5 78
+noteon 2 78 37
+noteoff 5 71
+noteon 5 83 49
+noteon 5 78 49
+noteon 5 71 49
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 50
+noteon 5 78 50
+noteon 5 71 50
+sleep 50.000000
+noteoff 3 83
+noteoff 2 78
+noteoff 5 83
+noteoff 4 66
+noteon 2 78 37
+noteoff 5 78
+noteon 3 85 80
+noteoff 5 71
+noteon 4 61 80
+noteon 5 83 51
+noteon 5 78 51
+noteon 5 71 51
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 53
+noteon 5 78 53
+noteon 5 71 53
+sleep 50.000000
+noteoff 5 83
+noteoff 2 78
+noteoff 5 78
+noteon 2 90 38
+noteoff 5 71
+noteon 5 83 54
+noteon 5 78 54
+noteon 5 71 54
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 55
+noteon 5 78 55
+noteon 5 71 55
+sleep 50.000000
+noteoff 4 61
+noteoff 0 71
+noteoff 5 83
+noteoff 2 90
+noteon 4 73 80
+noteoff 0 78
+noteoff 5 78
+noteoff 5 71
+noteoff 0 66
+noteon 2 90 38
+noteon 0 82 100
+noteon 0 78 100
+noteon 0 73 100
+sleep 50.000000
+noteon 5 85 14
+noteon 5 78 14
+noteon 5 73 14
+sleep 50.000000
+noteoff 5 85
+noteoff 2 90
+noteoff 5 78
+noteon 2 78 39
+noteoff 5 73
+noteon 5 85 19
+noteon 5 78 19
+noteon 5 73 19
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 25
+noteon 5 78 25
+noteon 5 73 25
+sleep 50.000000
+noteoff 4 73
+noteoff 2 78
+noteoff 5 85
+noteon 2 78 41
+noteon 4 66 80
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 30
+noteon 5 78 30
+noteon 5 73 30
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 35
+noteon 5 78 35
+noteon 5 73 35
+sleep 50.000000
+noteoff 5 85
+noteoff 2 78
+noteoff 5 78
+noteon 2 90 44
+noteoff 5 73
+noteon 5 85 40
+noteon 5 78 40
+noteon 5 73 40
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 46
+noteon 5 78 46
+noteon 5 73 46
+sleep 50.000000
+noteoff 4 66
+noteon 1 49 100
+noteoff 5 85
+noteoff 2 90
+noteon 4 78 80
+noteon 2 90 47
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 51
+noteon 5 78 51
+noteon 5 73 51
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 56
+noteon 5 78 56
+noteon 5 73 56
+sleep 50.000000
+noteoff 5 85
+noteoff 2 90
+noteoff 5 78
+noteon 2 78 50
+noteoff 5 73
+noteon 5 85 61
+noteon 5 78 61
+noteon 5 73 61
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 67
+noteon 5 78 67
+noteon 5 73 67
+sleep 50.000000
+noteoff 4 78
+noteoff 2 78
+noteoff 5 85
+noteon 4 73 80
+noteon 2 78 53
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 72
+noteon 5 78 72
+noteon 5 73 72
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 77
+noteon 5 78 77
+noteon 5 73 77
+sleep 50.000000
+noteoff 5 85
+noteoff 2 78
+noteoff 5 78
+noteon 2 90 56
+noteoff 5 73
+noteon 5 85 82
+noteon 5 78 82
+noteon 5 73 82
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 88
+noteon 5 78 88
+noteon 5 73 88
+sleep 50.000000
+noteoff 3 85
+noteoff 0 82
+noteoff 5 85
+noteoff 1 54
+noteoff 4 73
+noteoff 0 78
+noteoff 5 78
+noteoff 2 90
+noteoff 5 73
+noteoff 0 73
+noteoff 1 42
+noteon 5 78 90
+noteon 0 66 100
+noteon 0 61 100
+noteoff 1 30
+noteon 2 54 60
+noteoff 1 49
+noteon 1 42 100
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 5 78
+noteoff 2 61
+noteon 5 76 90
+noteon 2 64 60
+sleep 100.000000
+noteoff 5 76
+noteoff 2 64
+noteon 5 78 90
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 0 66
+noteoff 2 73
+noteoff 0 61
+noteon 2 76 60
+noteon 0 68 100
+noteon 0 59 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 2 78
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 2 73
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 1 42
+noteoff 5 78
+noteoff 2 78
+noteon 3 64 65
+noteon 1 42 100
+noteon 3 66 65
+noteon 2 54 60
+noteon 3 61 65
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 50.000000
+noteoff 3 64
+noteoff 3 66
+noteoff 3 61
+sleep 50.000000
+noteoff 2 73
+noteon 3 64 65
+noteon 2 76 60
+noteon 3 61 65
+noteon 3 57 65
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteon 5 85 90
+noteoff 0 68
+noteoff 2 78
+noteoff 0 59
+noteon 2 54 60
+noteon 0 61 100
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteon 5 73 90
+noteoff 0 61
+noteoff 2 61
+noteon 0 69 100
+noteon 2 64 60
+sleep 100.000000
+noteoff 5 85
+noteoff 2 64
+noteon 5 83 90
+noteon 2 66 60
+sleep 100.000000
+noteoff 0 69
+noteoff 2 66
+noteon 0 68 100
+noteon 2 66 60
+sleep 100.000000
+noteoff 5 73
+noteoff 2 66
+noteon 5 73 90
+noteon 2 73 60
+sleep 100.000000
+noteoff 5 83
+noteoff 2 73
+noteon 5 81 90
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 50.000000
+noteoff 3 64
+noteoff 3 61
+noteoff 3 57
+sleep 50.000000
+noteoff 0 68
+noteoff 5 73
+noteoff 1 42
+noteoff 5 81
+noteon 0 66 100
+noteon 5 83 90
+noteoff 2 78
+noteon 0 62 100
+noteon 1 47 100
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 5 83
+noteoff 2 66
+noteon 5 85 90
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 5 85
+noteoff 0 66
+noteon 5 78 90
+noteoff 2 73
+noteoff 0 62
+noteon 2 76 60
+noteon 0 68 100
+noteon 0 59 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 2 78
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 2 73
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteon 1 35 100
+noteoff 5 78
+noteoff 2 78
+noteon 3 66 65
+noteon 2 54 60
+noteon 3 64 65
+noteon 3 73 65
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 50.000000
+noteoff 3 66
+noteoff 3 64
+noteoff 3 73
+sleep 50.000000
+noteoff 2 73
+noteon 3 71 65
+noteon 2 76 60
+noteon 3 66 65
+noteon 3 69 65
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteon 5 73 90
+noteoff 0 68
+noteoff 2 78
+noteon 3 66 75
+noteoff 0 59
+noteon 2 54 60
+noteon 0 69 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 3 66
+noteoff 2 54
+noteon 3 61 75
+noteon 2 61 60
+sleep 100.000000
+noteoff 3 61
+noteoff 2 61
+noteon 3 76 75
+noteon 2 64 60
+sleep 100.000000
+noteoff 5 73
+noteoff 2 64
+noteoff 3 76
+noteon 2 66 60
+noteon 5 76 90
+noteon 3 74 75
+sleep 50.000000
+noteoff 3 71
+noteoff 3 66
+noteoff 3 69
+sleep 50.000000
+noteoff 0 69
+noteoff 3 74
+noteoff 2 66
+noteon 3 69 65
+noteoff 0 61
+noteon 3 66 65
+noteon 2 66 60
+noteon 3 64 65
+noteon 0 68 100
+noteon 0 59 100
+sleep 100.000000
+noteon 3 71 75
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 5 76
+noteoff 2 73
+noteoff 3 71
+noteon 2 76 60
+noteon 5 78 90
+noteon 3 69 75
+sleep 100.000000
+noteoff 2 76
+noteoff 3 69
+noteon 2 78 60
+noteon 3 68 75
+sleep 50.000000
+noteoff 3 69
+noteoff 3 66
+noteoff 3 64
+sleep 50.000000
+noteoff 0 68
+noteoff 5 78
+noteoff 1 47
+noteon 4 50 80
+noteoff 0 59
+noteon 5 78 90
+noteoff 2 78
+noteoff 3 68
+noteon 0 66 100
+noteoff 1 35
+noteon 0 62 100
+noteon 2 62 60
+noteon 1 38 100
+sleep 100.000000
+noteoff 2 62
+noteon 2 66 60
+sleep 100.000000
+noteoff 4 50
+noteoff 2 66
+noteon 2 69 60
+sleep 100.000000
+noteoff 2 69
+noteon 2 74 60
+sleep 100.000000
+noteon 4 50 80
+noteoff 2 74
+noteon 2 74 60
+sleep 100.000000
+noteoff 2 74
+noteon 2 78 60
+sleep 100.000000
+noteoff 4 50
+noteoff 0 62
+noteoff 2 78
+noteon 0 62 100
+noteon 2 81 60
+sleep 100.000000
+noteoff 2 81
+noteon 2 86 60
+sleep 100.000000
+noteoff 5 78
+noteoff 2 86
+noteon 4 50 80
+noteon 2 62 60
+noteon 5 81 90
+sleep 100.000000
+noteoff 2 62
+noteon 2 66 60
+sleep 100.000000
+noteoff 4 50
+noteoff 2 66
+noteon 2 69 60
+sleep 100.000000
+noteoff 5 81
+noteoff 2 69
+noteon 5 83 90
+noteon 2 74 60
+sleep 100.000000
+noteon 3 66 65
+noteoff 0 66
+noteon 4 50 80
+noteoff 2 74
+noteon 3 62 65
+noteoff 0 62
+noteon 3 64 65
+noteon 2 74 60
+noteon 0 71 100
+sleep 100.000000
+noteoff 2 74
+noteon 2 78 60
+sleep 50.000000
+noteoff 3 66
+noteoff 3 62
+noteoff 3 64
+sleep 50.000000
+noteoff 2 78
+noteoff 5 83
+noteon 2 81 60
+noteoff 4 50
+noteon 5 85 90
+noteon 3 68 65
+noteon 3 66 65
+sleep 100.000000
+noteoff 2 81
+noteon 2 86 60
+sleep 50.000000
+noteoff 3 68
+noteoff 3 66
+sleep 50.000000
+noteoff 0 71
+noteoff 5 85
+noteoff 1 38
+noteon 4 52 80
+noteon 0 68 100
+noteon 5 80 90
+noteoff 2 86
+noteon 3 69 65
+noteon 0 59 100
+noteon 3 66 65
+noteon 1 40 100
+noteon 3 61 65
+noteon 2 76 50
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 52
+sleep 50.000000
+noteoff 3 69
+noteoff 3 66
+noteoff 3 61
+sleep 50.000000
+noteoff 2 64
+noteoff 4 52
+noteon 2 76 54
+sleep 100.000000
+noteon 3 68 65
+noteoff 2 76
+noteon 3 64 65
+noteon 2 64 56
+noteon 3 59 65
+sleep 100.000000
+noteoff 2 64
+noteoff 5 80
+noteon 2 76 58
+noteon 4 52 80
+noteon 5 73 90
+sleep 50.000000
+noteoff 3 68
+noteoff 3 64
+noteoff 3 59
+sleep 50.000000
+noteoff 2 76
+noteon 2 64 60
+sleep 100.000000
+noteoff 4 52
+noteoff 0 68
+noteoff 2 64
+noteoff 0 59
+noteon 2 76 62
+noteon 0 61 100
+noteon 0 56 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 64
+sleep 100.000000
+noteoff 5 73
+noteoff 2 64
+noteon 4 52 80
+noteon 2 76 66
+noteon 5 76 90
+sleep 100.000000
+noteoff 2 76
+noteon 3 64 65
+noteon 2 64 68
+noteon 3 61 65
+noteon 3 59 65
+sleep 100.000000
+noteoff 2 64
+noteoff 4 52
+noteon 2 76 70
+sleep 50.000000
+noteoff 3 64
+noteoff 3 61
+noteoff 3 59
+sleep 50.000000
+noteoff 2 76
+noteon 2 64 72
+sleep 100.000000
+noteoff 5 76
+noteoff 0 61
+noteon 4 52 80
+noteoff 2 64
+noteon 5 78 90
+noteoff 0 56
+noteon 3 57 65
+noteon 2 76 74
+noteon 0 64 100
+noteon 0 59 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 76
+sleep 50.000000
+noteoff 3 57
+sleep 50.000000
+noteoff 2 64
+noteoff 4 52
+noteon 2 76 78
+noteon 3 59 65
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 80
+sleep 50.000000
+noteoff 3 59
+sleep 50.000000
+noteoff 0 64
+noteoff 5 78
+noteoff 1 40
+noteon 4 50 80
+noteoff 0 59
+noteon 5 78 90
+noteoff 2 64
+noteon 0 66 100
+noteon 1 38 100
+noteon 0 62 100
+noteon 2 62 60
+sleep 100.000000
+noteoff 2 62
+noteon 2 66 60
+sleep 100.000000
+noteoff 4 50
+noteoff 2 66
+noteon 2 69 60
+sleep 100.000000
+noteoff 2 69
+noteon 2 74 60
+sleep 100.000000
+noteon 4 50 80
+noteoff 2 74
+noteon 2 74 60
+sleep 100.000000
+noteoff 2 74
+noteon 2 78 60
+sleep 100.000000
+noteoff 4 50
+noteoff 0 66
+noteoff 2 78
+noteoff 0 62
+noteon 2 81 60
+noteon 0 66 100
+noteon 0 69 100
+sleep 100.000000
+noteoff 2 81
+noteon 2 86 60
+sleep 100.000000
+noteoff 5 78
+noteoff 2 86
+noteon 4 50 80
+noteon 2 62 60
+noteon 5 81 90
+sleep 100.000000
+noteoff 2 62
+noteon 2 66 60
+sleep 100.000000
+noteoff 4 50
+noteoff 2 66
+noteon 2 69 60
+sleep 100.000000
+noteoff 5 81
+noteoff 2 69
+noteon 5 83 90
+noteon 2 74 60
+sleep 100.000000
+noteon 3 66 65
+noteoff 0 66
+noteon 4 50 80
+noteoff 2 74
+noteon 3 62 65
+noteoff 0 69
+noteon 3 64 65
+noteon 2 74 60
+noteon 0 73 100
+noteon 0 69 100
+sleep 100.000000
+noteoff 2 74
+noteon 2 78 60
+sleep 50.000000
+noteoff 3 66
+noteoff 3 62
+noteoff 3 64
+sleep 50.000000
+noteoff 2 78
+noteoff 5 83
+noteon 2 81 60
+noteoff 4 50
+noteon 5 85 90
+noteon 3 68 65
+noteon 3 66 65
+sleep 100.000000
+noteoff 2 81
+noteon 2 86 60
+sleep 50.000000
+noteoff 3 68
+noteoff 3 66
+sleep 50.000000
+noteoff 0 73
+noteoff 1 38
+noteoff 5 85
+noteoff 0 69
+noteoff 2 86
+noteon 0 67 100
+noteon 1 43 100
+noteon 0 59 100
+noteon 1 31 100
+sleep 600.000000
+noteoff 0 67
+noteoff 0 59
+noteon 0 71 100
+noteon 0 62 100
+sleep 200.000000
+noteon 2 31 52
+sleep 100.000000
+noteoff 2 31
+noteon 2 55 61
+sleep 100.000000
+noteoff 2 55
+noteon 2 31 70
+sleep 100.000000
+noteoff 2 31
+noteon 2 55 80
+sleep 100.000000
+noteoff 0 71
+noteoff 2 55
+noteoff 0 62
+noteon 2 31 89
+noteon 0 74 100
+noteon 0 67 100
+sleep 100.000000
+noteoff 2 31
+noteon 2 55 99
+sleep 100.000000
+noteoff 2 55
+noteon 2 31 108
+sleep 100.000000
+noteoff 2 31
+noteon 2 55 113
+sleep 100.000000
+noteon 4 42 100
+noteoff 0 74
+noteon 3 54 80
+noteoff 1 43
+noteon 4 30 100
+noteoff 0 67
+noteoff 2 55
+noteon 0 66 100
+noteoff 1 31
+noteon 0 61 100
+noteon 2 54 80
+noteon 0 57 100
+noteon 1 30 100
+noteon 2 66 80
+sleep 100.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteoff 2 66
+noteon 2 49 80
+noteon 2 61 80
+sleep 100.000000
+noteon 5 73 90
+noteoff 2 49
+noteon 4 42 100
+noteoff 2 61
+noteon 5 69 90
+noteon 2 54 80
+noteon 4 30 100
+noteon 2 66 80
+noteon 5 66 90
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 57
+sleep 50.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteon 0 66 100
+noteoff 2 66
+noteon 0 61 100
+noteon 2 57 80
+noteon 0 57 100
+noteon 2 69 80
+sleep 100.000000
+noteoff 5 73
+noteoff 2 57
+noteon 4 42 100
+noteoff 2 69
+noteoff 5 69
+noteon 2 61 80
+noteon 4 30 100
+noteon 2 73 80
+noteoff 5 66
+sleep 100.000000
+noteoff 2 61
+noteoff 4 42
+noteoff 2 73
+noteon 5 73 90
+noteon 2 57 80
+noteoff 4 30
+noteon 2 69 80
+noteon 5 69 90
+noteon 5 66 90
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 57
+sleep 50.000000
+noteoff 3 54
+noteoff 2 57
+noteon 4 42 100
+noteon 0 66 100
+noteon 3 49 80
+noteoff 2 69
+noteon 4 30 100
+noteon 0 61 100
+noteon 2 54 80
+noteon 0 57 100
+noteon 2 66 80
+sleep 100.000000
+noteoff 5 73
+noteoff 2 54
+noteoff 4 42
+noteoff 2 66
+noteoff 5 69
+noteon 2 49 80
+noteoff 4 30
+noteon 2 61 80
+noteoff 5 66
+sleep 100.000000
+noteoff 0 66
+noteon 4 42 100
+noteoff 2 49
+noteon 5 73 90
+noteoff 0 61
+noteon 4 30 100
+noteoff 2 61
+noteon 5 69 90
+noteoff 0 57
+noteon 5 66 90
+noteon 2 54 80
+noteon 0 66 100
+noteon 2 66 80
+noteon 0 61 100
+noteon 0 69 100
+sleep 100.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteoff 2 66
+noteon 2 49 80
+noteon 2 61 80
+sleep 100.000000
+noteoff 5 73
+noteoff 2 49
+noteon 4 42 100
+noteoff 2 61
+noteoff 5 69
+noteon 2 54 80
+noteon 4 30 100
+noteon 2 66 80
+noteoff 5 66
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 69
+sleep 50.000000
+noteoff 4 42
+noteoff 2 54
+noteon 5 73 90
+noteon 0 66 100
+noteoff 4 30
+noteoff 2 66
+noteon 5 69 90
+noteon 0 61 100
+noteon 5 66 90
+noteon 2 57 80
+noteon 0 69 100
+noteon 2 69 80
+sleep 100.000000
+noteoff 3 49
+noteoff 2 57
+noteon 4 42 100
+noteoff 2 69
+noteon 3 57 80
+noteon 2 61 80
+noteon 4 30 100
+noteon 2 73 80
+sleep 100.000000
+noteoff 5 73
+noteoff 2 61
+noteoff 4 42
+noteoff 2 73
+noteoff 5 69
+noteon 2 57 80
+noteoff 4 30
+noteon 2 69 80
+noteoff 5 66
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 69
+sleep 50.000000
+noteon 4 42 100
+noteoff 2 57
+noteon 5 73 90
+noteon 0 66 100
+noteon 4 30 100
+noteoff 2 69
+noteon 5 69 90
+noteon 0 61 100
+noteon 5 66 90
+noteon 2 54 80
+noteon 0 69 100
+noteon 2 66 80
+sleep 100.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteoff 2 66
+noteon 2 49 80
+noteon 2 61 80
+sleep 100.000000
+noteoff 5 73
+noteoff 0 66
+noteoff 3 57
+noteoff 1 30
+noteoff 5 69
+noteoff 0 61
+noteon 4 43 100
+noteoff 2 49
+noteoff 5 66
+noteoff 0 69
+noteon 3 55 80
+noteon 1 31 100
+noteon 4 31 100
+noteon 0 67 100
+noteoff 2 61
+noteon 0 71 100
+noteon 2 47 80
+noteon 0 62 100
+noteon 2 59 80
+sleep 100.000000
+noteoff 4 43
+noteoff 2 47
+noteoff 4 31
+noteoff 2 59
+noteon 2 50 80
+noteon 2 62 80
+sleep 100.000000
+noteon 5 74 90
+noteoff 2 50
+noteon 4 43 100
+noteoff 2 62
+noteon 5 71 90
+noteon 2 55 80
+noteon 4 31 100
+noteon 2 67 80
+noteon 5 67 90
+sleep 50.000000
+noteoff 0 67
+noteoff 0 71
+noteoff 0 62
+sleep 50.000000
+noteoff 4 43
+noteoff 2 55
+noteoff 4 31
+noteon 0 67 100
+noteoff 2 67
+noteon 0 71 100
+noteon 2 59 80
+noteon 0 62 100
+noteon 2 71 80
+sleep 100.000000
+noteoff 5 74
+noteoff 2 59
+noteon 4 43 100
+noteoff 2 71
+noteoff 5 71
+noteon 2 62 80
+noteon 4 31 100
+noteon 2 74 80
+noteoff 5 67
+sleep 100.000000
+noteoff 2 62
+noteoff 4 43
+noteoff 2 74
+noteon 5 74 90
+noteon 2 59 80
+noteoff 4 31
+noteon 2 71 80
+noteon 5 71 90
+noteon 5 67 90
+sleep 50.000000
+noteoff 0 67
+noteoff 0 71
+noteoff 0 62
+sleep 50.000000
+noteoff 3 55
+noteoff 2 59
+noteon 4 43 100
+noteon 0 67 100
+noteon 3 52 80
+noteoff 2 71
+noteon 4 31 100
+noteon 0 62 100
+noteon 2 55 80
+noteon 0 71 100
+noteon 2 67 80
+sleep 100.000000
+noteoff 5 74
+noteoff 2 55
+noteoff 4 43
+noteoff 2 67
+noteoff 5 71
+noteon 2 50 80
+noteoff 4 31
+noteon 2 62 80
+noteoff 5 67
+sleep 50.000000
+noteon 0 73 100
+sleep 50.000000
+noteon 4 43 100
+noteoff 2 50
+noteon 5 74 90
+noteoff 0 67
+noteon 4 31 100
+noteoff 2 62
+noteon 5 71 90
+noteoff 0 62
+noteon 5 67 90
+noteon 2 47 80
+noteoff 0 71
+noteon 2 59 80
+noteoff 0 73
+noteon 0 74 100
+noteon 0 71 100
+noteon 0 67 100
+sleep 100.000000
+noteoff 4 43
+noteoff 2 47
+noteoff 4 31
+noteoff 2 59
+noteon 2 50 80
+noteon 2 62 80
+sleep 100.000000
+noteoff 5 74
+noteoff 2 50
+noteon 4 43 100
+noteoff 2 62
+noteoff 5 71
+noteon 2 55 80
+noteon 4 31 100
+noteon 2 67 80
+noteoff 5 67
+sleep 50.000000
+noteoff 0 74
+noteoff 0 71
+noteoff 0 67
+sleep 50.000000
+noteoff 4 43
+noteoff 2 55
+noteon 5 74 90
+noteon 0 73 100
+noteoff 4 31
+noteoff 2 67
+noteon 5 71 90
+noteon 0 69 100
+noteon 5 67 90
+noteon 2 59 80
+noteon 0 66 100
+noteon 2 71 80
+sleep 100.000000
+noteoff 3 52
+noteoff 2 59
+noteon 4 43 100
+noteoff 2 71
+noteon 3 54 80
+noteon 2 62 80
+noteon 4 31 100
+noteon 2 74 80
+sleep 100.000000
+noteoff 5 74
+noteoff 2 62
+noteoff 4 43
+noteoff 2 74
+noteoff 5 71
+noteon 2 59 80
+noteoff 4 31
+noteon 2 71 80
+noteoff 5 67
+sleep 50.000000
+noteoff 0 73
+noteoff 0 69
+noteoff 0 66
+sleep 50.000000
+noteon 4 43 100
+noteoff 2 59
+noteon 5 74 90
+noteon 0 71 100
+noteon 4 31 100
+noteoff 2 71
+noteon 5 71 90
+noteon 0 66 100
+noteon 5 67 90
+noteon 2 55 80
+noteon 2 67 80
+sleep 100.000000
+noteoff 4 43
+noteoff 2 55
+noteoff 4 31
+noteoff 2 67
+noteon 2 50 80
+noteon 2 62 80
+sleep 100.000000
+noteon 6 73 100
+noteoff 0 71
+noteoff 3 54
+noteoff 1 31
+noteoff 5 74
+noteoff 0 66
+noteon 4 42 100
+noteoff 2 50
+noteon 6 85 100
+noteon 0 66 100
+noteon 3 54 80
+noteon 1 30 100
+noteoff 5 71
+noteon 0 61 100
+noteon 4 30 100
+noteoff 2 62
+noteoff 5 67
+noteon 0 57 100
+noteon 2 54 80
+noteon 2 66 80
+sleep 100.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteoff 2 66
+noteon 2 49 80
+noteon 2 61 80
+sleep 100.000000
+noteon 5 73 90
+noteoff 2 49
+noteon 4 42 100
+noteoff 2 61
+noteon 5 69 90
+noteon 2 54 80
+noteon 4 30 100
+noteon 2 66 80
+noteon 5 66 90
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 57
+sleep 50.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteon 0 66 100
+noteoff 2 66
+noteon 0 61 100
+noteon 2 57 80
+noteon 0 57 100
+noteon 2 69 80
+sleep 100.000000
+noteoff 5 73
+noteoff 2 57
+noteon 4 42 100
+noteoff 2 69
+noteoff 5 69
+noteon 2 61 80
+noteon 4 30 100
+noteon 2 73 80
+noteoff 5 66
+sleep 100.000000
+noteoff 2 61
+noteoff 4 42
+noteoff 2 73
+noteon 5 73 90
+noteon 2 57 80
+noteoff 4 30
+noteon 2 69 80
+noteon 5 69 90
+noteon 5 66 90
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 57
+sleep 50.000000
+noteoff 3 54
+noteoff 2 57
+noteoff 6 73
+noteon 0 66 100
+noteon 4 42 100
+noteoff 2 69
+noteoff 6 85
+noteon 0 61 100
+noteon 3 49 80
+noteon 2 54 80
+noteon 6 66 100
+noteon 0 57 100
+noteon 4 30 100
+noteon 2 66 80
+noteon 6 78 100
+sleep 100.000000
+noteoff 2 54
+noteoff 4 42
+noteoff 2 66
+noteoff 5 73
+noteon 2 49 80
+noteoff 4 30
+noteon 2 61 80
+noteoff 5 69
+noteoff 5 66
+sleep 100.000000
+noteoff 0 66
+noteon 4 42 100
+noteoff 2 49
+noteon 5 73 90
+noteoff 0 61
+noteon 4 30 100
+noteoff 2 61
+noteon 5 69 90
+noteoff 0 57
+noteon 5 66 90
+noteon 2 54 80
+noteon 0 66 100
+noteon 2 66 80
+noteon 0 61 100
+noteon 0 69 100
+sleep 100.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteoff 2 66
+noteon 2 49 80
+noteon 2 61 80
+sleep 100.000000
+noteoff 5 73
+noteoff 2 49
+noteon 4 42 100
+noteoff 2 61
+noteoff 5 69
+noteon 2 54 80
+noteon 4 30 100
+noteon 2 66 80
+noteoff 5 66
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 69
+sleep 50.000000
+noteoff 4 42
+noteoff 2 54
+noteon 5 73 90
+noteon 0 66 100
+noteoff 4 30
+noteoff 2 66
+noteon 5 69 90
+noteon 0 61 100
+noteon 5 66 90
+noteon 2 57 80
+noteon 0 69 100
+noteon 2 69 80
+sleep 100.000000
+noteoff 3 49
+noteoff 2 57
+noteoff 6 66
+noteoff 2 69
+noteon 4 42 100
+noteon 2 61 80
+noteoff 6 78
+noteon 2 73 80
+noteon 3 57 80
+noteon 4 30 100
+sleep 100.000000
+noteoff 2 61
+noteoff 5 73
+noteoff 2 73
+noteoff 4 42
+noteon 2 57 80
+noteon 6 66 100
+noteon 2 69 80
+noteoff 4 30
+noteoff 5 69
+noteon 6 78 100
+noteoff 5 66
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 69
+sleep 50.000000
+noteon 4 42 100
+noteoff 2 57
+noteoff 6 66
+noteon 0 66 100
+noteon 4 30 100
+noteoff 2 69
+noteon 5 73 90
+noteon 0 61 100
+noteoff 6 78
+noteon 2 54 80
+noteon 5 69 90
+noteon 0 69 100
+noteon 6 68 100
+noteon 2 66 80
+noteon 5 66 90
+noteon 6 80 100
+sleep 100.000000
+noteoff 2 54
+noteoff 4 42
+noteoff 2 66
+noteoff 6 68
+noteon 2 49 80
+noteoff 4 30
+noteon 2 61 80
+noteoff 6 80
+noteon 6 69 100
+noteon 6 81 100
+sleep 100.000000
+noteoff 0 66
+noteoff 3 57
+noteoff 1 30
+noteoff 5 73
+noteoff 0 61
+noteon 4 43 100
+noteoff 2 49
+noteoff 6 69
+noteoff 0 69
+noteon 3 55 80
+noteon 1 31 100
+noteoff 5 69
+noteon 0 67 100
+noteon 4 31 100
+noteoff 2 61
+noteoff 6 81
+noteon 0 71 100
+noteoff 5 66
+noteon 2 47 80
+noteon 6 71 100
+noteon 0 62 100
+noteon 6 83 100
+noteon 2 59 80
+sleep 100.000000
+noteoff 4 43
+noteoff 2 47
+noteoff 6 71
+noteoff 2 59
+noteoff 4 31
+noteon 2 50 80
+noteoff 6 83
+noteon 2 62 80
+noteon 6 67 100
+noteon 6 79 100
+sleep 100.000000
+noteoff 2 50
+noteon 4 43 100
+noteoff 2 62
+noteon 5 74 90
+noteon 2 55 80
+noteon 4 31 100
+noteon 2 67 80
+noteoff 6 67
+noteon 5 71 90
+noteoff 6 79
+noteon 5 67 90
+noteon 6 62 100
+noteon 6 74 100
+sleep 50.000000
+noteoff 0 67
+noteoff 0 71
+noteoff 0 62
+sleep 50.000000
+noteoff 4 43
+noteoff 2 55
+noteoff 6 62
+noteon 0 67 100
+noteoff 4 31
+noteoff 2 67
+noteoff 6 74
+noteon 0 71 100
+noteon 6 74 100
+noteon 2 59 80
+noteon 6 86 100
+noteon 0 62 100
+noteon 2 71 80
+sleep 100.000000
+noteon 4 43 100
+noteoff 2 59
+noteoff 5 74
+noteoff 2 71
+noteon 4 31 100
+noteon 2 62 80
+noteoff 5 71
+noteon 2 74 80
+noteoff 5 67
+sleep 100.000000
+noteoff 2 62
+noteoff 4 43
+noteoff 2 74
+noteon 5 74 90
+noteon 2 59 80
+noteoff 4 31
+noteon 2 71 80
+noteon 5 71 90
+noteon 5 67 90
+sleep 50.000000
+noteoff 0 67
+noteoff 0 71
+noteoff 0 62
+sleep 50.000000
+noteoff 3 55
+noteoff 2 59
+noteoff 6 74
+noteon 0 67 100
+noteon 4 43 100
+noteoff 2 71
+noteoff 6 86
+noteon 0 62 100
+noteon 3 52 80
+noteon 2 55 80
+noteon 4 31 100
+noteon 0 71 100
+noteon 2 67 80
+sleep 100.000000
+noteoff 5 74
+noteoff 2 55
+noteoff 4 43
+noteoff 2 67
+noteoff 5 71
+noteon 2 50 80
+noteoff 4 31
+noteon 2 62 80
+noteoff 5 67
+sleep 50.000000
+noteon 0 73 100
+sleep 50.000000
+noteon 4 43 100
+noteoff 2 50
+noteon 6 74 100
+noteoff 0 67
+noteon 4 31 100
+noteoff 2 62
+noteon 5 74 90
+noteoff 0 62
+noteon 6 86 100
+noteon 2 47 80
+noteon 5 71 90
+noteoff 0 71
+noteon 5 67 90
+noteon 2 59 80
+noteoff 0 73
+noteon 0 74 100
+noteon 0 71 100
+noteon 0 67 100
+sleep 100.000000
+noteoff 4 43
+noteoff 2 47
+noteoff 6 74
+noteoff 2 59
+noteoff 4 31
+noteon 2 50 80
+noteoff 6 86
+noteon 2 62 80
+noteon 6 71 100
+noteon 6 83 100
+sleep 100.000000
+noteoff 2 50
+noteon 4 43 100
+noteoff 2 62
+noteoff 5 74
+noteon 2 55 80
+noteon 4 31 100
+noteon 2 67 80
+noteoff 6 71
+noteoff 5 71
+noteoff 6 83
+noteoff 5 67
+noteon 6 67 100
+noteon 6 79 100
+sleep 50.000000
+noteoff 0 74
+noteoff 0 71
+noteoff 0 67
+sleep 50.000000
+noteoff 4 43
+noteoff 2 55
+noteon 5 74 90
+noteon 0 76 100
+noteoff 4 31
+noteoff 2 67
+noteoff 6 67
+noteon 0 71 100
+noteon 5 71 90
+noteon 2 59 80
+noteoff 6 79
+noteon 0 67 100
+noteon 5 67 90
+noteon 2 71 80
+noteon 6 79 100
+noteon 6 91 100
+sleep 100.000000
+noteoff 2 59
+noteoff 3 52
+noteoff 2 71
+noteon 4 43 100
+noteon 2 62 80
+noteon 3 54 80
+noteon 2 74 80
+noteon 4 31 100
+sleep 100.000000
+noteoff 0 76
+noteoff 5 74
+noteoff 2 62
+noteoff 4 43
+noteoff 0 71
+noteoff 5 71
+noteoff 2 74
+noteoff 4 31
+noteoff 0 67
+noteoff 5 67
+noteon 2 59 80
+noteon 2 71 80
+sleep 100.000000
+noteon 7 108 70
+noteon 4 43 100
+noteon 7 106 70
+noteon 0 78 100
+noteon 7 104 70
+noteon 5 74 90
+noteon 7 103 70
+noteoff 2 59
+noteon 7 101 70
+noteon 4 31 100
+noteon 7 100 70
+noteon 0 74 100
+noteon 7 107 70
+noteon 5 71 90
+noteon 7 105 70
+noteoff 2 71
+noteon 7 102 70
+noteon 5 67 90
+noteon 7 99 70
+noteon 0 71 100
+noteon 7 98 70
+noteon 2 55 80
+noteon 7 96 70
+noteon 2 67 80
+noteon 7 94 70
+noteon 7 93 70
+noteon 7 91 70
+noteon 7 90 70
+noteon 7 97 70
+noteon 7 95 70
+noteon 7 92 70
+noteon 7 89 70
+sleep 100.000000
+noteoff 4 43
+noteoff 7 108
+noteoff 2 55
+noteoff 7 106
+noteoff 4 31
+noteoff 7 104
+noteoff 2 67
+noteoff 7 103
+noteon 2 50 80
+noteoff 7 101
+noteon 2 62 80
+noteoff 7 100
+noteoff 7 107
+noteoff 7 105
+noteoff 7 102
+noteoff 7 99
+noteoff 7 98
+noteoff 7 96
+noteoff 7 94
+noteoff 7 93
+noteoff 7 91
+noteoff 7 90
+noteoff 7 97
+noteoff 7 95
+noteoff 7 92
+noteoff 7 89
+sleep 100.000000
+noteoff 6 79
+noteoff 0 78
+noteoff 3 54
+noteoff 1 31
+noteoff 5 74
+noteoff 0 74
+noteon 4 42 100
+noteoff 2 50
+noteoff 6 91
+noteoff 0 71
+noteon 3 54 80
+noteon 1 30 100
+noteoff 5 71
+noteon 0 66 100
+noteon 4 30 100
+noteoff 2 62
+noteoff 5 67
+noteon 0 61 100
+noteon 2 54 80
+noteon 0 57 100
+noteon 2 66 80
+sleep 100.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteoff 2 66
+noteon 2 49 80
+noteon 2 61 80
+sleep 100.000000
+noteon 4 42 100
+noteoff 2 49
+noteon 4 30 100
+noteoff 2 61
+noteon 2 54 80
+noteon 2 66 80
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 57
+sleep 50.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteon 0 66 100
+noteoff 2 66
+noteon 0 61 100
+noteon 2 57 80
+noteon 0 57 100
+noteon 2 69 80
+sleep 100.000000
+noteon 4 42 100
+noteoff 2 57
+noteon 4 30 100
+noteoff 2 69
+noteon 2 61 80
+noteon 2 73 80
+sleep 100.000000
+noteoff 4 42
+noteoff 2 61
+noteoff 4 30
+noteoff 2 73
+noteon 2 57 80
+noteon 2 69 80
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 57
+sleep 50.000000
+noteoff 3 54
+noteoff 2 57
+noteon 4 42 100
+noteon 0 66 100
+noteon 3 49 80
+noteoff 2 69
+noteon 4 30 100
+noteon 0 61 100
+noteon 2 54 80
+noteon 0 57 100
+noteon 2 66 80
+sleep 100.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteoff 2 66
+noteon 2 49 80
+noteon 2 61 80
+sleep 100.000000
+noteon 4 42 100
+noteoff 0 66
+noteon 4 30 100
+noteoff 2 49
+noteoff 0 61
+noteoff 2 61
+noteoff 0 57
+noteon 2 54 80
+noteon 0 66 100
+noteon 2 66 80
+noteon 0 61 100
+noteon 0 69 100
+sleep 100.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteoff 2 66
+noteon 2 49 80
+noteon 2 61 80
+sleep 100.000000
+noteon 4 42 100
+noteoff 2 49
+noteon 4 30 100
+noteoff 2 61
+noteon 2 54 80
+noteon 2 66 80
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 69
+sleep 50.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteon 0 66 100
+noteoff 2 66
+noteon 0 61 100
+noteon 2 57 80
+noteon 0 69 100
+noteon 2 69 80
+sleep 100.000000
+noteoff 3 49
+noteoff 2 57
+noteon 4 42 100
+noteoff 2 69
+noteon 3 57 80
+noteon 2 61 80
+noteon 4 30 100
+noteon 2 73 80
+sleep 100.000000
+noteoff 4 42
+noteoff 2 61
+noteoff 4 30
+noteoff 2 73
+noteon 2 57 80
+noteon 2 69 80
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 69
+sleep 50.000000
+noteon 4 42 100
+noteoff 2 57
+noteon 4 30 100
+noteon 0 66 100
+noteoff 2 69
+noteon 0 61 100
+noteon 2 54 80
+noteon 0 69 100
+noteon 2 66 80
+sleep 100.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteoff 2 66
+noteon 2 49 80
+noteon 2 61 80
+sleep 100.000000
+noteoff 3 57
+noteoff 0 66
+noteon 4 43 100
+noteoff 1 30
+noteon 3 55 80
+noteoff 0 61
+noteon 4 31 100
+noteoff 2 49
+noteoff 0 69
+noteon 1 31 100
+noteon 0 67 100
+noteoff 2 61
+noteon 0 71 100
+noteon 2 47 80
+noteon 0 62 100
+noteon 2 59 80
+sleep 100.000000
+noteoff 4 43
+noteoff 2 47
+noteoff 4 31
+noteoff 2 59
+noteon 2 50 80
+noteon 2 62 80
+sleep 100.000000
+noteon 4 43 100
+noteoff 2 50
+noteon 4 31 100
+noteoff 2 62
+noteon 2 55 80
+noteon 2 67 80
+sleep 50.000000
+noteoff 0 67
+noteoff 0 71
+noteoff 0 62
+sleep 50.000000
+noteoff 4 43
+noteoff 2 55
+noteoff 4 31
+noteon 0 67 100
+noteoff 2 67
+noteon 0 71 100
+noteon 2 59 80
+noteon 0 62 100
+noteon 2 71 80
+sleep 100.000000
+noteon 4 43 100
+noteoff 2 59
+noteon 4 31 100
+noteoff 2 71
+noteon 2 62 80
+noteon 2 74 80
+sleep 100.000000
+noteoff 4 43
+noteoff 2 62
+noteoff 4 31
+noteoff 2 74
+noteon 2 59 80
+noteon 2 71 80
+sleep 50.000000
+noteoff 0 67
+noteoff 0 71
+noteoff 0 62
+sleep 50.000000
+noteoff 3 55
+noteoff 2 59
+noteon 4 43 100
+noteon 0 67 100
+noteon 3 52 80
+noteoff 2 71
+noteon 4 31 100
+noteon 0 62 100
+noteon 2 55 80
+noteon 0 71 100
+noteon 2 67 80
+sleep 100.000000
+noteoff 4 43
+noteoff 2 55
+noteoff 4 31
+noteoff 2 67
+noteon 2 50 80
+noteon 2 62 80
+sleep 50.000000
+noteon 0 73 100
+sleep 50.000000
+noteon 4 43 100
+noteoff 2 50
+noteon 4 31 100
+noteoff 0 67
+noteoff 2 62
+noteoff 0 62
+noteon 2 47 80
+noteoff 0 71
+noteon 2 59 80
+noteoff 0 73
+noteon 0 74 100
+noteon 0 71 100
+noteon 0 67 100
+sleep 100.000000
+noteoff 4 43
+noteoff 2 47
+noteoff 4 31
+noteoff 2 59
+noteon 2 50 80
+noteon 2 62 80
+sleep 100.000000
+noteon 4 43 100
+noteoff 2 50
+noteon 4 31 100
+noteoff 2 62
+noteon 2 55 80
+noteon 2 67 80
+sleep 50.000000
+noteoff 0 74
+noteoff 0 71
+noteoff 0 67
+sleep 50.000000
+noteoff 4 43
+noteoff 2 55
+noteoff 4 31
+noteon 0 73 100
+noteoff 2 67
+noteon 0 69 100
+noteon 2 59 80
+noteon 0 66 100
+noteon 2 71 80
+sleep 100.000000
+noteoff 3 52
+noteoff 2 59
+noteon 4 43 100
+noteoff 2 71
+noteon 3 54 80
+noteon 2 62 80
+noteon 4 31 100
+noteon 2 74 80
+sleep 100.000000
+noteoff 4 43
+noteoff 2 62
+noteoff 4 31
+noteoff 2 74
+noteon 2 59 80
+noteon 2 71 80
+sleep 50.000000
+noteoff 0 73
+noteoff 0 69
+noteoff 0 66
+sleep 50.000000
+noteon 4 43 100
+noteoff 2 59
+noteon 4 31 100
+noteon 0 71 100
+noteoff 2 71
+noteon 0 66 100
+noteon 2 55 80
+noteon 2 67 80
+sleep 100.000000
+noteoff 4 43
+noteoff 2 55
+noteoff 4 31
+noteoff 2 67
+noteon 2 50 80
+noteon 2 62 80
+sleep 100.000000
+noteoff 3 54
+noteoff 0 71
+noteon 4 42 100
+noteoff 1 31
+noteon 3 54 80
+noteoff 0 66
+noteon 4 30 100
+noteoff 2 50
+noteon 0 66 100
+noteon 1 30 100
+noteon 0 61 100
+noteoff 2 62
+noteon 0 57 100
+noteon 2 54 80
+noteon 0 73 100
+noteon 2 66 80
+sleep 100.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteoff 2 66
+noteon 2 49 80
+noteon 2 61 80
+sleep 100.000000
+noteon 4 42 100
+noteoff 2 49
+noteon 4 30 100
+noteoff 2 61
+noteon 2 54 80
+noteon 2 66 80
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 57
+noteoff 0 73
+sleep 50.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteon 0 66 100
+noteoff 2 66
+noteon 0 61 100
+noteon 2 57 80
+noteon 0 57 100
+noteon 2 69 80
+noteon 0 73 100
+sleep 100.000000
+noteon 4 42 100
+noteoff 2 57
+noteon 4 30 100
+noteoff 2 69
+noteon 2 61 80
+noteon 2 73 80
+sleep 100.000000
+noteoff 4 42
+noteoff 2 61
+noteoff 4 30
+noteoff 2 73
+noteon 2 57 80
+noteon 2 69 80
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 57
+noteoff 0 73
+sleep 50.000000
+noteoff 3 54
+noteoff 2 57
+noteon 4 42 100
+noteon 0 66 100
+noteon 3 49 80
+noteoff 2 69
+noteon 4 30 100
+noteon 0 61 100
+noteon 2 54 80
+noteon 0 57 100
+noteon 2 66 80
+noteon 0 73 100
+sleep 100.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteoff 2 66
+noteon 2 49 80
+noteon 2 61 80
+sleep 100.000000
+noteon 4 42 100
+noteoff 0 66
+noteon 4 30 100
+noteoff 2 49
+noteoff 0 61
+noteoff 2 61
+noteoff 0 57
+noteon 2 54 80
+noteoff 0 73
+noteon 2 66 80
+noteon 0 66 100
+noteon 0 61 100
+noteon 0 69 100
+sleep 100.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteoff 2 66
+noteon 2 49 80
+noteon 2 61 80
+sleep 100.000000
+noteon 4 42 100
+noteoff 2 49
+noteon 4 30 100
+noteoff 2 61
+noteon 2 54 80
+noteon 2 66 80
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 69
+sleep 50.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteon 0 66 100
+noteoff 2 66
+noteon 0 61 100
+noteon 2 57 80
+noteon 0 69 100
+noteon 2 69 80
+sleep 100.000000
+noteoff 3 49
+noteoff 2 57
+noteon 4 42 100
+noteoff 2 69
+noteon 3 57 80
+noteon 2 61 80
+noteon 4 30 100
+noteon 2 73 80
+sleep 100.000000
+noteoff 4 42
+noteoff 2 61
+noteoff 4 30
+noteoff 2 73
+noteon 2 57 80
+noteon 2 69 80
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+noteoff 0 69
+sleep 50.000000
+noteon 4 42 100
+noteoff 2 57
+noteon 4 30 100
+noteon 0 66 100
+noteoff 2 69
+noteon 0 61 100
+noteon 2 54 80
+noteon 0 69 100
+noteon 2 66 80
+sleep 100.000000
+noteoff 4 42
+noteoff 2 54
+noteoff 4 30
+noteoff 2 66
+noteon 2 49 80
+noteon 2 61 80
+sleep 100.000000
+noteoff 3 57
+noteoff 0 66
+noteoff 1 30
+noteoff 0 61
+noteoff 2 49
+noteoff 0 69
+noteoff 2 61
+noteon 0 71 100
+noteon 0 67 100
+noteon 0 55 100
+sleep 800.000000
+noteon 2 62 80
+sleep 400.000000
+noteon 2 64 80
+sleep 400.000000
+noteoff 0 71
+noteoff 2 62
+noteoff 0 67
+noteoff 2 64
+noteoff 0 55
+noteon 2 66 80
+noteon 2 61 80
+sleep 800.000000
+noteon 1 37 27
+sleep 100.000000
+noteoff 1 37
+noteon 1 37 36
+sleep 100.000000
+noteoff 1 37
+noteon 1 42 45
+noteon 1 37 45
+sleep 100.000000
+noteoff 1 42
+noteoff 1 37
+noteon 1 42 54
+noteon 1 37 54
+sleep 100.000000
+noteoff 1 42
+noteoff 1 37
+noteon 1 45 63
+noteon 1 42 63
+noteon 1 37 63
+sleep 100.000000
+noteoff 1 45
+noteoff 1 42
+noteoff 1 37
+noteon 1 45 73
+noteon 1 42 73
+noteon 1 37 73
+sleep 100.000000
+noteoff 1 45
+noteoff 1 42
+noteoff 1 37
+noteon 1 49 82
+noteon 1 45 82
+noteon 1 42 82
+noteon 1 37 82
+sleep 100.000000
+noteoff 1 49
+noteoff 1 45
+noteoff 1 42
+noteoff 1 37
+noteon 1 49 91
+noteon 1 45 91
+noteon 1 42 91
+noteon 1 37 91
+sleep 100.000000
+noteon 0 69 100
+noteoff 2 66
+noteon 3 78 80
+noteon 0 66 100
+noteon 4 54 80
+noteoff 1 49
+noteon 3 73 80
+noteon 0 61 100
+noteon 4 49 80
+noteoff 2 61
+noteon 3 69 80
+noteoff 1 45
+noteoff 1 42
+noteon 2 90 73
+noteoff 1 37
+noteon 1 42 100
+noteon 1 30 100
+sleep 100.000000
+noteoff 3 78
+noteoff 0 69
+noteoff 3 73
+noteoff 1 42
+noteoff 3 69
+noteoff 0 66
+noteoff 2 90
+noteoff 0 61
+noteoff 1 30
+noteon 0 69 50
+noteon 2 78 71
+noteon 0 66 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 54
+noteoff 0 69
+noteon 3 78 80
+noteon 1 42 100
+noteoff 4 49
+noteoff 0 66
+noteon 3 73 80
+noteoff 2 78
+noteon 4 42 80
+noteoff 0 61
+noteon 3 69 80
+noteon 1 30 100
+noteon 0 69 100
+noteon 2 78 68
+noteon 0 66 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 3 78
+noteoff 0 69
+noteoff 3 73
+noteoff 1 42
+noteoff 3 69
+noteoff 0 66
+noteoff 2 78
+noteoff 0 61
+noteoff 1 30
+noteon 0 69 50
+noteon 2 90 66
+noteon 0 66 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 42
+noteoff 0 69
+noteon 4 54 80
+noteoff 2 90
+noteon 4 49 80
+noteoff 0 66
+noteon 2 90 64
+noteoff 0 61
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 61
+sleep 100.000000
+noteon 3 76 80
+noteon 0 68 100
+noteoff 4 54
+noteon 1 40 100
+noteon 3 71 80
+noteon 0 64 100
+noteoff 4 49
+noteoff 2 78
+noteon 3 68 80
+noteon 0 61 100
+noteon 4 66 80
+noteon 1 28 100
+noteon 4 61 80
+noteon 2 78 59
+sleep 100.000000
+noteoff 3 76
+noteoff 0 68
+noteoff 3 71
+noteoff 1 40
+noteoff 3 68
+noteoff 0 64
+noteoff 2 78
+noteoff 0 61
+noteoff 1 28
+noteon 0 68 50
+noteon 2 90 57
+noteon 0 64 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 66
+noteoff 0 68
+noteoff 4 61
+noteoff 2 90
+noteon 4 69 80
+noteoff 0 64
+noteon 4 66 80
+noteon 2 90 54
+noteoff 0 61
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 52
+sleep 100.000000
+noteon 3 73 80
+noteon 0 64 100
+noteoff 4 69
+noteon 1 36 100
+noteon 3 69 80
+noteon 0 61 100
+noteoff 4 66
+noteoff 2 78
+noteon 3 66 80
+noteon 0 57 100
+noteon 4 66 80
+noteon 1 24 100
+noteon 4 61 80
+noteon 2 78 49
+sleep 100.000000
+noteoff 3 73
+noteoff 0 64
+noteoff 3 69
+noteoff 1 36
+noteoff 3 66
+noteoff 0 61
+noteoff 2 78
+noteoff 0 57
+noteoff 1 24
+noteon 0 64 50
+noteon 0 61 50
+noteon 2 90 47
+noteon 0 57 50
+sleep 100.000000
+noteoff 4 66
+noteoff 0 64
+noteoff 4 61
+noteon 1 37 100
+noteon 4 56 80
+noteoff 0 61
+noteon 4 52 80
+noteoff 2 90
+noteoff 0 57
+noteon 2 90 45
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 42
+sleep 100.000000
+noteon 3 73 80
+noteon 0 71 100
+noteoff 4 56
+noteoff 2 78
+noteon 3 69 80
+noteon 0 61 100
+noteoff 4 52
+noteon 2 78 40
+noteon 3 66 80
+noteon 0 68 100
+noteon 4 52 80
+noteon 4 49 80
+sleep 100.000000
+noteoff 3 73
+noteoff 2 78
+noteoff 3 69
+noteon 2 90 37
+noteoff 3 66
+sleep 100.000000
+noteoff 4 52
+noteoff 1 37
+noteoff 4 49
+noteoff 2 90
+noteon 4 50 80
+noteon 1 38 100
+noteon 2 90 36
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 36
+sleep 100.000000
+noteon 3 74 80
+noteoff 0 71
+noteoff 4 50
+noteoff 2 78
+noteon 3 69 80
+noteoff 0 61
+noteon 4 52 80
+noteon 2 78 36
+noteoff 0 68
+noteon 0 69 100
+noteon 0 66 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 3 74
+noteoff 0 69
+noteoff 3 69
+noteoff 2 78
+noteoff 0 66
+noteon 2 90 37
+noteoff 0 61
+sleep 100.000000
+noteoff 4 52
+noteon 0 69 100
+noteon 3 74 80
+noteoff 2 90
+noteon 4 54 80
+noteon 0 66 100
+noteon 3 69 80
+noteon 2 90 37
+noteon 0 62 100
+sleep 100.000000
+noteoff 3 74
+noteoff 2 90
+noteoff 3 69
+noteon 2 78 37
+sleep 100.000000
+noteoff 2 78
+noteon 2 78 37
+sleep 100.000000
+noteoff 2 78
+noteon 2 90 38
+sleep 100.000000
+noteon 0 61 100
+noteoff 2 90
+noteon 2 90 38
+sleep 100.000000
+noteoff 0 61
+noteoff 2 90
+noteon 0 62 100
+noteon 2 78 39
+sleep 100.000000
+noteoff 0 62
+noteoff 2 78
+noteon 0 66 100
+noteon 2 78 41
+sleep 100.000000
+noteoff 0 66
+noteoff 2 78
+noteon 0 69 100
+noteon 2 90 44
+sleep 100.000000
+noteoff 0 69
+noteoff 2 90
+noteon 0 73 100
+noteon 2 90 47
+sleep 100.000000
+noteoff 0 73
+noteoff 2 90
+noteon 0 74 100
+noteon 2 78 50
+sleep 100.000000
+noteoff 0 74
+noteoff 2 78
+noteon 0 73 100
+noteon 2 78 53
+sleep 100.000000
+noteoff 0 69
+noteoff 2 78
+noteoff 0 66
+noteon 2 90 56
+noteoff 0 62
+noteoff 0 73
+noteon 0 69 100
+sleep 100.000000
+noteoff 4 54
+noteoff 0 69
+noteon 3 73 80
+noteoff 1 38
+noteon 4 57 80
+noteon 0 69 100
+noteon 3 69 80
+noteoff 2 90
+noteon 4 50 80
+noteon 0 66 100
+noteon 3 85 80
+noteon 1 35 100
+noteon 3 81 80
+noteon 0 62 100
+noteon 0 59 100
+noteon 1 47 100
+noteon 2 90 73
+sleep 100.000000
+noteoff 3 73
+noteoff 0 69
+noteoff 3 69
+noteoff 1 35
+noteoff 3 85
+noteoff 0 66
+noteoff 3 81
+noteoff 2 90
+noteoff 0 62
+noteoff 1 47
+noteoff 0 59
+noteon 2 78 71
+sleep 100.000000
+noteoff 4 57
+noteon 0 69 100
+noteon 3 73 80
+noteon 1 35 100
+noteoff 4 50
+noteon 0 66 100
+noteon 3 69 80
+noteoff 2 78
+noteon 4 47 80
+noteon 0 62 100
+noteon 3 85 80
+noteon 1 47 100
+noteon 3 81 80
+noteon 0 59 100
+noteon 2 78 68
+sleep 100.000000
+noteoff 3 73
+noteoff 0 69
+noteoff 3 69
+noteoff 1 35
+noteoff 3 85
+noteoff 0 66
+noteoff 3 81
+noteoff 2 78
+noteoff 0 62
+noteoff 1 47
+noteoff 0 59
+noteon 2 90 66
+sleep 100.000000
+noteoff 4 47
+noteoff 2 90
+noteon 4 61 80
+noteon 2 90 64
+noteon 4 54 80
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 61
+sleep 100.000000
+noteon 3 71 80
+noteon 0 71 100
+noteoff 4 61
+noteon 1 37 100
+noteon 3 68 80
+noteon 0 68 100
+noteoff 4 54
+noteoff 2 78
+noteon 3 83 80
+noteon 0 64 100
+noteon 4 68 80
+noteon 1 49 100
+noteon 3 80 80
+noteon 0 61 100
+noteon 4 61 80
+noteon 2 78 59
+sleep 100.000000
+noteoff 3 71
+noteoff 0 71
+noteoff 3 68
+noteoff 1 37
+noteoff 3 83
+noteoff 0 68
+noteoff 3 80
+noteoff 2 78
+noteoff 0 64
+noteoff 1 49
+noteoff 0 61
+noteon 2 90 57
+sleep 100.000000
+noteoff 4 68
+noteoff 2 90
+noteoff 4 61
+noteon 2 90 54
+noteon 4 69 80
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 52
+sleep 100.000000
+noteon 3 68 80
+noteon 0 68 100
+noteoff 4 69
+noteon 1 40 100
+noteon 3 64 80
+noteon 0 64 100
+noteon 4 73 80
+noteoff 2 78
+noteon 3 80 80
+noteon 0 61 100
+noteon 3 76 80
+noteon 1 52 100
+noteon 2 78 49
+sleep 100.000000
+noteoff 3 68
+noteoff 0 68
+noteoff 3 64
+noteoff 1 40
+noteoff 3 80
+noteoff 0 64
+noteoff 3 76
+noteoff 2 78
+noteoff 0 61
+noteoff 1 52
+noteon 2 90 47
+sleep 100.000000
+noteoff 4 73
+noteon 1 37 100
+noteon 4 61 80
+noteoff 2 90
+noteon 1 49 100
+noteon 2 90 45
+sleep 100.000000
+noteoff 4 61
+noteoff 2 90
+noteon 4 59 80
+noteon 2 78 42
+sleep 100.000000
+noteon 3 68 80
+noteon 0 59 100
+noteoff 4 59
+noteoff 2 78
+noteon 3 64 80
+noteon 2 78 40
+noteon 4 57 80
+noteon 3 80 80
+noteon 3 76 80
+sleep 100.000000
+noteoff 4 57
+noteoff 0 59
+noteoff 3 68
+noteoff 2 78
+noteon 4 56 80
+noteon 0 61 100
+noteoff 3 64
+noteon 2 90 37
+noteoff 3 80
+noteoff 3 76
+sleep 100.000000
+noteoff 4 56
+noteoff 0 61
+noteon 3 69 80
+noteoff 1 37
+noteon 4 61 80
+noteon 0 66 100
+noteon 3 66 80
+noteoff 2 90
+noteon 0 61 100
+noteoff 1 49
+noteon 2 90 36
+noteon 1 50 100
+noteon 1 38 100
+sleep 100.000000
+noteoff 3 69
+noteoff 2 90
+noteoff 3 66
+noteon 2 78 36
+sleep 100.000000
+noteoff 2 78
+noteon 2 78 36
+sleep 100.000000
+noteoff 2 78
+noteon 2 90 37
+sleep 100.000000
+noteoff 2 90
+noteon 2 90 37
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 37
+sleep 100.000000
+noteoff 2 78
+noteon 2 78 37
+sleep 100.000000
+noteoff 2 78
+noteon 2 90 38
+sleep 100.000000
+noteon 0 81 100
+noteoff 2 90
+noteon 5 90 14
+noteon 2 90 38
+noteon 6 78 14
+sleep 50.000000
+noteoff 5 90
+noteoff 6 78
+sleep 1.666667
+noteon 5 90 19
+noteon 6 78 19
+sleep 48.333333
+noteon 5 90 23
+noteoff 0 81
+noteon 6 78 23
+noteoff 2 90
+noteon 0 78 100
+noteon 2 78 39
+sleep 1.666667
+noteoff 5 90
+noteoff 6 78
+sleep 48.333333
+noteoff 5 90
+noteoff 6 78
+noteon 5 90 28
+noteon 6 78 28
+sleep 50.000000
+noteoff 5 90
+noteoff 0 78
+noteoff 6 78
+noteoff 2 78
+noteon 5 90 32
+noteon 0 76 100
+noteon 6 78 32
+noteon 2 78 41
+sleep 50.000000
+noteoff 5 90
+noteoff 6 78
+sleep 1.666667
+noteon 5 90 37
+noteon 6 78 37
+sleep 48.333333
+noteon 5 90 41
+noteoff 0 76
+noteon 6 78 41
+noteoff 2 78
+noteon 0 73 100
+noteon 2 90 44
+sleep 1.666667
+noteoff 5 90
+noteoff 6 78
+sleep 48.333333
+noteoff 5 90
+noteoff 6 78
+noteon 5 90 45
+noteon 6 78 45
+sleep 50.000000
+noteoff 5 90
+noteoff 0 73
+noteoff 6 78
+noteoff 2 90
+noteon 5 90 50
+noteon 0 69 100
+noteon 6 78 50
+noteon 2 90 47
+sleep 50.000000
+noteoff 5 90
+noteoff 6 78
+sleep 1.666667
+noteon 5 90 54
+noteon 6 78 54
+sleep 48.333333
+noteon 5 90 59
+noteoff 0 69
+noteon 6 78 59
+noteoff 2 90
+noteon 0 66 100
+noteon 2 78 50
+sleep 1.666667
+noteoff 5 90
+noteoff 6 78
+sleep 48.333333
+noteoff 5 90
+noteoff 6 78
+noteon 5 90 63
+noteon 6 78 63
+sleep 50.000000
+noteoff 5 90
+noteoff 0 66
+noteoff 6 78
+noteoff 2 78
+noteon 5 90 68
+noteon 0 61 100
+noteon 6 78 68
+noteon 2 78 53
+sleep 50.000000
+noteoff 5 90
+noteoff 6 78
+sleep 1.666667
+noteon 5 90 72
+noteon 6 78 72
+sleep 48.333333
+noteon 5 90 76
+noteoff 0 61
+noteon 6 78 76
+noteoff 2 78
+noteon 0 57 100
+noteon 2 90 56
+sleep 1.666667
+noteoff 5 90
+noteoff 6 78
+sleep 48.333333
+noteoff 5 90
+noteoff 6 78
+noteon 5 90 81
+noteon 6 78 81
+sleep 50.000000
+noteoff 4 61
+noteoff 0 66
+noteoff 5 90
+noteoff 1 50
+noteon 3 78 80
+noteoff 0 61
+noteoff 6 78
+noteoff 2 90
+noteoff 0 57
+noteon 5 90 90
+noteoff 1 38
+noteon 3 73 80
+noteon 0 69 100
+noteon 5 78 90
+noteon 4 54 80
+noteon 0 66 100
+noteon 5 85 90
+noteon 1 42 100
+noteon 3 69 80
+noteon 0 61 100
+noteon 4 49 80
+noteon 2 90 73
+noteon 1 30 100
+sleep 100.000000
+noteoff 5 90
+noteoff 0 69
+noteoff 3 78
+noteoff 1 42
+noteoff 5 78
+noteoff 0 66
+noteoff 3 73
+noteoff 2 90
+noteoff 5 85
+noteoff 0 61
+noteoff 3 69
+noteoff 1 30
+noteon 5 78 90
+noteon 0 69 50
+noteon 2 78 71
+noteon 0 66 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 54
+noteoff 0 69
+noteoff 5 78
+noteon 1 42 100
+noteon 3 78 80
+noteoff 0 66
+noteon 5 78 90
+noteoff 2 78
+noteoff 4 49
+noteoff 0 61
+noteon 5 73 90
+noteon 1 30 100
+noteon 3 73 80
+noteon 0 69 100
+noteon 5 81 90
+noteon 2 78 68
+noteon 4 42 80
+noteon 0 66 100
+noteon 3 69 80
+noteon 0 61 100
+sleep 100.000000
+noteoff 5 78
+noteoff 0 69
+noteoff 3 78
+noteoff 1 42
+noteoff 5 73
+noteoff 0 66
+noteoff 3 73
+noteoff 2 78
+noteoff 5 81
+noteoff 0 61
+noteoff 3 69
+noteoff 1 30
+noteon 0 69 50
+noteon 2 90 66
+noteon 0 66 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 42
+noteoff 0 69
+noteon 4 54 80
+noteoff 2 90
+noteon 4 49 80
+noteoff 0 66
+noteon 2 90 64
+noteoff 0 61
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 61
+sleep 100.000000
+noteon 5 88 90
+noteon 0 68 100
+noteon 3 76 80
+noteon 1 40 100
+noteon 5 76 90
+noteon 0 64 100
+noteoff 4 54
+noteoff 2 78
+noteon 5 83 90
+noteon 0 61 100
+noteon 3 71 80
+noteon 1 28 100
+noteoff 4 49
+noteon 3 68 80
+noteon 2 78 59
+noteon 4 66 80
+noteon 4 61 80
+sleep 100.000000
+noteoff 5 88
+noteoff 0 68
+noteoff 3 76
+noteoff 1 40
+noteoff 5 76
+noteoff 0 64
+noteoff 3 71
+noteoff 2 78
+noteoff 5 83
+noteoff 0 61
+noteoff 3 68
+noteoff 1 28
+noteon 5 76 90
+noteon 0 68 50
+noteon 2 90 57
+noteon 0 64 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 66
+noteoff 0 68
+noteoff 5 76
+noteoff 2 90
+noteoff 4 61
+noteoff 0 64
+noteon 5 71 90
+noteon 2 90 54
+noteon 4 69 80
+noteoff 0 61
+noteon 5 76 90
+noteon 4 66 80
+sleep 100.000000
+noteoff 5 71
+noteoff 2 90
+noteoff 5 76
+noteon 2 78 52
+sleep 100.000000
+noteon 3 73 80
+noteon 0 64 100
+noteon 5 85 90
+noteon 1 36 100
+noteoff 4 69
+noteon 0 61 100
+noteon 5 78 90
+noteoff 2 78
+noteon 3 69 80
+noteon 0 57 100
+noteon 5 73 90
+noteon 1 24 100
+noteoff 4 66
+noteon 2 78 49
+noteon 3 66 80
+noteon 4 66 80
+noteon 4 61 80
+sleep 100.000000
+noteoff 5 85
+noteoff 0 64
+noteoff 3 73
+noteoff 1 36
+noteoff 5 78
+noteoff 0 61
+noteoff 3 69
+noteoff 2 78
+noteoff 5 73
+noteoff 0 57
+noteoff 3 66
+noteoff 1 24
+noteon 5 78 90
+noteon 0 64 50
+noteon 5 73 90
+noteon 0 61 50
+noteon 2 90 47
+noteon 0 57 50
+sleep 100.000000
+noteoff 4 66
+noteoff 0 64
+noteoff 5 78
+noteon 1 37 100
+noteoff 4 61
+noteoff 0 61
+noteoff 5 73
+noteoff 2 90
+noteon 4 56 80
+noteoff 0 57
+noteon 4 52 80
+noteon 2 90 45
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 42
+sleep 100.000000
+noteon 5 73 90
+noteon 0 71 100
+noteon 3 73 80
+noteoff 2 78
+noteon 5 69 90
+noteon 0 61 100
+noteoff 4 56
+noteon 2 78 40
+noteon 3 69 80
+noteon 0 68 100
+noteoff 4 52
+noteon 3 66 80
+noteon 4 52 80
+noteon 4 49 80
+sleep 100.000000
+noteoff 5 73
+noteoff 2 78
+noteoff 3 73
+noteon 2 90 37
+noteoff 5 69
+noteoff 3 69
+noteon 5 69 90
+noteoff 3 66
+sleep 100.000000
+noteoff 5 69
+noteoff 1 37
+noteoff 4 52
+noteoff 2 90
+noteoff 4 49
+noteon 1 38 100
+noteon 4 50 80
+noteon 2 90 36
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 36
+sleep 100.000000
+noteon 5 74 90
+noteoff 0 71
+noteon 3 74 80
+noteoff 2 78
+noteon 5 69 90
+noteoff 0 61
+noteoff 4 50
+noteon 2 78 36
+noteon 5 78 90
+noteoff 0 68
+noteon 3 69 80
+noteon 0 69 100
+noteon 4 52 80
+noteon 0 66 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 5 74
+noteoff 0 69
+noteoff 3 74
+noteoff 2 78
+noteoff 5 69
+noteoff 0 66
+noteoff 3 69
+noteon 2 90 37
+noteoff 5 78
+noteoff 0 61
+sleep 100.000000
+noteoff 4 52
+noteon 0 69 100
+noteon 5 74 90
+noteoff 2 90
+noteon 3 74 80
+noteon 0 66 100
+noteon 5 69 90
+noteon 2 90 37
+noteon 4 54 80
+noteon 0 62 100
+noteon 5 78 90
+noteon 3 69 80
+sleep 100.000000
+noteoff 5 74
+noteoff 2 90
+noteoff 3 74
+noteon 2 78 37
+noteoff 5 69
+noteoff 3 69
+noteoff 5 78
+sleep 100.000000
+noteoff 2 78
+noteon 2 78 37
+sleep 100.000000
+noteoff 2 78
+noteon 2 90 38
+sleep 100.000000
+noteon 0 61 100
+noteoff 2 90
+noteon 2 90 38
+sleep 100.000000
+noteoff 0 61
+noteoff 2 90
+noteon 0 62 100
+noteon 2 78 39
+sleep 100.000000
+noteoff 0 62
+noteoff 2 78
+noteon 0 66 100
+noteon 2 78 41
+sleep 100.000000
+noteoff 0 66
+noteoff 2 78
+noteon 0 69 100
+noteon 2 90 44
+sleep 100.000000
+noteoff 0 69
+noteoff 2 90
+noteon 0 73 100
+noteon 2 90 47
+sleep 100.000000
+noteoff 0 73
+noteoff 2 90
+noteon 0 74 100
+noteon 2 78 50
+sleep 100.000000
+noteoff 0 74
+noteoff 2 78
+noteon 0 78 100
+noteon 2 78 53
+sleep 100.000000
+noteoff 0 69
+noteoff 2 78
+noteoff 0 66
+noteon 2 90 56
+noteoff 0 62
+noteoff 0 78
+noteon 0 81 100
+sleep 100.000000
+noteoff 4 54
+noteoff 0 81
+noteon 3 73 80
+noteoff 1 38
+noteon 4 57 80
+noteon 0 69 100
+noteon 3 69 80
+noteoff 2 90
+noteon 4 50 80
+noteon 0 66 100
+noteon 3 85 80
+noteon 1 35 100
+noteon 3 81 80
+noteon 0 62 100
+noteon 0 59 100
+noteon 1 47 100
+noteon 2 90 73
+sleep 100.000000
+noteoff 3 73
+noteoff 0 69
+noteoff 3 69
+noteoff 1 35
+noteoff 3 85
+noteoff 0 66
+noteoff 3 81
+noteoff 2 90
+noteoff 0 62
+noteoff 1 47
+noteoff 0 59
+noteon 2 78 71
+sleep 100.000000
+noteoff 4 57
+noteon 0 69 100
+noteon 3 73 80
+noteon 1 35 100
+noteoff 4 50
+noteon 0 66 100
+noteon 3 69 80
+noteoff 2 78
+noteon 4 47 80
+noteon 0 62 100
+noteon 3 85 80
+noteon 1 47 100
+noteon 3 81 80
+noteon 0 59 100
+noteon 2 78 68
+sleep 100.000000
+noteoff 3 73
+noteoff 0 69
+noteoff 3 69
+noteoff 1 35
+noteoff 3 85
+noteoff 0 66
+noteoff 3 81
+noteoff 2 78
+noteoff 0 62
+noteoff 1 47
+noteoff 0 59
+noteon 2 90 66
+sleep 100.000000
+noteoff 4 47
+noteoff 2 90
+noteon 4 61 80
+noteon 2 90 64
+noteon 4 54 80
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 61
+sleep 100.000000
+noteon 3 71 80
+noteon 0 71 100
+noteoff 4 61
+noteon 1 37 100
+noteon 3 68 80
+noteon 0 68 100
+noteoff 4 54
+noteoff 2 78
+noteon 3 83 80
+noteon 0 64 100
+noteon 4 68 80
+noteon 1 49 100
+noteon 3 80 80
+noteon 0 61 100
+noteon 4 61 80
+noteon 2 78 59
+sleep 100.000000
+noteoff 3 71
+noteoff 0 71
+noteoff 3 68
+noteoff 1 37
+noteoff 3 83
+noteoff 0 68
+noteoff 3 80
+noteoff 2 78
+noteoff 0 64
+noteoff 1 49
+noteoff 0 61
+noteon 2 90 57
+sleep 100.000000
+noteoff 4 68
+noteoff 2 90
+noteoff 4 61
+noteon 2 90 54
+noteon 4 69 80
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 52
+sleep 100.000000
+noteon 3 68 80
+noteon 0 68 100
+noteoff 4 69
+noteon 1 40 100
+noteon 3 64 80
+noteon 0 64 100
+noteon 4 73 80
+noteoff 2 78
+noteon 3 80 80
+noteon 0 61 100
+noteon 3 76 80
+noteon 1 52 100
+noteon 3 88 80
+noteon 2 78 49
+sleep 100.000000
+noteoff 3 68
+noteoff 0 68
+noteoff 3 64
+noteoff 1 40
+noteoff 3 80
+noteoff 0 64
+noteoff 3 76
+noteoff 2 78
+noteoff 0 61
+noteoff 1 52
+noteon 2 90 47
+sleep 100.000000
+noteoff 4 73
+noteon 1 37 100
+noteoff 3 88
+noteoff 2 90
+noteon 4 61 80
+noteon 1 49 100
+noteon 3 83 80
+noteon 2 90 45
+sleep 100.000000
+noteoff 4 61
+noteoff 2 90
+noteon 4 59 80
+noteon 2 78 42
+sleep 100.000000
+noteoff 3 83
+noteon 0 59 100
+noteoff 4 59
+noteoff 2 78
+noteon 3 68 80
+noteon 2 78 40
+noteon 4 57 80
+noteon 3 64 80
+noteon 3 80 80
+noteon 3 76 80
+noteon 3 83 80
+sleep 100.000000
+noteoff 4 57
+noteoff 0 59
+noteoff 3 68
+noteoff 2 78
+noteon 4 56 80
+noteon 0 61 100
+noteoff 3 64
+noteon 2 90 37
+noteoff 3 80
+noteoff 3 76
+sleep 100.000000
+noteoff 0 61
+noteoff 4 56
+noteoff 1 37
+noteoff 3 83
+noteon 0 71 100
+noteon 4 61 80
+noteoff 2 90
+noteon 3 83 80
+noteon 0 78 100
+noteoff 1 49
+noteon 0 66 100
+noteon 2 90 36
+noteon 1 54 100
+noteon 1 42 100
+noteon 1 30 100
+sleep 50.000000
+noteon 5 83 23
+noteon 5 78 23
+noteon 5 71 23
+sleep 50.000000
+noteoff 5 83
+noteoff 2 90
+noteoff 5 78
+noteon 2 78 36
+noteoff 5 71
+noteon 5 83 28
+noteon 5 78 28
+noteon 5 71 28
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 32
+noteon 5 78 32
+noteon 5 71 32
+sleep 50.000000
+noteoff 4 61
+noteoff 2 78
+noteoff 5 83
+noteon 2 78 36
+noteon 4 54 80
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 37
+noteon 5 78 37
+noteon 5 71 37
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 42
+noteon 5 78 42
+noteon 5 71 42
+sleep 50.000000
+noteoff 5 83
+noteoff 2 78
+noteoff 5 78
+noteon 2 90 37
+noteoff 5 71
+noteon 5 83 46
+noteon 5 78 46
+noteon 5 71 46
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 45
+noteon 5 78 45
+noteon 5 71 45
+sleep 50.000000
+noteoff 4 54
+noteoff 2 90
+noteoff 5 83
+noteon 2 90 37
+noteon 4 66 80
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 46
+noteon 5 78 46
+noteon 5 71 46
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 47
+noteon 5 78 47
+noteon 5 71 47
+sleep 50.000000
+noteoff 5 83
+noteoff 2 90
+noteoff 5 78
+noteon 2 78 37
+noteoff 5 71
+noteon 5 83 49
+noteon 5 78 49
+noteon 5 71 49
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 50
+noteon 5 78 50
+noteon 5 71 50
+sleep 50.000000
+noteoff 3 83
+noteoff 2 78
+noteoff 5 83
+noteoff 4 66
+noteon 2 78 37
+noteoff 5 78
+noteon 3 85 80
+noteoff 5 71
+noteon 4 61 80
+noteon 5 83 51
+noteon 5 78 51
+noteon 5 71 51
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 53
+noteon 5 78 53
+noteon 5 71 53
+sleep 50.000000
+noteoff 5 83
+noteoff 2 78
+noteoff 5 78
+noteon 2 90 38
+noteoff 5 71
+noteon 5 83 54
+noteon 5 78 54
+noteon 5 71 54
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 55
+noteon 5 78 55
+noteon 5 71 55
+sleep 50.000000
+noteoff 4 61
+noteoff 0 71
+noteoff 5 83
+noteoff 2 90
+noteon 4 73 80
+noteoff 0 78
+noteoff 5 78
+noteoff 5 71
+noteoff 0 66
+noteon 2 90 38
+noteon 0 82 100
+noteon 0 78 100
+noteon 0 73 100
+sleep 50.000000
+noteon 5 85 14
+noteon 5 78 14
+noteon 5 73 14
+sleep 50.000000
+noteoff 5 85
+noteoff 2 90
+noteoff 5 78
+noteon 2 78 39
+noteoff 5 73
+noteon 5 85 19
+noteon 5 78 19
+noteon 5 73 19
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 25
+noteon 5 78 25
+noteon 5 73 25
+sleep 50.000000
+noteoff 4 73
+noteoff 2 78
+noteoff 5 85
+noteon 2 78 41
+noteon 4 66 80
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 30
+noteon 5 78 30
+noteon 5 73 30
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 35
+noteon 5 78 35
+noteon 5 73 35
+sleep 50.000000
+noteoff 5 85
+noteoff 2 78
+noteoff 5 78
+noteon 2 90 44
+noteoff 5 73
+noteon 5 85 40
+noteon 5 78 40
+noteon 5 73 40
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 46
+noteon 5 78 46
+noteon 5 73 46
+sleep 50.000000
+noteoff 4 66
+noteon 1 49 100
+noteoff 5 85
+noteoff 2 90
+noteon 4 78 80
+noteon 2 90 47
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 51
+noteon 5 78 51
+noteon 5 73 51
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 56
+noteon 5 78 56
+noteon 5 73 56
+sleep 50.000000
+noteoff 5 85
+noteoff 2 90
+noteoff 5 78
+noteon 2 78 50
+noteoff 5 73
+noteon 5 85 61
+noteon 5 78 61
+noteon 5 73 61
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 67
+noteon 5 78 67
+noteon 5 73 67
+sleep 50.000000
+noteoff 4 78
+noteoff 2 78
+noteoff 5 85
+noteon 4 73 80
+noteon 2 78 53
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 72
+noteon 5 78 72
+noteon 5 73 72
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 77
+noteon 5 78 77
+noteon 5 73 77
+sleep 50.000000
+noteoff 5 85
+noteoff 2 78
+noteoff 5 78
+noteon 2 90 56
+noteoff 5 73
+noteon 5 85 82
+noteon 5 78 82
+noteon 5 73 82
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 88
+noteon 5 78 88
+noteon 5 73 88
+sleep 50.000000
+noteoff 3 85
+noteoff 0 82
+noteoff 5 85
+noteoff 1 54
+noteoff 4 73
+noteoff 0 78
+noteoff 5 78
+noteoff 2 90
+noteoff 5 73
+noteoff 0 73
+noteoff 1 42
+noteon 0 69 100
+noteon 0 66 100
+noteoff 1 30
+noteon 0 61 100
+noteon 2 73 50
+noteoff 1 49
+noteon 2 66 50
+noteon 1 42 100
+sleep 200.000000
+noteoff 2 73
+noteoff 1 42
+noteoff 2 66
+noteon 1 49 100
+sleep 50.000000
+noteoff 0 69
+noteoff 0 66
+noteoff 0 61
+sleep 50.000000
+noteon 2 73 50
+noteon 2 66 50
+sleep 100.000000
+noteon 0 69 100
+noteoff 1 49
+noteon 0 66 100
+noteon 1 57 100
+noteon 0 61 100
+noteon 1 54 100
+sleep 100.000000
+noteoff 2 73
+noteoff 2 66
+sleep 100.000000
+noteoff 0 69
+noteoff 1 57
+noteoff 0 66
+noteon 2 73 50
+noteoff 0 61
+noteoff 1 54
+noteon 0 68 100
+noteon 2 66 50
+noteon 0 64 100
+noteon 1 49 100
+noteon 0 59 100
+sleep 200.000000
+noteoff 2 73
+noteoff 1 49
+noteoff 2 66
+noteon 1 40 100
+sleep 100.000000
+noteon 2 71 50
+noteon 2 64 50
+sleep 50.000000
+noteoff 0 68
+noteoff 0 64
+noteoff 0 59
+sleep 50.000000
+noteoff 1 40
+noteon 0 61 100
+noteon 1 47 100
+noteon 0 57 100
+noteon 0 64 100
+sleep 100.000000
+noteoff 2 71
+noteoff 2 64
+sleep 100.000000
+noteoff 1 47
+noteon 2 71 50
+noteon 1 56 100
+noteon 2 64 50
+noteon 1 52 100
+sleep 50.000000
+noteoff 0 61
+noteoff 0 57
+noteoff 0 64
+sleep 150.000000
+noteoff 2 71
+noteon 0 64 100
+noteoff 1 56
+noteon 0 61 100
+noteoff 2 64
+noteon 0 57 100
+noteoff 1 52
+noteon 1 47 100
+sleep 100.000000
+noteon 2 69 50
+noteon 2 62 50
+sleep 100.000000
+noteoff 1 47
+noteon 1 38 100
+sleep 100.000000
+noteoff 2 69
+noteoff 2 62
+sleep 100.000000
+noteoff 0 64
+noteoff 1 38
+noteoff 0 61
+noteon 2 69 50
+noteoff 0 57
+noteon 1 45 100
+noteon 0 66 100
+noteon 2 62 50
+noteon 0 57 100
+noteon 0 62 100
+sleep 100.000000
+noteoff 0 66
+noteoff 0 57
+noteoff 0 62
+sleep 100.000000
+noteoff 1 45
+noteon 0 66 100
+noteoff 2 69
+noteon 0 57 100
+noteon 1 54 100
+noteon 0 62 100
+noteoff 2 62
+noteon 1 50 100
+sleep 100.000000
+noteon 2 69 50
+noteon 2 62 50
+sleep 100.000000
+noteoff 1 54
+noteoff 1 50
+noteon 1 45 100
+sleep 100.000000
+noteoff 2 69
+noteoff 2 62
+sleep 100.000000
+noteoff 1 45
+noteon 2 69 50
+noteon 1 38 100
+noteon 2 62 50
+sleep 200.000000
+noteoff 1 38
+noteoff 2 69
+noteon 1 45 100
+noteoff 2 62
+sleep 100.000000
+noteon 2 69 50
+noteon 2 62 50
+sleep 100.000000
+noteoff 1 45
+noteon 1 54 100
+noteon 1 50 100
+sleep 100.000000
+noteoff 2 69
+noteoff 2 62
+sleep 100.000000
+noteoff 1 54
+noteon 2 69 50
+noteoff 1 50
+noteon 2 62 50
+noteon 1 45 100
+sleep 50.000000
+noteoff 0 66
+noteoff 0 57
+noteoff 0 62
+sleep 150.000000
+noteoff 2 69
+noteon 0 59 100
+noteoff 1 45
+noteon 0 66 100
+noteoff 2 62
+noteon 0 62 100
+noteon 1 35 100
+noteon 2 66 50
+noteon 2 59 50
+sleep 200.000000
+noteoff 0 62
+noteoff 1 35
+noteoff 0 66
+noteoff 2 66
+noteon 1 42 100
+noteoff 2 59
+sleep 50.000000
+noteoff 0 59
+sleep 50.000000
+noteon 2 66 50
+noteon 2 59 50
+sleep 100.000000
+noteon 0 59 100
+noteoff 1 42
+noteon 1 50 100
+noteon 1 47 100
+sleep 100.000000
+noteoff 2 66
+noteoff 2 59
+sleep 100.000000
+noteoff 0 59
+noteoff 1 50
+noteon 0 71 100
+noteon 2 66 50
+noteon 0 66 100
+noteoff 1 47
+noteon 2 59 50
+noteon 1 42 100
+sleep 200.000000
+noteoff 2 66
+noteoff 1 42
+noteoff 2 59
+noteon 1 37 100
+sleep 100.000000
+noteon 2 68 50
+noteon 2 61 50
+sleep 100.000000
+noteoff 0 71
+noteoff 1 37
+noteoff 0 66
+noteon 1 44 100
+noteon 0 68 100
+noteon 0 64 100
+noteon 0 59 100
+sleep 100.000000
+noteoff 2 68
+noteoff 2 61
+sleep 100.000000
+noteoff 1 44
+noteon 2 68 50
+noteon 1 49 100
+noteon 2 61 50
+noteon 1 52 100
+sleep 200.000000
+noteoff 0 68
+noteoff 2 68
+noteoff 0 64
+noteoff 1 49
+noteoff 0 59
+noteoff 2 61
+noteon 0 69 100
+noteoff 1 52
+noteon 0 64 100
+noteon 1 44 100
+noteon 0 57 100
+sleep 100.000000
+noteon 2 68 50
+noteon 2 61 50
+sleep 100.000000
+noteoff 1 44
+noteon 1 33 100
+sleep 100.000000
+noteoff 2 68
+noteoff 2 61
+sleep 100.000000
+noteoff 0 69
+noteoff 1 33
+noteoff 0 64
+noteon 2 73 50
+noteoff 0 57
+noteon 1 40 100
+noteon 0 71 100
+noteon 2 66 50
+noteon 0 64 100
+sleep 200.000000
+noteoff 1 40
+noteoff 0 71
+noteoff 2 73
+noteoff 0 64
+noteon 1 45 100
+noteon 0 73 100
+noteoff 2 66
+sleep 100.000000
+noteon 2 73 50
+noteon 2 66 50
+sleep 100.000000
+noteoff 0 73
+noteoff 1 45
+noteon 0 65 100
+noteon 1 49 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 2 73
+noteoff 2 66
+sleep 100.000000
+noteoff 1 49
+noteon 2 68 50
+noteon 1 53 100
+noteon 2 61 50
+sleep 200.000000
+noteoff 0 65
+noteoff 1 53
+noteoff 0 61
+noteoff 2 68
+noteon 0 66 100
+noteon 1 54 100
+noteon 0 63 100
+noteoff 2 61
+sleep 100.000000
+noteoff 0 63
+noteon 2 68 50
+noteon 2 61 50
+sleep 100.000000
+noteoff 0 66
+noteoff 1 54
+noteon 0 68 100
+noteon 1 53 100
+noteon 0 65 100
+sleep 100.000000
+noteoff 2 68
+noteoff 2 61
+sleep 100.000000
+noteoff 1 53
+noteon 2 68 50
+noteon 1 49 100
+noteon 2 61 50
+sleep 200.000000
+noteon 3 78 100
+noteoff 0 68
+noteon 3 81 100
+noteoff 1 49
+noteoff 0 65
+noteoff 2 68
+noteon 0 69 100
+noteon 1 42 100
+noteon 0 66 100
+noteoff 2 61
+noteon 0 61 100
+noteon 2 73 50
+noteon 2 66 50
+sleep 50.000000
+noteon 3 85 100
+sleep 150.000000
+noteoff 1 42
+noteoff 3 81
+noteoff 2 73
+noteon 1 49 100
+noteoff 2 66
+sleep 50.000000
+noteoff 0 69
+noteoff 0 66
+noteoff 0 61
+sleep 50.000000
+noteon 2 73 50
+noteon 2 66 50
+sleep 50.000000
+noteoff 3 78
+noteoff 3 85
+sleep 50.000000
+noteon 0 69 100
+noteon 3 85 100
+noteoff 1 49
+noteon 3 78 100
+noteon 0 66 100
+noteon 1 57 100
+noteon 0 61 100
+noteon 1 54 100
+sleep 100.000000
+noteoff 2 73
+noteoff 2 66
+sleep 100.000000
+noteoff 3 85
+noteoff 0 69
+noteoff 3 78
+noteoff 1 57
+noteon 3 83 100
+noteoff 0 66
+noteon 3 80 100
+noteon 2 73 50
+noteoff 0 61
+noteoff 1 54
+noteon 0 68 100
+noteon 2 66 50
+noteon 0 64 100
+noteon 1 49 100
+noteon 0 59 100
+sleep 200.000000
+noteoff 3 83
+noteoff 2 73
+noteoff 3 80
+noteoff 1 49
+noteoff 2 66
+noteon 1 40 100
+noteon 1 52 100
+sleep 100.000000
+noteon 2 71 50
+noteoff 1 40
+noteon 2 64 50
+noteoff 1 52
+sleep 50.000000
+noteoff 0 68
+noteoff 0 64
+noteoff 0 59
+sleep 50.000000
+noteon 3 88 100
+noteon 1 40 100
+noteon 3 76 100
+noteon 0 61 100
+noteon 1 52 100
+noteon 0 57 100
+noteon 0 64 100
+sleep 100.000000
+noteoff 2 71
+noteoff 1 40
+noteoff 2 64
+noteoff 1 52
+sleep 100.000000
+noteoff 3 88
+noteon 2 71 50
+noteoff 3 76
+noteon 1 40 100
+noteon 2 64 50
+noteon 1 52 100
+sleep 50.000000
+noteoff 0 61
+noteoff 0 57
+noteoff 0 64
+sleep 50.000000
+noteoff 1 40
+noteoff 1 52
+sleep 100.000000
+noteon 3 89 100
+noteon 0 65 100
+noteon 3 77 100
+noteoff 2 71
+noteon 0 61 100
+noteon 1 41 100
+noteon 0 56 100
+noteoff 2 64
+sleep 100.000000
+noteon 2 72 50
+noteon 2 65 50
+sleep 100.000000
+noteoff 3 89
+noteoff 0 65
+noteoff 3 77
+noteoff 0 61
+noteoff 0 56
+sleep 100.000000
+noteoff 2 72
+noteoff 2 65
+sleep 100.000000
+noteon 3 85 100
+noteon 0 61 100
+noteon 3 73 100
+noteoff 1 41
+noteon 0 57 100
+noteon 2 72 50
+noteon 1 49 100
+noteon 2 65 50
+sleep 200.000000
+noteoff 3 85
+noteoff 0 61
+noteoff 3 73
+noteoff 1 49
+noteon 3 83 100
+noteoff 0 57
+noteon 3 77 100
+noteoff 2 72
+noteon 0 59 100
+noteon 1 53 100
+noteon 0 56 100
+noteoff 2 65
+noteon 1 56 100
+sleep 100.000000
+noteon 2 73 50
+noteon 2 66 50
+sleep 100.000000
+noteoff 3 83
+noteoff 0 59
+noteoff 3 77
+noteoff 1 53
+noteon 3 81 100
+noteoff 0 56
+noteon 3 78 100
+noteoff 1 56
+noteon 0 54 100
+noteon 1 57 100
+noteon 0 61 100
+noteon 1 54 100
+noteon 1 45 100
+sleep 100.000000
+noteoff 2 73
+noteoff 2 66
+sleep 100.000000
+noteoff 3 81
+noteon 2 73 50
+noteoff 3 78
+noteon 2 66 50
+sleep 200.000000
+noteoff 1 57
+noteoff 2 73
+noteoff 1 54
+noteoff 2 66
+noteoff 1 45
+noteon 1 49 100
+sleep 100.000000
+noteon 2 73 50
+noteon 2 66 50
+sleep 100.000000
+noteon 0 66 100
+noteoff 1 49
+noteon 1 47 100
+sleep 100.000000
+noteoff 2 73
+noteoff 2 66
+sleep 100.000000
+noteoff 0 66
+noteoff 1 47
+noteon 0 69 100
+noteon 2 73 50
+noteon 1 42 100
+noteon 2 66 50
+sleep 200.000000
+noteoff 0 54
+noteoff 1 42
+noteoff 0 61
+noteoff 2 73
+noteoff 0 69
+noteon 1 38 100
+noteon 0 71 100
+noteoff 2 66
+noteon 0 62 100
+noteon 2 66 50
+noteon 2 59 50
+sleep 200.000000
+noteoff 1 38
+noteoff 2 66
+noteon 1 45 100
+noteoff 2 59
+sleep 100.000000
+noteon 2 66 50
+noteon 2 59 50
+sleep 100.000000
+noteoff 0 71
+noteoff 1 45
+noteoff 0 62
+noteon 1 54 100
+noteon 0 69 100
+noteon 1 50 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 2 66
+noteoff 2 59
+sleep 100.000000
+noteoff 1 54
+noteon 2 66 50
+noteoff 1 50
+noteon 2 59 50
+noteon 1 45 100
+sleep 200.000000
+noteoff 0 69
+noteoff 2 66
+noteoff 0 61
+noteoff 1 45
+noteon 0 71 100
+noteoff 2 59
+noteon 0 62 100
+noteon 1 38 100
+sleep 100.000000
+noteon 2 66 50
+noteon 2 59 50
+sleep 100.000000
+noteoff 1 38
+noteon 1 45 100
+sleep 100.000000
+noteoff 2 66
+noteoff 2 59
+sleep 100.000000
+noteoff 0 71
+noteoff 1 45
+noteoff 0 62
+noteon 2 66 50
+noteon 0 69 100
+noteon 1 37 100
+noteon 0 61 100
+noteon 2 59 50
+sleep 200.000000
+noteoff 0 69
+noteoff 1 37
+noteon 0 68 100
+noteoff 2 66
+noteon 1 44 100
+noteoff 2 59
+sleep 100.000000
+noteon 2 68 50
+noteon 2 61 50
+sleep 100.000000
+noteoff 0 61
+sleep 100.000000
+noteoff 2 68
+noteoff 2 61
+sleep 100.000000
+noteon 0 61 100
+noteoff 1 44
+noteon 2 68 50
+noteon 1 37 100
+noteon 2 61 50
+sleep 200.000000
+noteoff 0 68
+noteoff 1 37
+noteon 0 65 100
+noteoff 2 68
+noteon 1 53 100
+noteoff 2 61
+noteon 1 49 100
+sleep 100.000000
+noteon 2 68 50
+noteon 2 61 50
+sleep 100.000000
+noteon 0 68 100
+noteoff 1 53
+noteoff 1 49
+noteon 1 37 100
+sleep 100.000000
+noteoff 2 68
+noteoff 2 61
+sleep 100.000000
+noteoff 0 61
+noteoff 1 37
+noteon 0 73 100
+noteon 2 68 50
+noteon 1 32 100
+noteon 2 61 50
+sleep 200.000000
+noteoff 0 65
+noteoff 1 32
+noteon 0 77 100
+noteoff 2 68
+noteon 1 37 100
+noteoff 2 61
+sleep 100.000000
+noteon 2 68 50
+noteon 2 61 50
+sleep 100.000000
+noteoff 0 68
+noteoff 1 37
+noteon 0 81 100
+noteon 1 41 100
+sleep 100.000000
+noteoff 2 68
+noteoff 2 61
+sleep 100.000000
+noteoff 0 73
+noteoff 1 41
+noteon 0 85 100
+noteon 2 68 50
+noteon 1 44 100
+noteon 2 61 50
+sleep 200.000000
+noteoff 0 77
+noteon 8 85 80
+noteon 7 90 80
+noteoff 1 44
+noteon 3 78 80
+noteoff 0 81
+noteon 4 54 80
+noteoff 2 68
+noteon 3 73 80
+noteoff 0 85
+noteon 4 49 80
+noteon 1 42 100
+noteon 3 69 80
+noteon 0 69 100
+noteoff 2 61
+noteon 0 66 100
+noteon 1 30 100
+noteon 0 61 100
+noteon 0 81 100
+noteon 2 90 73
+noteon 0 78 100
+noteon 0 73 100
+sleep 100.000000
+noteoff 3 78
+noteoff 0 69
+noteoff 3 73
+noteoff 1 42
+noteoff 3 69
+noteoff 0 66
+noteoff 2 90
+noteoff 0 61
+noteoff 1 30
+noteoff 0 81
+noteon 2 78 71
+noteoff 0 78
+noteoff 0 73
+noteon 0 69 50
+noteon 0 66 50
+noteon 0 61 50
+noteon 0 81 50
+noteon 0 78 50
+noteon 0 73 50
+sleep 100.000000
+noteoff 4 54
+noteoff 0 69
+noteon 3 78 80
+noteon 1 42 100
+noteoff 4 49
+noteoff 0 66
+noteon 3 73 80
+noteoff 2 78
+noteon 4 42 80
+noteoff 0 61
+noteon 3 69 80
+noteon 1 30 100
+noteoff 0 81
+noteon 2 78 68
+noteoff 0 78
+noteoff 0 73
+noteon 0 69 100
+noteon 0 66 100
+noteon 0 61 100
+noteon 0 81 100
+noteon 0 78 100
+noteon 0 73 100
+sleep 100.000000
+noteoff 8 85
+noteoff 3 78
+noteoff 7 90
+noteoff 0 69
+noteon 8 81 80
+noteoff 3 73
+noteon 7 85 80
+noteoff 1 42
+noteoff 3 69
+noteoff 0 66
+noteoff 2 78
+noteoff 0 61
+noteoff 1 30
+noteoff 0 81
+noteon 2 90 66
+noteoff 0 78
+noteoff 0 73
+noteon 0 69 50
+noteon 0 66 50
+noteon 0 61 50
+noteon 0 81 50
+noteon 0 78 50
+noteon 0 73 50
+sleep 100.000000
+noteoff 4 42
+noteoff 0 69
+noteon 4 54 80
+noteoff 2 90
+noteon 4 49 80
+noteoff 0 66
+noteon 2 90 64
+noteoff 0 61
+noteoff 0 81
+noteoff 0 78
+noteoff 0 73
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 61
+sleep 100.000000
+noteoff 8 81
+noteon 3 76 80
+noteoff 7 85
+noteon 0 68 100
+noteon 8 78 80
+noteoff 4 54
+noteon 7 81 80
+noteon 1 40 100
+noteon 3 71 80
+noteon 0 64 100
+noteoff 4 49
+noteoff 2 78
+noteon 3 68 80
+noteon 0 61 100
+noteon 4 66 80
+noteon 1 28 100
+noteon 4 61 80
+noteon 0 80 100
+noteon 0 76 100
+noteon 2 78 59
+noteon 0 73 100
+sleep 100.000000
+noteoff 3 76
+noteoff 0 68
+noteoff 3 71
+noteoff 1 40
+noteoff 3 68
+noteoff 0 64
+noteoff 2 78
+noteoff 0 61
+noteoff 1 28
+noteoff 0 80
+noteon 2 90 57
+noteoff 0 76
+noteoff 0 73
+noteon 0 68 50
+noteon 0 64 50
+noteon 0 61 50
+noteon 0 80 50
+noteon 0 76 50
+noteon 0 73 50
+sleep 100.000000
+noteoff 8 78
+noteoff 4 66
+noteoff 7 81
+noteoff 0 68
+noteon 8 73 80
+noteoff 4 61
+noteon 7 78 80
+noteoff 2 90
+noteon 4 69 80
+noteoff 0 64
+noteon 4 66 80
+noteon 2 90 54
+noteoff 0 61
+noteoff 0 80
+noteoff 0 76
+noteoff 0 73
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 52
+sleep 100.000000
+noteon 3 73 80
+noteon 0 64 100
+noteoff 4 69
+noteon 1 36 100
+noteon 3 69 80
+noteon 0 61 100
+noteoff 4 66
+noteoff 2 78
+noteon 3 66 80
+noteon 0 57 100
+noteon 4 66 80
+noteon 1 24 100
+noteon 4 61 80
+noteon 0 76 100
+noteon 2 78 49
+noteon 0 73 100
+noteon 0 69 100
+sleep 100.000000
+noteoff 8 73
+noteoff 3 73
+noteoff 7 78
+noteoff 0 64
+noteon 8 85 80
+noteoff 3 69
+noteon 7 90 80
+noteoff 1 36
+noteoff 3 66
+noteoff 0 61
+noteoff 2 78
+noteoff 0 57
+noteoff 1 24
+noteoff 0 76
+noteoff 0 73
+noteon 2 90 47
+noteoff 0 69
+noteon 0 64 50
+noteon 0 61 50
+noteon 0 57 50
+noteon 0 76 50
+noteon 0 73 50
+noteon 0 69 50
+sleep 100.000000
+noteoff 4 66
+noteoff 0 64
+noteoff 4 61
+noteon 1 37 100
+noteon 4 56 80
+noteoff 0 61
+noteon 4 52 80
+noteoff 2 90
+noteoff 0 57
+noteon 2 90 45
+noteoff 0 76
+noteoff 0 73
+noteoff 0 69
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 42
+sleep 100.000000
+noteoff 8 85
+noteon 3 73 80
+noteoff 7 90
+noteon 0 71 100
+noteon 8 90 80
+noteoff 4 56
+noteon 7 93 80
+noteoff 2 78
+noteon 3 69 80
+noteon 0 61 100
+noteoff 4 52
+noteon 2 78 40
+noteon 3 66 80
+noteon 0 68 100
+noteon 4 52 80
+noteon 0 83 100
+noteon 4 49 80
+noteon 0 73 100
+noteon 0 80 100
+sleep 100.000000
+noteoff 3 73
+noteoff 2 78
+noteoff 3 69
+noteon 2 90 37
+noteoff 3 66
+sleep 100.000000
+noteoff 8 90
+noteoff 4 52
+noteoff 7 93
+noteoff 1 37
+noteon 8 85 80
+noteoff 4 49
+noteon 7 92 80
+noteoff 2 90
+noteon 4 50 80
+noteon 1 38 100
+noteon 2 90 36
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 36
+sleep 100.000000
+noteon 3 74 80
+noteoff 0 71
+noteoff 4 50
+noteoff 2 78
+noteon 3 69 80
+noteoff 0 61
+noteon 4 52 80
+noteon 2 78 36
+noteoff 0 68
+noteoff 0 83
+noteoff 0 73
+noteoff 0 80
+noteon 0 69 100
+noteon 0 66 100
+noteon 0 61 100
+noteon 0 81 100
+noteon 0 78 100
+noteon 0 73 100
+sleep 100.000000
+noteoff 8 85
+noteoff 3 74
+noteoff 7 92
+noteoff 0 69
+noteon 8 81 80
+noteoff 3 69
+noteon 7 88 80
+noteoff 2 78
+noteoff 0 66
+noteon 2 90 37
+noteoff 0 61
+noteoff 0 81
+noteoff 0 78
+noteoff 0 73
+sleep 100.000000
+noteoff 4 52
+noteon 0 69 100
+noteon 3 74 80
+noteoff 2 90
+noteon 4 54 80
+noteon 0 66 100
+noteon 3 69 80
+noteon 2 90 37
+noteon 0 62 100
+noteon 0 81 100
+noteon 0 78 100
+noteon 0 74 100
+sleep 100.000000
+noteoff 3 74
+noteoff 2 90
+noteoff 3 69
+noteon 2 78 37
+sleep 100.000000
+noteoff 8 81
+noteoff 2 78
+noteoff 7 88
+noteon 8 83 80
+noteon 2 78 37
+noteon 7 90 80
+sleep 100.000000
+noteoff 2 78
+noteon 2 90 38
+sleep 100.000000
+noteoff 8 83
+noteon 0 61 100
+noteoff 7 90
+noteoff 2 90
+noteon 8 78 80
+noteon 0 73 100
+noteon 7 85 80
+noteon 2 90 38
+sleep 100.000000
+noteoff 0 73
+noteoff 2 90
+noteoff 0 61
+noteon 2 78 39
+noteon 0 62 100
+noteon 0 74 100
+sleep 100.000000
+noteoff 0 74
+noteoff 2 78
+noteoff 0 62
+noteon 2 78 41
+noteon 0 66 100
+noteon 0 78 100
+sleep 100.000000
+noteoff 0 78
+noteoff 2 78
+noteoff 0 66
+noteon 2 90 44
+noteon 0 69 100
+noteon 0 81 100
+sleep 100.000000
+noteoff 0 81
+noteoff 2 90
+noteoff 0 69
+noteon 2 90 47
+noteon 0 73 100
+noteon 0 85 100
+sleep 100.000000
+noteoff 0 85
+noteoff 2 90
+noteoff 0 73
+noteon 2 78 50
+noteon 0 74 100
+noteon 0 86 100
+sleep 100.000000
+noteoff 8 78
+noteoff 0 86
+noteoff 7 85
+noteoff 2 78
+noteon 7 81 80
+noteoff 0 74
+noteon 0 73 100
+noteon 2 78 53
+noteon 0 85 100
+sleep 100.000000
+noteoff 7 81
+noteoff 0 69
+noteon 7 83 80
+noteoff 2 78
+noteoff 0 66
+noteon 2 90 56
+noteoff 0 62
+noteoff 0 81
+noteoff 0 78
+noteoff 0 74
+noteoff 0 73
+noteoff 0 85
+noteon 0 69 100
+noteon 0 81 100
+sleep 100.000000
+noteon 8 74 80
+noteoff 4 54
+noteoff 7 83
+noteoff 0 69
+noteon 7 85 80
+noteon 3 73 80
+noteoff 1 38
+noteon 4 57 80
+noteoff 0 81
+noteon 3 69 80
+noteoff 2 90
+noteon 4 50 80
+noteon 0 69 100
+noteon 3 85 80
+noteon 1 35 100
+noteon 3 81 80
+noteon 0 66 100
+noteon 0 62 100
+noteon 1 47 100
+noteon 0 59 100
+noteon 0 81 100
+noteon 2 90 73
+noteon 0 78 100
+noteon 0 74 100
+noteon 0 71 100
+sleep 100.000000
+noteoff 3 73
+noteoff 0 69
+noteoff 3 69
+noteoff 1 35
+noteoff 3 85
+noteoff 0 66
+noteoff 3 81
+noteoff 2 90
+noteoff 0 62
+noteoff 1 47
+noteoff 0 59
+noteon 2 78 71
+noteoff 0 81
+noteoff 0 78
+noteoff 0 74
+noteoff 0 71
+sleep 100.000000
+noteoff 4 57
+noteon 0 69 100
+noteon 3 73 80
+noteon 1 35 100
+noteoff 4 50
+noteon 0 66 100
+noteon 3 69 80
+noteoff 2 78
+noteon 4 47 80
+noteon 0 62 100
+noteon 3 85 80
+noteon 1 47 100
+noteon 3 81 80
+noteon 0 59 100
+noteon 2 78 68
+noteon 0 81 100
+noteon 0 78 100
+noteon 0 74 100
+noteon 0 71 100
+sleep 100.000000
+noteoff 8 74
+noteoff 3 73
+noteoff 7 85
+noteoff 0 69
+noteon 7 78 80
+noteoff 3 69
+noteoff 1 35
+noteoff 3 85
+noteoff 0 66
+noteoff 3 81
+noteoff 2 78
+noteoff 0 62
+noteoff 1 47
+noteoff 0 59
+noteon 2 90 66
+noteoff 0 81
+noteoff 0 78
+noteoff 0 74
+noteoff 0 71
+sleep 100.000000
+noteoff 4 47
+noteoff 2 90
+noteon 4 61 80
+noteon 2 90 64
+noteon 4 54 80
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 61
+sleep 100.000000
+noteon 8 74 80
+noteon 3 71 80
+noteoff 7 78
+noteon 0 71 100
+noteon 7 85 80
+noteoff 4 61
+noteon 1 37 100
+noteon 3 68 80
+noteon 0 68 100
+noteoff 4 54
+noteoff 2 78
+noteon 3 83 80
+noteon 0 64 100
+noteon 4 68 80
+noteon 1 49 100
+noteon 3 80 80
+noteon 0 61 100
+noteon 4 61 80
+noteon 0 83 100
+noteon 2 78 59
+noteon 0 80 100
+noteon 0 76 100
+noteon 0 73 100
+sleep 100.000000
+noteoff 3 71
+noteoff 0 71
+noteoff 3 68
+noteoff 1 37
+noteoff 3 83
+noteoff 0 68
+noteoff 3 80
+noteoff 2 78
+noteoff 0 64
+noteoff 1 49
+noteoff 0 61
+noteon 2 90 57
+noteoff 0 83
+noteoff 0 80
+noteoff 0 76
+noteoff 0 73
+sleep 100.000000
+noteoff 8 74
+noteoff 4 68
+noteoff 7 85
+noteoff 2 90
+noteon 8 76 80
+noteoff 4 61
+noteon 7 83 80
+noteon 2 90 54
+noteon 4 69 80
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 52
+sleep 100.000000
+noteoff 8 76
+noteon 3 68 80
+noteoff 7 83
+noteon 0 68 100
+noteon 8 73 80
+noteoff 4 69
+noteon 7 80 80
+noteon 1 40 100
+noteon 3 64 80
+noteon 0 64 100
+noteon 4 73 80
+noteoff 2 78
+noteon 3 80 80
+noteon 0 61 100
+noteon 3 76 80
+noteon 1 52 100
+noteon 0 80 100
+noteon 2 78 49
+noteon 0 76 100
+noteon 0 73 100
+sleep 100.000000
+noteoff 3 68
+noteoff 0 68
+noteoff 3 64
+noteoff 1 40
+noteoff 3 80
+noteoff 0 64
+noteoff 3 76
+noteoff 2 78
+noteoff 0 61
+noteoff 1 52
+noteoff 0 80
+noteoff 0 76
+noteon 2 90 47
+noteoff 0 73
+sleep 100.000000
+noteoff 8 73
+noteoff 4 73
+noteoff 7 80
+noteon 1 37 100
+noteon 8 69 80
+noteon 4 61 80
+noteon 7 76 80
+noteoff 2 90
+noteon 1 49 100
+noteon 2 90 45
+sleep 100.000000
+noteoff 4 61
+noteoff 2 90
+noteon 4 59 80
+noteon 2 78 42
+sleep 100.000000
+noteoff 8 69
+noteon 3 68 80
+noteoff 7 76
+noteon 0 59 100
+noteon 7 80 80
+noteoff 4 59
+noteoff 2 78
+noteon 3 64 80
+noteon 0 71 100
+noteon 4 57 80
+noteon 2 78 40
+noteon 3 80 80
+noteon 3 76 80
+sleep 100.000000
+noteoff 4 57
+noteoff 0 59
+noteoff 3 68
+noteoff 2 78
+noteon 4 56 80
+noteoff 0 71
+noteoff 3 64
+noteon 2 90 37
+noteoff 3 80
+noteon 0 61 100
+noteoff 3 76
+noteon 0 73 100
+sleep 100.000000
+noteon 8 73 80
+noteoff 4 56
+noteoff 7 80
+noteoff 0 61
+noteon 7 80 80
+noteon 3 69 80
+noteoff 1 37
+noteon 4 61 80
+noteoff 0 73
+noteon 3 66 80
+noteoff 2 90
+noteon 0 66 100
+noteoff 1 49
+noteon 0 61 100
+noteon 2 90 36
+noteon 0 78 100
+noteon 1 50 100
+noteon 0 73 100
+noteon 1 38 100
+sleep 100.000000
+noteoff 3 69
+noteoff 2 90
+noteoff 3 66
+noteon 2 78 36
+sleep 100.000000
+noteoff 2 78
+noteon 2 78 36
+sleep 100.000000
+noteoff 2 78
+noteon 2 90 37
+sleep 100.000000
+noteoff 2 90
+noteon 2 90 37
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 37
+sleep 100.000000
+noteoff 2 78
+noteon 2 78 37
+sleep 100.000000
+noteoff 2 78
+noteon 2 90 38
+sleep 100.000000
+noteoff 8 73
+noteoff 7 80
+noteon 0 81 100
+noteon 8 74 80
+noteon 7 81 80
+noteoff 2 90
+noteon 0 93 100
+noteon 5 90 14
+noteon 6 78 14
+noteon 2 90 38
+sleep 50.000000
+noteoff 5 90
+noteoff 6 78
+sleep 1.666667
+noteon 5 90 19
+noteon 6 78 19
+sleep 48.333333
+noteon 5 90 23
+noteoff 0 93
+noteon 6 78 23
+noteoff 2 90
+noteoff 0 81
+noteon 2 78 39
+noteon 0 78 100
+noteon 0 90 100
+sleep 1.666667
+noteoff 5 90
+noteoff 6 78
+sleep 48.333333
+noteoff 5 90
+noteoff 6 78
+noteon 5 90 28
+noteon 6 78 28
+sleep 50.000000
+noteoff 5 90
+noteoff 0 90
+noteoff 6 78
+noteoff 2 78
+noteon 5 90 32
+noteoff 0 78
+noteon 6 78 32
+noteon 2 78 41
+noteon 0 76 100
+noteon 0 88 100
+sleep 50.000000
+noteoff 5 90
+noteoff 6 78
+sleep 1.666667
+noteon 5 90 37
+noteon 6 78 37
+sleep 48.333333
+noteon 5 90 41
+noteoff 0 88
+noteon 6 78 41
+noteoff 2 78
+noteoff 0 76
+noteon 2 90 44
+noteon 0 73 100
+noteon 0 85 100
+sleep 1.666667
+noteoff 5 90
+noteoff 6 78
+sleep 48.333333
+noteoff 5 90
+noteoff 6 78
+noteon 5 90 45
+noteon 6 78 45
+sleep 50.000000
+noteoff 5 90
+noteoff 0 85
+noteoff 6 78
+noteoff 2 90
+noteon 5 90 50
+noteoff 0 73
+noteon 6 78 50
+noteon 2 90 47
+noteon 0 69 100
+noteon 0 81 100
+sleep 50.000000
+noteoff 5 90
+noteoff 6 78
+sleep 1.666667
+noteon 5 90 54
+noteon 6 78 54
+sleep 48.333333
+noteon 5 90 59
+noteoff 0 81
+noteon 6 78 59
+noteoff 2 90
+noteoff 0 69
+noteon 2 78 50
+noteon 0 66 100
+noteon 0 78 100
+sleep 1.666667
+noteoff 5 90
+noteoff 6 78
+sleep 48.333333
+noteoff 5 90
+noteoff 6 78
+noteon 5 90 63
+noteon 6 78 63
+sleep 50.000000
+noteoff 5 90
+noteoff 0 78
+noteoff 6 78
+noteoff 2 78
+noteon 5 90 68
+noteoff 0 66
+noteon 6 78 68
+noteon 0 61 100
+noteon 2 78 53
+noteon 0 73 100
+sleep 50.000000
+noteoff 5 90
+noteoff 6 78
+sleep 1.666667
+noteon 5 90 72
+noteon 6 78 72
+sleep 48.333333
+noteon 5 90 76
+noteoff 0 73
+noteon 6 78 76
+noteoff 2 78
+noteoff 0 61
+noteon 2 90 56
+noteon 0 57 100
+noteon 0 69 100
+sleep 1.666667
+noteoff 5 90
+noteoff 6 78
+sleep 48.333333
+noteoff 5 90
+noteoff 6 78
+noteon 5 90 81
+noteon 6 78 81
+sleep 50.000000
+noteoff 8 74
+noteoff 4 61
+noteoff 7 81
+noteoff 0 66
+noteon 8 85 80
+noteoff 5 90
+noteoff 1 50
+noteon 7 90 80
+noteon 3 78 80
+noteoff 0 61
+noteoff 6 78
+noteoff 2 90
+noteoff 0 78
+noteoff 1 38
+noteon 3 73 80
+noteoff 0 73
+noteon 4 54 80
+noteoff 0 57
+noteon 5 90 90
+noteon 1 42 100
+noteon 3 69 80
+noteoff 0 69
+noteon 5 78 90
+noteon 2 90 73
+noteon 4 49 80
+noteon 0 69 100
+noteon 5 85 90
+noteon 1 30 100
+noteon 0 66 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 3 78
+noteoff 0 69
+noteoff 5 90
+noteoff 1 42
+noteoff 3 73
+noteoff 0 66
+noteoff 5 78
+noteoff 2 90
+noteoff 3 69
+noteoff 0 61
+noteoff 5 85
+noteoff 1 30
+noteon 5 78 90
+noteon 0 69 50
+noteon 2 78 71
+noteon 0 66 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 54
+noteoff 0 69
+noteoff 5 78
+noteon 1 42 100
+noteon 3 78 80
+noteoff 0 66
+noteon 5 78 90
+noteoff 2 78
+noteoff 4 49
+noteoff 0 61
+noteon 5 73 90
+noteon 1 30 100
+noteon 3 73 80
+noteon 0 69 100
+noteon 5 81 90
+noteon 2 78 68
+noteon 4 42 80
+noteon 0 66 100
+noteon 3 69 80
+noteon 0 61 100
+sleep 100.000000
+noteoff 8 85
+noteoff 5 78
+noteoff 7 90
+noteoff 0 69
+noteon 8 81 80
+noteoff 3 78
+noteon 7 85 80
+noteoff 1 42
+noteoff 5 73
+noteoff 0 66
+noteoff 3 73
+noteoff 2 78
+noteoff 5 81
+noteoff 0 61
+noteoff 3 69
+noteoff 1 30
+noteon 0 69 50
+noteon 2 90 66
+noteon 0 66 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 4 42
+noteoff 0 69
+noteon 4 54 80
+noteoff 2 90
+noteon 4 49 80
+noteoff 0 66
+noteon 2 90 64
+noteoff 0 61
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 61
+sleep 100.000000
+noteoff 8 81
+noteon 5 88 90
+noteoff 7 85
+noteon 0 68 100
+noteon 8 78 80
+noteon 3 76 80
+noteon 7 81 80
+noteon 1 40 100
+noteon 5 76 90
+noteon 0 64 100
+noteoff 4 54
+noteoff 2 78
+noteon 5 83 90
+noteon 0 61 100
+noteon 3 71 80
+noteon 1 28 100
+noteoff 4 49
+noteon 3 68 80
+noteon 2 78 59
+noteon 4 66 80
+noteon 4 61 80
+sleep 100.000000
+noteoff 5 88
+noteoff 0 68
+noteoff 3 76
+noteoff 1 40
+noteoff 5 76
+noteoff 0 64
+noteoff 3 71
+noteoff 2 78
+noteoff 5 83
+noteoff 0 61
+noteoff 3 68
+noteoff 1 28
+noteon 5 76 90
+noteon 0 68 50
+noteon 2 90 57
+noteon 0 64 50
+noteon 0 61 50
+sleep 100.000000
+noteoff 8 78
+noteoff 4 66
+noteoff 7 81
+noteoff 0 68
+noteon 8 73 80
+noteoff 5 76
+noteon 7 78 80
+noteoff 2 90
+noteoff 4 61
+noteoff 0 64
+noteon 5 71 90
+noteon 2 90 54
+noteon 4 69 80
+noteoff 0 61
+noteon 5 76 90
+noteon 4 66 80
+sleep 100.000000
+noteoff 5 71
+noteoff 2 90
+noteoff 5 76
+noteon 2 78 52
+sleep 100.000000
+noteon 3 73 80
+noteon 0 64 100
+noteon 5 85 90
+noteon 1 36 100
+noteoff 4 69
+noteon 0 61 100
+noteon 5 78 90
+noteoff 2 78
+noteon 3 69 80
+noteon 0 57 100
+noteon 5 73 90
+noteon 1 24 100
+noteoff 4 66
+noteon 2 78 49
+noteon 3 66 80
+noteon 4 66 80
+noteon 4 61 80
+sleep 100.000000
+noteoff 8 73
+noteoff 5 85
+noteoff 7 78
+noteoff 0 64
+noteon 8 85 80
+noteoff 3 73
+noteon 7 90 80
+noteoff 1 36
+noteoff 5 78
+noteoff 0 61
+noteoff 3 69
+noteoff 2 78
+noteoff 5 73
+noteoff 0 57
+noteoff 3 66
+noteoff 1 24
+noteon 5 78 90
+noteon 0 64 50
+noteon 5 73 90
+noteon 0 61 50
+noteon 2 90 47
+noteon 0 57 50
+sleep 100.000000
+noteoff 4 66
+noteoff 0 64
+noteoff 5 78
+noteon 1 37 100
+noteoff 4 61
+noteoff 0 61
+noteoff 5 73
+noteoff 2 90
+noteon 4 56 80
+noteoff 0 57
+noteon 4 52 80
+noteon 2 90 45
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 42
+sleep 100.000000
+noteoff 8 85
+noteon 5 73 90
+noteoff 7 90
+noteon 0 71 100
+noteon 8 90 80
+noteon 3 73 80
+noteon 7 93 80
+noteoff 2 78
+noteon 5 69 90
+noteon 0 61 100
+noteoff 4 56
+noteon 2 78 40
+noteon 3 69 80
+noteon 0 68 100
+noteoff 4 52
+noteon 3 66 80
+noteon 4 52 80
+noteon 4 49 80
+sleep 100.000000
+noteoff 5 73
+noteoff 2 78
+noteoff 3 73
+noteon 2 90 37
+noteoff 5 69
+noteoff 3 69
+noteon 5 69 90
+noteoff 3 66
+sleep 100.000000
+noteoff 8 90
+noteoff 5 69
+noteoff 7 93
+noteoff 1 37
+noteon 8 86 80
+noteoff 4 52
+noteon 7 92 80
+noteoff 2 90
+noteoff 4 49
+noteon 1 38 100
+noteon 4 50 80
+noteon 2 90 36
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 36
+sleep 100.000000
+noteoff 8 86
+noteon 5 74 90
+noteoff 7 92
+noteoff 0 71
+noteon 7 95 80
+noteon 3 74 80
+noteoff 2 78
+noteon 5 69 90
+noteoff 0 61
+noteoff 4 50
+noteon 2 78 36
+noteon 5 78 90
+noteoff 0 68
+noteon 3 69 80
+noteon 0 69 100
+noteon 4 52 80
+noteon 0 66 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 5 74
+noteoff 0 69
+noteoff 3 74
+noteoff 2 78
+noteoff 5 69
+noteoff 0 66
+noteoff 3 69
+noteon 2 90 37
+noteoff 5 78
+noteoff 0 61
+sleep 100.000000
+noteon 8 86 80
+noteoff 4 52
+noteoff 7 95
+noteon 0 69 100
+noteon 7 93 80
+noteon 5 74 90
+noteoff 2 90
+noteon 3 74 80
+noteon 0 66 100
+noteon 5 69 90
+noteon 2 90 37
+noteon 4 54 80
+noteon 0 62 100
+noteon 5 78 90
+noteon 3 69 80
+sleep 100.000000
+noteoff 5 74
+noteoff 2 90
+noteoff 3 74
+noteon 2 78 37
+noteoff 5 69
+noteoff 3 69
+noteoff 5 78
+sleep 100.000000
+noteoff 8 86
+noteoff 2 78
+noteoff 7 93
+noteon 8 83 80
+noteon 2 78 37
+noteon 7 92 80
+sleep 100.000000
+noteoff 2 78
+noteon 2 90 38
+sleep 100.000000
+noteoff 8 83
+noteon 0 61 100
+noteoff 7 92
+noteoff 2 90
+noteon 8 85 80
+noteon 7 90 80
+noteon 2 90 38
+sleep 100.000000
+noteoff 0 61
+noteoff 2 90
+noteon 0 62 100
+noteon 2 78 39
+sleep 100.000000
+noteoff 7 90
+noteoff 0 62
+noteoff 2 78
+noteon 0 66 100
+noteon 2 78 41
+sleep 100.000000
+noteoff 0 66
+noteoff 2 78
+noteon 0 69 100
+noteon 2 90 44
+sleep 100.000000
+noteoff 0 69
+noteoff 2 90
+noteon 0 73 100
+noteon 2 90 47
+sleep 100.000000
+noteoff 0 73
+noteoff 2 90
+noteon 0 74 100
+noteon 2 78 50
+sleep 100.000000
+noteoff 8 85
+noteoff 0 74
+noteon 7 81 80
+noteoff 2 78
+noteon 0 78 100
+noteon 2 78 53
+sleep 100.000000
+noteoff 7 81
+noteoff 0 69
+noteon 7 83 80
+noteoff 2 78
+noteoff 0 66
+noteon 2 90 56
+noteoff 0 62
+noteoff 0 78
+noteon 0 81 100
+sleep 100.000000
+noteon 8 81 80
+noteoff 4 54
+noteoff 7 83
+noteoff 0 81
+noteon 7 85 80
+noteon 3 73 80
+noteoff 1 38
+noteon 4 57 80
+noteon 0 69 100
+noteon 3 69 80
+noteoff 2 90
+noteon 4 50 80
+noteon 0 66 100
+noteon 3 85 80
+noteon 1 35 100
+noteon 3 81 80
+noteon 0 62 100
+noteon 0 59 100
+noteon 1 47 100
+noteon 2 90 73
+sleep 100.000000
+noteoff 3 73
+noteoff 0 69
+noteoff 3 69
+noteoff 1 35
+noteoff 3 85
+noteoff 0 66
+noteoff 3 81
+noteoff 2 90
+noteoff 0 62
+noteoff 1 47
+noteoff 0 59
+noteon 2 78 71
+sleep 100.000000
+noteoff 4 57
+noteon 0 69 100
+noteon 3 73 80
+noteon 1 35 100
+noteoff 4 50
+noteon 0 66 100
+noteon 3 69 80
+noteoff 2 78
+noteon 4 47 80
+noteon 0 62 100
+noteon 3 85 80
+noteon 1 47 100
+noteon 3 81 80
+noteon 0 59 100
+noteon 2 78 68
+sleep 100.000000
+noteoff 8 81
+noteoff 3 73
+noteoff 7 85
+noteoff 0 69
+noteon 7 88 80
+noteoff 3 69
+noteoff 1 35
+noteoff 3 85
+noteoff 0 66
+noteoff 3 81
+noteoff 2 78
+noteoff 0 62
+noteoff 1 47
+noteoff 0 59
+noteon 2 90 66
+sleep 100.000000
+noteoff 4 47
+noteoff 2 90
+noteon 4 61 80
+noteon 2 90 64
+noteon 4 54 80
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 61
+sleep 100.000000
+noteon 8 78 80
+noteon 3 71 80
+noteoff 7 88
+noteon 0 71 100
+noteon 7 83 80
+noteoff 4 61
+noteon 1 37 100
+noteon 3 68 80
+noteon 0 68 100
+noteoff 4 54
+noteoff 2 78
+noteon 3 83 80
+noteon 0 64 100
+noteon 4 68 80
+noteon 1 49 100
+noteon 3 80 80
+noteon 0 61 100
+noteon 4 61 80
+noteon 2 78 59
+sleep 100.000000
+noteoff 3 71
+noteoff 0 71
+noteoff 3 68
+noteoff 1 37
+noteoff 3 83
+noteoff 0 68
+noteoff 3 80
+noteoff 2 78
+noteoff 0 64
+noteoff 1 49
+noteoff 0 61
+noteon 2 90 57
+sleep 100.000000
+noteoff 8 78
+noteoff 4 68
+noteoff 7 83
+noteoff 2 90
+noteon 8 80 80
+noteoff 4 61
+noteon 7 85 80
+noteon 2 90 54
+noteon 4 69 80
+sleep 100.000000
+noteoff 2 90
+noteon 2 78 52
+sleep 100.000000
+noteon 3 68 80
+noteon 0 68 100
+noteoff 4 69
+noteon 1 40 100
+noteon 3 64 80
+noteon 0 64 100
+noteon 4 73 80
+noteoff 2 78
+noteon 3 80 80
+noteon 0 61 100
+noteon 3 76 80
+noteon 1 52 100
+noteon 3 88 80
+noteon 2 78 49
+sleep 100.000000
+noteoff 8 80
+noteoff 3 68
+noteoff 7 85
+noteoff 0 68
+noteon 8 76 80
+noteoff 3 64
+noteon 7 80 80
+noteoff 1 40
+noteoff 3 80
+noteoff 0 64
+noteoff 3 76
+noteoff 2 78
+noteoff 0 61
+noteoff 1 52
+noteon 2 90 47
+sleep 100.000000
+noteoff 4 73
+noteon 1 37 100
+noteoff 3 88
+noteoff 2 90
+noteon 4 61 80
+noteon 1 49 100
+noteon 3 83 80
+noteon 2 90 45
+sleep 100.000000
+noteoff 4 61
+noteoff 2 90
+noteon 4 59 80
+noteon 2 78 42
+sleep 100.000000
+noteoff 8 76
+noteoff 3 83
+noteoff 7 80
+noteon 0 59 100
+noteon 8 73 80
+noteoff 4 59
+noteon 7 76 80
+noteoff 2 78
+noteon 3 68 80
+noteon 2 78 40
+noteon 4 57 80
+noteon 3 64 80
+noteon 3 80 80
+noteon 3 76 80
+noteon 3 83 80
+sleep 100.000000
+noteoff 4 57
+noteoff 0 59
+noteoff 3 68
+noteoff 2 78
+noteon 4 56 80
+noteon 0 61 100
+noteoff 3 64
+noteon 2 90 37
+noteoff 3 80
+noteoff 3 76
+sleep 100.000000
+noteoff 8 73
+noteoff 7 76
+noteoff 0 61
+noteon 8 73 80
+noteoff 4 56
+noteon 7 78 80
+noteoff 1 37
+noteoff 3 83
+noteon 0 71 100
+noteon 4 61 80
+noteoff 2 90
+noteon 3 83 80
+noteon 0 78 100
+noteoff 1 49
+noteon 0 66 100
+noteon 2 90 36
+noteon 1 54 100
+noteon 1 42 100
+noteon 1 30 100
+sleep 50.000000
+noteon 5 83 23
+noteon 5 78 23
+noteon 5 71 23
+sleep 50.000000
+noteoff 5 83
+noteoff 2 90
+noteoff 5 78
+noteon 2 78 36
+noteoff 5 71
+noteon 5 83 28
+noteon 5 78 28
+noteon 5 71 28
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 32
+noteon 5 78 32
+noteon 5 71 32
+sleep 50.000000
+noteoff 4 61
+noteoff 2 78
+noteoff 5 83
+noteon 2 78 36
+noteon 4 54 80
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 37
+noteon 5 78 37
+noteon 5 71 37
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 42
+noteon 5 78 42
+noteon 5 71 42
+sleep 50.000000
+noteoff 5 83
+noteoff 2 78
+noteoff 5 78
+noteon 2 90 37
+noteoff 5 71
+noteon 5 83 46
+noteon 5 78 46
+noteon 5 71 46
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 45
+noteon 5 78 45
+noteon 5 71 45
+sleep 50.000000
+noteoff 4 54
+noteoff 2 90
+noteoff 5 83
+noteon 2 90 37
+noteon 4 66 80
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 46
+noteon 5 78 46
+noteon 5 71 46
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 47
+noteon 5 78 47
+noteon 5 71 47
+sleep 50.000000
+noteoff 5 83
+noteoff 2 90
+noteoff 5 78
+noteon 2 78 37
+noteoff 5 71
+noteon 5 83 49
+noteon 5 78 49
+noteon 5 71 49
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 50
+noteon 5 78 50
+noteon 5 71 50
+sleep 50.000000
+noteoff 3 83
+noteoff 2 78
+noteoff 5 83
+noteoff 4 66
+noteon 2 78 37
+noteoff 5 78
+noteon 3 85 80
+noteoff 5 71
+noteon 4 61 80
+noteon 5 83 51
+noteon 5 78 51
+noteon 5 71 51
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 53
+noteon 5 78 53
+noteon 5 71 53
+sleep 50.000000
+noteoff 5 83
+noteoff 2 78
+noteoff 5 78
+noteon 2 90 38
+noteoff 5 71
+noteon 5 83 54
+noteon 5 78 54
+noteon 5 71 54
+sleep 50.000000
+noteoff 5 83
+noteoff 5 78
+noteoff 5 71
+noteon 5 83 55
+noteon 5 78 55
+noteon 5 71 55
+sleep 50.000000
+noteoff 4 61
+noteoff 0 71
+noteoff 5 83
+noteoff 2 90
+noteon 4 73 80
+noteoff 0 78
+noteoff 5 78
+noteoff 5 71
+noteoff 0 66
+noteon 2 90 38
+noteon 0 82 100
+noteon 0 78 100
+noteon 0 73 100
+sleep 50.000000
+noteon 5 85 14
+noteon 5 78 14
+noteon 5 73 14
+sleep 50.000000
+noteoff 5 85
+noteoff 2 90
+noteoff 5 78
+noteon 2 78 39
+noteoff 5 73
+noteon 5 85 19
+noteon 5 78 19
+noteon 5 73 19
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 25
+noteon 5 78 25
+noteon 5 73 25
+sleep 50.000000
+noteoff 4 73
+noteoff 2 78
+noteoff 5 85
+noteon 2 78 41
+noteon 4 66 80
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 30
+noteon 5 78 30
+noteon 5 73 30
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 35
+noteon 5 78 35
+noteon 5 73 35
+sleep 50.000000
+noteoff 5 85
+noteoff 2 78
+noteoff 5 78
+noteon 2 90 44
+noteoff 5 73
+noteon 5 85 40
+noteon 5 78 40
+noteon 5 73 40
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 46
+noteon 5 78 46
+noteon 5 73 46
+sleep 50.000000
+noteoff 4 66
+noteon 1 49 100
+noteoff 5 85
+noteoff 2 90
+noteon 4 78 80
+noteon 2 90 47
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 51
+noteon 5 78 51
+noteon 5 73 51
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 56
+noteon 5 78 56
+noteon 5 73 56
+sleep 50.000000
+noteoff 5 85
+noteoff 2 90
+noteoff 5 78
+noteon 2 78 50
+noteoff 5 73
+noteon 5 85 61
+noteon 5 78 61
+noteon 5 73 61
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 67
+noteon 5 78 67
+noteon 5 73 67
+sleep 50.000000
+noteoff 4 78
+noteoff 2 78
+noteoff 5 85
+noteon 4 73 80
+noteon 2 78 53
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 72
+noteon 5 78 72
+noteon 5 73 72
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 77
+noteon 5 78 77
+noteon 5 73 77
+sleep 50.000000
+noteoff 5 85
+noteoff 2 78
+noteoff 5 78
+noteon 2 90 56
+noteoff 5 73
+noteon 5 85 82
+noteon 5 78 82
+noteon 5 73 82
+sleep 50.000000
+noteoff 5 85
+noteoff 5 78
+noteoff 5 73
+noteon 5 85 88
+noteon 5 78 88
+noteon 5 73 88
+sleep 50.000000
+noteoff 8 73
+noteoff 3 85
+noteoff 7 78
+noteoff 0 82
+noteoff 5 85
+noteoff 1 54
+noteoff 4 73
+noteoff 0 78
+noteoff 5 78
+noteoff 2 90
+noteoff 5 73
+noteoff 0 73
+noteoff 1 42
+noteon 0 66 100
+noteon 0 61 100
+noteoff 1 30
+noteon 2 54 60
+noteoff 1 49
+noteon 1 42 100
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 0 66
+noteoff 2 73
+noteoff 0 61
+noteon 2 76 60
+noteon 0 68 100
+noteon 0 59 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 2 78
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 2 73
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 1 42
+noteon 3 64 65
+noteoff 2 78
+noteon 3 66 65
+noteon 1 42 100
+noteon 3 61 65
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 50.000000
+noteoff 3 64
+noteoff 3 66
+noteoff 3 61
+sleep 50.000000
+noteoff 2 73
+noteon 3 64 65
+noteon 2 76 60
+noteon 3 61 65
+noteon 3 57 65
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 0 68
+noteoff 2 78
+noteoff 0 59
+noteon 2 54 60
+noteon 0 61 100
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 0 61
+noteoff 2 61
+noteon 0 69 100
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 0 69
+noteoff 2 66
+noteon 0 68 100
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 2 73
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 50.000000
+noteoff 3 64
+noteoff 3 61
+noteoff 3 57
+sleep 50.000000
+noteoff 0 68
+noteoff 1 42
+noteon 0 66 100
+noteoff 2 78
+noteon 0 62 100
+noteon 1 47 100
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 0 66
+noteoff 2 73
+noteoff 0 62
+noteon 2 76 60
+noteon 0 68 100
+noteon 0 59 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 2 78
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 2 73
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteon 1 35 100
+noteon 3 66 65
+noteoff 2 78
+noteon 3 64 65
+noteon 2 54 60
+noteon 3 73 65
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 50.000000
+noteoff 3 66
+noteoff 3 64
+noteoff 3 73
+sleep 50.000000
+noteoff 2 73
+noteon 3 71 65
+noteon 2 76 60
+noteon 3 66 65
+noteon 3 69 65
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 0 68
+noteon 3 66 75
+noteoff 2 78
+noteoff 0 59
+noteon 2 54 60
+noteon 0 69 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 3 66
+noteoff 2 54
+noteon 3 61 75
+noteon 2 61 60
+sleep 100.000000
+noteoff 3 61
+noteoff 2 61
+noteon 3 76 75
+noteon 2 64 60
+sleep 100.000000
+noteoff 3 76
+noteoff 2 64
+noteon 3 74 75
+noteon 2 66 60
+sleep 50.000000
+noteoff 3 71
+noteoff 3 66
+noteoff 3 69
+sleep 50.000000
+noteoff 0 69
+noteoff 3 74
+noteoff 2 66
+noteon 3 69 65
+noteoff 0 61
+noteon 3 66 65
+noteon 2 66 60
+noteon 3 64 65
+noteon 0 68 100
+noteon 0 59 100
+sleep 100.000000
+noteon 3 71 75
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 3 71
+noteoff 2 73
+noteon 3 69 75
+noteon 2 76 60
+sleep 100.000000
+noteoff 3 69
+noteoff 2 76
+noteon 3 68 75
+noteon 2 78 60
+sleep 50.000000
+noteoff 3 69
+noteoff 3 66
+noteoff 3 64
+sleep 50.000000
+noteoff 0 68
+noteon 4 50 80
+noteoff 1 47
+noteoff 3 68
+noteoff 0 59
+noteoff 2 78
+noteon 0 66 100
+noteoff 1 35
+noteon 0 62 100
+noteon 2 62 60
+noteon 1 38 100
+sleep 100.000000
+noteoff 2 62
+noteon 2 66 60
+sleep 100.000000
+noteoff 4 50
+noteoff 2 66
+noteon 2 69 60
+sleep 100.000000
+noteoff 2 69
+noteon 2 74 60
+sleep 100.000000
+noteon 4 50 80
+noteoff 2 74
+noteon 2 74 60
+sleep 100.000000
+noteoff 2 74
+noteon 2 78 60
+sleep 100.000000
+noteoff 4 50
+noteoff 0 62
+noteoff 2 78
+noteon 0 62 100
+noteon 2 81 60
+sleep 100.000000
+noteoff 2 81
+noteon 2 86 60
+sleep 100.000000
+noteon 4 50 80
+noteoff 2 86
+noteon 2 62 60
+sleep 100.000000
+noteoff 2 62
+noteon 2 66 60
+sleep 100.000000
+noteoff 4 50
+noteoff 2 66
+noteon 2 69 60
+sleep 100.000000
+noteoff 2 69
+noteon 2 74 60
+sleep 100.000000
+noteon 3 66 65
+noteoff 0 66
+noteon 4 50 80
+noteoff 2 74
+noteon 3 62 65
+noteoff 0 62
+noteon 3 64 65
+noteon 2 74 60
+noteon 0 71 100
+sleep 100.000000
+noteoff 2 74
+noteon 2 78 60
+sleep 50.000000
+noteoff 3 66
+noteoff 3 62
+noteoff 3 64
+sleep 50.000000
+noteoff 2 78
+noteoff 4 50
+noteon 2 81 60
+noteon 3 68 65
+noteon 3 66 65
+sleep 100.000000
+noteoff 2 81
+noteon 2 86 60
+sleep 50.000000
+noteoff 3 68
+noteoff 3 66
+sleep 50.000000
+noteoff 0 71
+noteon 4 52 80
+noteoff 1 38
+noteon 3 69 65
+noteon 0 68 100
+noteon 3 66 65
+noteoff 2 86
+noteon 3 61 65
+noteon 0 59 100
+noteon 1 40 100
+noteon 2 76 50
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 52
+sleep 50.000000
+noteoff 3 69
+noteoff 3 66
+noteoff 3 61
+sleep 50.000000
+noteoff 2 64
+noteoff 4 52
+noteon 2 76 54
+sleep 100.000000
+noteon 3 68 65
+noteoff 2 76
+noteon 3 64 65
+noteon 2 64 56
+noteon 3 59 65
+sleep 100.000000
+noteoff 2 64
+noteon 4 52 80
+noteon 2 76 58
+sleep 50.000000
+noteoff 3 68
+noteoff 3 64
+noteoff 3 59
+sleep 50.000000
+noteoff 2 76
+noteon 2 64 60
+sleep 100.000000
+noteoff 4 52
+noteoff 0 68
+noteoff 2 64
+noteoff 0 59
+noteon 2 76 62
+noteon 0 61 100
+noteon 0 56 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 64
+sleep 100.000000
+noteon 4 52 80
+noteoff 2 64
+noteon 2 76 66
+sleep 100.000000
+noteon 3 64 65
+noteoff 2 76
+noteon 3 61 65
+noteon 2 64 68
+noteon 3 59 65
+sleep 100.000000
+noteoff 2 64
+noteoff 4 52
+noteon 2 76 70
+sleep 50.000000
+noteoff 3 64
+noteoff 3 61
+noteoff 3 59
+sleep 50.000000
+noteoff 2 76
+noteon 2 64 72
+sleep 100.000000
+noteon 4 52 80
+noteoff 0 61
+noteon 3 57 65
+noteoff 2 64
+noteoff 0 56
+noteon 2 76 74
+noteon 0 64 100
+noteon 0 59 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 76
+sleep 50.000000
+noteoff 3 57
+sleep 50.000000
+noteoff 2 64
+noteoff 4 52
+noteon 2 76 78
+noteon 3 59 65
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 80
+sleep 50.000000
+noteoff 3 59
+sleep 50.000000
+noteoff 0 64
+noteon 4 50 80
+noteoff 1 40
+noteoff 0 59
+noteoff 2 64
+noteon 0 66 100
+noteon 1 38 100
+noteon 0 62 100
+noteon 2 62 60
+sleep 100.000000
+noteoff 2 62
+noteon 2 66 60
+sleep 100.000000
+noteoff 4 50
+noteoff 2 66
+noteon 2 69 60
+sleep 100.000000
+noteoff 2 69
+noteon 2 74 60
+sleep 100.000000
+noteon 4 50 80
+noteoff 2 74
+noteon 2 74 60
+sleep 100.000000
+noteoff 2 74
+noteon 2 78 60
+sleep 100.000000
+noteoff 4 50
+noteoff 0 66
+noteoff 2 78
+noteoff 0 62
+noteon 2 81 60
+noteon 0 66 100
+noteon 0 69 100
+sleep 100.000000
+noteoff 2 81
+noteon 2 86 60
+sleep 100.000000
+noteon 4 50 80
+noteoff 2 86
+noteon 2 62 60
+sleep 100.000000
+noteoff 2 62
+noteon 2 66 60
+sleep 100.000000
+noteoff 4 50
+noteoff 2 66
+noteon 2 69 60
+sleep 100.000000
+noteoff 2 69
+noteon 2 74 60
+sleep 100.000000
+noteon 3 66 65
+noteoff 0 66
+noteon 4 50 80
+noteoff 2 74
+noteon 3 62 65
+noteoff 0 69
+noteon 3 64 65
+noteon 2 74 60
+noteon 0 73 100
+noteon 0 69 100
+sleep 100.000000
+noteoff 2 74
+noteon 2 78 60
+sleep 50.000000
+noteoff 3 66
+noteoff 3 62
+noteoff 3 64
+sleep 50.000000
+noteoff 2 78
+noteoff 4 50
+noteon 2 81 60
+noteon 3 68 65
+noteon 3 66 65
+sleep 100.000000
+noteoff 2 81
+noteon 2 86 60
+sleep 50.000000
+noteoff 3 68
+noteoff 3 66
+sleep 50.000000
+noteoff 0 73
+noteon 4 52 80
+noteoff 1 38
+noteoff 0 69
+noteoff 2 86
+noteon 0 74 100
+noteon 1 40 100
+noteon 0 71 100
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 68 60
+sleep 100.000000
+noteoff 4 52
+noteoff 0 74
+noteoff 2 68
+noteoff 0 71
+noteon 2 71 60
+noteon 0 73 100
+noteon 0 69 100
+sleep 100.000000
+noteoff 2 71
+noteon 2 76 60
+sleep 100.000000
+noteon 4 52 80
+noteoff 0 73
+noteoff 2 76
+noteoff 0 69
+noteon 2 76 60
+noteon 0 71 100
+noteon 0 68 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 80 60
+sleep 100.000000
+noteoff 4 52
+noteoff 0 71
+noteoff 2 80
+noteoff 0 68
+noteon 2 83 60
+noteon 0 73 100
+noteon 0 69 100
+sleep 100.000000
+noteoff 2 83
+noteon 2 88 60
+sleep 100.000000
+noteon 4 52 80
+noteoff 2 88
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 68 60
+sleep 100.000000
+noteoff 4 52
+noteoff 0 73
+noteoff 2 68
+noteoff 0 69
+noteon 2 71 60
+noteon 0 76 100
+noteon 0 69 100
+sleep 100.000000
+noteoff 2 71
+noteon 2 76 60
+sleep 100.000000
+noteon 4 52 80
+noteoff 0 76
+noteoff 2 76
+noteoff 0 69
+noteon 2 76 60
+noteon 0 73 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 80 60
+sleep 100.000000
+noteoff 4 52
+noteoff 2 80
+noteon 2 83 60
+sleep 100.000000
+noteoff 2 83
+noteon 2 88 60
+sleep 100.000000
+noteoff 0 73
+noteon 5 78 90
+noteoff 1 40
+noteon 0 66 100
+noteoff 2 88
+noteon 0 61 100
+noteon 1 42 100
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 5 78
+noteoff 2 61
+noteon 5 76 90
+noteon 2 64 60
+sleep 100.000000
+noteoff 5 76
+noteoff 2 64
+noteon 5 78 90
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 0 66
+noteoff 2 73
+noteoff 0 61
+noteon 2 76 60
+noteon 0 68 100
+noteon 0 59 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 2 78
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 2 73
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 1 42
+noteoff 5 78
+noteoff 2 78
+noteon 3 64 65
+noteon 1 42 100
+noteon 3 66 65
+noteon 3 61 65
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 50.000000
+noteoff 3 64
+noteoff 3 66
+noteoff 3 61
+sleep 50.000000
+noteoff 2 73
+noteon 3 64 65
+noteon 2 76 60
+noteon 3 61 65
+noteon 3 57 65
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteon 5 85 90
+noteoff 0 68
+noteoff 2 78
+noteoff 0 59
+noteon 2 54 60
+noteon 0 61 100
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteon 5 73 90
+noteoff 0 61
+noteoff 2 61
+noteon 0 69 100
+noteon 2 64 60
+sleep 100.000000
+noteoff 5 85
+noteoff 2 64
+noteon 5 83 90
+noteon 2 66 60
+sleep 100.000000
+noteoff 0 69
+noteoff 2 66
+noteon 0 68 100
+noteon 2 66 60
+sleep 100.000000
+noteoff 5 73
+noteoff 2 66
+noteon 5 73 90
+noteon 2 73 60
+sleep 100.000000
+noteoff 5 83
+noteoff 2 73
+noteon 5 81 90
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 50.000000
+noteoff 3 64
+noteoff 3 61
+noteoff 3 57
+sleep 50.000000
+noteoff 0 68
+noteoff 5 73
+noteoff 1 42
+noteoff 5 81
+noteon 0 66 100
+noteon 5 83 90
+noteoff 2 78
+noteon 0 62 100
+noteon 1 47 100
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 5 83
+noteoff 2 66
+noteon 5 85 90
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 5 85
+noteoff 0 66
+noteon 5 78 90
+noteoff 2 73
+noteoff 0 62
+noteon 2 76 60
+noteon 0 68 100
+noteon 0 59 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 2 78
+noteon 2 54 60
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 2 73
+noteon 2 76 60
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteon 1 35 100
+noteoff 5 78
+noteoff 2 78
+noteon 3 66 65
+noteon 3 64 65
+noteon 2 54 60
+noteon 3 73 65
+sleep 100.000000
+noteoff 2 54
+noteon 2 61 60
+sleep 100.000000
+noteoff 2 61
+noteon 2 64 60
+sleep 100.000000
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 73 60
+sleep 50.000000
+noteoff 3 66
+noteoff 3 64
+noteoff 3 73
+sleep 50.000000
+noteoff 2 73
+noteon 3 71 65
+noteon 2 76 60
+noteon 3 66 65
+noteon 3 69 65
+sleep 100.000000
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteon 5 73 90
+noteoff 0 68
+noteoff 2 78
+noteon 3 66 75
+noteoff 0 59
+noteon 2 54 60
+noteon 0 69 100
+noteon 0 61 100
+sleep 100.000000
+noteoff 3 66
+noteoff 2 54
+noteon 3 61 75
+noteon 2 61 60
+sleep 100.000000
+noteoff 3 61
+noteoff 2 61
+noteon 3 76 75
+noteon 2 64 60
+sleep 100.000000
+noteoff 5 73
+noteoff 2 64
+noteoff 3 76
+noteon 2 66 60
+noteon 5 76 90
+noteon 3 74 75
+sleep 50.000000
+noteoff 3 71
+noteoff 3 66
+noteoff 3 69
+sleep 50.000000
+noteoff 0 69
+noteoff 3 74
+noteoff 2 66
+noteon 3 69 65
+noteoff 0 61
+noteon 3 66 65
+noteon 2 66 60
+noteon 3 64 65
+noteon 0 68 100
+noteon 0 59 100
+sleep 100.000000
+noteon 3 71 75
+noteoff 2 66
+noteon 2 73 60
+sleep 100.000000
+noteoff 5 76
+noteoff 2 73
+noteoff 3 71
+noteon 2 76 60
+noteon 5 78 90
+noteon 3 69 75
+sleep 100.000000
+noteoff 2 76
+noteoff 3 69
+noteon 2 78 60
+noteon 3 68 75
+sleep 50.000000
+noteoff 3 69
+noteoff 3 66
+noteoff 3 64
+sleep 50.000000
+noteoff 0 68
+noteoff 5 78
+noteoff 1 47
+noteon 4 50 80
+noteoff 0 59
+noteon 5 78 90
+noteoff 2 78
+noteoff 3 68
+noteon 0 66 100
+noteoff 1 35
+noteon 0 62 100
+noteon 1 38 100
+noteon 2 62 60
+sleep 100.000000
+noteoff 2 62
+noteon 2 66 60
+sleep 100.000000
+noteoff 4 50
+noteoff 2 66
+noteon 2 69 60
+sleep 100.000000
+noteoff 2 69
+noteon 2 74 60
+sleep 100.000000
+noteon 4 50 80
+noteoff 2 74
+noteon 2 74 60
+sleep 100.000000
+noteoff 2 74
+noteon 2 78 60
+sleep 100.000000
+noteoff 4 50
+noteoff 0 62
+noteoff 2 78
+noteon 0 62 100
+noteon 2 81 60
+sleep 100.000000
+noteoff 2 81
+noteon 2 86 60
+sleep 100.000000
+noteoff 5 78
+noteoff 2 86
+noteon 4 50 80
+noteon 2 62 60
+noteon 5 81 90
+sleep 100.000000
+noteoff 2 62
+noteon 2 66 60
+sleep 100.000000
+noteoff 4 50
+noteoff 2 66
+noteon 2 69 60
+sleep 100.000000
+noteoff 5 81
+noteoff 2 69
+noteon 5 83 90
+noteon 2 74 60
+sleep 100.000000
+noteon 3 66 65
+noteoff 0 66
+noteon 4 50 80
+noteoff 2 74
+noteon 3 62 65
+noteoff 0 62
+noteon 3 64 65
+noteon 2 74 60
+noteon 0 71 100
+sleep 100.000000
+noteoff 2 74
+noteon 2 78 60
+sleep 50.000000
+noteoff 3 66
+noteoff 3 62
+noteoff 3 64
+sleep 50.000000
+noteoff 2 78
+noteoff 5 83
+noteon 2 81 60
+noteoff 4 50
+noteon 5 85 90
+noteon 3 68 65
+noteon 3 66 65
+sleep 100.000000
+noteoff 2 81
+noteon 2 86 60
+sleep 50.000000
+noteoff 3 68
+noteoff 3 66
+sleep 50.000000
+noteoff 0 71
+noteoff 5 85
+noteoff 1 38
+noteon 4 52 80
+noteon 0 68 100
+noteon 5 80 90
+noteoff 2 86
+noteon 3 69 65
+noteon 0 59 100
+noteon 3 66 65
+noteon 1 40 100
+noteon 3 61 65
+noteon 2 76 50
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 52
+sleep 50.000000
+noteoff 3 69
+noteoff 3 66
+noteoff 3 61
+sleep 50.000000
+noteoff 2 64
+noteoff 4 52
+noteon 2 76 54
+sleep 100.000000
+noteon 3 68 65
+noteoff 2 76
+noteon 3 64 65
+noteon 2 64 56
+noteon 3 59 65
+sleep 100.000000
+noteoff 2 64
+noteoff 5 80
+noteon 2 76 58
+noteon 4 52 80
+noteon 5 73 90
+sleep 50.000000
+noteoff 3 68
+noteoff 3 64
+noteoff 3 59
+sleep 50.000000
+noteoff 2 76
+noteon 2 64 60
+sleep 100.000000
+noteoff 4 52
+noteoff 0 68
+noteoff 2 64
+noteoff 0 59
+noteon 2 76 62
+noteon 0 61 100
+noteon 0 56 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 64
+sleep 100.000000
+noteoff 5 73
+noteoff 2 64
+noteon 4 52 80
+noteon 2 76 66
+noteon 5 76 90
+sleep 100.000000
+noteoff 2 76
+noteon 3 64 65
+noteon 2 64 68
+noteon 3 61 65
+noteon 3 59 65
+sleep 100.000000
+noteoff 2 64
+noteoff 4 52
+noteon 2 76 70
+sleep 50.000000
+noteoff 3 64
+noteoff 3 61
+noteoff 3 59
+sleep 50.000000
+noteoff 2 76
+noteon 2 64 72
+sleep 100.000000
+noteoff 5 76
+noteoff 0 61
+noteon 4 52 80
+noteoff 2 64
+noteon 5 78 90
+noteoff 0 56
+noteon 3 57 65
+noteon 2 76 74
+noteon 0 64 100
+noteon 0 59 100
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 76
+sleep 50.000000
+noteoff 3 57
+sleep 50.000000
+noteoff 2 64
+noteoff 4 52
+noteon 2 76 78
+noteon 3 59 65
+sleep 100.000000
+noteoff 2 76
+noteon 2 64 80
+sleep 50.000000
+noteoff 3 59
+sleep 50.000000
+noteoff 0 64
+noteoff 5 78
+noteoff 1 40
+noteon 4 52 80
+noteoff 0 59
+noteon 5 78 90
+noteoff 2 64
+noteon 0 66 100
+noteon 1 47 100
+noteon 0 59 100
+noteon 2 59 60
+sleep 100.000000
+noteoff 2 59
+noteon 2 64 60
+sleep 100.000000
+noteoff 4 52
+noteoff 2 64
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 71 60
+sleep 100.000000
+noteon 4 52 80
+noteoff 2 71
+noteon 2 73 60
+sleep 100.000000
+noteoff 2 73
+noteon 2 71 60
+sleep 100.000000
+noteoff 4 52
+noteoff 2 71
+noteon 2 66 60
+sleep 100.000000
+noteoff 2 66
+noteon 2 76 60
+sleep 100.000000
+noteon 4 52 80
+noteoff 2 76
+noteon 2 71 60
+sleep 100.000000
+noteoff 2 71
+noteon 2 76 60
+sleep 100.000000
+noteoff 4 52
+noteoff 2 76
+noteon 2 78 60
+sleep 100.000000
+noteoff 2 78
+noteon 2 83 60
+sleep 100.000000
+noteon 4 52 80
+noteoff 2 83
+noteon 2 85 60
+sleep 100.000000
+noteoff 2 85
+noteon 2 83 60
+sleep 100.000000
+noteoff 4 52
+noteoff 2 83
+noteon 2 78 60
+sleep 100.000000
+noteoff 2 78
+noteon 2 76 60
+sleep 100.000000
+noteoff 5 78
+noteoff 0 66
+noteon 4 54 80
+noteoff 1 47
+noteoff 0 59
+noteoff 2 76
+noteon 0 66 100
+noteon 1 46 100
+noteon 0 61 100
+noteon 2 90 60
+sleep 50.000000
+noteon 2 85 60
+sleep 75.000000
+noteon 2 82 60
+sleep 2925.000000
+noteoff 2 90
+sleep 50.000000
+noteoff 2 85
+sleep 50.000000
+noteoff 0 66
+noteoff 0 61
+sleep 25.000000
+noteoff 2 82
+sleep 25.000000
+noteoff 4 54
+noteoff 1 46

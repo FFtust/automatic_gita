@@ -2,25 +2,11 @@ import time
 import math
 import random
 import note
-import keyboard
-import os
-import sys
 
 NOTE_SECTION_INTERVAL = 0.03
-RIGHT_LEFT_INTERVAL = 0.05
+RIGHT_LEFT_INTERVAL = 0.03
 
 SAME_NOTE_INTERVAL = 0.07
-
-CHECK_ENABLE = True
-
-_exit_flag = False
-def keyEventCb(e):
-    global _exit_flag
-    if e.event_type == "up":
-        if e.name == "q":
-            _exit_flag = True
-            print("aaaaaaaa")
-keyboard.hook(keyEventCb)
 
 class music_trans():
     def __init__(self, music, beat = 60, note_per = 4, move = 0):
@@ -69,8 +55,7 @@ class music_trans():
         last_tone = []
         rest_time = 0
         copy_index_start = None
-        check_t = [[], []]
-        mmm = 0
+        check_t = []
 
         if not isinstance(self.music, list):
             self.music = [self.music]
@@ -82,6 +67,8 @@ class music_trans():
             rest_time = 0
             i = 0
             copy_index_start = None
+            check_t = []
+
             while i < len(music_item):
             # for i in range(len(music_item)):
                 # 处理一小节
@@ -110,10 +97,9 @@ class music_trans():
                             copy_index_start = i+1
                             continue
                         elif "COPY_STOP" in chor:
-                            if copy_index_start != None:      
-                                if not CHECK_ENABLE:                      
-                                    i = copy_index_start
-                                    i -= 1
+                            if copy_index_start != None:                            
+                                i = copy_index_start
+                                i -= 1
                                 copy_index_start = None
                             continue
                         elif "=" in chor:
@@ -142,51 +128,21 @@ class music_trans():
                             last_tone = []
                             ##########################
                             for m in range(len(chors)):
-                                chors[m] = chors[m].replace("&", ",")
-
-                                if '{' in chors[m]:
-                                    temp = eval(chors[m])
-                                    for key in temp:
-                                        if isinstance(temp[key], list):
-                                            self._rest_with_time(temp[key][0])
-                                            self._play(key)
-                                            self._rest(temp[key][1])
-                                            self._rest_with_time(-temp[key][0])
-                                            self._stop(key)
-                                            self._rest(-temp[key][1])
-                                        else: 
-                                            self._play(key)
-                                            self._rest(temp[key])
-                                            self._stop(key)
-                                            self._rest(-temp[key])
-                                else:
-                                    self._play(chors[m])
-                                    last_tone.append(chors[m])
+                                self._play(chors[m])
+                                last_tone.append(chors[m])
+                                
                         if rest_time == 0:
                             self._rest(1 / self.cal_rest(len(music_item[i])))
                         else:
                             self._rest(rest_time)
 
                     self._rest_with_time(NOTE_SECTION_INTERVAL)
-                    check_t[mmm].append([i,round(self.current_t, 1)])
+                    check_t.append([i,round(self.current_t, 1)])
                 else:
                     print("error", i, music_item[i])
-
                 i = i + 1
 
-            mmm += 1
-        if CHECK_ENABLE:
-            self._check_show(check_t[0], check_t[1])
         self.play_list_sort()
-
-    def _check_show(self, r, l):
-        if len(r) != len(l):
-            print("right and left section not the same, right:{}, left:()".format(len(r),len(l)))
-            return
-
-        for i in range(len(r)):
-            if abs(r[i][1] - l[i][1]) > 0.001:
-                print("time not sync, section:{}, notes:{}".format(i, self.music[0][i]))
 
     def _sort_by_time(self, play_list):
         _play_list = play_list.copy()
@@ -264,12 +220,12 @@ class music_trans():
         start_time = time.time()
         for i in range(len(play_list)):
             while time.time() - start_time < play_list[i][0][2]:
-                if _exit_flag:
-                    break
+                pass
 
-            if _exit_flag:
-                break
-                
+            # for item in self.last_play:
+            #     if (not (item in play_list[i])) and (not (item in play_list[i + 1])) and (not (item in play_list[i + 2])):
+            #         note.servoCtl.run_single_servo(self.servo_table[item[0]] - note.SERVO_ID_BASE, note.FREE_ANGLE)
+
             note_play = []
             note_stop = []
             for item in play_list[i]:

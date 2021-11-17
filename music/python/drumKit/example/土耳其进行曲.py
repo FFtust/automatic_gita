@@ -252,7 +252,7 @@ music_table_left = \
  	("3-:3,7-:3,7-:3,7-=1/8",),
  	("3-:3,7-:7--:7-=1/8",),
 
- 	# 9q
+ 	# 9
  	("3-=1/4",),
  	("{'COPY_STOP':0}",),
  	("{'COPY_START':0}",),
@@ -366,7 +366,7 @@ music_table_left = \
  	("{'COPY_STOP':0}",),
  	("{'COPY_START':0}",),
 
- 	("0=1/4",),
+ 	("0=1/16",),
  	("6-:3,1:3,1:3,1=1/8",),
 
  	# 73
@@ -478,7 +478,7 @@ import sys
 sys.path.append('C:\\work\\automatic_gita\\music\\python\\piano')
 
 import music_translate2 as music_translate
-music_parse = music_translate.music_trans([music_table_left,music_table], beat = 120, move=0)
+music_parse = music_translate.music_trans([music_table, music_table_left], beat = 120, move=0)
 music_parse.music_to_play_table()
 music_parse.play_music()
 
