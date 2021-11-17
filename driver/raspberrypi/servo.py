@@ -1,10 +1,11 @@
 import Adafruit_PCA9685
 import time
+import thread as _thread
 
-SERVO_NUM = 128
-ADRESS_TABLE = [0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00]
-SPEED_CTL_ANGLE_INTERVAL = 2
-SPEED_CTL_T_INTERVAL = 2
+SERVO_NUM = 16
+ADRESS_TABLE = [0x40,0x41,0x42,0x44,0x00,0x00,0x00,0x00]
+SPEED_CTL_ANGLE_INTERVAL = 3
+SPEED_CTL_T_INTERVAL = 1
 
 class servo_c():
     def __init__(self, num = SERVO_NUM, address = ADRESS_TABLE):
@@ -20,15 +21,18 @@ class servo_c():
         self.pwm = [None] * (self.servo_num // 16)
 
         for i in range(len(self.pwm)):
-            self.pwm[i] = Adafruit_PCA9685.PCA9685(self.driver_address[i])
+            self.pwm[i] = Adafruit_PCA9685.PCA9685(self.driver_address[i], busnum=1)
             self.pwm[i].set_pwm_freq(50)
+            
+        _thread.start_new_thread(self.update_task, ())
 
     def _run_to(self, idx, angle):
         driver_id = idx // 16
         servo_id = idx % 16
+        print(driver_id, servo_id)
 
-        date = 4096 * ((angle * 11) + 500) / 2000
-        self.pwm[driver_id].set_pwm(servo_id, 0, date)
+        date = 4096 * ((angle * 11) + 500) / 20000
+        self.pwm[driver_id].set_pwm(servo_id, 0, int(date))
 
         self.current_angles[idx] = angle
 
@@ -52,4 +56,18 @@ class servo_c():
                             self._run_to(i, self.current_angles[i] + SPEED_CTL_ANGLE_INTERVAL)
                         else:
                             self._run_to(i, self.current_angles[i] - SPEED_CTL_ANGLE_INTERVAL)
+                    self.servo_speeds_t_record[i] = time.time() * 1000
+    def update_task(self):
+        while 1:
+            self.update()
+            
+####################################################
+    def test(self):
+        while 1:
+            self.set_angle(1, 90, 30)
+            time.sleep(1)
+            self.set_angle(1, 30, 5)
+            time.sleep(1)
+                    
 
+    
