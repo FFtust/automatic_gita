@@ -4,7 +4,7 @@ import thread as _thread
 
 SERVO_NUM = 16
 ADRESS_TABLE = [0x40,0x41,0x42,0x44,0x00,0x00,0x00,0x00]
-SPEED_CTL_ANGLE_INTERVAL = 3
+SPEED_CTL_ANGLE_INTERVAL = 1
 SPEED_CTL_T_INTERVAL = 1
 
 class servo_c():
@@ -25,11 +25,12 @@ class servo_c():
             self.pwm[i].set_pwm_freq(50)
             
         _thread.start_new_thread(self.update_task, ())
+        time.sleep(2)
 
     def _run_to(self, idx, angle):
         driver_id = idx // 16
         servo_id = idx % 16
-        print(driver_id, servo_id)
+        print(driver_id, servo_id, angle)
 
         date = 4096 * ((angle * 11) + 500) / 20000
         self.pwm[driver_id].set_pwm(servo_id, 0, int(date))
@@ -63,11 +64,13 @@ class servo_c():
             
 ####################################################
     def test(self):
-        while 1:
-            self.set_angle(1, 90, 30)
-            time.sleep(1)
-            self.set_angle(1, 30, 5)
-            time.sleep(1)
-                    
 
-    
+        while 1:
+            self.set_angle(0, 60, 0)
+            time.sleep(1)
+            self.set_angle(0, 110, 10)
+            time.sleep(1)
+            self.set_angle(0, 60, 0)
+            time.sleep(1)
+            self.set_angle(0, 110, 0)
+            time.sleep(1)
