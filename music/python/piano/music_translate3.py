@@ -9,20 +9,22 @@ RIGHT_LEFT_INTERVAL = 0.03
 SAME_NOTE_INTERVAL = 0.07
 
 class music_item_c():
-    def __init__(self, music_data):
+    def __init__(self, music_data, music_parse):
         self.music_data = music_data
         self.section_chors_id = 0
         self.section_parse_id = 0
         self.current_t = 0
 
+        self.music_parse = music_parse
+
     def _reset_t(self):
         self.current_t = 0
 
     def _rest(self, beat):
-        self.current_t += self.beat_time * beat
+        self.current_t += self.music_parse.beat_time * beat
 
     def _rest_with_time(self, t):
-        self.current_t += 
+        self.current_t += t
         
 
 class music_trans():
@@ -39,6 +41,9 @@ class music_trans():
 
         self._count = 0
 
+        self.section_parse_id = 0
+        self.copy_index_start = 0
+
         note.set_tone_moving(move)
 
     def set_beat(self, beat, note_per = 4):
@@ -48,7 +53,7 @@ class music_trans():
         if tone in self.servo_table:
             self.play_list.append([note.cal_note(tone), 1, music_item.current_t])
 
-    def _stop(self, tone):
+    def _stop(self, tone, music_item):
         if tone in self.servo_table:
             self.play_list.append([note.cal_note(tone), 0, music_item.current_t])
 
@@ -61,7 +66,7 @@ class music_trans():
 
 #######################################################
 
-    def _parse_cmd(self, cmd)：
+    def _parse_cmd(self, chor, music_item):
         ret = False
         if "REST" in chor:
             tmp = eval(chor)
@@ -69,7 +74,7 @@ class music_trans():
             ret = True
         elif "NOP" in chor:
             tmp = eval(chor)
-            self._rest(tmp["NOP"])
+            music_item._rest(tmp["NOP"])
             ret = True
         elif "BEAT" in chor:
             tmp = eval(chor)
@@ -80,13 +85,13 @@ class music_trans():
             note.set_tone_moving(tmp["MOVE"])
             ret = True
         elif "COPY_START" in chor:
-            copy_index_start = i+1
+            self.copy_index_start = self.section_parse_id + 1
             ret = True
         elif "COPY_STOP" in chor:
-            if copy_index_start != None:                            
-                i = copy_index_start
-                i -= 1
-                copy_index_start = None
+            if self.copy_index_start != None:                            
+                self.section_parse_id = self.copy_index_start
+                self.section_parse_id -= 1
+                self.copy_index_start = None
             ret = True
 
         return ret
@@ -98,11 +103,10 @@ class music_trans():
                 return math.pow(2,i)
 
     def music_to_play_table(self):
-        copy_index_start = None
         check_t = []
 
-        for i in range(self.music):
-            self.music[i] = music_item_c(self.music[i])
+        for i in range(len(self.music)):
+            self.music[i] = music_item_c(self.music[i],self)
 
         if len(self.music) > 1:
             for i in range(1, len(self.music)):
@@ -111,16 +115,16 @@ class music_trans():
 
         self.set_beat(self.origin_beat)
 
-        i = 0
+        self.section_parse_id = 0
         copy_index_start = None
         check_t = []
-        while i < len(self.music[0].music_data):
+        while self.section_parse_id < len(self.music[0].music_data):
             for music_item in self.music:
-                for j in range(len(music_item[i])):
+                for j in range(len(music_item.music_data[self.section_parse_id])):
                     # 解析1/16节拍
-                    chor = music_item.music_data[i][j]
+                    chor = music_item.music_data[self.section_parse_id][j]
 
-                    if self._parse_cmd(chor) == True:
+                    if self._parse_cmd(chor, music_item) == True:
                         continue
                     elif "=" in chor:
                         tmp = chor.split("=")
@@ -139,7 +143,7 @@ class music_trans():
                 music_item._rest_with_time(NOTE_SECTION_INTERVAL)
 
 
-            i = i + 1
+            self.section_parse_id += 1
 
         self.play_list_sort()
 
@@ -241,3 +245,5 @@ class music_trans():
             self._count += 0.2
             for j in range(len(self.play_list[i])):
                 self.play_list[i][j][2] += abs(math.sin(self._count)) * 0.03
+
+
