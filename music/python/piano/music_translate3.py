@@ -9,30 +9,51 @@ RIGHT_LEFT_INTERVAL = 0.03
 SAME_NOTE_INTERVAL = 0.07
 
 class music_item_c():
-    def __init__(self, music_data, music_parse):
+    def __init__(self, music_data):
         self.music_data = music_data
         self.section_chors_id = 0
         self.section_parse_id = 0
         self.current_t = 0
+        self.beat_time = 0
 
-        self.music_parse = music_parse
+        self.play_list = []
 
     def _reset_t(self):
         self.current_t = 0
 
     def _rest(self, beat):
-        self.current_t += self.music_parse.beat_time * beat
+        self.current_t += self.beat_time * beat
 
     def _rest_with_time(self, t):
         self.current_t += t
-        
+
+    def _set_beat(self, beat, note_per = 4):
+        self.beat_time = note_per * (60 / beat)
+
+    def _play(self, tone, sec_id):
+        if len(self.play_list) <= sec_id:
+            self.play_list.append([])
+
+        if tone in self.servo_table:
+            self.play_list.append([tone, 1, self.current_t])
+
+    def _stop(self, tone, sec_id):
+        if len(self.play_list) <= sec_id:
+            self.play_list.append([])
+
+        if tone in self.servo_table:
+            self.play_list[sec_id].append([tone, 0, self.current_t])
 
 class music_trans():
     def __init__(self, music, beat = 60, note_per = 4, move = 0):
         self.music = music
+        for i in range(len(self.music)):
+            self.music[i] = music_item_c(self.music[i])
+            self.music[i]._set_beat(note_per)
 
         self.beat_time = note_per * (60 / beat)
         self.origin_beat = beat
+
         self.play_list = []
 
         self.current_t = 0
@@ -42,31 +63,25 @@ class music_trans():
         self._count = 0
 
         self.section_parse_id = 0
+        self.section_chors_id = 0
         self.copy_index_start = 0
 
         note.set_tone_moving(move)
 
-    def set_beat(self, beat, note_per = 4):
-        self.beat_time = note_per * (60 / beat)
+    def _set_beat(self, beat, note_per = 4):
+        for i in range(len(self.music)):
+            self.music[i]._set_beat(note_per)
 
-    def _play(self, tone, music_item):
-        if tone in self.servo_table:
-            self.play_list.append([note.cal_note(tone), 1, music_item.current_t])
+    def _play(self, tone, idx, sec_id):
+        self.music[idx]._play(note.cal_note(tone), sec_id)
 
-    def _stop(self, tone, music_item):
-        if tone in self.servo_table:
-            self.play_list.append([note.cal_note(tone), 0, music_item.current_t])
-
-#######################################################
-    def cal_rest(self, l):
-        for i in range(10):
-            if l >= math.pow(2, i) and l < math.pow(2, i + 1):
-                return math.pow(2,i)
+    def _stop(self, tone, idx, sec_id):
+        self.music[idx]._stop(note.cal_note(tone), sec_id)
 
 
 #######################################################
 
-    def _parse_cmd(self, chor, music_item):
+    def _parse_cmd(self, chor, idx):
         ret = False
         if "REST" in chor:
             tmp = eval(chor)
@@ -74,11 +89,11 @@ class music_trans():
             ret = True
         elif "NOP" in chor:
             tmp = eval(chor)
-            music_item._rest(tmp["NOP"])
+            self.music[idx]._rest(tmp["NOP"])
             ret = True
         elif "BEAT" in chor:
             tmp = eval(chor)
-            self.set_beat(tmp["BEAT"])
+            self._set_beat(tmp["BEAT"])
             ret = True
         elif "MOVE" in chor:
             tmp = eval(chor)
@@ -97,34 +112,27 @@ class music_trans():
         return ret
 
 ######################################################################
-    def cal_rest(self, l):
-        for i in range(10):
-            if l >= math.pow(2, i) and l < math.pow(2, i + 1):
-                return math.pow(2,i)
-
     def music_to_play_table(self):
         check_t = []
-
-        for i in range(len(self.music)):
-            self.music[i] = music_item_c(self.music[i],self)
 
         if len(self.music) > 1:
             for i in range(1, len(self.music)):
                 if len(self.music[i].music_data) != len(self.music[0].music_data):
+                    print("music len:", len(self.music[i].music_data), len(self.music[0].music_data))
                     raise "music len error"
 
-        self.set_beat(self.origin_beat)
+        self._set_beat(self.origin_beat)
 
         self.section_parse_id = 0
         copy_index_start = None
         check_t = []
         while self.section_parse_id < len(self.music[0].music_data):
-            for music_item in self.music:
-                for j in range(len(music_item.music_data[self.section_parse_id])):
+            for idx in range(len(self.music)):
+                for j in range(len(self.music[idx].music_data[self.section_parse_id])):
                     # 解析1/16节拍
-                    chor = music_item.music_data[self.section_parse_id][j]
+                    chor = self.music[idx].music_data[self.section_parse_id][j]
 
-                    if self._parse_cmd(chor, music_item) == True:
+                    if self._parse_cmd(chor, self.music[idx]) == True:
                         continue
                     elif "=" in chor:
                         tmp = chor.split("=")
@@ -134,17 +142,18 @@ class music_trans():
                         for tc in chors_all:
                             chors = tc.split(",")
                             for item in chors:
-                                self._play(item, music_item)
-                            music_item._rest(t)
+                                self._play(item, idx, self.section_chors_id)
+                            self.music[idx]._rest(t)
                             for item in chors:
-                                self._stop(item, music_item)
+                                self._stop(item, idx, self.section_chors_id)
                         continue                            
 
-                music_item._rest_with_time(NOTE_SECTION_INTERVAL)
+                self.music[idx]._rest_with_time(NOTE_SECTION_INTERVAL)
 
 
             self.section_parse_id += 1
 
+        print(self.play_list)
         self.play_list_sort()
 
     def _sort_by_time(self, play_list):
