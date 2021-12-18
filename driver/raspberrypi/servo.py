@@ -40,13 +40,16 @@ class servo_c():
         self.current_angles[idx] = angle
 
 ####################################################
-    def set_angle(self, idx, angle, speed = 0):
+    def set_angle(self, idx, angle, speed = 0, update = False):
         if idx >=  self.servo_num:
             print("invalid servo id")
             return
         
         self.angles_to[idx] = angle
         self.servo_speeds[idx] = speed
+
+        if update:
+            self.update()
 
     def update(self):
         for i in range(self.servo_num):
@@ -80,7 +83,7 @@ class servo_c():
 
 from socket import *
 
-HOST = '127.0.0.1' # or 'localhost'
+HOST = '192.168.0.103' # or 'localhost'
 PORT = 5050
 ADDR = (HOST,PORT)
  
