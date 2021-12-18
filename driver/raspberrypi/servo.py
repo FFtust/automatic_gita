@@ -74,3 +74,5 @@ class servo_c():
             time.sleep(1)
             self.set_angle(0, 110, 0)
             time.sleep(1)
+
+servoCtl = servo_c()
