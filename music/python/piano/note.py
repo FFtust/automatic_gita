@@ -118,7 +118,9 @@ def get_note_by_servo(idx):
     return None
 
 #########################################################
-import servo
+import sys 
+sys.path.append("../../../")
+import driver.raspberrypi
 servoCtl = servo.servo_control()
 def play_note(note):
     global TOME_MOVING
