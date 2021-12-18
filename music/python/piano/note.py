@@ -44,7 +44,6 @@ midi_table = \
     "1+++":96, "1+++#":97, "2+++":98, "2+++#":99, "3+++":100
 }
 
-# 舵机信息在configContent里配置
 import configContent
 servos_angle = configContent.servos_angle
 
@@ -54,7 +53,6 @@ def get_angle(servo_id, sta):
     is_white = True
     is_two_key = False
 
-    # 处理一个舵机控制两个琴键的情况
     if servo_id >= 100:
         is_two_key = True
 
@@ -63,7 +61,6 @@ def get_angle(servo_id, sta):
         else:
             sign = -1.4
 
-    # 判断黑白键
     for key in servo_table:
         if servo_id == servo_table[key]:
             if "#" in key:
@@ -131,12 +128,12 @@ def play_note(note):
     for item in note:
         item = cal_note(item)
         if item in servo_table:
-            servoCtl.set_single_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 1))
-    servoCtl.run()
+            servoCtl.set_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 1))
+    servoCtl.update()
 
 
 def stop_note(note):
-    global TOME_MOVING123qwerty234565523
+    global TOME_MOVING
 
     if not isinstance(note, (list, tuple)):
             note = [note]
@@ -144,8 +141,8 @@ def stop_note(note):
     for item in note:
         item = cal_note(item)
         if item in servo_table:
-            servoCtl.set_single_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 0))
-    servoCtl.run()
+            servoCtl.set_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 0))
+    servoCtl.update()
 
 def play_midi(midi):
     global TOME_MOVING
@@ -166,27 +163,29 @@ def play_servo(servo_id):
             servo_id = [servo_id]
 
     for item in servo_id:
-        servoCtl.set_single_angle(get_servo(item), get_angle(item, 1))
-    servo_id.servoCtl.run()
+        servoCtl.set_angle(get_servo(item), get_angle(item, 1))
+    servo_id.servoCtl.update()
 
 def stop_servo(servo_id):
     if not isinstance(servo_id, (list, tuple)):
             servo_id = [servo_id]
 
     for item in servo_id:
-        servoCtl.set_single_angle(get_servo(item), get_angle(item, 0))
-    servo_id.servoCtl.run()
+        servoCtl.set_angle(get_servo(item), get_angle(item, 0))
+    servo_id.servoCtl.update()
 
 def servos_home():
     time.sleep(0.3)
     for key in servos_angle:
-        servoCtl.run_single_servo(get_servo(key), get_angle(key, 0))
-        time.sleep(0.1)
+        servoCtl.set_angle(get_servo(key), get_angle(key, 0))
+        servoCtl.update()
+        time.sleep(0.02)
     time.sleep(0.3)
     free_all()
 
 def free_all():
     for key in servos_angle:
-        servoCtl.run_single_servo(get_servo(key), FREE_ANGLE)  
-        time.sleep(0.05)
+        servoCtl.set_angle(get_servo(key), FREE_ANGLE)  
+        time.sleep(0.02)
+        servoCtl.update()
 

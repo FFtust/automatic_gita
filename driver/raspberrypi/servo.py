@@ -2,6 +2,8 @@ import Adafruit_PCA9685
 import time
 import thread as _thread
 
+REMOTE_CTL = False
+
 SERVO_NUM = 16
 ADRESS_TABLE = [0x40,0x41,0x42,0x44,0x00,0x00,0x00,0x00]
 SPEED_CTL_ANGLE_INTERVAL = 1
@@ -75,4 +77,32 @@ class servo_c():
             self.set_angle(0, 110, 0)
             time.sleep(1)
 
-servoCtl = servo_c()
+
+from socket import *
+
+HOST = '127.0.0.1' # or 'localhost'
+PORT = 5050
+ADDR = (HOST,PORT)
+ 
+class servo_rmt_c():
+    def __init__(self, num = SERVO_NUM, address = ADRESS_TABLE):
+        self.tcpCliSock = socket(AF_INET,SOCK_STREAM)
+        self.tcpCliSock.connect(ADDR)
+
+    def _run_to(self, idx, angle):
+        ctlStr = "servoCtl.set_angle({}, {}, {}, {})\n".format(idx, angle, speed, True)
+        self.tcpCliSock.send(bytes(ctlStr, "utf8"))
+
+####################################################
+    def set_angle(self, idx, angle, speed = 0):
+        ctlStr = "servoCtl.set_angle({}, {}, {}, {})\n".format(idx, angle, speed, update)
+        self.tcpCliSock.send(bytes(ctlStr, "utf8"))
+
+    def update(self):
+        ctlStr = "servoCtl.update()\n"
+        self.tcpCliSock.send(bytes(ctlStr, "utf8"))
+
+if REMOTE_CTL:
+    servoCtl = servo_rmt_c()
+else:
+    servoCtl = servo_c()
