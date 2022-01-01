@@ -4,10 +4,10 @@ SERVO_ID_BASE = 0
 NOT_IMPLEMET = 100
 FREE_ANGLE = 181
 
-ANG_WHITE = 38
+ANG_WHITE = 30
 ANG_BLACK = 30
 
-KEY_IDLE_OFFSET = 10
+KEY_IDLE_OFFSET = 3
 
 ANG_OFF_BLACK = 0
 ANG_OFF_WHITE = 0
@@ -17,12 +17,12 @@ TOME_MOVING = 0
 servo_table = \
 {
 "1---": -12, "1---#": -11, "2---": -10,"2---#": -9,"3---": -8,"4---": -7, "4---#": -6,"5---": -5,"5---#": -4,"6---": -3,"6---#": -2, "7---": -1,
-"1--": 0, "1--#": 100, "2--": 2,"2--#": 101,"3--": 4,"4--": 5, "4--#": 6,"5--": 7,"5--#": 8,"6--": 9,"6--#": 10, "7--": 11,
-"1-": 12, "1-#": 13, "2-": 14, "2-#": 15,"3-": 16,"4-": 17, "4-#": 18,"5-": 1900,"5-#": 20,"6-": 1901,"6-#": 22, "7-": 23,
-"1": 24, "1#": 25, "2": 2600,"2#": 27,"3": 2601,"4": 29, "4#": 30,"5": 31,"5#": 32,"6": 33,"6#": 34, "7": 35,
-"1+": 36, "1+#": 37, "2+": 38,"2+#": 39,"3+": 40,"4+": 41, "4+#": 42,"5+": 43,"5+#": 4400,"6+": 45,"6+#": 4401, "7+": 47,
-"1++": 48, "1++#": 4900, "2++": 50,"2++#": 4901,"3++": 5200,"4++": 5201, "4++#": 5400,"5++": 5500,"5++#": 5401,"6++": 5501,"6++#": 58, "7++": 59,
-"1+++":60, "1+++#":61, "2+++":62, "2+++#":100, "3+++":100
+"1--": 0, "1--#": 1, "2--": 2,"2--#": 3,"3--": 4,"4--": 5, "4--#": 6,"5--": 7,"5--#": 8,"6--": 9,"6--#": 10, "7--": 11,
+"1-": 12, "1-#": 13, "2-": 14, "2-#": 15,"3-": 16,"4-": 17, "4-#": 18,"5-": 19,"5-#": 20,"6-": 21,"6-#": 22, "7-": 23,
+"1": 24, "1#": 25, "2": 26,"2#": 27,"3": 28,"4": 29, "4#": 30,"5": 31,"5#": 32,"6": 33,"6#": 34, "7": 35,
+"1+": 36, "1+#": 37, "2+": 38,"2+#": 39,"3+": 40,"4+": 41, "4+#": 42,"5+": 43,"5+#": 44,"6+": 45,"6+#": 46, "7+": 47,
+"1++": 48, "1++#": 49, "2++": 50,"2++#": 51,"3++": 52,"4++": 53, "4++#": 54,"5++": 55,"5++#": 56,"6++": 57,"6++#": 58, "7++": 59,
+"1+++":60, "1+++#":61, "2+++":62, "2+++#":63, "3+++":64
 }
 
 midi_table = \
@@ -49,7 +49,7 @@ servos_angle = configContent.servos_angle
 
 def get_angle(servo_id, sta):
     down_ang = 30
-    sign = 1
+    sign = -1
     is_white = True
     is_two_key = False
 
@@ -116,19 +116,23 @@ def get_note_by_servo(idx):
 
 #########################################################
 import sys 
-sys.path.append("../../../")
-import driver.raspberrypi
-servoCtl = servo.servo_control()
-def play_note(note):
+sys.path.append("../../../../")
+from driver.raspberrypi.servo import servoCtl
+
+def play_note(note, speed = 0):
     global TOME_MOVING
 
     if not isinstance(note, (list, tuple)):
-            note = [note]
+        note = [note]
 
     for item in note:
         item = cal_note(item)
         if item in servo_table:
-            servoCtl.set_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 1))
+            if get_servo(servo_table[item]) < 12:
+                speed = 0
+            else:
+                speed = 0
+            servoCtl.set_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 1), 0)
     servoCtl.update()
 
 
@@ -136,19 +140,19 @@ def stop_note(note):
     global TOME_MOVING
 
     if not isinstance(note, (list, tuple)):
-            note = [note]
+        note = [note]
 
     for item in note:
         item = cal_note(item)
         if item in servo_table:
-            servoCtl.set_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 0))
+            servoCtl.set_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 0), 0)
     servoCtl.update()
 
-def play_midi(midi):
+def play_midi(midi, speed = 0):
     global TOME_MOVING
 
     if midi in midi_table:
-        play_note(midi_table[cal_midi(midi)])
+        play_note(midi_table[cal_midi(midi)], speed)
 
 
 def stop_midi(midi):
@@ -158,12 +162,12 @@ def stop_midi(midi):
         stop_note(midi_table[cal_midi(midi)])
 
 
-def play_servo(servo_id):
+def play_servo(servo_id, speed = 0):
     if not isinstance(servo_id, (list, tuple)):
             servo_id = [servo_id]
 
     for item in servo_id:
-        servoCtl.set_angle(get_servo(item), get_angle(item, 1))
+        servoCtl.set_angle(get_servo(item), get_angle(item, 1), speed)
     servo_id.servoCtl.update()
 
 def stop_servo(servo_id):
@@ -181,7 +185,7 @@ def servos_home():
         servoCtl.update()
         time.sleep(0.02)
     time.sleep(0.3)
-    free_all()
+    # free_all()
 
 def free_all():
     for key in servos_angle:
@@ -189,3 +193,16 @@ def free_all():
         time.sleep(0.02)
         servoCtl.update()
 
+
+def servos_test():
+    for m in range(5):
+        for i in range(64):
+            servoCtl.set_angle(i, 70)
+            servoCtl.update()
+            time.sleep(0.02)
+        time.sleep(1)
+        for i in range(64):
+            servoCtl.set_angle(i, 100)
+            servoCtl.update()
+            time.sleep(0.02)
+        time.sleep(1)

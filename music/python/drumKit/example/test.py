@@ -40,14 +40,14 @@ music_black = \
 #     ("1+++", "1+++"),
 # )
 
-music_table1 = \
-(
-    ("0", "0"),
-	# ("6++", "6++"),
-	# ("2", "1", "2", "1"),
-	("1", "1", "1", "1", "1"),
+# music_table1 = \
+# (
+#     ("0", "0"),
+# 	# ("6++", "6++"),
+# 	# ("2", "1", "2", "1"),
+# 	("1", "1", "1", "1", "1"),
 
-)
+# )
 
 # music_table = \
 # (
@@ -60,8 +60,14 @@ music_table1 = \
 
 # )
 
+music_table = \
+(
+    ("1,2,3:1,2,3:1,2,3:1,2,3:1,2,3:1,2,3:1,2,3:1,2,3:1,2,3:1,2,3=1/16",),
+)
+
+
 import sys,time
-sys.path.append('C:\\work\\automatic_gita\\music\\python\\piano')
+sys.path.append('../')
 
 # import 一千个伤心的理由
 # import 那个夏天
@@ -79,8 +85,8 @@ sys.path.append('C:\\work\\automatic_gita\\music\\python\\piano')
 # 	("1", "1", "1", "1", "1", "1", "1", "1"),
 # )
 # music_white = (("2++","3++", "4++"),)
-import music_translate
-music_parse = music_translate.music_trans([music_black, music_table1], beat=60)
+import music_translate2 as music_translate
+music_parse = music_translate.music_trans([music_table], beat=40)
 music_parse.music_to_play_table()
 music_parse.play_music()
 # while 1:

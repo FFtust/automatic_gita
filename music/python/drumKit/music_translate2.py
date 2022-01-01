@@ -2,12 +2,18 @@ import time
 import math
 import random
 import note
+import os
+import sys
 
-NOTE_SECTION_INTERVAL = 0.03
-RIGHT_LEFT_INTERVAL = 0.03
+NOTE_SECTION_INTERVAL = 0.0
+RIGHT_LEFT_INTERVAL = 0.0
 
-SAME_NOTE_INTERVAL = 0.07
+SAME_NOTE_INTERVAL = 0
+NOTE_CONTINUE_TIME = 0.15
 
+CHECK_ENABLE = True
+
+_exit_flag = False
 class music_trans():
     def __init__(self, music, beat = 60, note_per = 4, move = 0):
         self.music = music
@@ -17,6 +23,7 @@ class music_trans():
         self.play_list = []
 
         self.current_t = 0
+        self.speed = 0
 
         self.servo_table = note.servo_table
 
@@ -37,13 +44,13 @@ class music_trans():
     def _rest_with_time(self, t):
         self.current_t += t
 
-    def _play(self, tone):
+    def _play(self, tone, speed = 0):
         if tone in self.servo_table:
-            self.play_list.append([note.cal_note(tone), 1, self.current_t])
+            self.play_list.append([tone, 1, self.current_t, speed])
 
     def _stop(self, tone):
         if tone in self.servo_table:
-            self.play_list.append([note.cal_note(tone), 0, self.current_t])
+            self.play_list.append([tone, 0, self.current_t])
 
 ######################################################################
     def cal_rest(self, l):
@@ -55,7 +62,8 @@ class music_trans():
         last_tone = []
         rest_time = 0
         copy_index_start = None
-        check_t = []
+        check_t = [[], []]
+        mmm = 0
 
         if not isinstance(self.music, list):
             self.music = [self.music]
@@ -67,14 +75,10 @@ class music_trans():
             rest_time = 0
             i = 0
             copy_index_start = None
-            check_t = []
-
             while i < len(music_item):
             # for i in range(len(music_item)):
-                # 处理一小节
                 if isinstance(music_item[i], tuple):
                     for j in range(len(music_item[i])):
-                        # 解析1/16节拍
                         chor = music_item[i][j]
 
                         if "REST" in chor:
@@ -97,10 +101,15 @@ class music_trans():
                             copy_index_start = i+1
                             continue
                         elif "COPY_STOP" in chor:
-                            if copy_index_start != None:                            
-                                i = copy_index_start
-                                i -= 1
+                            if copy_index_start != None:      
+                                if not CHECK_ENABLE:                      
+                                    i = copy_index_start
+                                    i -= 1
                                 copy_index_start = None
+                            continue
+                        elif "SPEED" in chor:
+                            tmp = eval(chor)
+                            self.speed = tmp["SPEED"]
                             continue
                         elif "=" in chor:
                             tmp = chor.split("=")
@@ -111,60 +120,37 @@ class music_trans():
                             for tc in chors_all:
                                 chors = tc.split(",")
                                 for item in chors:
-                                    self._play(item)
-                                self._rest(t)
+                                    self._play(item, self.speed)
+                                self._rest(NOTE_CONTINUE_TIME)
                                 for item in chors:
                                     self._stop(item)
+                                self._rest(t - NOTE_CONTINUE_TIME)
+
                             continue                            
 
-                        # - 代表这个节拍无变化
-                        if chor != '-':
-                            # 多个音符以 逗号间隔
-                            chors = chor.split(",")
-                            # 抬起需要停止的音符
-                            for item in last_tone:
-                                self._stop(item)
-
-                            last_tone = []
-                            ##########################
-                            for m in range(len(chors)):
-                                chors[m] = chors[m].replace("&", ",")
-
-                                if '{' in chors[m]:
-                                    temp = eval(chors[m])
-                                    for key in temp:
-                                        if isinstance(temp[key], list):
-                                            self._rest_with_time(temp[key][0])
-                                            self._play(key)
-                                            self._rest(temp[key][1])
-                                            self._rest_with_time(-temp[key][0])
-                                            self._stop(key)
-                                            self._rest(-temp[key][1])
-                                        else: 
-                                            self._play(key)
-                                            self._rest(temp[key])
-                                            self._stop(key)
-                                            self._rest(-temp[key])
-                                else:
-                                    self._play(chors[m])
-                                    last_tone.append(chors[m])
-                        if rest_time == 0:
-                            self._rest(1 / self.cal_rest(len(music_item[i])))
-                        else:
-                            self._rest(rest_time)
-
-                    self._rest_with_time(NOTE_SECTION_INTERVAL)
-                    check_t.append([i,round(self.current_t, 1)])
+                    check_t[mmm].append([i,round(self.current_t, 1)])
                 else:
                     print("error", i, music_item[i])
+
                 i = i + 1
 
+            mmm += 1
+        if CHECK_ENABLE:
+            self._check_show(check_t[0], check_t[1])
         self.play_list_sort()
+
+    def _check_show(self, r, l):
+        if len(r) != len(l):
+            print("right and left section not the same, right:{}, left:()".format(len(r),len(l)))
+            return
+
+        for i in range(len(r)):
+            if abs(r[i][1] - l[i][1]) > 0.001:
+                print("time not sync, section:{}, notes:{}".format(i, self.music[0][i]))
 
     def _sort_by_time(self, play_list):
         _play_list = play_list.copy()
         ret_list = []
-        # 按时间排序
         while _play_list != []:
             current_index = 0
             min_t = 100000
@@ -175,7 +161,6 @@ class music_trans():
             ret_list.append(_play_list[current_index])
             del _play_list[current_index]
 
-        # 将同一时间操作的音符放在一个list中
         temp_list1 = []
         temp_list2 = []
         i = 0
@@ -199,14 +184,13 @@ class music_trans():
     def play_list_sort(self):
         temp_list1 = self._sort_by_time(self.play_list)
 
-        # 两个连续的相同音符需要单独处理，否则将不会抬起，只有一个声音
         for i in range(1, len(temp_list1)):
             t_ret = self._check_special(temp_list1[i])
             if t_ret != []:
                 for l in range(len(temp_list1[i])):
                     if l in t_ret:
                         if temp_list1[i][l][1] == 1:
-                            temp_list1[i][l][2] += 0.02
+                            temp_list1[i][l][2] += 0.0
                         else:
                             temp_list1[i][l][2] -= SAME_NOTE_INTERVAL
                     else:
@@ -237,12 +221,13 @@ class music_trans():
         start_time = time.time()
         for i in range(len(play_list)):
             while time.time() - start_time < play_list[i][0][2]:
-                pass
+                note.servoCtl.update()
+                if _exit_flag:
+                    break
 
-            # for item in self.last_play:
-            #     if (not (item in play_list[i])) and (not (item in play_list[i + 1])) and (not (item in play_list[i + 2])):
-            #         note.servoCtl.run_single_servo(self.servo_table[item[0]] - note.SERVO_ID_BASE, note.FREE_ANGLE)
-
+            if _exit_flag:
+                break
+                
             note_play = []
             note_stop = []
             for item in play_list[i]:

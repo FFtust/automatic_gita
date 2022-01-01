@@ -475,9 +475,9 @@ music_table_left = \
  	("1-=1/4", "1,5-,3-,1-=2/4", "0=1/4"),
 )
 import sys
-sys.path.append('C:\\work\\automatic_gita\\music\\python\\piano')
+sys.path.append('../')
 
-import music_translate3 as music_translate
+import music_translate2 as music_translate
 music_parse = music_translate.music_trans([music_table_left,music_table], beat = 120, move=0)
 music_parse.music_to_play_table()
 music_parse.play_music()

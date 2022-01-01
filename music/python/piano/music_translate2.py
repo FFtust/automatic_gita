@@ -2,26 +2,17 @@ import time
 import math
 import random
 import note
-import keyboard
 import os
 import sys
 
 NOTE_SECTION_INTERVAL = 0.03
 RIGHT_LEFT_INTERVAL = 0.05
 
-SAME_NOTE_INTERVAL = 0.07
+SAME_NOTE_INTERVAL = 0.05
 
 CHECK_ENABLE = True
 
 _exit_flag = False
-def keyEventCb(e):
-    global _exit_flag
-    if e.event_type == "up":
-        if e.name == "q":
-            _exit_flag = True
-            print("aaaaaaaa")
-keyboard.hook(keyEventCb)
-
 class music_trans():
     def __init__(self, music, beat = 60, note_per = 4, move = 0):
         self.music = music
@@ -31,6 +22,7 @@ class music_trans():
         self.play_list = []
 
         self.current_t = 0
+        self.speed = 0
 
         self.servo_table = note.servo_table
 
@@ -51,9 +43,9 @@ class music_trans():
     def _rest_with_time(self, t):
         self.current_t += t
 
-    def _play(self, tone):
+    def _play(self, tone, speed = 0):
         if tone in self.servo_table:
-            self.play_list.append([note.cal_note(tone), 1, self.current_t])
+            self.play_list.append([note.cal_note(tone), 1, self.current_t, speed])
 
     def _stop(self, tone):
         if tone in self.servo_table:
@@ -84,10 +76,8 @@ class music_trans():
             copy_index_start = None
             while i < len(music_item):
             # for i in range(len(music_item)):
-                # 处理一小节
                 if isinstance(music_item[i], tuple):
                     for j in range(len(music_item[i])):
-                        # 解析1/16节拍
                         chor = music_item[i][j]
 
                         if "REST" in chor:
@@ -116,6 +106,10 @@ class music_trans():
                                     i -= 1
                                 copy_index_start = None
                             continue
+                        elif "SPEED" in chor:
+                            tmp = eval(chor)
+                            self.speed = tmp["SPEED"]
+                            continue
                         elif "=" in chor:
                             tmp = chor.split("=")
                             t = eval(tmp[1])
@@ -125,17 +119,14 @@ class music_trans():
                             for tc in chors_all:
                                 chors = tc.split(",")
                                 for item in chors:
-                                    self._play(item)
+                                    self._play(item, self.speed)
                                 self._rest(t)
                                 for item in chors:
                                     self._stop(item)
                             continue                            
 
-                        # - 代表这个节拍无变化
                         if chor != '-':
-                            # 多个音符以 逗号间隔
                             chors = chor.split(",")
-                            # 抬起需要停止的音符
                             for item in last_tone:
                                 self._stop(item)
 
@@ -149,18 +140,18 @@ class music_trans():
                                     for key in temp:
                                         if isinstance(temp[key], list):
                                             self._rest_with_time(temp[key][0])
-                                            self._play(key)
+                                            self._play(key, self.speed)
                                             self._rest(temp[key][1])
                                             self._rest_with_time(-temp[key][0])
                                             self._stop(key)
                                             self._rest(-temp[key][1])
                                         else: 
-                                            self._play(key)
+                                            self._play(key, self.speed)
                                             self._rest(temp[key])
                                             self._stop(key)
                                             self._rest(-temp[key])
                                 else:
-                                    self._play(chors[m])
+                                    self._play(chors[m], self.speed)
                                     last_tone.append(chors[m])
                         if rest_time == 0:
                             self._rest(1 / self.cal_rest(len(music_item[i])))
@@ -191,7 +182,6 @@ class music_trans():
     def _sort_by_time(self, play_list):
         _play_list = play_list.copy()
         ret_list = []
-        # 按时间排序
         while _play_list != []:
             current_index = 0
             min_t = 100000
@@ -202,7 +192,6 @@ class music_trans():
             ret_list.append(_play_list[current_index])
             del _play_list[current_index]
 
-        # 将同一时间操作的音符放在一个list中
         temp_list1 = []
         temp_list2 = []
         i = 0
@@ -226,14 +215,13 @@ class music_trans():
     def play_list_sort(self):
         temp_list1 = self._sort_by_time(self.play_list)
 
-        # 两个连续的相同音符需要单独处理，否则将不会抬起，只有一个声音
         for i in range(1, len(temp_list1)):
             t_ret = self._check_special(temp_list1[i])
             if t_ret != []:
                 for l in range(len(temp_list1[i])):
                     if l in t_ret:
                         if temp_list1[i][l][1] == 1:
-                            temp_list1[i][l][2] += 0.02
+                            temp_list1[i][l][2] += SAME_NOTE_INTERVAL
                         else:
                             temp_list1[i][l][2] -= SAME_NOTE_INTERVAL
                     else:
@@ -257,13 +245,14 @@ class music_trans():
 ######################################################################
     def play_music(self, play_list = None):
         note.servos_home()
-        # self.create_noise()
+        self.create_noise()
         self.last_play = []
         if play_list == None:
             play_list = self.play_list
         start_time = time.time()
         for i in range(len(play_list)):
             while time.time() - start_time < play_list[i][0][2]:
+                note.servoCtl.update()
                 if _exit_flag:
                     break
 

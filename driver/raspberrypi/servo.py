@@ -1,13 +1,21 @@
-import Adafruit_PCA9685
 import time
-import thread as _thread
+try:
+    import thread as _thread
+except:
+    import _thread
 
 REMOTE_CTL = False
 
-SERVO_NUM = 16
-ADRESS_TABLE = [0x40,0x41,0x42,0x44,0x00,0x00,0x00,0x00]
+if not REMOTE_CTL:
+    import Adafruit_PCA9685
+
+FREE_ANGLE=181
+SERVO_NUM = 64
+# ADRESS_TABLE = [0x40,0x41,0x42,0x44,0x00,0x00,0x00,0x00]
+ADRESS_TABLE = [0x42,0x44,0x41,0x40,0x00,0x00,0x00,0x00]
+
 SPEED_CTL_ANGLE_INTERVAL = 1
-SPEED_CTL_T_INTERVAL = 1
+SPEED_CTL_T_INTERVAL = 300
 
 class servo_c():
     def __init__(self, num = SERVO_NUM, address = ADRESS_TABLE):
@@ -26,8 +34,8 @@ class servo_c():
             self.pwm[i] = Adafruit_PCA9685.PCA9685(self.driver_address[i], busnum=1)
             self.pwm[i].set_pwm_freq(50)
             
+    def start_update_task(self):
         _thread.start_new_thread(self.update_task, ())
-        time.sleep(2)
 
     def _run_to(self, idx, angle):
         driver_id = idx // 16
@@ -40,6 +48,11 @@ class servo_c():
         self.current_angles[idx] = angle
 
 ####################################################
+    def free(self, idx):
+        driver_id = idx // 16
+        servo_id = idx % 16
+        self.pwm[driver_id].set_pwm(servo_id, 0, 0)
+
     def set_angle(self, idx, angle, speed = 0, update = False):
         if idx >=  self.servo_num:
             print("invalid servo id")
@@ -53,8 +66,12 @@ class servo_c():
 
     def update(self):
         for i in range(self.servo_num):
+            if self.angles_to[i] == FREE_ANGLE:
+                self.free(i)
+                continue
+
             if abs(self.angles_to[i] - self.current_angles[i]) > SPEED_CTL_ANGLE_INTERVAL:
-                if time.time() * 1000 - self.servo_speeds_t_record[i] > self.servo_speeds[i] * SPEED_CTL_T_INTERVAL:
+                if time.time() * 1000000 - self.servo_speeds_t_record[i] > self.servo_speeds[i] * SPEED_CTL_T_INTERVAL:
                     if self.servo_speeds[i] == 0:
                         self._run_to(i, self.angles_to[i])
                     else:
@@ -62,7 +79,7 @@ class servo_c():
                             self._run_to(i, self.current_angles[i] + SPEED_CTL_ANGLE_INTERVAL)
                         else:
                             self._run_to(i, self.current_angles[i] - SPEED_CTL_ANGLE_INTERVAL)
-                    self.servo_speeds_t_record[i] = time.time() * 1000
+                    self.servo_speeds_t_record[i] = time.time() * 1000000
     def update_task(self):
         while 1:
             self.update()
@@ -83,7 +100,7 @@ class servo_c():
 
 from socket import *
 
-HOST = '192.168.0.103' # or 'localhost'
+HOST = '192.168.1.103' # or 'localhost'
 PORT = 5050
 ADDR = (HOST,PORT)
  
@@ -97,7 +114,7 @@ class servo_rmt_c():
         self.tcpCliSock.send(bytes(ctlStr, "utf8"))
 
 ####################################################
-    def set_angle(self, idx, angle, speed = 0):
+    def set_angle(self, idx, angle, speed = 0, update = False):
         ctlStr = "servoCtl.set_angle({}, {}, {}, {})\n".format(idx, angle, speed, update)
         self.tcpCliSock.send(bytes(ctlStr, "utf8"))
 

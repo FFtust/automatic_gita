@@ -20,7 +20,6 @@ def servo_stop(servo_id):
     note.servoCtl.run_single_servo(servo_id, note.get_angle(servo_id, 0))
 
 note.servos_home()
-note.free_all()
 
 print("config init done")
 
@@ -69,5 +68,5 @@ def keyEventCb2(e):
 			note.play_midi(midi_num)
 
 
-keyboard.hook(keyEventCb2)
+keyboard.hook(keyEventCb)
 keyboard.wait('Esc')
