@@ -43,12 +43,14 @@ music_table_left = \
     ("3,7-,6-,4--", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"),
     ("5--", "-", "4-", "-", "5-", "-", "2", "-", "-", "-", "-", "-", "-", "-", "-", "-"),
     ("2,6-3-,1--", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"),
+
+    ("0",),
 )
 
 import sys,time
-sys.path.append('C:\\work\\automatic_gita\\python\\piano')
+sys.path.append('../')
 
 import music_translate
-music_parse = music_translate.music_trans([music_table], beat = 80)
+music_parse = music_translate.music_trans([music_table_left, music_table], beat = 80)
 music_parse.music_to_play_table()
 music_parse.play_music()

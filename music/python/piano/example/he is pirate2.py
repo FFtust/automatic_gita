@@ -148,16 +148,10 @@ music_table_left = \
 )
 
 import sys
-sys.path.append('C:\\work\\automatic_gita\\music\\python\\piano')
-import music_translate2 as music_translate
+sys.path.append('../')
+import music_translate
 
 music_parse = music_translate.music_trans([music_table, music_table_left], beat = 100, note_per = 8, move = 3)
-# nn = 0
-# for i in range(len(music_table_left)):
-# 	print(nn, len(music_table_left[i]), music_parse.cal_rest(len(music_table_left[i])), len(music_table[i]), music_parse.cal_rest(len(music_table[i])))
-# 	if len(music_table_left) > 1:
-# 		nn += 1
-
 music_parse.music_to_play_table()
 music_parse.play_music()
 

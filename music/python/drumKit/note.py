@@ -4,14 +4,14 @@ SERVO_ID_BASE = 0
 NOT_IMPLEMET = 100
 FREE_ANGLE = 181
 
-ANG_DOWN = 30
+ANG_DOWN = 15
 KEY_IDLE_OFFSET = 0
 
 
 servo_table = \
 {
 
-"5": 60, "3": 61,"1": 62,"4": 64,
+"1A": 67, "1B": 68,"1C": 69, "1D":72, "S1": 67, "2":70, "S2":71, "3":66, "S3":0, "4":64, "S4":0, "5":65, "S5":65,  
 }
 
 import configContent

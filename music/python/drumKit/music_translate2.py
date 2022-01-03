@@ -9,7 +9,7 @@ NOTE_SECTION_INTERVAL = 0.0
 RIGHT_LEFT_INTERVAL = 0.0
 
 SAME_NOTE_INTERVAL = 0
-NOTE_CONTINUE_TIME = 0.15
+NOTE_CONTINUE_TIME = 0.06
 
 CHECK_ENABLE = True
 
@@ -121,10 +121,10 @@ class music_trans():
                                 chors = tc.split(",")
                                 for item in chors:
                                     self._play(item, self.speed)
-                                self._rest(NOTE_CONTINUE_TIME)
+                                self._rest_with_time(NOTE_CONTINUE_TIME)
                                 for item in chors:
                                     self._stop(item)
-                                self._rest(t - NOTE_CONTINUE_TIME)
+                                self._rest_with_time(self.beat_time * t - NOTE_CONTINUE_TIME)
 
                             continue                            
 

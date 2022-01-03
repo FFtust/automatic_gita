@@ -84,7 +84,7 @@ music_table = \
 import sys
 sys.path.append('../')
 
-import music_translate2 as music_translate
+import music_translate
 music_parse = music_translate.music_trans([music_table], beat = 80)
 music_parse.music_to_play_table()
 music_parse.play_music()

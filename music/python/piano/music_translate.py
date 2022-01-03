@@ -8,7 +8,7 @@ import sys
 NOTE_SECTION_INTERVAL = 0.03
 RIGHT_LEFT_INTERVAL = 0.05
 
-SAME_NOTE_INTERVAL = 0.12
+SAME_NOTE_INTERVAL = 0.03
 
 CHECK_ENABLE = True
 
@@ -20,6 +20,7 @@ class music_trans():
         self.beat_time = note_per * (60 / beat)
         self.origin_beat = beat
         self.play_list = []
+        self.note_status = {}
 
         self.current_t = 0
         self.speed = 0
@@ -45,12 +46,21 @@ class music_trans():
 
     def _play(self, tone, speed = 0):
         if tone in self.servo_table:
+            if self.is_note_playing(tone):
+                self.play_list.append([note.cal_note(tone), 0, self.current_t, 0])
             self.play_list.append([note.cal_note(tone), 1, self.current_t, speed])
+            self.note_status.update({tone:True})
 
     def _stop(self, tone):
         if tone in self.servo_table:
-            self.play_list.append([note.cal_note(tone), 0, self.current_t])
+            self.play_list.append([note.cal_note(tone), 0, self.current_t, 0])
+            self.note_status.update({tone:False})
 
+    def is_note_playing(self, tone):
+        if tone in self.note_status:
+            return self.note_status[tone]
+        else:
+            return False
 ######################################################################
     def cal_rest(self, l):
         for i in range(10):
@@ -221,11 +231,16 @@ class music_trans():
                 for l in range(len(temp_list1[i])):
                     if l in t_ret:
                         if temp_list1[i][l][1] == 1:
-                            temp_list1[i][l][2] += 0.02
+                            temp_list1[i][l][2] += SAME_NOTE_INTERVAL
                         else:
                             temp_list1[i][l][2] -= SAME_NOTE_INTERVAL
                     else:
                         temp_list1[i][l][2] += 0.0
+
+
+                for j in range(i + 1, len(temp_list1)):
+                    for m in range(len(temp_list1[j])):
+                        temp_list1[j][m][2] += SAME_NOTE_INTERVAL
 
         temp = []
         for item in temp_list1:
@@ -245,7 +260,7 @@ class music_trans():
 ######################################################################
     def play_music(self, play_list = None):
         note.servos_home()
-        # self.create_noise()
+        self.create_noise()
         self.last_play = []
         if play_list == None:
             play_list = self.play_list
@@ -265,10 +280,14 @@ class music_trans():
                 print(item, self.servo_table[item[0]] - note.SERVO_ID_BASE, note.get_angle(self.servo_table[item[0]] - note.SERVO_ID_BASE, item[1]))
                 if item[1]:
                     note_play.append(item[0])
+                    note.play_note(item[0], item[3])
                 else:
                     note_stop.append(item[0])
-            note.stop_note(note_stop)
-            note.play_note(note_play)
+                    note.stop_note(item[0])
+
+            # note.stop_note(note_stop)
+            # note.play_note(note_play)
+            note.servoCtl.update()
 
             self.last_play = play_list[i].copy()
 

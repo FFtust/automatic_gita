@@ -4,7 +4,7 @@ SERVO_ID_BASE = 0
 NOT_IMPLEMET = 100
 FREE_ANGLE = 181
 
-ANG_WHITE = 30
+ANG_WHITE = 35
 ANG_BLACK = 30
 
 KEY_IDLE_OFFSET = 3
@@ -43,6 +43,8 @@ midi_table = \
     "1++": 84, "1++#": 85, "2++": 86,"2++#": 87,"3++": 88,"4++": 89, "4++#": 90,"5++": 91,"5++#": 92,"6++": 93,"6++#": 94, "7++": 95,
     "1+++":96, "1+++#":97, "2+++":98, "2+++#":99, "3+++":100
 }
+
+note_status = {}
 
 import configContent
 servos_angle = configContent.servos_angle
@@ -119,8 +121,8 @@ import sys
 sys.path.append("../../../../")
 from driver.raspberrypi.servo import servoCtl
 
-def play_note(note, speed = 0):
-    global TOME_MOVING
+def play_note(note, speed = 0, update = False):
+    global TOME_MOVING, note_status
 
     if not isinstance(note, (list, tuple)):
         note = [note]
@@ -128,16 +130,15 @@ def play_note(note, speed = 0):
     for item in note:
         item = cal_note(item)
         if item in servo_table:
-            if get_servo(servo_table[item]) < 12:
-                speed = 0
-            else:
-                speed = 0
-            servoCtl.set_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 1), 0)
-    servoCtl.update()
+            servoCtl.set_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 1), speed)
+        note_status.update({item:True})
+
+    if update:
+        servoCtl.update()
 
 
-def stop_note(note):
-    global TOME_MOVING
+def stop_note(note, update = False):
+    global TOME_MOVING, note_status
 
     if not isinstance(note, (list, tuple)):
         note = [note]
@@ -146,13 +147,24 @@ def stop_note(note):
         item = cal_note(item)
         if item in servo_table:
             servoCtl.set_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 0), 0)
-    servoCtl.update()
+        note_status.update({item:False})
 
+    if update:
+        servoCtl.update()
+
+def is_note_playing(note):
+    global note_status
+    item = cal_note(note)
+    if item in note_status:
+        return note_status[item]
+    else:
+        return False
 def play_midi(midi, speed = 0):
     global TOME_MOVING
 
     if midi in midi_table:
         play_note(midi_table[cal_midi(midi)], speed)
+    servoCtl.update()
 
 
 def stop_midi(midi):
@@ -160,6 +172,7 @@ def stop_midi(midi):
 
     if midi in midi_table:
         stop_note(midi_table[cal_midi(midi)])
+    servoCtl.update()
 
 
 def play_servo(servo_id, speed = 0):
