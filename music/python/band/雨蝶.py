@@ -24,6 +24,7 @@ music_parse2.music_to_play_table()
 drumKit.music_translate.note.servos_home()
 
 _thread.start_new_thread(music_parse.play_music, ())
+time.sleep(0.1)
 music_parse2.play_music()
 
 # _thread.start_new_thread(music_parse2.play_music, ())
