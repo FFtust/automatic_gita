@@ -1,7 +1,7 @@
 import time
 import math
 import random
-import note
+import drumKit.note
 
 class music_trans():
     def __init__(self, music, beat = 60, move = 0):

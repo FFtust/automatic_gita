@@ -14,7 +14,7 @@ servo_table = \
 "1A": 67, "1B": 68,"1C": 69, "1D":72, "S1": 67, "2":70, "S2":71, "3":66, "S3":0, "4":64, "S4":0, "5":65, "S5":65,  
 }
 
-import configContent
+import drumKit.configContent as configContent
 servos_angle = configContent.servos_angle
 
 def get_angle(servo_id, sta):
@@ -49,7 +49,6 @@ def get_note_by_servo(idx):
 
 #########################################################
 import sys 
-sys.path.append("../../../../")
 from driver.raspberrypi.servo import servoCtl
 # servoCtl = servo.servo_control()
 def play_note(note, speed = 0):

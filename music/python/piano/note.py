@@ -46,7 +46,7 @@ midi_table = \
 
 note_status = {}
 
-import configContent
+import piano.configContent as configContent
 servos_angle = configContent.servos_angle
 
 def get_angle(servo_id, sta):
@@ -118,7 +118,6 @@ def get_note_by_servo(idx):
 
 #########################################################
 import sys 
-sys.path.append("../../../../")
 from driver.raspberrypi.servo import servoCtl
 
 def play_note(note, speed = 0, update = False):

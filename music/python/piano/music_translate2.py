@@ -1,7 +1,7 @@
 import time
 import math
 import random
-import note
+import piano.note as note
 import os
 import sys
 
