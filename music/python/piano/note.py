@@ -94,6 +94,8 @@ def get_angle(servo_id, sta):
 def get_servo(servo_id):
     if servo_id > 63:
         servo_id = 100
+    elif servo_id < 0:
+        servo_id = 100
     return servo_id
 
 def set_tone_moving(move):
