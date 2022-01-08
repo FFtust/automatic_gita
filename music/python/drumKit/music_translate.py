@@ -213,7 +213,7 @@ class music_trans():
         return ret
 ######################################################################
     def play_music(self, play_list = None):
-        note.servos_home()
+        # note.servos_home()
         # self.create_noise()
         self.last_play = []
         if play_list == None:
@@ -224,6 +224,7 @@ class music_trans():
                 note.servoCtl.update()
                 if _exit_flag:
                     break
+                time.sleep(0.001)
 
             if _exit_flag:
                 break
@@ -240,6 +241,7 @@ class music_trans():
             note.play_note(note_play)
 
             self.last_play = play_list[i].copy()
+            time.sleep(0.001)
 
         note.servos_home()
 

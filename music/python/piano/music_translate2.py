@@ -5,12 +5,12 @@ import piano.note as note
 import os
 import sys
 
-NOTE_SECTION_INTERVAL = 0.03
+NOTE_SECTION_INTERVAL = 0.0
 RIGHT_LEFT_INTERVAL = 0.05
 
 SAME_NOTE_INTERVAL = 0.05
 
-CHECK_ENABLE = True
+CHECK_ENABLE = False
 
 _exit_flag = False
 class music_trans():
@@ -244,7 +244,7 @@ class music_trans():
         return ret
 ######################################################################
     def play_music(self, play_list = None):
-        note.servos_home()
+        # note.servos_home()
         self.create_noise()
         self.last_play = []
         if play_list == None:
@@ -255,6 +255,8 @@ class music_trans():
                 note.servoCtl.update()
                 if _exit_flag:
                     break
+                time.sleep(0.001)
+
 
             if _exit_flag:
                 break
@@ -271,6 +273,7 @@ class music_trans():
             note.play_note(note_play)
 
             self.last_play = play_list[i].copy()
+            time.sleep(0.001)
 
         note.servos_home()
 
