@@ -1,7 +1,7 @@
 import keyboard
 import time
-from note import servo_table, get_note_by_servo
-import note
+from piano.note import servo_table, get_note_by_servo
+import piano.note as note
 
 currentMidi = 36
 

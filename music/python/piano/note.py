@@ -4,7 +4,7 @@ SERVO_ID_BASE = 0
 NOT_IMPLEMET = 100
 FREE_ANGLE = 181
 
-ANG_WHITE = 35
+ANG_WHITE = 40
 ANG_BLACK = 30
 
 KEY_IDLE_OFFSET = 3
@@ -122,17 +122,15 @@ def get_note_by_servo(idx):
 import sys 
 from driver.raspberrypi.servo import servoCtl
 
-def play_note(note, speed = 0, update = False):
+def play_note(notes, update = False):
     global TOME_MOVING, note_status
 
-    if not isinstance(note, (list, tuple)):
-        note = [note]
-
-    for item in note:
-        item = cal_note(item)
-        if item in servo_table:
-            servoCtl.set_angle(get_servo(servo_table[item]) - SERVO_ID_BASE, get_angle(servo_table[item] - SERVO_ID_BASE, 1), speed)
-        note_status.update({item:True})
+    for item in notes:
+        note = cal_note(item[0])
+        speed = item[1]
+        if note in servo_table:
+            servoCtl.set_angle(get_servo(servo_table[note]) - SERVO_ID_BASE, get_angle(servo_table[note] - SERVO_ID_BASE, 1), speed)
+        note_status.update({note:True})
 
     if update:
         servoCtl.update()

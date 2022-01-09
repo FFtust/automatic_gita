@@ -5,6 +5,9 @@ import piano.note as note
 import os
 import sys
 
+MAX_SPD = 0
+MIN_SPD = 4
+
 NOTE_SECTION_INTERVAL = 0.0
 RIGHT_LEFT_INTERVAL = 0.05
 
@@ -255,7 +258,7 @@ class music_trans():
                 note.servoCtl.update()
                 if _exit_flag:
                     break
-                time.sleep(0.001)
+                time.sleep(0.0001)
 
 
             if _exit_flag:
@@ -266,14 +269,14 @@ class music_trans():
             for item in play_list[i]:
                 print(item, self.servo_table[item[0]] - note.SERVO_ID_BASE, note.get_angle(self.servo_table[item[0]] - note.SERVO_ID_BASE, item[1]))
                 if item[1]:
-                    note_play.append(item[0])
+                    note_play.append((item[0], item[3]))
                 else:
                     note_stop.append(item[0])
             note.stop_note(note_stop)
             note.play_note(note_play)
 
             self.last_play = play_list[i].copy()
-            time.sleep(0.001)
+            time.sleep(0.0001)
 
         note.servos_home()
 
