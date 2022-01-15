@@ -90,13 +90,15 @@ def stop_servo(servo_id):
     servo_id.servoCtl.update()
 
 def servos_home():
+    ss = time.time()
     time.sleep(0.3)
     for key in servos_angle:
         servoCtl.set_angle(get_servo(key), get_angle(key, 0))
         servoCtl.update()
         time.sleep(0.02)
     time.sleep(0.3)
-    # free_all()
+    while time.time() - ss < 2:
+        time.sleep(0.001)
 
 def free_all():
     for key in servos_angle:

@@ -20,6 +20,13 @@ music_table_speed_test = \
 
 )
 
+music_table_mul_test = \
+(
+    ("0", "-", "-", "-"),
+    ("1+", "0", "1+,2+", "0", "1+,2+,3+", "0", "1+,2+,3+,4+", "0", "1+,2+,3+,4+,5+"),
+    ("1+,2+,3+,4+,5+,6+", "0"),
+
+)
 
 import sys, time
 sys.path.append('../../')
@@ -38,16 +45,16 @@ def sleep(t):
 def speed_test():
     import piano.note as note
     note.servos_home()
-    for i in range(10):
-        note.play_note([("1", 0)], 1)
-        sleep(0.07)
+    for i in range(20):
+        note.play_note([("1", i)], 1)
+        sleep(0.1)
         note.stop_note("1", 1)
-        sleep(0.07)
+        sleep(1)
 
 speed_test()
 # if __name__ == "__main__":
 #     import piano.music_translate2 as music_translate
 
-#     music_parse = music_translate.music_trans([music_table_key_test], beat = 80)
+#     music_parse = music_translate.music_trans([music_table_mul_test], beat = 30)
 #     music_parse.music_to_play_table()
 #     music_parse.play_music()

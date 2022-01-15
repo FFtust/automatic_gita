@@ -213,7 +213,7 @@ class music_trans():
         return ret
 ######################################################################
     def play_music(self, play_list = None):
-        # note.servos_home()
+        note.servos_home()
         # self.create_noise()
         self.last_play = []
         if play_list == None:

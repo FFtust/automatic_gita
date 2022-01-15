@@ -4,7 +4,7 @@ SERVO_ID_BASE = 0
 NOT_IMPLEMET = 100
 FREE_ANGLE = 181
 
-ANG_WHITE = 35
+ANG_WHITE = 30
 ANG_BLACK = 30
 
 KEY_IDLE_OFFSET = 3
@@ -54,14 +54,6 @@ def get_angle(servo_id, sta):
     sign = -1
     is_white = True
     is_two_key = False
-
-    if servo_id >= 100:
-        is_two_key = True
-
-        if servo_id % 2 == 0:
-            sign = 1.4
-        else:
-            sign = -1.4
 
     for key in servo_table:
         if servo_id == servo_table[key]:
@@ -129,7 +121,7 @@ def play_note(notes, update = False):
         note = cal_note(item[0])
         speed = item[1]
         if note in servo_table:
-            servoCtl.set_angle(get_servo(servo_table[note]) - SERVO_ID_BASE, get_angle(servo_table[note] - SERVO_ID_BASE, 1), speed)
+            servoCtl.set_angle(get_servo(servo_table[note]) - SERVO_ID_BASE, get_angle(servo_table[note] - SERVO_ID_BASE, 1) - speed * 0.5, 0)
         note_status.update({note:True})
 
     if update:
@@ -189,13 +181,15 @@ def stop_servo(servo_id):
     servo_id.servoCtl.update()
 
 def servos_home():
+    ss = time.time()
     time.sleep(0.3)
     for key in servos_angle:
         servoCtl.set_angle(get_servo(key), get_angle(key, 0))
         servoCtl.update()
         time.sleep(0.02)
     time.sleep(0.3)
-    # free_all()
+    while time.time() - ss < 2:
+        time.sleep(0.001)
 
 def free_all():
     for key in servos_angle:

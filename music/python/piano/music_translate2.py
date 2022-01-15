@@ -5,9 +5,6 @@ import piano.note as note
 import os
 import sys
 
-MAX_SPD = 0
-MIN_SPD = 2
-
 NOTE_SECTION_INTERVAL = 0.0
 RIGHT_LEFT_INTERVAL = 0.05
 
@@ -52,7 +49,7 @@ class music_trans():
 
     def _stop(self, tone):
         if tone in self.servo_table:
-            self.play_list.append([note.cal_note(tone), 0, self.current_t])
+            self.play_list.append([note.cal_note(tone), 0, self.current_t, 0])
 
 ######################################################################
     def cal_rest(self, l):
@@ -75,6 +72,7 @@ class music_trans():
             self.set_beat(self.origin_beat)
             self._rest_with_time(RIGHT_LEFT_INTERVAL)
             rest_time = 0
+            self.speed = 0
             i = 0
             copy_index_start = None
             while i < len(music_item):
@@ -248,7 +246,7 @@ class music_trans():
 ######################################################################
     def play_music(self, play_list = None, mode = None):
         note.servos_home()
-        self.create_noise()
+        # self.create_noise()
         if play_list == None:
             play_list = self.play_list
         start_time = time.time()

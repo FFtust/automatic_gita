@@ -14,8 +14,8 @@ SERVO_NUM = 80
 # ADRESS_TABLE = [0x40,0x41,0x42,0x44,0x00,0x00,0x00,0x00]
 ADRESS_TABLE = [0x42,0x44,0x41,0x40,0x47,0x00,0x00,0x00]
 
-SPEED_CTL_ANGLE_INTERVAL = 1
-SPEED_CTL_T_INTERVAL = 200
+SPEED_CTL_ANGLE_INTERVAL = 2
+SPEED_CTL_T_INTERVAL = 500
 
 class servo_c():
     def __init__(self, num = SERVO_NUM, address = ADRESS_TABLE):
@@ -25,7 +25,7 @@ class servo_c():
         self.current_angles = [255] * self.servo_num 
         self.angles_to = [90] * self.servo_num 
         self.servo_speeds = [0] * self.servo_num 
-        self.servo_speeds_t_record = [0] * self.servo_num 
+        self.servo_speeds_t_record = [[0, 0]] * self.servo_num 
 
 
         self.pwm = [None] * (self.servo_num // 16)
@@ -63,6 +63,13 @@ class servo_c():
 
         if update:
             self.update()
+    def _cal_delta_angle(self, to, current, speed):
+        diff = to - current
+        if speed == 0 or abs(diff) > 10:
+            return diff, abs(diff) * 1500
+        else:
+            return (SPEED_CTL_ANGLE_INTERVAL if diff > 0 else (-SPEED_CTL_ANGLE_INTERVAL)), SPEED_CTL_ANGLE_INTERVAL * 1500 + speed * 500
+
 
     def update(self):
         for i in range(self.servo_num):
@@ -71,15 +78,14 @@ class servo_c():
                 continue
 
             if abs(self.angles_to[i] - self.current_angles[i]) > SPEED_CTL_ANGLE_INTERVAL:
-                if time.time() * 1000000 - self.servo_speeds_t_record[i] > self.servo_speeds[i] * SPEED_CTL_T_INTERVAL:
-                    if self.servo_speeds[i] == 0:
-                        self._run_to(i, self.angles_to[i])
-                    else:
-                        if self.angles_to[i] >= self.current_angles[i]:
-                            self._run_to(i, self.current_angles[i] + SPEED_CTL_ANGLE_INTERVAL)
-                        else:
-                            self._run_to(i, self.current_angles[i] - SPEED_CTL_ANGLE_INTERVAL)
-                    self.servo_speeds_t_record[i] = time.time() * 1000000
+                if time.time() * 1000000 - self.servo_speeds_t_record[i][0] >= self.servo_speeds_t_record[i][1]:
+                    delta, run_t = self._cal_delta_angle(self.angles_to[i], self.current_angles[i], self.servo_speeds[i])
+                    self._run_to(i, self.current_angles[i] + delta)
+                    self.servo_speeds_t_record[i][0] = time.time() * 1000000
+                    self.servo_speeds_t_record[i][1] = run_t
+            else:
+                self.servo_speeds_t_record[i][1] = 0
+
     def update_task(self):
         while 1:
             self.update()
