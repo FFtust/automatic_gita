@@ -1,6 +1,6 @@
 import socket
 import time
-import thread
+import _thread
 from servo import servoCtl
 
 HOST = ''
@@ -40,7 +40,7 @@ class new_connection():
 
         self.process = process
 
-        thread.start_new_thread(self.work, ())
+        _thread.start_new_thread(self.work, ())
 
     def register_process(self, process):
         self.process = process
