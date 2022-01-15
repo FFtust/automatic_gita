@@ -6,12 +6,12 @@ import os
 import sys
 
 MAX_SPD = 0
-MIN_SPD = 4
+MIN_SPD = 2
 
 NOTE_SECTION_INTERVAL = 0.0
 RIGHT_LEFT_INTERVAL = 0.05
 
-SAME_NOTE_INTERVAL = 0.05
+SAME_NOTE_INTERVAL = 0.06
 
 CHECK_ENABLE = False
 
@@ -246,10 +246,9 @@ class music_trans():
                     ret.append(j)
         return ret
 ######################################################################
-    def play_music(self, play_list = None):
-        # note.servos_home()
+    def play_music(self, play_list = None, mode = None):
+        note.servos_home()
         self.create_noise()
-        self.last_play = []
         if play_list == None:
             play_list = self.play_list
         start_time = time.time()
@@ -267,15 +266,18 @@ class music_trans():
             note_play = []
             note_stop = []
             for item in play_list[i]:
-                print(item, self.servo_table[item[0]] - note.SERVO_ID_BASE, note.get_angle(self.servo_table[item[0]] - note.SERVO_ID_BASE, item[1]))
+                # print(item, self.servo_table[item[0]] - note.SERVO_ID_BASE, note.get_angle(self.servo_table[item[0]] - note.SERVO_ID_BASE, item[1]))
                 if item[1]:
                     note_play.append((item[0], item[3]))
                 else:
                     note_stop.append(item[0])
-            note.stop_note(note_stop)
-            note.play_note(note_play)
+            if mode != "midi":
+                note.stop_note(note_stop)
+                note.play_note(note_play)
+            else:
+                note.stop_midi(note_stop)
+                note.play_midi(note_play)
 
-            self.last_play = play_list[i].copy()
             time.sleep(0.0001)
 
         note.servos_home()

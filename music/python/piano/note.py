@@ -4,7 +4,7 @@ SERVO_ID_BASE = 0
 NOT_IMPLEMET = 100
 FREE_ANGLE = 181
 
-ANG_WHITE = 40
+ANG_WHITE = 35
 ANG_BLACK = 30
 
 KEY_IDLE_OFFSET = 3
@@ -139,9 +139,6 @@ def play_note(notes, update = False):
 def stop_note(note, update = False):
     global TOME_MOVING, note_status
 
-    if not isinstance(note, (list, tuple)):
-        note = [note]
-
     for item in note:
         item = cal_note(item)
         if item in servo_table:
@@ -160,17 +157,18 @@ def is_note_playing(note):
         return False
 def play_midi(midi, speed = 0):
     global TOME_MOVING
-
-    if midi in midi_table:
-        play_note(midi_table[cal_midi(midi)], speed)
+    # print("aaa", midi)
+    for item in midi:
+        if item[0] in midi_table:
+            play_note([[midi_table[cal_midi(item[0])], speed]])
     servoCtl.update()
 
 
 def stop_midi(midi):
     global TOME_MOVING
-
-    if midi in midi_table:
-        stop_note(midi_table[cal_midi(midi)])
+    for item in midi:
+        if item in midi_table:
+            stop_note([midi_table[cal_midi(item)]])
     servoCtl.update()
 
 
