@@ -121,7 +121,7 @@ def play_note(notes, update = False):
         note = cal_note(item[0])
         speed = item[1]
         if note in servo_table:
-            servoCtl.set_angle(get_servo(servo_table[note]) - SERVO_ID_BASE, get_angle(servo_table[note] - SERVO_ID_BASE, 1) - speed * 0.5, 0)
+            servoCtl.set_angle(get_servo(servo_table[note]) - SERVO_ID_BASE, get_angle(servo_table[note] - SERVO_ID_BASE, 1), speed)
         note_status.update({note:True})
 
     if update:

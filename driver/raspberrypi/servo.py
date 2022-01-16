@@ -25,8 +25,8 @@ class servo_c():
         self.current_angles = [255] * self.servo_num 
         self.angles_to = [90] * self.servo_num 
         self.servo_speeds = [0] * self.servo_num 
-        self.servo_speeds_t_record = [[0, 0]] * self.servo_num 
-
+        self.servo_speeds_t_record = [0] * self.servo_num 
+        self.servo_speeds_interval_record = [0] * self.servo_num 
 
         self.pwm = [None] * (self.servo_num // 16)
 
@@ -65,10 +65,12 @@ class servo_c():
             self.update()
     def _cal_delta_angle(self, to, current, speed):
         diff = to - current
-        if speed == 0 or abs(diff) > 10:
+        if speed == 0:
             return diff, abs(diff) * 1500
+        elif abs(diff) > 30:
+            return (10 if diff > 0 else -10), 10 * 1500
         else:
-            return (SPEED_CTL_ANGLE_INTERVAL if diff > 0 else (-SPEED_CTL_ANGLE_INTERVAL)), SPEED_CTL_ANGLE_INTERVAL * 1500 + speed * 500
+            return (SPEED_CTL_ANGLE_INTERVAL if diff > 0 else (-SPEED_CTL_ANGLE_INTERVAL)), SPEED_CTL_ANGLE_INTERVAL * 1500 + speed * 100
 
 
     def update(self):
@@ -78,13 +80,13 @@ class servo_c():
                 continue
 
             if abs(self.angles_to[i] - self.current_angles[i]) > SPEED_CTL_ANGLE_INTERVAL:
-                if time.time() * 1000000 - self.servo_speeds_t_record[i][0] >= self.servo_speeds_t_record[i][1]:
+                if (time.time() * 1000000 - self.servo_speeds_t_record[i]) >= self.servo_speeds_interval_record[i]:
                     delta, run_t = self._cal_delta_angle(self.angles_to[i], self.current_angles[i], self.servo_speeds[i])
                     self._run_to(i, self.current_angles[i] + delta)
-                    self.servo_speeds_t_record[i][0] = time.time() * 1000000
-                    self.servo_speeds_t_record[i][1] = run_t
+                    self.servo_speeds_t_record[i] = time.time() * 1000000
+                    self.servo_speeds_interval_record[i] = run_t
             else:
-                self.servo_speeds_t_record[i][1] = 0
+                self.servo_speeds_interval_record[i] = 0
 
     def update_task(self):
         while 1:

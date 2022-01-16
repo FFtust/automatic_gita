@@ -45,7 +45,7 @@ def sleep(t):
 def speed_test():
     import piano.note as note
     note.servos_home()
-    for i in range(20):
+    for i in range(50):
         note.play_note([("1", i)], 1)
         sleep(0.1)
         note.stop_note("1", 1)
