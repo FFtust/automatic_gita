@@ -5,6 +5,7 @@ import piano.note as note
 import os
 import sys
 
+MAX_SPEED = 100
 NOTE_SECTION_INTERVAL = 0.0
 RIGHT_LEFT_INTERVAL = 0.05
 
@@ -22,7 +23,7 @@ class music_trans():
         self.play_list = []
 
         self.current_t = 0
-        self.speed = 0
+        self.speed = MAX_SPEED
 
         self.servo_table = note.servo_table
 
@@ -43,13 +44,13 @@ class music_trans():
     def _rest_with_time(self, t):
         self.current_t += t
 
-    def _play(self, tone, speed = 0):
+    def _play(self, tone, speed = MAX_SPEED):
         if tone in self.servo_table:
             self.play_list.append([note.cal_note(tone), 1, self.current_t, speed])
 
     def _stop(self, tone):
         if tone in self.servo_table:
-            self.play_list.append([note.cal_note(tone), 0, self.current_t, 0])
+            self.play_list.append([note.cal_note(tone), 0, self.current_t, MAX_SPEED])
 
 ######################################################################
     def cal_rest(self, l):

@@ -6,6 +6,7 @@ FREE_ANGLE = 181
 
 ANG_WHITE = 30
 ANG_BLACK = 30
+MAX_SPEED = 100
 
 KEY_IDLE_OFFSET = 3
 
@@ -121,7 +122,7 @@ def play_note(notes, update = False):
         note = cal_note(item[0])
         speed = item[1]
         if note in servo_table:
-            servoCtl.set_angle(get_servo(servo_table[note]) - SERVO_ID_BASE, get_angle(servo_table[note] - SERVO_ID_BASE, 1), speed)
+            servoCtl.set_angle(get_servo(servo_table[note]) - SERVO_ID_BASE, get_angle(servo_table[note] - SERVO_ID_BASE, 1), MAX_SPEED - speed)
         note_status.update({note:True})
 
     if update:
@@ -147,7 +148,7 @@ def is_note_playing(note):
         return note_status[item]
     else:
         return False
-def play_midi(midi, speed = 0):
+def play_midi(midi, speed = MAX_SPEED):
     global TOME_MOVING
     # print("aaa", midi)
     for item in midi:
@@ -164,7 +165,7 @@ def stop_midi(midi):
     servoCtl.update()
 
 
-def play_servo(servo_id, speed = 0):
+def play_servo(servo_id, speed = MAX_SPEED):
     if not isinstance(servo_id, (list, tuple)):
             servo_id = [servo_id]
 

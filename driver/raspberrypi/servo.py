@@ -15,7 +15,9 @@ SERVO_NUM = 80
 ADRESS_TABLE = [0x42,0x44,0x41,0x40,0x47,0x00,0x00,0x00]
 
 SPEED_CTL_ANGLE_INTERVAL = 2
-SPEED_CTL_T_INTERVAL = 500
+SPEED_CTL_T_INTERVAL = 150
+ANGLE_TO_TIME = 1500
+
 
 class servo_c():
     def __init__(self, num = SERVO_NUM, address = ADRESS_TABLE):
@@ -40,7 +42,7 @@ class servo_c():
     def _run_to(self, idx, angle):
         driver_id = idx // 16
         servo_id = idx % 16
-        print(driver_id, servo_id, angle)
+        print("play servo", driver_id, servo_id, angle)
 
         date = 4096 * ((angle * 11) + 500) / 20000
         self.pwm[driver_id].set_pwm(servo_id, 0, int(date))
@@ -66,11 +68,12 @@ class servo_c():
     def _cal_delta_angle(self, to, current, speed):
         diff = to - current
         if speed == 0:
-            return diff, abs(diff) * 1500
-        elif abs(diff) > 30:
-            return (10 if diff > 0 else -10), 10 * 1500
+            return diff, abs(diff) * ANGLE_TO_TIME
+        elif abs(diff) > 25:
+            return (10 if diff > 0 else -10), 10 * ANGLE_TO_TIME
         else:
-            return (SPEED_CTL_ANGLE_INTERVAL if diff > 0 else (-SPEED_CTL_ANGLE_INTERVAL)), SPEED_CTL_ANGLE_INTERVAL * 1500 + speed * 100
+            return (SPEED_CTL_ANGLE_INTERVAL if diff > 0 else (-SPEED_CTL_ANGLE_INTERVAL)), \
+            SPEED_CTL_ANGLE_INTERVAL * ANGLE_TO_TIME + speed * SPEED_CTL_T_INTERVAL
 
 
     def update(self):
