@@ -120,7 +120,7 @@ music_table1 = \
     ("3:1=1/32", "7-=3/8", "0=5/16"),
 )
 
-MAX_SPD_L = 100
+MAX_SPD_L = 90
 MIN_SPD_L = 70
 
 music_table2 = \

@@ -31,10 +31,12 @@ class servo_c():
         self.servo_speeds_interval_record = [0] * self.servo_num 
 
         self.pwm = [None] * (self.servo_num // 16)
-
-        for i in range(len(self.pwm)):
-            self.pwm[i] = Adafruit_PCA9685.PCA9685(self.driver_address[i], busnum=1)
-            self.pwm[i].set_pwm_freq(50)
+        try:
+            for i in range(len(self.pwm)):
+                self.pwm[i] = Adafruit_PCA9685.PCA9685(self.driver_address[i], busnum=1)
+                self.pwm[i].set_pwm_freq(50)
+        except:
+            pass
             
     def start_update_task(self):
         _thread.start_new_thread(self.update_task, ())
@@ -45,15 +47,20 @@ class servo_c():
         print("play servo", driver_id, servo_id, angle)
 
         date = 4096 * ((angle * 11) + 500) / 20000
-        self.pwm[driver_id].set_pwm(servo_id, 0, int(date))
-
+        try:
+            self.pwm[driver_id].set_pwm(servo_id, 0, int(date))
+        except:
+            pass
         self.current_angles[idx] = angle
 
 ####################################################
     def free(self, idx):
         driver_id = idx // 16
         servo_id = idx % 16
-        self.pwm[driver_id].set_pwm(servo_id, 0, 0)
+        try:
+            self.pwm[driver_id].set_pwm(servo_id, 0, 0)
+        except:
+            pass
 
     def set_angle(self, idx, angle, speed = 0, update = False):
         if idx >=  self.servo_num:

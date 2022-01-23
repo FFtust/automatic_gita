@@ -66,8 +66,18 @@ music_table = \
 )
 
 
-import sys,time
-sys.path.append('../')
+import sys, time
+sys.path.append('../../')
+sys.path.append('../../../../')
+
+import sys
+sys.path.append('../../')
+sys.path.append('../../../../')
+if __name__ == "__main__":
+    import piano.music_translate2 as music_translate
+    music_parse = music_translate.music_trans([music_table1], beat = 60)
+    music_parse.music_to_play_table()
+    music_parse.play_music()
 
 # import 一千个伤心的理由
 # import 那个夏天
@@ -85,10 +95,10 @@ sys.path.append('../')
 # 	("1", "1", "1", "1", "1", "1", "1", "1"),
 # )
 # music_white = (("2++","3++", "4++"),)
-import music_translate2 as music_translate
-music_parse = music_translate.music_trans([music_white], beat=120)
-music_parse.music_to_play_table()
-music_parse.play_music()
+# import music_translate2 as music_translate
+# music_parse = music_translate.music_trans([music_table1], beat=120)
+# music_parse.music_to_play_table()
+# music_parse.play_music()
 # while 1:
 # 	music_parse.servos.run_single_servo(0, 90)
 # 	time.sleep(1)

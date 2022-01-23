@@ -9,7 +9,7 @@ MAX_SPEED = 100
 NOTE_SECTION_INTERVAL = 0.0
 RIGHT_LEFT_INTERVAL = 0.05
 
-SAME_NOTE_INTERVAL = 0.06
+SAME_NOTE_INTERVAL = 0.03
 
 CHECK_ENABLE = False
 
@@ -52,6 +52,12 @@ class music_trans():
         if tone in self.servo_table:
             self.play_list.append([note.cal_note(tone), 0, self.current_t, MAX_SPEED])
 
+    def _play_pedal(self):
+        self.play_list.append(["pedal", 1, self.current_t, MAX_SPEED])
+
+    def _stop_pedal(self):
+        self.play_list.append(["pedal", 0, self.current_t, MAX_SPEED])
+
 ######################################################################
     def cal_rest(self, l):
         for i in range(10):
@@ -68,7 +74,9 @@ class music_trans():
         if not isinstance(self.music, list):
             self.music = [self.music]
 
+        track_idx = 0
         for music_item in self.music:
+            track_idx += 1
             self._reset_t()
             self.set_beat(self.origin_beat)
             self._rest_with_time(RIGHT_LEFT_INTERVAL)
@@ -78,6 +86,12 @@ class music_trans():
             copy_index_start = None
             while i < len(music_item):
             # for i in range(len(music_item)):
+                if track_idx ==1 and i !=0 and i % 2 == 0:
+                    self._play_pedal()
+                    self._rest_with_time(0.2)
+                    self._stop_pedal()
+                    self._rest_with_time(-0.2)
+
                 if isinstance(music_item[i], tuple):
                     for j in range(len(music_item[i])):
                         chor = music_item[i][j]
@@ -267,9 +281,15 @@ class music_trans():
             for item in play_list[i]:
                 # print(item, self.servo_table[item[0]] - note.SERVO_ID_BASE, note.get_angle(self.servo_table[item[0]] - note.SERVO_ID_BASE, item[1]))
                 if item[1]:
-                    note_play.append((item[0], item[3]))
+                    if item[0] == "pedal":
+                        note.play_pedal()
+                    else:
+                        note_play.append((item[0], item[3]))
                 else:
-                    note_stop.append(item[0])
+                    if item[0] == "pedal":
+                        note.stop_pedal()
+                    else:
+                        note_stop.append(item[0])
             if mode != "midi":
                 note.stop_note(note_stop)
                 note.play_note(note_play)

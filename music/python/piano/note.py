@@ -5,7 +5,7 @@ NOT_IMPLEMET = 100
 FREE_ANGLE = 181
 
 ANG_WHITE = 30
-ANG_BLACK = 30
+ANG_BLACK = 40
 MAX_SPEED = 100
 
 KEY_IDLE_OFFSET = 3
@@ -23,7 +23,7 @@ servo_table = \
 "1": 24, "1#": 25, "2": 26,"2#": 27,"3": 28,"4": 29, "4#": 30,"5": 31,"5#": 32,"6": 33,"6#": 34, "7": 35,
 "1+": 36, "1+#": 37, "2+": 38,"2+#": 39,"3+": 40,"4+": 41, "4+#": 42,"5+": 43,"5+#": 44,"6+": 45,"6+#": 46, "7+": 47,
 "1++": 48, "1++#": 49, "2++": 50,"2++#": 51,"3++": 52,"4++": 53, "4++#": 54,"5++": 55,"5++#": 56,"6++": 57,"6++#": 58, "7++": 59,
-"1+++":60, "1+++#":61, "2+++":62, "2+++#":63, "3+++":100
+"1+++":60, "1+++#":61, "2+++":1000, "2+++#":63, "3+++":100, "padel":62
 }
 
 midi_table = \
@@ -52,17 +52,16 @@ servos_angle = configContent.servos_angle
 
 def get_angle(servo_id, sta):
     down_ang = 30
-    sign = -1
     is_white = True
     is_two_key = False
 
     for key in servo_table:
         if servo_id == servo_table[key]:
             if "#" in key:
-                down_ang = ANG_BLACK * int(sign)
+                down_ang = ANG_BLACK * -servos_angle[servo_id][1]
                 is_white = False
             else:
-                down_ang = ANG_WHITE * sign
+                down_ang = ANG_WHITE * -servos_angle[servo_id][1]
                 is_white = True
 
     if sta == 0:
@@ -122,7 +121,7 @@ def play_note(notes, update = False):
         note = cal_note(item[0])
         speed = item[1]
         if note in servo_table:
-            servoCtl.set_angle(get_servo(servo_table[note]) - SERVO_ID_BASE, get_angle(servo_table[note] - SERVO_ID_BASE, 1), MAX_SPEED - speed)
+            servoCtl.set_angle(get_servo(servo_table[note]) - SERVO_ID_BASE, get_angle(servo_table[note] - SERVO_ID_BASE, 1), 0)
         note_status.update({note:True})
 
     if update:
@@ -140,6 +139,14 @@ def stop_note(note, update = False):
 
     if update:
         servoCtl.update()
+
+def play_pedal():
+    servoCtl.set_angle(62, 115, 0)
+    servoCtl.update()
+
+def stop_pedal():
+    servoCtl.set_angle(62, 75, 0)
+    servoCtl.update()
 
 def is_note_playing(note):
     global note_status
